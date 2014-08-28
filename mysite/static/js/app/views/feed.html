@@ -1,0 +1,43 @@
+<!-- main page -->
+
+<div class="col-lg-7 pull-right">
+    <!--   breadcramb  -->
+    <ol class="breadcrumb">
+      <li><a href="#/">Home</a></li>
+    </ol>
+    <!--    end breadcramb  -->
+    
+    <ul class="media-list">
+
+    <!-- repeat list of posts -->
+        <li class="media" data-ng-repeat="post in posts | orderBy: 'id'">
+            
+            <div class="panel panel-primary">
+                <div class="panel-heading"> {[{post.id}]} </div>
+                <div class="panel-body">
+                    <a class="pull-left" href="#"><img class="media-object" style="padding:20px" src="http://placehold.it/100x100"></a>
+                    <div class="media-body">
+                        <h3 class="media-headings"> 
+                            <a href="{[{post.api_url}]}">{[{post.title}]}</a> 
+                            
+                        </h3>
+
+                        <p> {[{ post.description }]} </p>
+                        
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+                        <span class="glyphicon glyphicon-user btn-xs"></span> 
+                        <small class="muted">by: {[{post.author}]}</small>
+                        <h6> <span class="glyphicon glyphicon-calendar"></span> &nbsp; {[{post.created_on | date}]} </h6>
+                    </div>
+
+            </div>            
+
+        </li>
+
+    </ul>
+</div>
+
+

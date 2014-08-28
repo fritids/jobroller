@@ -1,0 +1,621 @@
+{% extends "sitebase.html" %}
+
+{% load dajaxice_templatetags %}
+
+{% load i18n %}
+
+
+
+        
+    {% block middlecontent %}
+
+    
+
+    <div class="col-sm-8">
+
+      <br/>
+    
+    <div id="respo">
+
+      <div class="panel panel-default">
+     <div class="panel-heading"> {% trans "last_added_cars" %} </div>
+     <div class="panel-body">
+
+      
+        <div id="wrapper2">
+        <div id="carousel2">
+
+          {{ boby }}
+          
+
+          <ul>
+
+            {% for i in cars %}
+
+              <li>
+
+                <div class="col-lg-12">
+
+                    <a href="{{ i.get_absolute_url }}" class="tile-button tile-button-alt btn bg-blue-alt" title="">
+                        <div class="tile-header">
+                            {{ i }}
+                            <div class="float-right">
+                                used
+                            </div>
+                        </div>
+
+                        <div class="tile-content-wrapper">
+                            
+                            <img src="{{ i.image.thumb_url }}" class='img-thumbnail' alt='{{ i.manufacturor }}' >
+                            <div class="tile-content">
+                                <span>$</span>
+                                {{i.price_display}}
+
+                                <i class="glyph-icon icon-big icon-cogs"></i>
+                                <br/>
+                                <span class="tile-content-meta">{{i.year_display}}</span><br/>
+                                <span class="tile-content-meta">CD player</span>
+
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                
+              </li>
+
+              {% empty %}    
+              <li>
+                <img src="/static/img/thumb1.JPG" alt="" class="img-thumbnail">
+                <div class="car-meta">
+                  <h4>lorem 1</h4>
+                  <i class='icon icon-comments-alt'></i> <span>13 Comments</span> <br/>  
+                  <i class="icon icon-calendar"></i> <span>12/12/12</span>
+                </div>
+            </li>
+            <li>
+                <img src="/static/img/thumb2.JPG" alt="" class="img-thumbnail">
+                <div class="car-meta">
+                  <h4>lorem 1</h4>
+                  <i class='icon icon-comments-alt'></i> <span>4 Comments</span> <br/>  
+                  <i class="icon icon-calendar"></i> <span>12/12/12</span>
+                </div>
+            </li>
+            <li>
+                <img src="/static/img/thumb3.jpg" alt="" class="img-thumbnail">
+                <div class="car-meta">
+                  <h4>lorem 1</h4>
+                  <i class='icon icon-comments-alt'></i> <span>35 Comments</span> <br/>  
+                  <i class="icon icon-calendar"></i> <span>12/12/12</span>
+                </div>
+            </li>
+            <li>
+                <img src="/static/img/thumb4.JPG" alt="" class="img-thumbnail">
+                <div class="car-meta">
+                  <h4>lorem 1</h4>
+                  <i class='icon icon-comments-alt'></i> <span>10 Comments</span> <br/>  
+                  <i class="icon icon-calendar"></i> <span>12/12/12</span>
+                </div>
+            </li>
+            <li>
+                <img src="/static/img/thumb2.JPG" alt="" class="img-thumbnail">
+                <div class="car-meta">
+                  <h4>lorem 1</h4>
+                  <i class='icon icon-comments-alt'></i> <span>10 Comments</span> <br/>  
+                  <i class="icon icon-calendar"></i> <span>12/12/12</span>
+                </div>
+            </li>
+            <li>
+                <img src="/static/img/thumb3.jpg" alt="" class="img-thumbnail">
+                <div class="car-meta">
+                  <h4>lorem 1</h4>
+                  <i class='icon icon-comments-alt'></i> <span>10 Comments</span> <br/>  
+                  <i class="icon icon-calendar"></i> <span>12/12/12</span>
+                </div>
+            </li>
+            {% endfor %}
+            
+            
+          </ul>
+
+          <div class="clearfix"></div>
+          <a id="prev2" class="prev" href="#">&lt;</a>
+          <a id="next2" class="next" href="#">&gt;</a>
+          <div id="pager2" class="pager"></div>
+        </div>
+      </div>
+
+     </div>
+   </div>
+      
+    </div>
+    
+    <div class="clearfix"></div>  
+    <!-- Authors word -->
+   <div class="panel panel-default">
+    <div class="panel-heading"> {% trans "we_have_choosen" %} </div>
+    <div class="panel-body">
+       <article class="single">
+          <div class="inner">
+            <div class="rows">
+              <div class="col-sm-6 col-lg-6 img-responsive">
+                <a href="single.html">
+                  <img src="/static/img/50240.jpg" alt="Blog Image" class="img-thumbnail">
+                </a><!-- end a -->  
+              </div><!-- end image -->
+              <div class="col-sm-6">
+
+                  <h3 class="highlighted"><a href="single.html">BMW serie 7</a></h3>
+                  <hr>
+                   <h5 class='highlighted'> Price: 23000 Dhm </h5>
+                   <h5 class="highlighted">Number of views : 21</h5>
+                   <h5 class="highlighted">Number of comments : 15</h5>
+                
+              </div><!-- end row -->
+          </div><!-- end inner -->
+          </div>
+        </article>
+
+    </div>
+   </div>
+
+   <div class="clear"></div>
+
+    <!-- carousel events --> 
+   <div class="panel panel-default">
+
+    <div class="panel-heading"> {% trans "latest_events" %} </div>
+    <div class="panel-body"> 
+
+      
+      <div id="wrapper">
+        <div id="carousel">
+          <ul>
+            {% for i in articles %}
+              <li>
+                <img src="{{i.img.url}}" class="img-thumbnail"/><h5 class="highlighted">{{ i.title }}</h5>
+              </li>
+            
+            {% endfor %}
+          </ul>
+          <div class="clearfix"></div>
+          <a id="prev" class="prev" href="#">&lt;</a>
+          <a id="next" class="next" href="#">&gt;</a>
+          <div id="pager" class="pager"></div>
+        </div>
+      </div>
+
+    </div>
+     
+   </div> <!-- end carousel events--> 
+
+   <div class="panel panel-default">
+     <div class="panel-body">
+       <div class="col-sm-12">
+         <img src="http://placehold.it/670x70" alt="placeholder image" class='img-responsive'>
+       </div>
+     </div>
+   </div>
+      
+    </div> <!-- end span8 -->
+      
+    {% endblock middlecontent %}
+
+    <br/>
+
+    {% block sidecontent %}
+
+    <div class="col-sm-4">
+      <div class="sidebar">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Text search</div>
+          <div class="panel-body"> 
+            <form method="post" id="textsearchform" action="/search" class="form-search">
+
+              <div class="form-group" style="width: 99%; float:right">
+                  
+                  <label for="id_text_search">textual search:</label>
+                  <div class="input-group">
+                     <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-search"></span>
+                     </span> 
+                    {{ text_form.target_text }}
+                    
+                  </div>
+              </div>
+
+              <p style="text-align: center;"> 
+                <input type="button" class="btn btn-primary" value="Send" onclick="text_send_form();"> 
+              </p>
+              
+            </form>
+
+              
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          
+        
+          <div class="panel-heading"> {% trans "search" %} </div>
+          <div class="panel-body">
+            <!-- injected form --> 
+            <form action="" method="post" id="search_form" accept-charset="utf-8">
+
+              {% csrf_token %}
+
+               {{ form.non_field_errors }}
+              <div class="form-group">
+                  {{ form.region.errors }}
+                  <label for="id_region">{% trans "region" %}:</label>
+
+                  <div class="form-input">
+                    {{ form.region }}
+                  </div>
+              </div>
+              <div class="form-group" style="width: 47%; float:left">
+                  {{ form.from_year.errors }}
+                  <label for="id_from_year">{% trans "from_year" %}:</label>
+                  {{ form.from_year }}
+              </div>
+              <div class="form-group" style="width: 47%; float:right">
+                  {{ form.to_year.errors }}
+                  <label for="id_to_year">{% trans "to_year" %}:</label>
+                  {{ form.to_year }}
+              </div>
+
+              <div class="form-group" style="width: 47%; float:left">
+                  {{ form.low_price.errors }}
+                  <label for="id_low_price">{% trans "low_price" %}:</label>
+                  <div class="input-group">
+                     <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-arrow-down"></span>
+                     </span> 
+                    {{ form.low_price }}
+                    
+                  </div>
+              </div>
+
+              <div class="form-group" style="width: 47%; float:right">
+                  {{ form.high_price.errors }}
+                  <label for="id_high_price">{% trans "high_price" %}:</label>
+                  <div class="input-group">
+                     <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-arrow-up"></span>
+                     </span> 
+                    {{ form.high_price }}
+                    
+                  </div>
+              </div>
+
+
+              <div class="form-group" style="clear:both;">
+                  {{ form.manufacturor.errors }}
+                  <label for="id_manufacturor">{% trans "manufacturor" %}:</label>
+                  {{ form.manufacturor }}
+              </div>
+              <div class="form-group">
+                  {{ form.model.errors }}
+                  <label for="id_model">{% trans "model" %}:</label>
+                  {{ form.model }}
+              </div>
+                <br/>
+
+                <p style="text-align: center;"> <input type="button" class="btn btn-primary" value="Send" onclick="send_form();"> </p>
+
+            </form>
+            <!-- injected form ends --> 
+          </div>
+
+        </div>
+
+      </div>
+      <!-- end div sidebar -->
+
+      <!--  tabbed posts and comments -->
+
+      <div class="panel panel-default">
+
+        <div class="panel-heading"> {% trans "popular_posts" %} </div>
+        <div class="panel-body">
+
+          <br/>
+          <div id="secondary" class="widget-area span3" role="complementary">
+        <aside id="dw_focus_tabs-6" class="widget dw_focus_tabs news-tab">
+
+          <div class="nav-tab-select-wrap">
+            <select name="nav-tabs-dw_focus_tabs-6" class="nav-tabs-by-select hidden-desktop">
+              <option data-target="#dw_focus_popular_news-3" value="#dw_focus_popular_news-3">POPULAR</option>
+              <option data-target="#dw-recent-comments-dw-widget-1" value="#dw-recent-comments-dw-widget-1">COMMENT</option>
+
+            </select>
+          </div>
+
+          <ul class="nav nav-tabs visible-desktop" id="nav-tabs-dw_focus_tabs-6">
+            <li class="active">
+
+              <!-- be careful to the urls it is used to navigate -->
+
+              <a href="http://demo.designwall.com/dw-focus/blog/#dw_focus_popular_news-3">Popular</a>
+            </li>
+            <li class="">
+              <a href="http://demo.designwall.com/dw-focus/blog/#dw-recent-comments-dw-widget-1">Comment</a>
+            </li>
+
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="dw_focus_popular_news-3">
+              <h3 class="widget-title">{% trans "Popular" %}</h3>
+
+              <article class="hentry item active has-thumbnail content-print">
+
+                <div class="entry-thumbnail">
+                  <a href="#">
+                    <img width="110" height="110" src="/static/img/thumb1.JPG" class="attachment-thumbnail wp-post-image" alt="Bloomberg tops $1B in gifts to alma mater Johns Hopkins University"></a>
+                </div>
+
+                <div class="entry-meta">July 9, 2012</div>
+
+                <h2 class="entry-title">
+                  <a href="#">
+                    Bloomberg tops $1B in gifts to alma mater Johns Hopkins University
+                  </a>
+                </h2>
+
+              </article>
+
+              <article class="hentry item has-thumbnail content-print">
+
+                <div class="entry-thumbnail">
+                  <a href="#">
+                    <img width="110" height="110" src="/static/img/thumb2.JPG" class="attachment-thumbnail wp-post-image" alt="Hackers take over sentencing commission website"></a>
+                </div>
+
+                <div class="entry-meta">December 30, 2012</div>
+
+                <h2 class="entry-title">
+                  <a href="#">
+                    Article Demo Showcase: What markup you can use in your News Article
+                  </a>
+                </h2>
+
+              </article>
+
+              <article class="hentry item has-thumbnail content-print">
+
+                <div class="entry-thumbnail">
+                  <a href="#">
+                    <img width="110" height="110" src="/static/img/thumb3.jpg" class="attachment-thumbnail wp-post-image" alt="Tennessee lawmaker wants to tie welfare benefits to good grades"></a>
+                </div>
+
+                <div class="entry-meta">January 20, 2013</div>
+
+                <h2 class="entry-title">
+                  <a href="#">Barack Obama’s Complete 2013 Inauguration Speech</a>
+                </h2>
+
+              </article>
+
+              <article class="hentry item has-thumbnail content-print">
+
+                <div class="entry-thumbnail">
+                  <a href="#">
+                    <img width="110" height="110" src="/static/img/thumb4.JPG" class="attachment-thumbnail wp-post-image" alt="Tennessee lawmaker wants to tie welfare benefits to good grades"></a>
+                </div>
+
+                <div class="entry-meta">January 20, 2013</div>
+
+                <h2 class="entry-title">
+                  <a href="#">Barack Obama’s Complete 2013 Inauguration Speech</a>
+                </h2>
+
+              </article>
+
+            </div>
+            <div class="tab-pane" id="dw-recent-comments-dw-widget-1">
+              <h3 class="widget-title">{% trans "Comment" %}</h3>
+              <ul id="dw_recentcomments">
+                <li class="dw_recentcomments">
+                  <img alt="" src="/static/img/user.jpg" class="avatar avatar-60 photo" height="60" width="60">
+                  <div class="comment-info">
+
+                    <span class="comment-date">January 8, 2013</span>
+                    <span class="comment-title">
+                      on
+                      <a href="#">The Man Who Sold The World</a>
+                    </span>
+                    <span class="comment-author">by ass</span>
+                  </div>
+                </li>
+                <li class="dw_recentcomments">
+                  <img alt="" src="/static/img/user.jpg" class="avatar avatar-60 photo avatar-default" height="60" width="60">
+                  <div class="comment-info">
+
+                    <span class="comment-date">January 7, 2013</span>
+                    <span class="comment-title">
+                      on
+                      <a href="#">Umbrella Beach</a>
+                    </span>
+                    <span class="comment-author">
+                      by
+                      <a href="http://twitter.com/honglt" rel="external nofollow" class="url">Le Hong</a>
+                    </span>
+                  </div>
+                </li>
+                <li class="dw_recentcomments">
+                  <img alt="" src="/static/img/user.jpg" class="avatar avatar-60 photo avatar-default" height="60" width="60">
+                  <div class="comment-info">
+
+                    <span class="comment-date">January 7, 2013</span>
+                    <span class="comment-title">
+                      on
+                      <a href="#">Umbrella Beach</a>
+                    </span>
+                    <span class="comment-author">
+                      by
+                      <a href="http://twitter.com/honglt" rel="external nofollow" class="url">Le Hong</a>
+                    </span>
+                  </div>
+                </li>
+                <li class="dw_recentcomments">
+                  <img alt="" src="/static/img/user.jpg" class="avatar avatar-60 photo" height="60" width="60">
+                  <div class="comment-info">
+
+                    <span class="comment-date">January 7, 2013</span>
+                    <span class="comment-title">
+                      on
+                      <a href="#">Umbrella Beach</a>
+                    </span>
+                    <span class="comment-author">by admin</span>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          <!-- end div tab-content --> </aside>
+
+      </div>
+        </div>
+      </div>
+      <!-- end div secodary  -->
+
+      <!--  end tabbed posts and comments -->
+
+      <div class="panel panel-default">
+
+      <div class="panel-heading">
+        {% trans "stay_in_touch" %}
+      </div>
+      
+      <div class="panel-body">
+        <div class="row">
+      <div class="col-sm-12">
+        <div class="content_btm">
+
+            <div class="content_btm_grid" align="center">
+              <h2>{% trans "join the newsletter" %}</h2>
+              <p>{% trans "sign up for our personlized weekly news letter" %}</p>
+            </div>
+
+             
+              <div class="search1">
+                <form class="form_center">
+                  <input type="text" value=""><br>
+                  <input type="submit" value="Sign up">
+                </form>
+             </div>
+
+          </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    </div> <!-- end col-sm-4 --> 
+      
+    {% endblock sidecontent %}
+
+  {% block extra_js %}
+
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+      /* Flex image slider */
+
+         $('.flex-image').flexslider({
+            direction: "vertical",
+            controlNav: false,
+            directionNav: true,
+            pauseOnHover: true,
+            slideshowSpeed: 10000      
+         });
+
+      /* Flexslider for product images */
+
+         $('.product-image-slider').flexslider({
+            direction: "vertical",
+            controlNav: false,
+            directionNav: true,
+            pauseOnHover: true,
+            slideshowSpeed: 10000,
+         });
+      });
+    </script>
+
+     <script type="text/javascript">
+          $(document).ready(function(){
+
+            $('#carousel ul').carouFredSel({
+              prev: '#prev',
+              next: '#next',
+              pagination: "#pager",
+              scroll: 1,
+              // auto: false,
+              responsive: true,
+              duration: 2000,
+              items: 3
+            });
+
+          });
+        </script>
+
+        <script type="text/javascript">
+          $(document).ready(function(){
+
+            $('#carousel2 ul').carouFredSel({
+              prev: '#prev2',
+              next: '#next2',
+              pagination: "#pager2",
+              // height: '100%',
+              auto: false,
+              duration: 3000,
+
+              responsive: true,
+              direction: 'up',
+              scroll: 1,
+              items: 5,
+              scroll : {
+                items : 1,
+              },
+              items: {
+              width: "100%",
+              height: '100%',
+              visible: {
+                min: 5,
+                max: 5
+                  }
+                }
+            });
+
+          });
+        </script>
+
+    <script>$(".mobile").click(function() {
+      $("nav").slideToggle();  
+    });
+
+    var menu = $("nav");
+    jQuery(window).on('resize', function(){     
+        if(!jQuery(".mobile").is(":visible") && !menu.is(':visible'))
+        {
+            menu.css({'display':''});   
+        }
+    });//@ sourceURL=pen.js
+    </script>
+
+    <script>
+      $(window).bind("load resize slid.bs.carousel", function() {
+      var imageHeight = $(".active .holder").height();
+      $(".controllers").height( imageHeight );
+      console.log("Slid");
+    });
+    </script>
+
+{% endblock extra_js %}      
+
+
+

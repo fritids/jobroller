@@ -1,0 +1,197 @@
+{% extends "sitebase.html" %}
+{% load dajaxice_templatetags %}
+{% load i18n %}
+
+  {% block middlecontent %}
+
+  <script type="text/javascript">
+              
+      toastr.options = {
+      
+        "debug":          false,
+        "positionClass": "toast-top-full-width",
+        "onclick":        null,
+        "fadeIn":         3000,
+        "fadeOut":        1000,
+        "timeOut":        5000,
+        // "extendedTimeOut": 0 // to make it sticky
+    };
+    // toastr.info('simple message', 'Info');
+  </script>
+
+  {% if messages %}
+      {% for message in messages %}
+          <script type="text/javascript">
+  
+          // alert('{{ message.tags }}');
+              toastr.info('{{message}}', '{{message.tags}}');
+          </script>
+      {% endfor %}
+  {% endif %}
+
+  <div class="col-sm-8">
+    <br/>
+
+    <div class="panel panel-default">
+      <div class="panel-heading"> 
+        {% trans "Deposez une offre gratuitement " %} 
+      </div>
+      <div class="panel-body">
+
+        
+        <div class="ad-title">
+          {% trans "Details de l'offre :" %}
+        </div>
+        
+        <br/>
+
+        <div class="col-sm-12">
+          <form method="post" enctype="multipart/form-data" class=" uploadform form-horizontal">
+
+            {% csrf_token %}
+
+             {{ form.non_field_errors }}
+            
+            <div class="wells">
+              <div class="form-group halfsize">
+                {{ form.title.errors }}
+                <label class="col-sm-3 control-label" for="id_title">{% trans "Titre" %}:</label>
+
+                <div class="col-sm-8">
+                  {{ form.title }}
+                </div>
+            </div> 
+
+            <div class="form-group halfsize">
+                {{ form.offer.errors }}
+                
+                <label class="col-sm-3 control-label" for="id_offer">{% trans "Offre" %} :</label>
+                <div class="col-sm-4">
+                  {{ form.offer }}
+                </div>
+            </div> 
+            
+            <div class="form-group halfsize">
+                {{ form.category.errors }}
+                <label class="col-sm-3 control-label" for="id_category">{% trans "Category" %}:</label>
+
+                <div class="col-sm-4">
+                  {{ form.category }}
+                </div>
+            </div> 
+            
+            <div class="form-group halfsize">
+
+                {{ form.region.errors }}
+                <label class="col-sm-3 control-label" for="id_region">{% trans "Region" %}:</label>
+
+                <div class="col-sm-4">
+                  {{ form.region }}
+                </div>
+                
+            </div> 
+
+            <div class="form-group halfsize">
+
+                {{ form.salary.errors }}
+                <label class="col-sm-3 control-label" for="id_salary">{% trans "Salaire" %}:</label>
+
+                <div class="col-sm-4">
+                  {{ form.salary }}
+                </div>
+            </div> 
+
+            <div class="form-group halfsize">
+
+                {{ form.immediate.errors }}
+                <label class="col-sm-3 control-label" for="id_immediate">{% trans "immédiat" %}:</label>
+
+                <div class="col-sm-4">
+                  {{ form.immediate }}
+                </div>
+            </div>
+
+            <div class="form-group halfsize">
+
+                {{ form.description.errors }}
+                <label class="col-sm-3 control-label" for="id_description">{% trans "description" %}:</label>
+
+                <div class="col-sm-8">
+                  {{ form.description }}
+                </div>
+            </div>
+
+            </div>
+
+            <br/>
+            
+            <div class="ad-title">
+              {% trans "Avouter le logo de votre entreprise :" %}
+            </div>
+            <br/>
+
+            <div class="wells">
+              <div class="tile-content-wrapper">
+
+                <div class="form-group">
+
+                  <div class="fileinput fileinput-new" data-provides="fileinput">
+                  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+
+                  <div>
+                    <span class="btn btn-default btn-file">
+                      <span class="fileinput-new">
+                        {% trans "Choisissez votre image" %}
+                      </span>
+                      <span class="fileinput-exists">
+                        {% trans "Changer" %}
+                      </span>
+                      <input type="file" name="image"></span>
+                  </div>
+                  
+                  {{ form.image.errors }}
+
+                  </div>
+
+                </div>
+
+                <div class="tile-content">
+                    <i class="glyph-icon icon-bigger icon-upload"></i>
+                </div>
+
+              </div>
+
+            </div>
+
+              <br/>
+              
+              <p style="text-align: center;"> <input type="submit" class="btn btn-primary" value="Déposez l'offre "> </p>
+
+          </form>
+
+          <br/>
+          <br/>
+
+        </div>
+        
+      </div>
+      <!-- end panel body --> 
+      
+    </div>
+
+<!-- google ads -->       
+ <div class="panel panel-default">
+   <div class="panel-body">
+     <div class="col-sm-12">
+       <img src="http://placehold.it/670x70" alt="placeholder image" class='img-responsive'>
+     </div>
+   </div>
+ </div>
+    
+  </div> <!-- end span8 -->
+    
+  {% endblock middlecontent %}
+
+  <br/>
+
+  

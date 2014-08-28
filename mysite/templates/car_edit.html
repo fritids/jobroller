@@ -1,0 +1,150 @@
+{% extends "sitebase.html" %}
+
+{% load dajaxice_templatetags %}
+
+{% load i18n %}
+
+        
+  {% block middlecontent %}
+
+    <div class="col-sm-8">
+
+    <br/>
+
+    <div class="panel panel-default">
+      <div class="panel-heading"> {{car.title}} </div>
+      <div class="panel-body">
+
+       <!-- car slider --> 
+      <br/>
+      
+      <div class="car-desc">
+
+        <div class="ad-title"> Edit Car specs </div>
+
+        <form method="post" enctype="multipart/form-data" class="uploadform form-horizontal">
+
+            {% csrf_token %}
+
+             {{ form.non_field_errors }}
+
+            <div class="wells">
+              <div class="form-group halfsize">
+                {{ form.title.errors }}
+                <label class="col-sm-3 control-label" for="id_title">Title:</label>
+
+                <div class="col-sm-8">
+                  {{ form.title }}
+                </div>
+            </div> 
+
+            <div class="form-group halfsize">
+                {{ form.category.errors }}
+                
+                <label class="col-sm-3 control-label" for="id_category">Categorie:</label>
+                <div class="col-sm-4">
+                  {{ form.category }}
+                </div>
+            </div> 
+            
+            <div class="form-group halfsize">
+                {{ form.offerType.errors }}
+                <label class="col-sm-3 control-label" for="id_offerType">Offre:</label>
+
+                <div class="col-sm-4">
+                  {{ form.offer }}
+                </div>
+            </div> 
+            
+            <div class="form-group halfsize">
+
+                {{ form.salary.errors }}
+                <label class="col-sm-3 control-label" for="id_salary">Salaire:</label>
+
+                <div class="col-sm-4">
+                  {{ form.salary }}
+                </div>
+                
+            </div> 
+
+            <div class="form-group halfsize">
+
+                {{ form.region.errors }}
+                <label class="col-sm-3 control-label" for="id_region">Region:</label>
+
+                <div class="col-sm-4">
+                  {{ form.region }}
+                </div>
+            </div>
+
+            <div class="form-group halfsize">
+
+                {{ form.immediate.errors }}
+                <label class="col-sm-3 control-label" for="id_immediate">{% trans "immediat" %}:</label>
+
+                <div class="col-sm-4">
+                  {{ form.immediate }}
+                </div>
+            </div>
+
+            <div class="form-group halfsize">
+
+                {{ form.description.errors }}
+                <label class="col-sm-3 control-label" for="id_description">{% trans "description" %}:</label>
+
+                <div class="col-sm-8">
+                  {{ form.description }}
+                </div>
+            </div>
+
+            </div>
+
+            <br/>
+            
+            <div class="ad-title">
+              Edit car photos :
+            </div>
+
+            <div class="wells bluetxt">
+              <br/>
+              {{ form.image }}
+              <hr/>
+              
+              <br/>
+            </div>
+
+              <p style='text-align: center'>
+                
+                <input type="submit" class="btn btn-primary" value="Enregistrer">
+              </p>  
+          </form>
+
+          
+        
+      </div> <!-- car desc ends --> 
+
+      <br/><br/><br/><br/>
+
+        <!-- car slider ends --> 
+        
+      </div> <!-- end panel body -->
+      
+    </div>
+
+<!-- google ads -->       
+ <div class="panel panel-default">
+   <div class="panel-body">
+     <div class="col-sm-12">
+       <img src="http://placehold.it/670x70&amp;text=Google_ads" alt="placeholder image" class='img-responsive'>
+     </div>
+   </div>
+ </div>
+    
+  </div> <!-- end span8 -->
+
+  {% endblock middlecontent %}
+  <br/>
+
+
+  
+

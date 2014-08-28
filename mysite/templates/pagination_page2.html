@@ -1,0 +1,139 @@
+{% load i18n %}
+<!-- head of injected part --> 
+
+      <div class="panel panel-default">
+        <div class="panel-heading"> {% trans "Resultats de la recherche" %} </div>
+        <div class="panel-body"> 
+
+          <div id="wrapper2">
+            <div id="carousel2">
+
+              <ul>
+
+                {% for i in items.object_list %}
+                    <li>
+                    
+                    <div class="col-lg-12">
+
+                        <div class="post-block-out " style="direction:{{ direction }}">
+        
+                      <div class="post-block">
+                  
+                          <div class="post-left">
+                              <a href="#" title="My First Classified Ad">
+                                <img class="attachment-medium img-thumbnail" alt="" title="" src="{{ i.image.thumb_url }}" width='87'>
+                              </a>                
+                          </div>
+                  
+                          <div class="post-right full">
+                          
+                                <div class="price-wrap">
+                                  <span class="tag-head">&nbsp;</span><p class="post-price">${{i.salary_display}}</p>
+                                </div>
+
+                              <h3><a href="{{i.get_absolute_url}}">{{ i.title }}</a></h3>
+                              
+                              <div class="clr"></div>
+                              
+                              <p class="post-meta">
+                                  <span class="folder">
+                                    <a href="#" rel="tag"> {{ i.category_display }} </a>
+                                  </span> | 
+
+                                  <span class="owner">
+                                    <a href="#" title="Posts by admin" rel="author"> {{ i.region_display }} </a>
+                                  </span> | 
+
+                                  <span class="clock"><span>{{i.created}}</span></span>
+                              </p>
+                              
+                              <div class="clr"></div>
+                              
+                              <p class="post-desc">
+                                {% if i.description  %}
+                                  {{ i.description }}
+                                {% else %}
+                                  {% trans "Pas de description" %}
+                                {% endif %}
+                                <i class="glyph-icon icon-big icon-cogs"></i>
+                              </p>
+                              
+                                <p class="stats">{{i.views}} &nbsp; vues</p>
+                              
+                              <div class="clr"></div>
+
+
+                  
+                          </div>
+                  
+                          <div class="clr"></div>
+
+
+                  
+                      </div><!-- /post-block -->
+          
+                    </div> <!-- post-block-out ends --> 
+
+                    </div>
+
+                  </li>
+
+                  {% empty %}    
+                  <li>
+                    <img src="/static/images/no-thumb.jpg" alt="" class="img-thumbnail">
+                    <div class="car-meta">
+                      <h4>{% trans "Pas de resultats disponible" %}</h4>
+                      <i class='icon icon-comments-alt'></i> <span>{% trans "Pas de commentaires" %}</span> <br/>  
+                      <i class="icon icon-calendar"></i> <span>{% trans "Pas de date d" %}</span>
+                    </div>
+                </li>
+                {% endfor %}
+                
+                
+              </ul>
+
+              <div class="clearfix"></div>
+              <a id="prev2" class="prev" href="#">&lt;</a>
+              <a id="next2" class="next" href="#">&gt;</a>
+              <div id="pager2" class="pager"></div>
+            </div>
+          </div>
+
+        <div class="clearfix"></div>
+
+        <div style="padding:10px; text-align:center">
+          <div class="pagination">
+            <span class="step-links">
+                {% if items.has_previous %}
+                 
+                 &nbsp;
+                  <a class="btn btn-info" 
+                      href="#respo"
+                      onclick="Dajaxice.car_shop.pagination2(Dajax.process,{'p':{{ items.previous_page_number }}, 'form': $('#search_form').serialize(true)});  ">{% trans "Retour" %} &nbsp;
+                  </a>   
+                 
+                {% endif %}
+
+                <span class="current">
+                    &nbsp; {% trans "Page" %} {{ items.number }} / {{ items.paginator.num_pages }}. &nbsp;
+                </span>
+
+                {% if items.has_next %}
+                  
+                  &nbsp;  
+                  <a class="btn btn-info" 
+                      href="#respo"
+                      onclick="Dajaxice.car_shop.pagination2(Dajax.process,{'p':{{ items.next_page_number }}, 'form': $('#search_form').serialize(true)}); ">{% trans "Suivant" %} &nbsp;
+                  </a>
+                {% endif %}
+            </span>
+
+
+        </div>
+        </div>
+
+
+        </div>
+      </div>
+      
+<!-- end of the injected part -->    

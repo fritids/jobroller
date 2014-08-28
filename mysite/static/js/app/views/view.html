@@ -1,0 +1,39 @@
+<!-- post detail page and update post modal window -->
+
+<div class="col-lg-7 pull-right">
+    
+    <!--	breadcramb	-->
+	<ol class="breadcrumb">
+      <li><a href="#/">Home</a></li>
+	  <li><a href="">View Post</a></li>
+	</ol>
+	<!--	end breadcramb	-->
+    
+    <h2 class="well-title">{[{ post.title }]}</h2>
+    <p> {[{ post.description }]} </p>
+    <p>
+        <h6> {[{post.created_on | date }]} </h6>
+        <small><b>by</b> {[{post.author}]}</small>
+    </p>
+    <br/>
+    <a ng-show="globals.is_authenticated" class="btn btn-default" href="#/post/{[{ post.id }]}/edit"> 
+        <span class="glyphicon glyphicon-edit"></span>
+        Edit
+    </a>
+    
+    <a ng-hide="globals.is_authenticated" class="btn btn-default" href="/api-auth/login/">
+         <span class="glyphicon glyphicon-edit"></span>
+         Edit
+    </a>
+    
+    <button type="button" class="btn btn-default " ng-show="globals.is_authenticated" ng-click="delete(post)">
+        <span class="glyphicon glyphicon-remove"></span> delete 
+    </button>
+    <a class="btn btn-default" href="#/"> <span class="glyphicon glyphicon-home"></span> Go back</a>
+
+    <br/>
+
+</div>
+
+
+

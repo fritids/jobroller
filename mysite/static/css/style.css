@@ -1,0 +1,82 @@
+
+body{
+    background-image: url(../img/cross.jpg);
+    /*overflow: hidden;*/
+    /* the width overflow is caused by the scrollbar that appears when page height is greater that ~700px */
+    /* it could be fixed using javascript */
+}
+
+.container{
+    max-width: 1240px;
+    min-height: 800px;
+}
+
+
+.pending-bg{
+    width: 26%;
+    margin: 19% auto;
+    /* loading text */
+    text-align: center;
+    font-weight: bold;
+    color: #8F8888;
+}
+
+/* route state */
+/* one sidebar */ 
+.col-lg-9.ng-scope{
+    padding:10px;
+    float: left;
+    margin-right: 185px;
+    border: 2px solid #ccc;
+/* background: #ccc; */
+}
+
+/* route state */
+/* two sidebar */ 
+.col-lg-7.ng-scope{
+    padding:10px;
+    float: left;
+    margin-right: 193px;
+    border: 2px solid #ccc;
+/* background: #ccc; */
+}
+
+
+h3.media-heading a {
+    color:#08c;
+    text-decoration: none;
+}
+
+/* nav pills */
+
+
+/* side bar */
+.fixme { position: fixed;  left: 0px; border: 2px solid #ccc; min-height: 600px;}
+.fixme2 { position: fixed;  right: 0px; border: 2px solid #ccc; min-height: 600px;}
+
+.col-lg-2.fixme2{
+    width: 14.666667%;
+    margin-right: 6px;
+    right: 2px;
+}
+
+
+.list-group-item.active{
+    background-color:#E9E9E9;
+    border: 1px solid #ccc;
+    color: #007fff; !important;
+}
+
+.list-group-item.active:hover{
+    background-color:#E9E9E9;
+    border: 1px solid #ccc;
+    color: #007fff;;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+.fixme { width: 100%; position: static; }
+.fixme2 { width: 100%; position: static; }
+}
+
+

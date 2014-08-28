@@ -1,0 +1,101 @@
+<!-- begin of injected part --> 
+
+      <div class="panel panel-default">
+        <div class="panel-heading"> Search Results </div>
+        <div class="panel-body"> 
+
+          <div id="wrapper2">
+            <div id="carousel2">
+
+              <ul>
+
+                {% for i in items.object_list %}
+                    <li>
+                      <!-- 
+                      <img src="/home/enigma/django_projects/django_angular_spa/mysite{{ i.image.thumb_url }}" class='img-thumbnail' alt='{{ i.name }}'>
+                       --> 
+
+                       <a href="{{ i.get_absolute_url }}">
+                          <img src="{{ i.image.thumb_url }}" class='img-thumbnail' alt='{{ i.manufacturor }}' >
+                       </a>
+
+                      <div class="car-meta">
+                          
+                        <span>  {{ i }} </span> <br/>
+
+                         <span>$&nbsp;{{i.price_display}}</span> <br/>  
+                         <span> {{i.year_display}} </span><br/>
+                         <span> {{i.model_display}} </span> <br/>
+                          
+                         <br/> 
+                         <div class="extra-info">
+
+                           <span class="label label-default"> Automatic </span>&nbsp;
+                           <span class="label label-default"> CD player </span> &nbsp;
+                           <span class="label label-default"> Used </span>&nbsp;
+                           <span class="label label-default"> White </span>
+
+                         </div>
+
+                      </div>
+
+                  </li>
+
+                  {% empty %}    
+                  <li>
+                    <img src="/static/img/thumb1.JPG" alt="" class="img-thumbnail">
+                    <div class="car-meta">
+                      <h4>No cars available</h4>
+                      <i class='icon icon-comments-alt'></i> <span>No Comments</span> <br/>  
+                      <i class="icon icon-calendar"></i> <span>No Date</span>
+                    </div>
+                </li>
+                {% endfor %}
+                
+                
+              </ul>
+
+              <div class="clearfix"></div>
+              <a id="prev2" class="prev" href="#">&lt;</a>
+              <a id="next2" class="next" href="#">&gt;</a>
+              <div id="pager2" class="pager"></div>
+            </div>
+          </div>
+
+        <div class="clearfix"></div>
+
+        <div style="padding:10px; text-align:center">
+          <div class="pagination">
+            <span class="step-links">
+                {% if items.has_previous %}
+                 
+                 &nbsp;
+                  <a class="btn btn-info" 
+                      href="#respo"
+                      onclick="Dajaxice.car_shop.pagination2(Dajax.process,{'p':{{ items.previous_page_number }}, 'form': $('#search_form').serialize(true)});  ">previous &nbsp;
+                  </a>   
+                 
+                {% endif %}
+
+                <span class="current">
+                    &nbsp; Page {{ items.number }} / {{ items.paginator.num_pages }}. &nbsp;
+                </span>
+
+                {% if items.has_next %}
+                  
+                  &nbsp;  
+                  <a class="btn btn-info" 
+                      href="#respo"
+                      onclick="Dajaxice.car_shop.pagination2(Dajax.process,{'p':{{ items.next_page_number }}, 'form': $('#search_form').serialize(true)});  ">next &nbsp;
+                  </a>
+                {% endif %}
+            </span>
+
+
+        </div>
+        </div>
+
+
+        </div>
+      </div>
+      

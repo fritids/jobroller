@@ -1,0 +1,43 @@
+<!-- main page -->
+
+<div class="col-lg-7 pull-right">
+    <!--   breadcramb  -->
+    <ol class="breadcrumb">
+      <li><a href="#/">Home</a></li>
+    </ol>
+    <!--    end breadcramb  -->
+    
+    <ul class="media-list">
+
+    <!-- repeat list of posts -->
+        <li class="media" data-ng-repeat="entry in feed.entries | orderBy: 'id'">
+            
+            <div class="panel panel-primary">
+                
+                <div class="panel-heading"> News x</div>
+                <div class="panel-body"> 
+                    <a class="pull-left" style="padding:20px" href="#"><img class="media-object" src="http://placehold.it/100x100"></a>
+                    <div class="media-body">
+                        <h3 class="media-headings"> 
+                            <a href="{[{entry.link}]}">{[{entry.title}]}</a> 
+                        </h3>
+
+                        <p> {[{ entry.contentSnippet }]} </p>
+
+                    </div>
+                    
+                </div>
+
+                <div class="panel-footer">
+                        <small class="muted">by: {[{entry.author}]}</small> <span class="glyphicon glyphicon-user btn-xs"></span> 
+                        <h6> <span class="glyphicon glyphicon-calendar"></span> &nbsp; {[{entry.publishedDate | date}]} </h6>
+                </div>
+                
+            </div>
+
+        </li>
+
+    </ul>
+</div>
+
+

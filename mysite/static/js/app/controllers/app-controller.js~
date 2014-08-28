@@ -1,0 +1,12 @@
+// A controller to initialize our app  (just bring the is_authenticated from app-service.js)
+// used in genral.html line 37
+var appController = Blog.controller('AppController', function ($scope, $rootScope, $location) {
+    var failureCb = function (status) {
+        console.log(status);
+    };
+    //$scope.globals = GlobalService;
+
+    $scope.initialize = function (is_authenticated) {
+        $scope.globals.is_authenticated = is_authenticated;
+    };
+})

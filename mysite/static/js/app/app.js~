@@ -1,0 +1,59 @@
+'use strict';
+
+var Blog = angular.module("Blog", ["ui.bootstrap", "ngCookies"], function ($interpolateProvider) {
+        $interpolateProvider.startSymbol("{[{");
+        $interpolateProvider.endSymbol("}]}");
+    }
+);
+
+Blog.run(function ($http, $cookies) {
+    $http.defaults.headers.common['X-CSRFToken'] = $cookies['csrftoken'];
+})
+
+Blog.config(function ($routeProvider) {
+    $routeProvider
+        .when("/", {
+            templateUrl: "static/js/app/views/feed.html",
+            controller: "FeedController",  // to create modal actions ( create, open, close )
+            resolve: {
+                posts: function (PostService) {
+                    return PostService.list();
+                }
+
+            }
+        })
+        .when("/post/:id", {
+            templateUrl: "static/js/app/views/view.html",
+            controller: "PostController",
+            resolve: {
+                post: function ($route, PostService) {
+                    var postId = $route.current.params.id
+                    return PostService.get(postId);
+                }
+            }
+        })
+        .otherwise({
+            redirectTo: '/'
+        })
+});
+
+Blog.controller('FeedControllers', function($scope){
+	$scope.posts = [{title: 'erda', description: 'ted', author:'med'}];
+});
+
+// resolve : is used to load data before changing the view
+
+// the data workflow:
+// appjs, --> feed.html -->  feed-controller(prepare modal window)  --> PostService (to listen to GET request)
+
+
+// with angular directive, We’ll keep our markup intact by just adding a custom attribute
+
+
+
+
+
+
+
+
+

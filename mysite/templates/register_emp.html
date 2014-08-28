@@ -1,0 +1,161 @@
+{% extends "sitebase.html" %}
+{% load dajaxice_templatetags %}
+{% load i18n %}
+
+{% block extra_style %}
+  <link rel="stylesheet" href="/static/social.css">      
+{% endblock extra_style %}
+
+{% block middlecontent %}
+
+
+<div class="main2 desktop chrome right-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <br/>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br/>
+
+                        <br/>
+                        <div class="col-sm-2">&nbsp;</div>
+                        <div class="col-sm-7" id='loginform'>
+                            <div class="panel panel-default">
+                                <div class="panel-heading"> <i class="glyph-icon icon-user"></i> &nbsp; S'enregistrer </div>
+                                <div class="panel-body">
+
+                                    <br>
+                                      <!-- second form to hold -->  
+                                    <form class="form-horizontal" method="post" enctype="multipart/form-data" role="form" action='/accounts/register_emp/'>
+                                      {% csrf_token %}
+
+                                     <div class="control-group">
+                                        <label class="control-label">Société</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_username' name="username" class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group" style='display:none'>
+                                        
+                                        <div class="controls">
+                                           <div style='display:none'><input type='hidden' name='first_name' value='employer' /></div>
+                                        
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Téléphone</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_phone' name="phone" class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">code postal</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_postal_code' name='postal_code' class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">ville</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_town' name="town" class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Email</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_email' name="email" class="span6">
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Mot de passe</label>
+                                        <div class="controls">
+                                           <input id="id_password1" type="password" name="password1" maxlength="200"  class='span6'>
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Vérifier mot de passe</label>
+                                        <div class="controls">
+                                           <input id="id_password2" type="password" name="password2" maxlength="200"  class='span6'>
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Site web</label>
+                                        <div class="controls">
+                                           <input id="id_website" type="text" name="website" maxlength="200" placeholder="Site web" class='span6'>
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Presentation</label>
+                                        <div class="controls">
+                                        <textarea name="presentation" id="id_presentation" class="form-control" rows="9" cols="25" placeholder="......"></textarea>
+                                           <span class="help-inline">Supporting help text</span>
+                                        </div>
+                                     </div>
+
+
+
+                                     
+                                     <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary">Valider</button>
+                                        <button type="button" class="btn btn-danger" onclick='javascrpt:window.location.href="/"'>Retour</button>
+                                     </div>
+                                  </form>
+
+                                </div>
+
+                                <div class="panel-footer">
+                                    <b>Vous possedez un compte ?</b> <a href="/accounts/login/">S'authentifier</a>
+                                </div>
+
+                          </div> <!-- end panel-default -->
+
+                      </div> <!-- end col-sm-6 -->
+
+                      <div class="col-sm-3">&nbsp;</div>
+                      <div class="clearfix"></div>
+                      <br/>
+
+                      </div>
+                </div> <!-- end panel panel-default --> 
+
+                <div class="clear"></div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                        <img src="http://placehold.it/1010x70" alt="placeholder image" class='img-responsive'>  
+                      </div>
+                    </div>
+                </div>
+
+          </div> <!-- end col-sm-12 --> 
+
+    </div> <!-- end row --> 
+  
+  <div class="clear"></div>
+
+</div> <!-- end container -->
+</div> <!-- end main2 -->
+{% endblock middlecontent %}
+
+{% block sidecontent %}
+  
+{% endblock sidecontent %}

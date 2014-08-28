@@ -1,0 +1,37 @@
+// bar that shows when the user try to switch to another view
+Blog.directive('pendingBar', ['$rootScope',
+    function ($rootScope) {
+        return {
+            link: function (scope, element, attrs) {
+                element.addClass('hide');
+                $rootScope.$on('$routeChangeStart', function () {
+                    element.removeClass('hide');
+                });
+                $rootScope.$on('$routeChangeSuccess', function () {
+                    element.addClass('hide');
+                });
+                $rootScope.$on('$routeChangeError', function () {
+                    element.removeClass('hide');
+                });
+            }
+        };
+    }]);
+
+// This hides the view until the routing is completed.
+Blog.directive('viewState', ['$rootScope',
+    function ($rootScope) {
+        return {
+            link: function (scope, element, attrs) {
+                element.addClass('hide');
+                $rootScope.$on('$routeChangeStart', function () {
+                    element.addClass('hide');
+                });
+                $rootScope.$on('$routeChangeSuccess', function () {
+                    element.removeClass('hide');
+                });
+                $rootScope.$on('$routeChangeError', function () {
+                    element.addClass('hide');
+                });
+            }
+        };
+    }]);

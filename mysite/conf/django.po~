@@ -1,0 +1,2909 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-25 05:35-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: campaign/admin.py:52 grappelli/tests/test_switch.py:156
+#: grappelli/views/switch.py:40 grappelli/views/switch.py:51
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: campaign/admin.py:59
+#, python-format
+msgid ""
+"The %(name)s \"%(obj)s\" was successfully sent. %(num_sent)s messages "
+"delivered."
+msgstr ""
+
+#: campaign/admin.py:71
+#, python-format
+msgid "Send %s"
+msgstr ""
+
+#: campaign/apps.py:6
+msgid "campaign management"
+msgstr ""
+
+#: campaign/models.py:19 campaign/models.py:40 campaign/models.py:59
+#: campaign/models.py:98
+#: grappelli/templates/admin/constance/change_list.html:61 pybb/models.py:62
+#: pybb/models.py:93 suit/templates/admin/filer/folder/directory_table.html:13
+msgid "Name"
+msgstr ""
+
+#: campaign/models.py:20 pybb/models.py:95
+msgid "Description"
+msgstr ""
+
+#: campaign/models.py:26
+msgid "newsletter"
+msgstr ""
+
+#: campaign/models.py:27
+msgid "newsletters"
+msgstr ""
+
+#: campaign/models.py:41
+msgid "Plaintext Body"
+msgstr ""
+
+#: campaign/models.py:42
+msgid "HTML Body"
+msgstr ""
+
+#: campaign/models.py:43 pybb/forms.py:61 pybb/models.py:156
+msgid "Subject"
+msgstr ""
+
+#: campaign/models.py:49
+msgid "mail template"
+msgstr ""
+
+#: campaign/models.py:50
+msgid "mail templates"
+msgstr ""
+
+#: campaign/models.py:61
+msgid ""
+"Django ORM compatible lookup kwargs which are used to get the list of "
+"objects."
+msgstr ""
+
+#: campaign/models.py:62
+msgid "Email-Field name"
+msgstr ""
+
+#: campaign/models.py:62
+msgid "Name of the model field which stores the recipients email address"
+msgstr ""
+
+#: campaign/models.py:82
+msgid "subscriber list"
+msgstr ""
+
+#: campaign/models.py:83
+msgid "subscriber lists"
+msgstr ""
+
+#: campaign/models.py:99
+msgid "Newsletter"
+msgstr ""
+
+#: campaign/models.py:100
+msgid "Template"
+msgstr ""
+
+#: campaign/models.py:101
+#: campaign/templates/admin/campaign/campaign/send_object.html:31
+msgid "Subscriber lists"
+msgstr ""
+
+#: campaign/models.py:102
+msgid "sent out"
+msgstr ""
+
+#: campaign/models.py:103
+msgid "sent at"
+msgstr ""
+
+#: campaign/models.py:104
+msgid "available online"
+msgstr ""
+
+#: campaign/models.py:104
+msgid "make a copy available online"
+msgstr ""
+
+#: campaign/models.py:121
+msgid "campaign"
+msgstr ""
+
+#: campaign/models.py:122
+msgid "campaigns"
+msgstr ""
+
+#: campaign/models.py:139
+msgid "blacklist entry"
+msgstr ""
+
+#: campaign/models.py:140
+msgid "blacklist entries"
+msgstr ""
+
+#: campaign/models.py:148
+msgid "recipient"
+msgstr ""
+
+#: campaign/models.py:149
+msgid "exception"
+msgstr ""
+
+#: campaign/models.py:155
+msgid "bounce entry"
+msgstr ""
+
+#: campaign/models.py:156
+msgid "bounce entries"
+msgstr ""
+
+#: campaign/templates/admin/campaign/campaign/change_form.html:6
+#: grappelli/templates/admin/change_form.html:147
+#: grappelli/templates/admin/object_history.html:14
+#: grappelli/templates/reversion/revision_form.html:11
+#: suit/templates/admin/change_form.html:102
+#: suit/templates/admin/object_history.html:15
+#: suit/templates/admin/cms/page/change_form.html:105
+#: suit/templates/admin/filer/folder/change_form.html:33
+#: suit/templates/admin/filer/image/change_form.html:10
+#: suit/templates/reversion/revision_form.html:16
+#: wpadmin/templates/admin/change_form.html:33
+msgid "History"
+msgstr ""
+
+#: campaign/templates/admin/campaign/campaign/change_form.html:7
+#: grappelli/templates/admin/change_form.html:148
+#: suit/templates/admin/change_form.html:107
+#: suit/templates/admin/cms/page/change_form.html:104
+#: suit/templates/admin/edit_inline/stacked.html:9
+#: suit/templates/admin/filer/folder/change_form.html:37
+#: suit/templates/admin/filer/image/change_form.html:15
+#: wpadmin/templates/admin/change_form.html:35
+msgid "View on site"
+msgstr ""
+
+#: campaign/templates/admin/campaign/campaign/change_form.html:8
+#: campaign/templates/admin/campaign/campaign/send_object.html:14
+#: campaign/templates/admin/campaign/campaign/send_object.html:43
+msgid "Send"
+msgstr ""
+
+#: campaign/templates/admin/campaign/campaign/send_object.html:10
+#: grappelli/dashboard/templates/admin/index.html:25
+#: grappelli/templates/admin/500.html:9
+#: grappelli/templates/admin/app_index.html:12
+#: grappelli/templates/admin/base.html:112
+#: grappelli/templates/admin/change_form.html:133
+#: grappelli/templates/admin/change_list.html:138
+#: grappelli/templates/admin/change_list_filter_sidebar.html:152
+#: grappelli/templates/admin/csv_export_selected_confirmation.html:9
+#: grappelli/templates/admin/delete_confirmation.html:14
+#: grappelli/templates/admin/delete_selected_confirmation.html:14
+#: grappelli/templates/admin/index.html:18
+#: grappelli/templates/admin/invalid_setup.html:10
+#: grappelli/templates/admin/object_history.html:10
+#: grappelli/templates/admin/auth/user/change_password.html:8
+#: grappelli/templates/admin/constance/change_list.html:44
+#: grappelli/templates/admin_doc/bookmarklets.html:8
+#: grappelli/templates/admin_doc/index.html:9
+#: grappelli/templates/admin_doc/missing_docutils.html:8
+#: grappelli/templates/admin_doc/model_detail.html:20
+#: grappelli/templates/admin_doc/model_index.html:23
+#: grappelli/templates/admin_doc/template_filter_index.html:25
+#: grappelli/templates/admin_doc/template_tag_index.html:27
+#: grappelli/templates/admin_doc/view_detail.html:7
+#: grappelli/templates/admin_doc/view_index.html:24
+#: grappelli/templates/grp_doc/basic_page_structure.html:132
+#: grappelli/templates/grp_doc/context_navigation.html:55
+#: grappelli/templates/registration/password_change_done.html:7
+#: grappelli/templates/registration/password_change_form.html:7
+#: grappelli/templates/reversion/recover_form.html:7
+#: grappelli/templates/reversion/recover_list.html:6
+#: grappelli/templates/reversion/revision_form.html:7
+#: grappelli/templates/smuggler/load_data_form.html:27
+#: pybb/templates/pybb/breadcrumb.html:4 suit/templates/admin/app_index.html:8
+#: suit/templates/admin/base.html:98 suit/templates/admin/change_form.html:61
+#: suit/templates/admin/change_list.html:42
+#: suit/templates/admin/delete_confirmation.html:7
+#: suit/templates/admin/delete_selected_confirmation.html:7
+#: suit/templates/admin/object_history.html:7
+#: suit/templates/admin/auth/user/change_password.html:19
+#: suit/templates/admin/cms/page/change_form.html:46
+#: suit/templates/admin/cms/page/change_list.html:8
+#: suit/templates/admin/cms/page/plugin_change_form.html:82
+#: suit/templates/admin/filer/breadcrumbs.html:5
+#: suit/templates/admin/filer/folder/change_form.html:8
+#: suit/templates/admin/import_export/base.html:10
+#: suit/templates/registration/logged_out.html:6
+#: suit/templates/registration/password_change_form.html:26
+#: suit/templates/reversion/recover_form.html:8
+#: suit/templates/reversion/recover_list.html:8
+#: suit/templates/reversion/revision_form.html:8
+#: suit/templates/suit/menu.html:10 wpadmin/templates/admin/base.html:78
+#: wpadmin/templates/admin/change_form.html:18
+#: wpadmin/templates/admin/change_list.html:42
+#: wpadmin/templates/admin/delete_confirmation.html:6
+#: wpadmin/templates/admin/delete_selected_confirmation.html:6
+#: wpadmin/templates/registration/password_change_done.html:6
+#: wpadmin/templates/registration/password_change_form.html:7
+#: wpadmin/templates/registration/password_reset_complete.html:6
+#: wpadmin/templates/registration/password_reset_confirm.html:6
+#: wpadmin/templates/registration/password_reset_done.html:6
+#: wpadmin/templates/registration/password_reset_form.html:6
+msgid "Home"
+msgstr ""
+
+#: campaign/templates/admin/campaign/campaign/send_object.html:26
+msgid ""
+"This campaign has already been sent at least once. Are you sure that you "
+"want to send it again?"
+msgstr ""
+
+#: campaign/templates/admin/campaign/campaign/send_object.html:28
+#, python-format
+msgid ""
+"\n"
+"\t\t\tClicking 'Send' below will send the <a href=\"../\">%(object_name)s</"
+"a> %(model_name)s to its recipients.\n"
+"\t\t\t"
+msgstr ""
+
+#: campaign/templates/admin/campaign/campaign/send_object.html:35
+#, python-format
+msgid "%(subscriber_count)s recipient%(pluralized)s"
+msgstr ""
+
+#: campaign/templates/campaign/subscribe.html:5
+msgid "Subscribe to our newsletter"
+msgstr ""
+
+#: campaign/templates/campaign/subscribe.html:8
+msgid "You successfully subscribed to our newsletter."
+msgstr ""
+
+#: campaign/templates/campaign/subscribe.html:10
+msgid "Something went wrong and we could not subscribe you."
+msgstr ""
+
+#: campaign/templates/campaign/subscribe.html:15
+msgid "subscribe"
+msgstr ""
+
+#: campaign/templates/campaign/unsubscribe.html:5
+msgid "Unsubscribe from our newsletter"
+msgstr ""
+
+#: campaign/templates/campaign/unsubscribe.html:8
+msgid "You successfully unscuscribed from our newsletter."
+msgstr ""
+
+#: campaign/templates/campaign/unsubscribe.html:10
+msgid "Something went wrong and we could not unsubscribe you."
+msgstr ""
+
+#: campaign/templates/campaign/unsubscribe.html:15
+msgid "unsubscribe"
+msgstr ""
+
+#: car_shop/admin.py:19
+msgid "Change:"
+msgstr "قم بالتحديث"
+
+#: car_shop/admin.py:34
+msgid "Delete selected car(s) and image file(s)."
+msgstr "احذف العناصر المختارة"
+
+#: car_shop/context_processors.py:6
+#, fuzzy
+msgid "Last added cars"
+msgstr "اخر السيارات المضافة"
+
+#: car_shop/context_processors.py:7 pybb/templates/pybb/users.html:9
+#: suit/templates/admin/search_form.html:26
+#: suit/templates/admin/filer/tools/search_form.html:12
+msgid "Search"
+msgstr "البحث"
+
+#: car_shop/context_processors.py:8
+#, fuzzy
+msgid "Popular posts"
+msgstr "الاكثر مشاهدة"
+
+#: car_shop/context_processors.py:9
+#, fuzzy
+msgid "We have choosen"
+msgstr "اخترنا لك"
+
+#: car_shop/context_processors.py:10
+#, fuzzy
+msgid "Latest events"
+msgstr "اخر الاخبار"
+
+#: car_shop/context_processors.py:11
+#, fuzzy
+msgid "Stay in touch"
+msgstr "ابق متصل معنا"
+
+#: car_shop/context_processors.py:13 templates/index.html:129
+msgid "home"
+msgstr "الرئيسية"
+
+#: car_shop/context_processors.py:14
+#, fuzzy
+msgid "post a free ad"
+msgstr "اعلن معنا"
+
+#: car_shop/context_processors.py:15 templates/index.html:131
+msgid "forum"
+msgstr "المنتدى"
+
+#: car_shop/context_processors.py:16 templates/index.html:132
+msgid "news"
+msgstr "الاخبار"
+
+#: car_shop/context_processors.py:17 templates/index.html:133
+#: templates/index.html.py:395
+msgid "search"
+msgstr "البحث"
+
+#: car_shop/context_processors.py:18 templates/index.html:134
+msgid "contact"
+msgstr "اتصل بنا"
+
+#: car_shop/context_processors.py:20 car_shop/forms.py:8 car_shop/forms.py:17
+#: templates/index.html:405
+msgid "region"
+msgstr "المنطقة"
+
+#: car_shop/context_processors.py:21 car_shop/forms.py:9
+msgid "from year"
+msgstr "من السنة"
+
+#: car_shop/context_processors.py:23 car_shop/forms.py:11
+msgid "low price"
+msgstr "السعر الادنى"
+
+#: car_shop/context_processors.py:24 car_shop/forms.py:12
+msgid "high price"
+msgstr "السعر الاقصى"
+
+#: car_shop/context_processors.py:25 car_shop/forms.py:13 car_shop/forms.py:23
+#: templates/index.html:433
+msgid "manufacturor"
+msgstr "الشركة المصنعة"
+
+#: car_shop/context_processors.py:26 car_shop/forms.py:14 car_shop/forms.py:24
+#: templates/index.html:438
+msgid "model"
+msgstr "النوع"
+
+#: car_shop/context_processors.py:28
+msgid "title"
+msgstr "العنوان"
+
+#: car_shop/context_processors.py:29
+#, fuzzy
+msgid "year"
+msgstr "الى السنة"
+
+#: car_shop/context_processors.py:30
+#, fuzzy
+msgid "price"
+msgstr "السعر الادنى"
+
+#: car_shop/forms.py:18 templates/index.html:413
+msgid "from_year"
+msgstr "من السنة"
+
+#: car_shop/forms.py:19 templates/index.html:418
+msgid "to_year"
+msgstr "الى السنة"
+
+#: car_shop/forms.py:20 templates/index.html:423
+msgid "low_price"
+msgstr "السعر الادنى"
+
+#: car_shop/forms.py:21 templates/index.html:428
+msgid "high_price"
+msgstr "السعر الاقصى"
+
+#: car_shop/model_choices.py:8 car_shop/model_choices.py:15
+#: car_shop/model_choices.py:61 car_shop/model_choices.py:75
+#: car_shop/model_choices.py:82
+msgid "ALL"
+msgstr "كل"
+
+#: car_shop/model_choices.py:62
+msgid "kia"
+msgstr "كيا"
+
+#: car_shop/model_choices.py:63
+msgid "mitsubishi"
+msgstr "ميتسوبيشي"
+
+#: car_shop/model_choices.py:64
+msgid "dodge"
+msgstr "دودج"
+
+#: car_shop/model_choices.py:65
+msgid "lexus"
+msgstr "لكزس"
+
+#: car_shop/model_choices.py:66
+msgid "mercedess"
+msgstr "مرسيدس"
+
+#: car_shop/model_choices.py:67
+msgid "nissan"
+msgstr "نيسان"
+
+#: car_shop/model_choices.py:68 car_shop/model_choices.py:72
+msgid "toyota"
+msgstr "تويوتا"
+
+#: car_shop/model_choices.py:69
+msgid "gmc"
+msgstr "جي ام سي"
+
+#: car_shop/model_choices.py:70
+msgid "hundai"
+msgstr "هيونداي"
+
+#: car_shop/model_choices.py:71
+msgid "jeep"
+msgstr "جييب"
+
+#: car_shop/model_choices.py:76
+msgid "Pick up"
+msgstr "تجارية"
+
+#: car_shop/model_choices.py:77
+msgid "Break"
+msgstr "عائلية"
+
+#: car_shop/model_choices.py:78
+msgid "Berline"
+msgstr "عادية"
+
+#: car_shop/model_choices.py:83
+msgid "Los Angeles"
+msgstr "بغداد"
+
+#: car_shop/model_choices.py:84
+msgid "Wachington"
+msgstr "البصرة"
+
+#: car_shop/model_choices.py:85
+msgid "California"
+msgstr "سامراء"
+
+#: car_shop/views.py:24
+msgid "target message"
+msgstr "النص المترجم"
+
+#: crispy_forms/tests/test_form_helper.py:129
+#: crispy_forms/tests/test_form_helper.py:139
+msgid "This field is required."
+msgstr ""
+
+#: crispy_forms/tests/test_layout.py:363
+msgid "i18n text"
+msgstr ""
+
+#: crispy_forms/tests/test_layout.py:365
+msgid "i18n legend"
+msgstr ""
+
+#: crispy_forms/tests/test_layout_objects.py:114
+msgid "Enter a valid value."
+msgstr ""
+
+#: django_yaba/templates/comments/posted.html:4
+msgid "Thanks for commenting"
+msgstr ""
+
+#: django_yaba/templates/comments/posted.html:7
+msgid "Thank you for your comment"
+msgstr ""
+
+#: example_bootstrap/settings.py:233
+msgid "English"
+msgstr ""
+
+#: example_bootstrap/settings.py:234
+msgid "Arabic"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:95 wpadmin/menu/menus.py:73
+#: wpadmin/menu/menus.py:76 wpadmin/menu/menus.py:104
+#: wpadmin/menu/menus.py:107
+msgid "Dashboard"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:139
+msgid "Quick links"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:142
+msgid "Return to site"
+msgstr ""
+
+#. Translators: This is already translated in Django
+#: grappelli/dashboard/dashboards.py:143
+#: grappelli/templates/admin/base.html:86
+#: grappelli/templates/admin/auth/user/change_password.html:12
+#: grappelli/templates/admin/auth/user/change_password.html:58
+#: grappelli/templates/admin/includes_grappelli/header.html:21
+#: suit/templates/admin/base.html:76
+#: suit/templates/admin/auth/user/change_password.html:32
+#: suit/templates/admin/auth/user/change_password.html:75
+#: suit/templates/registration/password_change_form.html:19
+#: wpadmin/templates/registration/password_change_done.html:3
+#: wpadmin/templates/registration/password_change_form.html:4
+#: wpadmin/templates/wpadmin/menu/user_tools.html:15
+msgid "Change password"
+msgstr ""
+
+#. Translators: This is already translated in Django
+#: grappelli/dashboard/dashboards.py:145
+#: grappelli/templates/admin/base.html:89
+#: grappelli/templates/admin/includes_grappelli/header.html:30
+#: suit/templates/admin/base.html:78
+#: suit/templates/registration/password_change_form.html:21
+#: wpadmin/templates/registration/password_change_done.html:3
+#: wpadmin/templates/registration/password_change_form.html:4
+#: wpadmin/templates/wpadmin/menu/user_tools.html:18
+msgid "Log out"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:151 grappelli/dashboard/modules.py:214
+#: wpadmin/menu/menus.py:110 wpadmin/menu/menus.py:111
+msgid "Applications"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:157 wpadmin/menu/menus.py:116
+#: wpadmin/menu/menus.py:117
+msgid "Administration"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:162 grappelli/dashboard/modules.py:290
+#: grappelli/templates/admin/index.html:64
+msgid "Recent Actions"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:166
+msgid "Latest Django News"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:173
+msgid "Support"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:176
+msgid "Django documentation"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:181
+msgid "Django \"django-users\" mailing list"
+msgstr ""
+
+#: grappelli/dashboard/dashboards.py:186
+msgid "Django irc channel"
+msgstr ""
+
+#: grappelli/dashboard/modules.py:188
+msgid "Links"
+msgstr ""
+
+#: grappelli/dashboard/modules.py:350
+msgid "RSS Feed"
+msgstr ""
+
+#. Translators: This is already translated in Django
+#. Translators: This is already translated in Django
+#: grappelli/dashboard/templates/grappelli/dashboard/modules/app_list.html:19
+#: grappelli/dashboard/templates/grappelli/dashboard/modules/model_list.html:9
+#: grappelli/templates/admin/app_index.html:31
+#: grappelli/templates/admin/change_form.html:136
+#: grappelli/templates/admin/index.html:45
+#: suit/templates/admin/change_form.html:50
+#: suit/templates/admin/change_form.html:76 suit/templates/admin/index.html:34
+#: suit/templates/admin/cms/page/change_form.html:53
+#: suit/templates/admin/cms/page/plugin_change_form.html:85
+#: wpadmin/templates/admin/change_form.html:21
+#: wpadmin/templates/admin/change_list.html:56
+#: wpadmin/templates/wpadmin/menu/menu_item.html:7
+#: wpadmin/templates/wpadmin/menu/menu_top_item.html:8
+msgid "Add"
+msgstr ""
+
+#. Translators: This is already translated in Django
+#: grappelli/dashboard/templates/grappelli/dashboard/modules/app_list.html:24
+#: grappelli/dashboard/templates/grappelli/dashboard/modules/model_list.html:10
+#: grappelli/templates/admin/app_index.html:32
+#: grappelli/templates/admin/index.html:50 suit/templates/admin/index.html:26
+#: suit/templates/admin/filer/folder/change_form.html:24
+#: suit/templates/admin/filer/folder/directory_listing.html:86
+#: suit/templates/admin/filer/folder/directory_table.html:27
+#: suit/templates/admin/filer/folder/directory_table.html:43
+#: wpadmin/menu/items.py:132
+msgid "Change"
+msgstr ""
+
+#: grappelli/dashboard/templates/grappelli/dashboard/modules/recent_actions.html:18
+msgid "None Available"
+msgstr ""
+
+#: grappelli/templates/admin/404.html:7 grappelli/templates/admin/404.html:11
+#: suit/templates/404.html:4
+msgid "Page not found"
+msgstr ""
+
+#: grappelli/templates/admin/404.html:12 suit/templates/404.html:9
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: grappelli/templates/admin/500.html:10
+msgid "Server error"
+msgstr ""
+
+#: grappelli/templates/admin/500.html:15
+msgid "Server error (500)"
+msgstr ""
+
+#: grappelli/templates/admin/500.html:19
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: grappelli/templates/admin/500.html:20 suit/templates/500.html:9
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: grappelli/templates/admin/actions.html:10
+#: suit/templates/admin/actions.html:22
+#: suit/templates/admin/filer/actions.html:14
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: grappelli/templates/admin/actions.html:10
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: grappelli/templates/admin/actions.html:11
+#: suit/templates/admin/actions.html:26
+#: suit/templates/admin/filer/actions.html:16
+msgid "Clear selection"
+msgstr ""
+
+#: grappelli/templates/admin/app_index.html:14
+#, python-format
+msgid "<li>%(name)s</li>"
+msgstr ""
+
+#: grappelli/templates/admin/app_index.html:39
+#: grappelli/templates/admin/index.html:59
+msgid "You don´t have permission to edit anything."
+msgstr ""
+
+#. Translators: This is already translated in Django
+#: grappelli/templates/admin/base.html:97
+#: grappelli/templates/admin/includes_grappelli/header.html:41
+#: grappelli/templates/admin_doc/bookmarklets.html:9
+#: suit/templates/admin/base.html:73
+#: suit/templates/registration/password_change_form.html:15
+#: wpadmin/templates/registration/password_change_done.html:3
+#: wpadmin/templates/registration/password_change_form.html:4
+#: wpadmin/templates/wpadmin/menu/user_tools.html:22
+msgid "Documentation"
+msgstr ""
+
+#. Translators: This is already translated in Django
+#: grappelli/templates/admin/base_site.html:4
+#: wpadmin/templatetags/wpadmin_tags.py:39
+msgid "Django site admin"
+msgstr ""
+
+#: grappelli/templates/admin/change_form.html:123
+#: grappelli/templates/admin/edit_inline/stacked.html:9
+msgid "Open All Items"
+msgstr ""
+
+#: grappelli/templates/admin/change_form.html:124
+#: grappelli/templates/admin/edit_inline/stacked.html:10
+msgid "Close All Items"
+msgstr ""
+
+#: grappelli/templates/admin/change_form.html:167
+#: grappelli/templates/admin/change_list.html:220
+#: grappelli/templates/admin/change_list_filter_sidebar.html:233
+#: grappelli/templates/admin/login.html:33
+#: grappelli/templates/admin/auth/user/change_password.html:28
+#: grappelli/templates/smuggler/load_data_form.html:45
+#: suit/templates/admin/change_form.html:141
+#: suit/templates/admin/change_list.html:86 suit/templates/admin/login.html:27
+#: suit/templates/admin/auth/user/change_password.html:45
+#: suit/templates/admin/cms/page/change_form.html:137
+#: suit/templates/admin/cms/page/plugin_change_form.html:99
+#: suit/templates/admin/filer/folder/new_folder_form.html:10
+#: suit/templates/registration/password_change_form.html:44
+#: wpadmin/templates/admin/change_form.html:45
+#: wpadmin/templates/admin/change_list.html:65
+#: wpadmin/templates/admin/login.html:17
+#: wpadmin/templates/registration/password_change_form.html:23
+#: wpadmin/templates/registration/password_reset_confirm.html:25
+#: wpadmin/templates/registration/password_reset_form.html:23
+#, fuzzy
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+msgstr[1] ""
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"#-#-#-#-#  django.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+
+#: grappelli/templates/admin/change_list.html:155
+#: grappelli/templates/admin/change_list_filter_sidebar.html:169
+#: grappelli/templates/smuggler/change_list.html:15
+#: suit/templates/admin/change_form.html:113
+#: suit/templates/admin/change_list.html:68
+#: suit/templates/admin/change_list.html:116
+#: suit/templates/admin/cms/page/change_form.html:108
+#: suit/templates/admin/cms/page/change_list.html:113
+#: suit/templates/admin/cms/page/change_list.html:141
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: grappelli/templates/admin/change_list.html:185
+#: grappelli/templates/admin/change_list_filter_sidebar.html:184
+#: wpadmin/templates/admin/change_list.html:75
+msgid "Filter"
+msgstr ""
+
+#: grappelli/templates/admin/change_list.html:220
+#: grappelli/templates/admin/login.html:33
+#: grappelli/templates/admin/auth/user/change_password.html:28
+#: wpadmin/templates/admin/change_form.html:45
+#: wpadmin/templates/admin/change_list.html:65
+#: wpadmin/templates/admin/login.html:17
+#: wpadmin/templates/registration/password_change_form.html:23
+#: wpadmin/templates/registration/password_reset_confirm.html:25
+#: wpadmin/templates/registration/password_reset_form.html:23
+msgid "Please correct the errors below."
+msgstr ""
+
+#: grappelli/templates/admin/change_list.html:247
+#: grappelli/templates/admin/submit_line.html:9
+#: grappelli/templates/admin/constance/change_list.html:110
+#: inplaceeditform/templates/inplaceeditform/render_field.html:11
+#: inplaceeditform/templates/inplaceeditform/adaptor_file/render_field.html:7
+#: pybb/templates/pybb/_button_save.html:1
+#: suit/templates/admin/page_submit_line.html:3
+#: suit/templates/admin/pagination.html:4
+#: suit/templates/admin/submit_line.html:3
+#: suit/templates/admin/cms/page/plugin_change_form.html:128
+#: suit/templates/admin/filer/folder/new_folder_form.html:43
+#: wpadmin/templates/admin/change_list.html:99
+#: wpadmin/templates/admin/submit_line.html:3
+msgid "Save"
+msgstr ""
+
+#: grappelli/templates/admin/change_list_results.html:18
+#: suit/templates/admin/change_list_results.html:20
+#: wpadmin/templates/admin/change_list_results.html:18
+#: wpadmin/templates/admin/change_list_results.html:36
+msgid "Toggle sorting"
+msgstr ""
+
+#: grappelli/templates/admin/change_list_results.html:19
+#: suit/templates/admin/change_list_results.html:19
+#: wpadmin/templates/admin/change_list_results.html:19
+#: wpadmin/templates/admin/change_list_results.html:37
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr ""
+
+#: grappelli/templates/admin/change_list_results.html:20
+#: suit/templates/admin/change_list_results.html:22
+#: wpadmin/templates/admin/change_list_results.html:20
+#: wpadmin/templates/admin/change_list_results.html:38
+msgid "Remove from sorting"
+msgstr ""
+
+#: grappelli/templates/admin/csv_export_selected_confirmation.html:12
+msgid "Export selection as CSV"
+msgstr ""
+
+#: grappelli/templates/admin/csv_export_selected_confirmation.html:31
+msgid "Export following fields:"
+msgstr ""
+
+#: grappelli/templates/admin/csv_export_selected_confirmation.html:34
+msgid "Select all"
+msgstr ""
+
+#: grappelli/templates/admin/csv_export_selected_confirmation.html:54
+msgid "Back"
+msgstr ""
+
+#: grappelli/templates/admin/csv_export_selected_confirmation.html:55
+#: suit/templates/admin/import_export/change_list_export.html:5
+#: suit/templates/admin/import_export/change_list_import_export.html:6
+#: suit/templates/admin/import_export/export.html:5
+#: suit/templates/admin/import_export/export.html:12
+msgid "Export"
+msgstr ""
+
+#: grappelli/templates/admin/delete_confirmation.html:18
+#: grappelli/templates/admin/submit_line.html:6
+#: pybb/templates/pybb/post_template.html:53
+#: suit/templates/admin/delete_confirmation.html:18
+#: suit/templates/admin/delete_confirmation.html:49
+#: suit/templates/admin/page_submit_line.html:8
+#: suit/templates/admin/submit_line.html:8
+#: suit/templates/admin/filer/folder/directory_table.html:42
+#: suit/templates/admin/import_export/import.html:69
+#: wpadmin/templates/admin/delete_confirmation.html:10
+#: wpadmin/templates/admin/submit_line.html:9
+msgid "Delete"
+msgstr ""
+
+#: grappelli/templates/admin/delete_confirmation.html:28
+#: suit/templates/admin/delete_confirmation.html:26
+#: suit/templates/admin/filer/delete_confirmation.html:12
+#: wpadmin/templates/admin/delete_confirmation.html:17
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: grappelli/templates/admin/delete_confirmation.html:36
+#: suit/templates/admin/delete_confirmation.html:36
+#: suit/templates/admin/filer/delete_confirmation.html:21
+#: wpadmin/templates/admin/delete_confirmation.html:25
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: grappelli/templates/admin/delete_confirmation.html:46
+#: suit/templates/admin/delete_confirmation.html:51
+#: suit/templates/admin/filer/delete_confirmation.html:31
+#: wpadmin/templates/admin/delete_confirmation.html:33
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: grappelli/templates/admin/delete_confirmation.html:52
+#: grappelli/templates/admin/delete_selected_confirmation.html:58
+#: inplaceeditform/templates/inplaceeditform/render_field.html:18
+#: suit/templates/admin/cms/page/plugin_change_form.html:129
+msgid "Cancel"
+msgstr ""
+
+#: grappelli/templates/admin/delete_confirmation.html:53
+#: grappelli/templates/admin/delete_selected_confirmation.html:59
+#: suit/templates/admin/delete_confirmation.html:57
+#: suit/templates/admin/delete_selected_confirmation.html:61
+#: suit/templates/admin/filer/delete_confirmation.html:36
+#: suit/templates/admin/filer/delete_selected_files_confirmation.html:47
+#: wpadmin/templates/admin/delete_confirmation.html:39
+#: wpadmin/templates/admin/delete_selected_confirmation.html:44
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: grappelli/templates/admin/delete_selected_confirmation.html:17
+#: suit/templates/admin/delete_selected_confirmation.html:15
+#: wpadmin/templates/admin/delete_selected_confirmation.html:9
+msgid "Delete multiple objects"
+msgstr ""
+
+#: grappelli/templates/admin/delete_selected_confirmation.html:27
+#: suit/templates/admin/delete_selected_confirmation.html:23
+#: wpadmin/templates/admin/delete_selected_confirmation.html:16
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: grappelli/templates/admin/delete_selected_confirmation.html:35
+#: suit/templates/admin/delete_selected_confirmation.html:33
+#: wpadmin/templates/admin/delete_selected_confirmation.html:24
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: grappelli/templates/admin/delete_selected_confirmation.html:45
+#: suit/templates/admin/delete_selected_confirmation.html:54
+#: wpadmin/templates/admin/delete_selected_confirmation.html:32
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: grappelli/templates/admin/filter.html:4
+#: grappelli/templates/admin/filter_listing.html:3
+#, python-format
+msgid "%(filter_title)s"
+msgstr ""
+
+#: grappelli/templates/admin/index.html:66 suit/templates/admin/index.html:54
+msgid "My Actions"
+msgstr ""
+
+#: grappelli/templates/admin/index.html:69 suit/templates/admin/index.html:59
+msgid "None available"
+msgstr ""
+
+#: grappelli/templates/admin/invalid_setup.html:17
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: grappelli/templates/admin/login.html:27
+msgid "Login"
+msgstr ""
+
+#: grappelli/templates/admin/login.html:55
+#: wpadmin/templates/admin/login.html:38
+msgid "Password:"
+msgstr ""
+
+#: grappelli/templates/admin/login.html:64 suit/templates/admin/login.html:56
+#: wpadmin/templates/admin/login.html:50
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: grappelli/templates/admin/login.html:71
+#: grappelli/templates/registration/password_reset_complete.html:17
+#: suit/templates/admin/login.html:60 wpadmin/templates/admin/login.html:44
+#: wpadmin/templates/registration/password_reset_complete.html:19
+msgid "Log in"
+msgstr ""
+
+#: grappelli/templates/admin/object_history.html:25
+#: grappelli/templates/reversion/object_history.html:13
+#: grappelli/templates/reversion/recover_list.html:22
+#: suit/templates/admin/object_history.html:27
+#: suit/templates/reversion/object_history.html:15
+#: suit/templates/reversion/recover_list.html:27
+msgid "Date/time"
+msgstr ""
+
+#: grappelli/templates/admin/object_history.html:26
+#: grappelli/templates/reversion/object_history.html:14 pybb/forms.py:180
+#: pybb/models.py:159 pybb/models.py:245 pybb/models.py:352 pybb/models.py:438
+#: pybb/templates/pybb/mail_templates/subscription_email_body.html:3
+#: suit/templates/admin/object_history.html:28
+#: suit/templates/reversion/object_history.html:16
+msgid "User"
+msgstr ""
+
+#: grappelli/templates/admin/object_history.html:27
+#: suit/templates/admin/object_history.html:29
+msgid "Action"
+msgstr ""
+
+#: grappelli/templates/admin/object_history.html:33
+msgid "DATETIME_FORMAT"
+msgstr ""
+
+#: grappelli/templates/admin/object_history.html:37
+msgid "Created object"
+msgstr ""
+
+#: grappelli/templates/admin/object_history.html:47
+#: grappelli/templates/reversion/object_history.html:34
+#: suit/templates/admin/object_history.html:43
+#: suit/templates/reversion/object_history.html:36
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: grappelli/templates/admin/pagination.html:8 grappelli/views/related.py:165
+#: suit/templates/admin/search_form.html:29
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: grappelli/templates/admin/pagination.html:13
+#: grappelli/templates/admin/pagination.html:15
+#: suit/templates/admin/search_form.html:31
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: grappelli/templates/admin/pagination.html:27
+#: suit/templates/admin/pagination.html:26
+#: wpadmin/templates/admin/pagination.html:10
+msgid "Show all"
+msgstr ""
+
+#: grappelli/templates/admin/submit_line.html:12
+#: suit/templates/admin/page_submit_line.html:5
+#: suit/templates/admin/submit_line.html:5
+#: wpadmin/templates/admin/submit_line.html:4
+msgid "Save as new"
+msgstr ""
+
+#: grappelli/templates/admin/submit_line.html:15
+#: suit/templates/admin/page_submit_line.html:6
+#: suit/templates/admin/submit_line.html:6
+#: wpadmin/templates/admin/submit_line.html:5
+msgid "Save and add another"
+msgstr ""
+
+#: grappelli/templates/admin/submit_line.html:18
+#: suit/templates/admin/page_submit_line.html:4
+#: suit/templates/admin/submit_line.html:4
+#: wpadmin/templates/admin/submit_line.html:6
+msgid "Save and continue editing"
+msgstr ""
+
+#: grappelli/templates/admin/auth/user/change_password.html:16
+#: grappelli/templates/registration/password_change_done.html:8
+#: grappelli/templates/registration/password_change_form.html:8
+#: grappelli/templates/registration/password_change_form.html:11
+#: grappelli/templates/registration/password_change_form.html:16
+#: suit/templates/registration/password_change_form.html:28
+#: suit/templates/registration/password_change_form.html:32
+#: wpadmin/templates/registration/password_change_done.html:7
+#: wpadmin/templates/registration/password_change_form.html:8
+#: wpadmin/templates/registration/password_change_form.html:11
+#: wpadmin/templates/registration/password_change_form.html:17
+msgid "Password change"
+msgstr ""
+
+#: grappelli/templates/admin/auth/user/change_password.html:25
+#: suit/templates/admin/auth/user/change_password.html:48
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: grappelli/templates/admin/auth/user/change_password.html:35
+#: grappelli/templates/registration/password_change_form.html:32
+#: grappelli/templates/registration/password_reset_confirm.html:21
+#: suit/templates/registration/password_change_form.html:66
+#: wpadmin/templates/registration/password_change_form.html:39
+msgid "New password"
+msgstr ""
+
+#: grappelli/templates/admin/auth/user/change_password.html:47
+#: grappelli/templates/registration/password_change_form.html:39
+#: grappelli/templates/registration/password_reset_confirm.html:26
+#: registration/forms.py:41
+#: suit/templates/admin/auth/user/change_password.html:64
+#: suit/templates/registration/password_change_form.html:77
+#: wpadmin/templates/registration/password_change_form.html:46
+msgid "Password (again)"
+msgstr ""
+
+#: grappelli/templates/admin/auth/user/change_password.html:51
+#: grappelli/templates/registration/password_reset_confirm.html:29
+#: suit/templates/admin/auth/user/change_password.html:68
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: grappelli/templates/admin/constance/change_list.html:66
+msgid "Default"
+msgstr ""
+
+#: grappelli/templates/admin/constance/change_list.html:71
+msgid "Value"
+msgstr ""
+
+#: grappelli/templates/admin/constance/change_list.html:76
+msgid "Is modified"
+msgstr ""
+
+#: grappelli/templates/admin/edit_inline/stacked.html:11
+#: grappelli/templates/admin/edit_inline/stacked.html:55
+#: grappelli/templates/admin/edit_inline/tabular.html:91
+msgid "Add Item"
+msgstr ""
+
+#: grappelli/templates/admin/edit_inline/stacked.html:24
+#: grappelli/templates/admin/edit_inline/tabular.html:64
+msgid "View on Site"
+msgstr ""
+
+#: grappelli/templates/admin/edit_inline/stacked.html:26
+#: grappelli/templates/admin/edit_inline/tabular.html:66
+msgid "Move Item"
+msgstr ""
+
+#: grappelli/templates/admin/edit_inline/stacked.html:30
+#: grappelli/templates/admin/edit_inline/stacked.html:35
+#: grappelli/templates/admin/edit_inline/tabular.html:70
+#: grappelli/templates/admin/edit_inline/tabular.html:75
+msgid "Delete Item"
+msgstr ""
+
+#: grappelli/templates/admin/edit_inline/stacked.html:53
+#: grappelli/templates/admin/edit_inline/tabular.html:89
+#: suit/templates/admin/edit_inline/stacked.html:67
+#: suit/templates/admin/edit_inline/tabular.html:120
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: grappelli/templates/admin/edit_inline/tabular.html:9
+msgid "Add Another"
+msgstr ""
+
+#: grappelli/templates/admin/includes_grappelli/header.html:36
+msgid "Tests"
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:10
+#: grappelli/templates/admin_doc/bookmarklets.html:16
+msgid "Bookmarklets"
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:13
+msgid "Documentation bookmarklets"
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:18
+msgid ""
+"\n"
+"            <p>To install bookmarklets, drag the link to your bookmarks\n"
+"    toolbar, or right-click the link and add it to your bookmarks. Now you "
+"can\n"
+"    select the bookmarklet from any page in the site.  Note that some of "
+"these\n"
+"    bookmarklets require you to be viewing the site from a computer "
+"designated\n"
+"    as \"internal\" (talk to your system administrator if you aren't sure "
+"if\n"
+"    your computer is \"internal\").</p>\n"
+"        "
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:27
+msgid "Documentation for this page"
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:28
+msgid ""
+"Jumps you from any page to the documentation for the view that generates "
+"that page."
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:31
+msgid "Show object ID"
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:32
+msgid ""
+"Shows the content-type and unique ID for pages that represent a single "
+"object."
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:35
+msgid "Edit this object (current window)"
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:36
+msgid "Jumps to the admin page for pages that represent a single object."
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:39
+msgid "Edit this object (new window)"
+msgstr ""
+
+#: grappelli/templates/admin_doc/bookmarklets.html:40
+msgid "As above, but opens the admin page in a new window."
+msgstr ""
+
+#: grappelli/templates/registration/logged_out.html:16
+#: suit/templates/registration/logged_out.html:12
+msgid "Log in again"
+msgstr ""
+
+#: grappelli/templates/registration/password_change_done.html:12
+#: grappelli/templates/registration/password_change_done.html:14
+#: wpadmin/templates/registration/password_change_done.html:11
+#: wpadmin/templates/registration/password_change_done.html:15
+msgid "Password change successful"
+msgstr ""
+
+#: grappelli/templates/registration/password_change_done.html:18
+#: wpadmin/templates/registration/password_change_done.html:17
+msgid "Your password was changed."
+msgstr ""
+
+#: grappelli/templates/registration/password_change_form.html:20
+#: suit/templates/registration/password_change_form.html:40
+#: wpadmin/templates/registration/password_change_form.html:19
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: grappelli/templates/registration/password_change_form.html:25
+#: suit/templates/registration/password_change_form.html:55
+#: wpadmin/templates/registration/password_change_form.html:32
+msgid "Old password"
+msgstr ""
+
+#: grappelli/templates/registration/password_change_form.html:48
+#: suit/templates/registration/password_change_form.html:88
+#: wpadmin/templates/registration/password_change_form.html:53
+#: wpadmin/templates/registration/password_reset_confirm.html:47
+msgid "Change my password"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_complete.html:5
+#: grappelli/templates/registration/password_reset_complete.html:12
+#: wpadmin/templates/registration/password_reset_complete.html:11
+#: wpadmin/templates/registration/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_complete.html:16
+#: wpadmin/templates/registration/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_confirm.html:5
+#: grappelli/templates/registration/password_reset_confirm.html:14
+#: wpadmin/templates/registration/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_confirm.html:5
+#: grappelli/templates/registration/password_reset_confirm.html:43
+#: wpadmin/templates/registration/password_reset_confirm.html:53
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_confirm.html:18
+#: wpadmin/templates/registration/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_confirm.html:35
+#: grappelli/templates/registration/password_reset_form.html:28
+#: wpadmin/templates/registration/password_reset_form.html:38
+msgid "Reset my password"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_confirm.html:47
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_done.html:5
+#: grappelli/templates/registration/password_reset_done.html:12
+#: wpadmin/templates/registration/password_reset_done.html:11
+#: wpadmin/templates/registration/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_done.html:16
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_email.html:3
+#, python-format
+msgid ""
+"You're receiving this e-mail because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_email.html:5
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_email.html:9
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_email.html:11
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_email.html:13
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_form.html:5
+#: grappelli/templates/registration/password_reset_form.html:13
+#: wpadmin/templates/registration/password_reset_complete.html:7
+#: wpadmin/templates/registration/password_reset_confirm.html:11
+#: wpadmin/templates/registration/password_reset_done.html:7
+#: wpadmin/templates/registration/password_reset_form.html:7
+#: wpadmin/templates/registration/password_reset_form.html:11
+#: wpadmin/templates/registration/password_reset_form.html:15
+msgid "Password reset"
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+
+#: grappelli/templates/registration/password_reset_form.html:20
+msgid "E-mail address"
+msgstr ""
+
+#: grappelli/templates/reversion/change_list.html:6
+#: grappelli/templates/reversion/recover_form.html:10
+#: grappelli/templates/reversion/recover_list.html:9
+#: suit/templates/admin/cms/page/change_list.html:110
+#: suit/templates/reversion/change_list.html:8
+#: suit/templates/reversion/recover_form.html:14
+#: suit/templates/reversion/recover_list.html:14
+#, python-format
+msgid "Recover deleted %(name)s"
+msgstr ""
+
+#: grappelli/templates/reversion/object_history.html:7
+#: suit/templates/reversion/object_history.html:8
+msgid ""
+"Choose a date from the list below to revert to a previous version of this "
+"object."
+msgstr ""
+
+#: grappelli/templates/reversion/object_history.html:15
+#: suit/templates/reversion/object_history.html:17
+msgid "Comment"
+msgstr ""
+
+#: grappelli/templates/reversion/recover_form.html:18
+#: suit/templates/reversion/recover_form.html:22
+msgid "Press the save button below to recover this version of the object."
+msgstr ""
+
+#: grappelli/templates/reversion/recover_list.html:16
+#: suit/templates/reversion/recover_list.html:21
+msgid ""
+"Choose a date from the list below to recover a deleted version of an object."
+msgstr ""
+
+#: grappelli/templates/reversion/recover_list.html:36
+#: suit/templates/reversion/recover_list.html:41
+msgid "There are no deleted objects to recover."
+msgstr ""
+
+#: grappelli/templates/reversion/revision_form.html:12
+#: suit/templates/reversion/revision_form.html:18
+#, python-format
+msgid "Revert %(verbose_name)s"
+msgstr ""
+
+#: grappelli/templates/reversion/revision_form.html:27
+#: suit/templates/reversion/revision_form.html:31
+msgid "Press the save button below to revert to this version of the object."
+msgstr ""
+
+#: grappelli/templates/smuggler/change_list.html:7
+msgid "Dump data"
+msgstr ""
+
+#: grappelli/templates/smuggler/change_list.html:11
+#: grappelli/templates/smuggler/load_data_form.html:7
+#: grappelli/templates/smuggler/load_data_form.html:28
+#: grappelli/templates/smuggler/load_data_form.html:34
+msgid "Load data"
+msgstr ""
+
+#: grappelli/templates/smuggler/load_data_form.html:49
+msgid "Data from your computer"
+msgstr ""
+
+#: grappelli/templates/smuggler/load_data_form.html:68
+#: grappelli/templates/smuggler/load_data_form.html:114
+msgid "Load"
+msgstr ""
+
+#: grappelli/templates/smuggler/load_data_form.html:71
+msgid "Load fixture and save on disk"
+msgstr ""
+
+#: grappelli/templates/smuggler/load_data_form.html:93
+#, python-format
+msgid "Data from %(smuggler_fixture_dir)s directory"
+msgstr ""
+
+#: grappelli/templates/smuggler/load_data_form.html:97
+msgid "File name"
+msgstr ""
+
+#: grappelli/templates/smuggler/load_data_form.html:98 pybb/models.py:372
+msgid "Size"
+msgstr ""
+
+#: grappelli/tests/test_switch.py:113 grappelli/tests/test_switch.py:172
+#: grappelli/views/switch.py:37 grappelli/views/switch.py:48
+msgid "Permission denied."
+msgstr ""
+
+#: grappelli/views/related.py:65 grappelli/views/related.py:94
+msgid "?"
+msgstr ""
+
+#: inplaceeditform/settings.py:21
+msgid "Doubleclick to edit"
+msgstr ""
+
+#: inplaceeditform/settings.py:26
+msgid "Write a translation"
+msgstr ""
+
+#: inplaceeditform/settings.py:28
+msgid "Successfully saved"
+msgstr ""
+
+#: inplaceeditform/settings.py:30
+msgid "You have unsaved changes!"
+msgstr ""
+
+#: inplaceeditform/templates/inplaceeditform/inc.inplace_toolbar.html:3
+msgid "Enable edit inline"
+msgstr ""
+
+#: inplaceeditform/templates/inplaceeditform/inc.inplace_toolbar.html:4
+msgid "Disable edit inline"
+msgstr ""
+
+#: inplaceeditform/templates/inplaceeditform/render_field.html:9
+#: inplaceeditform/templates/inplaceeditform/adaptor_file/render_field.html:5
+msgid "Apply change"
+msgstr ""
+
+#: inplaceeditform/templates/inplaceeditform/render_field.html:16
+msgid "Cancel change"
+msgstr ""
+
+#: propaganda/admin.py:14
+msgid "current"
+msgstr ""
+
+#: propaganda/models.py:7
+msgid "plain text message"
+msgstr ""
+
+#: propaganda/models.py:8
+msgid "html message"
+msgstr ""
+
+#: propaganda/models.py:9
+msgid "subject"
+msgstr ""
+
+#: propaganda/models.py:10
+msgid "sender name"
+msgstr ""
+
+#: propaganda/models.py:16 propaganda/models.py:40
+msgid "propaganda"
+msgstr ""
+
+#: propaganda/models.py:17
+msgid "propagandas"
+msgstr ""
+
+#: propaganda/models.py:22
+msgid "email"
+msgstr ""
+
+#: propaganda/models.py:23
+msgid "active user"
+msgstr ""
+
+#: propaganda/models.py:24
+msgid "test user"
+msgstr ""
+
+#: propaganda/models.py:30 propaganda/models.py:41
+msgid "subscriber"
+msgstr ""
+
+#: propaganda/models.py:31
+msgid "subscribers"
+msgstr ""
+
+#: propaganda/models.py:42
+msgid "delivery date"
+msgstr ""
+
+#: propaganda/models.py:43
+msgid "sent pamphlet"
+msgstr ""
+
+#: propaganda/models.py:49
+msgid "pamphlet"
+msgstr ""
+
+#: propaganda/models.py:50
+msgid "pamphlets"
+msgstr ""
+
+#: pure_pagination/templates/pure_pagination/pagination.html:4
+#: pure_pagination/templates/pure_pagination/pagination.html:6
+#: suit/templates/admin/filer/folder/directory_table.html:64
+msgid "previous"
+msgstr ""
+
+#: pure_pagination/templates/pure_pagination/pagination.html:20
+#: pure_pagination/templates/pure_pagination/pagination.html:22
+#: suit/templates/admin/filer/folder/directory_table.html:74
+msgid "next"
+msgstr ""
+
+#: pybb/admin.py:38 pybb/admin.py:64 pybb/admin.py:92 pybb/admin.py:114
+msgid "Additional options"
+msgstr ""
+
+#: pybb/admin.py:97 pybb/models.py:231
+msgid "Message"
+msgstr ""
+
+#: pybb/admin.py:128
+msgid "View post"
+msgstr ""
+
+#: pybb/admin.py:133
+msgid "Edit post"
+msgstr ""
+
+#: pybb/feeds.py:25 pybb/feeds.py:26 pybb/templates/pybb/base.html:9
+msgid "Latest posts on forum"
+msgstr ""
+
+#: pybb/feeds.py:35 pybb/feeds.py:36 pybb/templates/pybb/base.html:10
+msgid "Latest topics on forum"
+msgstr ""
+
+#: pybb/forms.py:31
+msgid "Attachment is too big"
+msgstr ""
+
+#: pybb/forms.py:51
+#, python-format
+msgid "You cant add more than %s answers for poll"
+msgstr ""
+
+#: pybb/forms.py:53
+msgid "Add two or more answers for this poll"
+msgstr ""
+
+#: pybb/forms.py:62 pybb/models.py:168
+msgid "Poll type"
+msgstr ""
+
+#: pybb/forms.py:64 pybb/models.py:169
+msgid "Poll question"
+msgstr ""
+
+#: pybb/forms.py:134
+msgid "Polls question is required when adding a poll"
+msgstr ""
+
+#: pybb/forms.py:213
+#, python-format
+msgid "Avatar is too large, max size: %s bytes"
+msgstr ""
+
+#: pybb/models.py:63 pybb/models.py:94
+msgid "Position"
+msgstr ""
+
+#: pybb/models.py:64 pybb/models.py:100 pybb/templates/pybb/category.html:4
+#: pybb/templates/pybb/category.html:27
+msgid "Hidden"
+msgstr ""
+
+#: pybb/models.py:65
+msgid "If checked, this category will be visible only for staff"
+msgstr ""
+
+#: pybb/models.py:70 pybb/models.py:92
+msgid "Category"
+msgstr ""
+
+#: pybb/models.py:71
+msgid "Categories"
+msgstr ""
+
+#: pybb/models.py:96
+msgid "Moderators"
+msgstr ""
+
+#: pybb/models.py:97 pybb/models.py:158 pybb/models.py:247
+msgid "Updated"
+msgstr ""
+
+#: pybb/models.py:98 pybb/models.py:165 pybb/models.py:327
+msgid "Post count"
+msgstr ""
+
+#: pybb/models.py:99
+msgid "Topic count"
+msgstr ""
+
+#: pybb/models.py:102
+msgid "Headline"
+msgstr ""
+
+#: pybb/models.py:106 pybb/models.py:155 pybb/templates/pybb/category.html:9
+msgid "Forum"
+msgstr ""
+
+#: pybb/models.py:107
+msgid "Forums"
+msgstr ""
+
+#: pybb/models.py:150
+msgid "None"
+msgstr ""
+
+#: pybb/models.py:151
+msgid "Single answer"
+msgstr ""
+
+#: pybb/models.py:152
+msgid "Multiple answers"
+msgstr ""
+
+#: pybb/models.py:157 pybb/models.py:246
+msgid "Created"
+msgstr ""
+
+#: pybb/models.py:160
+msgid "Views count"
+msgstr ""
+
+#: pybb/models.py:161 pybb/templates/pybb/forum.html:45
+msgid "Sticky"
+msgstr ""
+
+#: pybb/models.py:162 pybb/templates/pybb/forum.html:46
+msgid "Closed"
+msgstr ""
+
+#: pybb/models.py:163 pybb/templates/pybb/topic.html:134
+msgid "Subscribers"
+msgstr ""
+
+#: pybb/models.py:167 pybb/models.py:249
+msgid "On moderation"
+msgstr ""
+
+#: pybb/models.py:173 pybb/models.py:244 pybb/models.py:417
+#: pybb/templates/pybb/forum.html:26
+msgid "Topic"
+msgstr ""
+
+#: pybb/models.py:174 pybb/templates/pybb/category.html:12
+#: pybb/templates/pybb/user_posts.html:19
+#: pybb/templates/pybb/user_topics.html:22
+msgid "Topics"
+msgstr ""
+
+#: pybb/models.py:232
+msgid "HTML version"
+msgstr ""
+
+#: pybb/models.py:233
+msgid "Text version"
+msgstr ""
+
+#: pybb/models.py:248
+msgid "User IP"
+msgstr ""
+
+#: pybb/models.py:253 pybb/models.py:371
+msgid "Post"
+msgstr ""
+
+#: pybb/models.py:254 pybb/templates/pybb/category.html:15
+#: pybb/templates/pybb/forum.html:29 pybb/templates/pybb/topic.html:20
+#: pybb/templates/pybb/topic.html.py:40
+msgid "Posts"
+msgstr ""
+
+#: pybb/models.py:316
+msgid "Signature"
+msgstr ""
+
+#: pybb/models.py:318
+msgid "Signature HTML Version"
+msgstr ""
+
+#: pybb/models.py:320
+msgid "Time zone"
+msgstr ""
+
+#: pybb/models.py:322
+msgid "Language"
+msgstr ""
+
+#: pybb/models.py:325
+msgid "Show signatures"
+msgstr ""
+
+#: pybb/models.py:328
+msgid "Avatar"
+msgstr ""
+
+#: pybb/models.py:330
+msgid "Automatically subscribe"
+msgstr ""
+
+#: pybb/models.py:331
+msgid "Automatically subscribe to topics that you answer"
+msgstr ""
+
+#: pybb/models.py:355
+msgid "Profile"
+msgstr ""
+
+#: pybb/models.py:356
+msgid "Profiles"
+msgstr ""
+
+#: pybb/models.py:368
+msgid "Attachment"
+msgstr ""
+
+#: pybb/models.py:369
+msgid "Attachments"
+msgstr ""
+
+#: pybb/models.py:373
+msgid "File"
+msgstr ""
+
+#: pybb/models.py:395
+msgid "Topic read tracker"
+msgstr ""
+
+#: pybb/models.py:396
+msgid "Topic read trackers"
+msgstr ""
+
+#: pybb/models.py:408
+msgid "Forum read tracker"
+msgstr ""
+
+#: pybb/models.py:409
+msgid "Forum read trackers"
+msgstr ""
+
+#: pybb/models.py:418
+msgid "Text"
+msgstr ""
+
+#: pybb/models.py:421 pybb/models.py:437
+msgid "Poll answer"
+msgstr ""
+
+#: pybb/models.py:422
+msgid "Polls answers"
+msgstr ""
+
+#: pybb/models.py:442
+msgid "Poll answer user"
+msgstr ""
+
+#: pybb/models.py:443
+msgid "Polls answers users"
+msgstr ""
+
+#: pybb/views.py:483
+msgid "All forums marked as read"
+msgstr ""
+
+#: pybb/views.py:493
+msgid "User successfuly blocked"
+msgstr ""
+
+#: pybb/templates/pybb/_button_new_topic.html:3
+#: pybb/templates/pybb/add_post.html:24
+msgid "New topic"
+msgstr "موضوع جديد"
+
+#: pybb/templates/pybb/_button_submit.html:1
+msgid "Submit"
+msgstr "موافق"
+
+#: pybb/templates/pybb/_need_to_login_message.html:2
+msgid "Register"
+msgstr "سجل"
+
+#: pybb/templates/pybb/_need_to_login_message.html:2
+msgid "or"
+msgstr "او"
+
+#: pybb/templates/pybb/_need_to_login_message.html:2
+msgid "login"
+msgstr "دخول"
+
+#: pybb/templates/pybb/_need_to_login_message.html:2
+msgid "to create to post a reply"
+msgstr "لانشاء موضوع يرجى الدخول او التسجيل"
+
+#: pybb/templates/pybb/add_post.html:24
+msgid "New reply"
+msgstr "اجابة جديدة"
+
+#: pybb/templates/pybb/attachments_formset.html:4
+msgid "Add attachments"
+msgstr "ارفاق ملف"
+
+#: pybb/templates/pybb/attachments_formset.html:10
+#: pybb/templates/pybb/edit_profile.html:49
+msgid "delete"
+msgstr ""
+
+#: pybb/templates/pybb/category.html:18
+msgid "Last posts"
+msgstr ""
+
+#: pybb/templates/pybb/category.html:45
+msgid "No forums created"
+msgstr ""
+
+#: pybb/templates/pybb/category.html:46
+msgid "Add forum now"
+msgstr ""
+
+#: pybb/templates/pybb/delete_post.html:5
+msgid "Are you sure you want to delete this message?"
+msgstr ""
+
+#: pybb/templates/pybb/delete_post.html:12
+msgid "No, take me back"
+msgstr ""
+
+#: pybb/templates/pybb/delete_post.html:13
+msgid "Yes, I am sure"
+msgstr ""
+
+#: pybb/templates/pybb/edit_post.html:4 pybb/templates/pybb/edit_post.html:13
+msgid "Editing the post"
+msgstr ""
+
+#: pybb/templates/pybb/edit_profile.html:4
+#: pybb/templates/pybb/edit_profile.html:7
+#: pybb/templates/pybb/edit_profile.html:73
+msgid "Profile editing"
+msgstr ""
+
+#: pybb/templates/pybb/edit_profile.html:38
+msgid "Subscriptions on topics"
+msgstr ""
+
+#: pybb/templates/pybb/edit_profile.html:60
+msgid "Change the password"
+msgstr ""
+
+#: pybb/templates/pybb/forum.html:32
+msgid "Views"
+msgstr ""
+
+#: pybb/templates/pybb/forum.html:35
+msgid "Last post"
+msgstr ""
+
+#: pybb/templates/pybb/forum.html:50
+msgid "pages"
+msgstr ""
+
+#: pybb/templates/pybb/index.html:16
+msgid "Forum categories are not created"
+msgstr ""
+
+#: pybb/templates/pybb/index.html:17
+msgid "Add a category now"
+msgstr ""
+
+#: pybb/templates/pybb/index.html:22
+msgid "Mark all forums as read"
+msgstr ""
+
+#: pybb/templates/pybb/pagination.html:8
+msgid "previous page"
+msgstr ""
+
+#: pybb/templates/pybb/pagination.html:22
+msgid "next page"
+msgstr ""
+
+#: pybb/templates/pybb/poll.html:4
+msgid "Poll"
+msgstr ""
+
+#: pybb/templates/pybb/poll_edit_form.html:7
+msgid "Poll answers"
+msgstr ""
+
+#: pybb/templates/pybb/poll_edit_form.html:23
+msgid "remove answer"
+msgstr ""
+
+#: pybb/templates/pybb/poll_edit_form.html:24
+msgid "add answer"
+msgstr ""
+
+#: pybb/templates/pybb/post_template.html:29
+msgid "Rank"
+msgstr ""
+
+#: pybb/templates/pybb/post_template.html:47 pybb/templates/pybb/user.html:38
+msgid "Edit"
+msgstr ""
+
+#: pybb/templates/pybb/post_template.html:52
+msgid "Delete post?"
+msgstr ""
+
+#: pybb/templates/pybb/post_template.html:55
+msgid "Approve post"
+msgstr ""
+
+#: pybb/templates/pybb/post_template.html:61 pybb/templates/pybb/topic.html:88
+msgid "Admin"
+msgstr ""
+
+#: pybb/templates/pybb/post_template.html:77
+msgid "Edited"
+msgstr ""
+
+#: pybb/templates/pybb/post_template.html:93
+msgid "quote"
+msgstr ""
+
+#: pybb/templates/pybb/topic.html:52
+msgid "Unstick topic"
+msgstr ""
+
+#: pybb/templates/pybb/topic.html:60
+msgid "Stick topic"
+msgstr ""
+
+#: pybb/templates/pybb/topic.html:70
+msgid "Open topic"
+msgstr ""
+
+#: pybb/templates/pybb/topic.html:78
+msgid "Close topic"
+msgstr ""
+
+#: pybb/templates/pybb/topic.html:102
+msgid "Unsubscribe"
+msgstr ""
+
+#: pybb/templates/pybb/topic.html:109
+msgid "Subscribe"
+msgstr ""
+
+#: pybb/templates/pybb/user.html:17
+msgid "Statistics"
+msgstr ""
+
+#: pybb/templates/pybb/user.html:18
+msgid "Number of posts"
+msgstr ""
+
+#: pybb/templates/pybb/user.html:20
+msgid "Number of topics"
+msgstr ""
+
+#: pybb/templates/pybb/user.html:29
+msgid "Date of registration"
+msgstr ""
+
+#: pybb/templates/pybb/user.html:35
+msgid "Block"
+msgstr ""
+
+#: pybb/templates/pybb/user_topics.html:4
+#: pybb/templates/pybb/user_topics.html:7
+msgid "All topics created by"
+msgstr ""
+
+#: pybb/templates/pybb/users.html:5 pybb/templates/pybb/users.html.py:21
+msgid "Users"
+msgstr ""
+
+#: pybb/templates/pybb/mail_templates/subscription_email_body.html:3
+msgid "replied in topic to which you are subscribed."
+msgstr ""
+
+#: pybb/templates/pybb/mail_templates/subscription_email_body.html:4
+msgid "Link to post:"
+msgstr ""
+
+#: pybb/templates/pybb/mail_templates/subscription_email_body.html:5
+msgid "Link to topic:"
+msgstr ""
+
+#: pybb/templates/pybb/mail_templates/subscription_email_body.html:8
+msgid ""
+"If you don't want to recive notifications on new messages in this topic "
+"visit following link:"
+msgstr ""
+
+#: pybb/templates/pybb/mail_templates/subscription_email_subject.html:2
+msgid "New answer in topic that you subscribed."
+msgstr ""
+
+#: pybb/templatetags/pybb_tags.py:61
+msgid "seconds ago,seconds ago,seconds ago"
+msgstr ""
+
+#: pybb/templatetags/pybb_tags.py:64
+msgid "seconds ago"
+msgstr ""
+
+#: pybb/templatetags/pybb_tags.py:70
+msgid "minutes ago,minutes ago,minutes ago"
+msgstr ""
+
+#: pybb/templatetags/pybb_tags.py:73
+msgid "minutes ago"
+msgstr ""
+
+#: pybb/templatetags/pybb_tags.py:83
+#, python-format
+msgid "today, %s"
+msgstr ""
+
+#: pybb/templatetags/pybb_tags.py:85
+#, python-format
+msgid "yesterday, %s"
+msgstr ""
+
+#: registration/admin.py:23
+msgid "Activate users"
+msgstr ""
+
+#: registration/admin.py:43
+msgid "Re-send activation emails"
+msgstr ""
+
+#: registration/forms.py:33
+msgid "Username"
+msgstr ""
+
+#: registration/forms.py:34
+msgid "This value must contain only letters, numbers and underscores."
+msgstr ""
+
+#: registration/forms.py:37
+msgid "Email address"
+msgstr ""
+
+#: registration/forms.py:39 suit/templates/admin/login.html:48
+#: suit/templates/admin/auth/user/change_password.html:54
+msgid "Password"
+msgstr ""
+
+#: registration/forms.py:58
+msgid "A user with that username already exists."
+msgstr ""
+
+#: registration/forms.py:70
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: registration/forms.py:81
+msgid "I have read and agree to the Terms of Service"
+msgstr ""
+
+#: registration/forms.py:82
+msgid "You must agree to the terms to register"
+msgstr ""
+
+#: registration/forms.py:98
+msgid ""
+"This email address is already in use. Please supply a different email "
+"address."
+msgstr ""
+
+#: registration/forms.py:125
+msgid ""
+"Registration using free email addresses is prohibited. Please supply a "
+"different email address."
+msgstr ""
+
+#: registration/models.py:168
+msgid "user"
+msgstr ""
+
+#: registration/models.py:169
+msgid "activation key"
+msgstr ""
+
+#: registration/models.py:174
+msgid "registration profile"
+msgstr ""
+
+#: registration/models.py:175
+msgid "registration profiles"
+msgstr ""
+
+#: sorl/thumbnail/fields.py:51
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: sorl/thumbnail/admin/compat.py:53
+msgid "Clear image"
+msgstr ""
+
+#: suit/widgets.py:104
+msgid "Date:"
+msgstr ""
+
+#: suit/widgets.py:118
+msgid "Time:"
+msgstr ""
+
+#: suit/templates/403.html:4
+msgid "forbidden"
+msgstr ""
+
+#: suit/templates/403.html:6 suit/templates/404.html:6
+#: suit/templates/500.html:6 suit/templates/suit/error_base.html:76
+msgid "error"
+msgstr ""
+
+#: suit/templates/403.html:9
+msgid "We're sorry, but the requested action is forbidden"
+msgstr ""
+
+#: suit/templates/500.html:4
+msgid "Server Error"
+msgstr ""
+
+#: suit/templates/admin/actions.html:14
+#: suit/templates/admin/filer/actions.html:5
+msgid "Run the selected action"
+msgstr ""
+
+#: suit/templates/admin/actions.html:14
+#: suit/templates/admin/filer/actions.html:5
+msgid "Go"
+msgstr ""
+
+#: suit/templates/admin/actions.html:23
+#, python-format
+msgid ""
+"Select all %(total_count)s\n"
+"                    %(module_name)s"
+msgstr ""
+
+#: suit/templates/admin/app_index.html:11
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#. Translators: This is already translated in Django
+#: suit/templates/admin/base.html:65
+#: wpadmin/templates/wpadmin/menu/user_tools.html:7
+msgid "Welcome,"
+msgstr ""
+
+#: suit/templates/admin/change_form.html:21
+msgid "You have unsaved changes"
+msgstr ""
+
+#: suit/templates/admin/change_form.html:98
+#: suit/templates/admin/filer/image/change_form.html:7
+msgid "tools"
+msgstr ""
+
+#: suit/templates/admin/change_list.html:110
+msgid "Nothing found"
+msgstr ""
+
+#: suit/templates/admin/change_list.html:112
+msgid "Reset search and filters"
+msgstr ""
+
+#: suit/templates/admin/change_list.html:114
+#, python-format
+msgid "%(name_plural)s are not created yet"
+msgstr ""
+
+#: suit/templates/admin/delete_selected_confirmation.html:51
+msgid "Confirm deletion"
+msgstr ""
+
+#: suit/templates/admin/index.html:19
+#, python-format
+msgid "Models available in the %(name)s application."
+msgstr ""
+
+#: suit/templates/admin/index.html:45
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: suit/templates/admin/index.html:68
+msgid "added"
+msgstr ""
+
+#: suit/templates/admin/index.html:69
+msgid "changed"
+msgstr ""
+
+#: suit/templates/admin/index.html:70
+msgid "deleted"
+msgstr ""
+
+#: suit/templates/admin/index.html:76
+msgid "Unknown content"
+msgstr ""
+
+#: suit/templates/admin/page_submit_line.html:14
+#, python-format
+msgid "Delete %(language)s translation"
+msgstr ""
+
+#: suit/templates/admin/search_form.html:8
+msgid "keyword"
+msgstr ""
+
+#: suit/templates/admin/auth/user/add_form.html:6
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr ""
+
+#: suit/templates/admin/auth/user/add_form.html:8
+msgid "Enter a username and password."
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:4
+msgid "Change a page"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:64
+msgid "Confirm delete"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:65
+msgid "Remove delete request"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:68
+msgid "Confirm page deletion"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:93
+msgid "actions"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:97
+#: suit/templates/admin/cms/page/change_list.html:78
+msgid "Publish"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:97
+#: suit/templates/admin/cms/page/change_form.html:98
+msgid "draft"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:98
+#: suit/templates/admin/import_export/import.html:51
+msgid "Preview"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:100
+msgid "Revert to public"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:157
+msgid "All permissions"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:158
+#: suit/templates/admin/cms/page/change_form.html:169
+msgid "Loading..."
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_form.html:168
+msgid "Page states"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_list.html:3
+msgid "List of pages"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_list.html:69
+msgid "Successfully moved"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_list.html:87
+msgid "An error occured. Please reload the page"
+msgstr ""
+
+#: suit/templates/admin/cms/page/change_list.html:125
+msgid "Pages on:"
+msgstr ""
+
+#: suit/templates/admin/edit_inline/stacked.html:70
+#: suit/templates/admin/edit_inline/tabular.html:123
+msgid "Remove"
+msgstr ""
+
+#: suit/templates/admin/edit_inline/tabular.html:17
+msgid "Delete?"
+msgstr ""
+
+#: suit/templates/admin/filer/actions.html:14
+#, python-format
+msgid "Select all %(total_count)s files and/or folders"
+msgstr ""
+
+#: suit/templates/admin/filer/breadcrumbs.html:5
+msgid "Go back to admin homepage"
+msgstr ""
+
+#: suit/templates/admin/filer/breadcrumbs.html:8
+msgid "Go back to Filer app"
+msgstr ""
+
+#: suit/templates/admin/filer/breadcrumbs.html:8
+#: suit/templates/admin/filer/folder/change_form.html:12
+msgid "Filer"
+msgstr ""
+
+#: suit/templates/admin/filer/breadcrumbs.html:12
+msgid "Go back to root folder"
+msgstr ""
+
+#: suit/templates/admin/filer/breadcrumbs.html:12
+#: suit/templates/admin/filer/folder/change_form.html:15
+#: suit/templates/admin/filer/folder/directory_listing.html:80
+msgid "root"
+msgstr ""
+
+#: suit/templates/admin/filer/breadcrumbs.html:17
+#: suit/templates/admin/filer/breadcrumbs.html:23
+#: suit/templates/admin/filer/folder/change_form.html:19
+#, python-format
+msgid "Go back to '%(folder_name)s' folder"
+msgstr ""
+
+#: suit/templates/admin/filer/change_form.html:30
+msgid "duplicates"
+msgstr ""
+
+#: suit/templates/admin/filer/delete_selected_files_confirmation.html:11
+msgid ""
+"Deleting the selected files and/or folders would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: suit/templates/admin/filer/delete_selected_files_confirmation.html:20
+msgid ""
+"Deleting the selected files and/or folders would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: suit/templates/admin/filer/delete_selected_files_confirmation.html:30
+msgid ""
+"<p>Are you sure you want to delete the selected files and/or folders? All of "
+"the following objects and their related items will be deleted:</p>"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/change_form.html:8
+#: suit/templates/admin/filer/folder/change_form.html:12
+#: suit/templates/admin/filer/folder/change_form.html:15
+#: suit/templates/admin/filer/folder/directory_listing.html:80
+msgid "Go back to"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/change_form.html:8
+msgid "admin homepage"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/change_form.html:15
+#: suit/templates/admin/filer/folder/directory_listing.html:80
+#: suit/templates/admin/filer/folder/new_folder_form.html:4
+#: suit/templates/admin/filer/tools/clipboard/clipboard.html:15
+msgid "folder"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/change_form.html:50
+#: suit/templates/admin/filer/folder/directory_listing.html:81
+#: suit/templates/admin/filer/folder/directory_listing.html:91
+#: suit/templates/admin/filer/folder/directory_table.html:23
+msgid "Folder Icon"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_copy_destination.html:12
+msgid ""
+"Your account doesn't have permissions to copy all of the selected files and/"
+"or folders."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_copy_destination.html:15
+#: suit/templates/admin/filer/folder/choose_move_destination.html:15
+msgid "There are no destination folders available."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_copy_destination.html:18
+msgid "There are no files and/or folders available to copy."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_copy_destination.html:21
+msgid ""
+"The following files and/or folders will be copied to a destination folder "
+"(retaining their tree structure):"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_copy_destination.html:31
+#: suit/templates/admin/filer/folder/choose_move_destination.html:32
+msgid "Destination folder:"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_copy_destination.html:38
+msgid "Copy"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_images_resize_options.html:12
+msgid ""
+"Your account doesn't have permissions to resize all of the selected images."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_images_resize_options.html:15
+msgid "There are no images available to resize."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_images_resize_options.html:18
+msgid "The following images will be resized:"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_images_resize_options.html:29
+msgid "Choose an existing thumbnail option or enter resize parameters:"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_images_resize_options.html:32
+msgid "Choose resize parameters:"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_images_resize_options.html:35
+msgid ""
+"Warning: Images will be resized in-place and originals will be lost. Maybe "
+"first make a copy of them to retain the originals."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_images_resize_options.html:36
+msgid "Resize"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_move_destination.html:12
+msgid ""
+"Your account doesn't have permissions to move all of the selected files and/"
+"or folders."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_move_destination.html:18
+msgid "There are no files and/or folders available to move."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_move_destination.html:21
+msgid ""
+"The following files and/or folders will be moved to a destination folder "
+"(retaining their tree structure):"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_move_destination.html:38
+msgid "Move"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_rename_format.html:12
+msgid ""
+"Your account doesn't have permissions to rename all of the selected files."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_rename_format.html:15
+msgid "There are no files available to rename."
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_rename_format.html:18
+msgid ""
+"The following files will be renamed (they will stay in their folders and "
+"keep original filename, only displayed filename will be changed):"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/choose_rename_format.html:31
+msgid "Rename"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_listing.html:71
+msgid "Adds a new Folder"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_listing.html:71
+msgid "New Folder"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_listing.html:72
+msgid "upload files"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_listing.html:72
+msgid "Upload"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_listing.html:80
+msgid "Go back to the parent folder"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_listing.html:82
+#: suit/templates/admin/filer/folder/directory_table.html:30
+#: suit/templates/admin/filer/tools/search_form.html:19
+#, python-format
+msgid "1 folder"
+msgid_plural "%(counter)s folders"
+msgstr[0] ""
+msgstr[1] ""
+
+#: suit/templates/admin/filer/folder/directory_listing.html:82
+#: suit/templates/admin/filer/folder/directory_table.html:30
+#: suit/templates/admin/filer/tools/search_form.html:20
+#, python-format
+msgid "1 file"
+msgid_plural "%(counter)s files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: suit/templates/admin/filer/folder/directory_listing.html:86
+msgid "Change current folder details"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:23
+#: suit/templates/admin/filer/folder/directory_table.html:27
+#: suit/templates/admin/filer/folder/directory_table.html:29
+#, python-format
+msgid "Change '%(item_label)s' folder details"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:30
+#: suit/templates/admin/filer/folder/directory_table.html:45
+msgid "Owner"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:37
+msgid "Select this file"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:39
+#: suit/templates/admin/filer/folder/directory_table.html:43
+#: suit/templates/admin/filer/folder/directory_table.html:44
+#, python-format
+msgid "Change '%(item_label)s' details"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:42
+#, python-format
+msgid "Delete '%(item_label)s'"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:45
+msgid "Permissions"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:45
+msgid "disabled"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:45
+msgid "enabled"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:49
+msgid "Move to clipboard"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:57
+msgid "there are no files or subfolders"
+msgstr ""
+
+#: suit/templates/admin/filer/folder/directory_table.html:68
+#, python-format
+msgid ""
+"\n"
+"            Page %(number)s of %(num_pages)s\n"
+"            "
+msgstr ""
+
+#: suit/templates/admin/filer/folder/new_folder_form.html:4
+msgid "Add new"
+msgstr ""
+
+#: suit/templates/admin/filer/image/change_form.html:31
+msgid "Full size preview"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/search_form.html:11
+msgid "Enter your search phrase here"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/search_form.html:12
+msgid "Click here to"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/search_form.html:12
+msgid "run search for entered phrase"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/search_form.html:15
+msgid "Check it to"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/search_form.html:15
+msgid "limit the search to current folder"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/search_form.html:19
+msgid "found"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/search_form.html:19
+msgid "and"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/search_form.html:20
+msgid "cancel search"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/clipboard/clipboard.html:4
+msgid "Clipboard"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/clipboard/clipboard.html:15
+msgid "discard"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/clipboard/clipboard.html:15
+msgid "Move all clipboard files to"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/clipboard/clipboard.html:15
+msgid "unfiled files"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/clipboard/clipboard.html:24
+msgid "Paste all items here"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/clipboard/clipboard.html:63
+msgid "the clipboard is empty"
+msgstr ""
+
+#: suit/templates/admin/filer/tools/clipboard/clipboard_item_rows.html:10
+msgid "upload failed"
+msgstr ""
+
+#: suit/templates/admin/import_export/change_list_import.html:5
+#: suit/templates/admin/import_export/change_list_import_export.html:5
+#: suit/templates/admin/import_export/import.html:6
+#: suit/templates/admin/import_export/import.html:25
+msgid "Import"
+msgstr ""
+
+#: suit/templates/admin/import_export/import.html:17
+msgid "This importer will import the following fields: "
+msgstr ""
+
+#: suit/templates/admin/import_export/import.html:34
+msgid "Errors"
+msgstr ""
+
+#: suit/templates/admin/import_export/import.html:42
+msgid "Line number"
+msgstr ""
+
+#: suit/templates/admin/import_export/import.html:65
+msgid "New"
+msgstr ""
+
+#: suit/templates/admin/import_export/import.html:67
+msgid "Skipped"
+msgstr ""
+
+#: suit/templates/admin/import_export/import.html:71
+msgid "Update"
+msgstr ""
+
+#: suit/templates/admin/import_export/import.html:90
+msgid "Confirm import"
+msgstr ""
+
+#: suit/templates/registration/logged_out.html:9
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: templates/index.html:130
+msgid "post_free_ad"
+msgstr "اعلن معنا"
+
+#: templates/index.html:194
+msgid "last_added_cars"
+msgstr "اخر السيارات المضافة"
+
+#: templates/index.html:309
+msgid "we_have_choosen"
+msgstr "اخترنا لك"
+
+#: templates/index.html:340
+msgid "latest_events"
+msgstr "اخر الاخبار"
+
+#: templates/index.html:458
+msgid "popular_posts"
+msgstr "الاكثر مشاهدة"
+
+#: templates/index.html:627
+msgid "stay_in_touch"
+msgstr "ابق متصل معنا"
+
+#. Translators: This is already translated in Django
+#: wpadmin/menu/items.py:134
+msgid "No permission"
+msgstr ""
+
+#. Translators: This is already translated in Django
+#: wpadmin/menu/menus.py:36 wpadmin/templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr ""
+
+#: wpadmin/menu/menus.py:62
+msgid "Site"
+msgstr ""
+
+#: wpadmin/templates/admin/filter.html:3
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: wpadmin/templates/registration/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr ""
+
+#: wpadmin/templates/registration/password_reset_confirm.html:34
+msgid "New password:"
+msgstr ""
+
+#: wpadmin/templates/registration/password_reset_confirm.html:41
+msgid "Confirm password:"
+msgstr ""
+
+#: wpadmin/templates/registration/password_reset_confirm.html:55
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: wpadmin/templates/registration/password_reset_done.html:17
+msgid ""
+"We've emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+
+#: wpadmin/templates/registration/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: wpadmin/templates/registration/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: wpadmin/templates/registration/password_reset_form.html:32
+msgid "Email address:"
+msgstr ""
+
+#: wpadmin/templates/wpadmin/menu/left_menu.html:8
+#: wpadmin/templates/wpadmin/menu/left_menu.html:9
+#: wpadmin/templates/wpadmin/menu/left_menu.html:12
+msgid "Menu options"
+msgstr ""
+
+#: wpadmin/templates/wpadmin/menu/left_menu.html:14
+msgid "Expand menu"
+msgstr ""
+
+#: wpadmin/templates/wpadmin/menu/left_menu.html:14
+#: wpadmin/templates/wpadmin/menu/left_menu.html:15
+msgid "Collapse menu"
+msgstr ""
+
+#: wpadmin/templates/wpadmin/menu/left_menu.html:17
+msgid "Unpin menu"
+msgstr ""
+
+#: wpadmin/templates/wpadmin/menu/left_menu.html:17
+#: wpadmin/templates/wpadmin/menu/left_menu.html:18
+msgid "Pin menu"
+msgstr ""

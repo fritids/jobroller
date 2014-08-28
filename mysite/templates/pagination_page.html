@@ -1,0 +1,32 @@
+{% for i  in items.object_list %}
+<li>
+    <a class="cbp-vm-image" href="#">
+      <img src="{{ i.image.thumb_url }}" class='img-thumbnail'>
+    </a>
+
+    <h3 class="cbp-vm-title">{{ i.name }}</h3>
+    <div class="cbp-vm-price">$19.90</div>
+    <div class="cbp-vm-details">
+      Silver beet shallot wakame tomatillo salsify mung bean beetroot .
+    </div>  
+</li>
+{% endfor %}
+
+
+<div class="pagination">
+    <span class="step-links">
+        {% if items.has_previous %}
+            
+            <button class="btn" onclick="Dajaxice.car_shop.pagination(Dajax.process,{'p':{{ items.previous_page_number }}})">previous</button>
+        {% endif %}
+
+        <span class="current">
+            Page {{ items.number }} of {{ items.paginator.num_pages }}.
+        </span>
+
+        {% if items.has_next %}
+            
+            <button class="btn" onclick="Dajaxice.car_shop.pagination(Dajax.process,{'p':{{ items.next_page_number }}})">next</button>
+        {% endif %}
+    </span>
+</div>

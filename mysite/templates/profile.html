@@ -1,0 +1,217 @@
+{% extends "sitebase.html" %}
+
+{% load dajaxice_templatetags %}
+
+{% load i18n %}
+
+{% block middlecontent %}
+
+<div class="col-sm-8">
+
+  <br/>
+
+  <div id="respo">
+
+    <div class="panel panel-default">
+
+      <div class="panel-heading">
+        Mon Profile
+      </div>
+
+      <div class="wells">
+        <div class="panel-body">
+
+        <!-- messages and breadcrumb block -->
+
+        <div id="breadcrumb">
+
+          <ul class='breadcrumb'>
+
+            <li>
+              <a href="/discuss">Home</a>
+              <span class="divider"></span>
+            </li>
+
+            <li>{{usname}}</li>
+
+          </ul>
+
+        </div>
+
+        <!-- messages and breadcrumb block ends -->
+
+        <h1>Profile editing</h1>
+        <br/>
+
+        <div class="col-sm-5">
+
+          <div class="avatar">
+            <h4>Avatar:</h4>
+            <br/>
+
+            <!-- the solr thumbnail problem is due to dir and file write permissions -->
+
+            <img src="http://placehold.it/120x120" alt="avatar" class="img-thumbnail" width='110' height='110'></div>
+
+          <br/>
+
+          <div class="subscription">
+
+            <h4>Subscriptions on topics:</h4>
+            <br/>
+
+            <ul></ul>
+
+          </div>
+
+          <hr/>
+
+          <p> <i class="icon-key"></i>
+            &nbsp;
+            <a href="/accounts/password/change/">Change the password</a>
+          </p>
+
+          <hr/>
+
+        </div>
+
+        <div class="col-sm-7">
+
+          <form method="post" enctype="multipart/form-data" class="profile-edit" role="form" action="/profile">
+            {% csrf_token %}
+
+            <!-- <h4>Profile editing</h4>
+          <br/>
+          -->
+          <h4>Info:</h4>
+          <br/>
+
+          <label for="id_email">
+            Email:
+            <span class="required">*</span>
+
+          </label>
+
+          <div class="form-group">
+
+            <p class="contact-form-email">{{form.adress}}</p>
+
+          </div>
+
+          <label for="id_mobile">Mobile:</label>
+
+          <div class="form-group">
+
+            <p class="form-controld"> {{ form.telephone }} </p>
+
+          </div>
+          <!-- /.input-wrapper -->
+
+          <label for="id_signature">Signature:</label>
+
+          <div class="form-group">
+
+            <textarea rows="3" cols:="2" name="signature" id="id_signature" autofocus="autofocus" cols="40" class="form-control"></textarea>
+
+          </div>
+          <!-- /.input-wrapper -->
+
+          <label for="id_time_zone">
+            Time zone:
+            <span class="required">*</span>
+
+          </label>
+
+          <div class="form-group"></div>
+          <!-- /.input-wrapper -->
+
+          <br/>
+          <br/>
+          <br/>
+
+          <p>
+            <input type="submit" class="btn btn-primary" value="Save" />
+          </p>
+
+        </form>
+
+      </div>
+
+    </div> <!-- end panel body -->  
+      </div>
+      
+    
+    </div>
+
+</div>
+
+<div class="clearfix"></div>
+<!-- Authors word -->
+<div class="panel panel-default">
+  <div class="panel-heading">{% trans "On a choisi pour vous" %}</div>
+  <div class="panel-body">
+    <article class="single">
+      <div class="inner">
+        <div class="rows">
+          <div class="col-sm-6 col-lg-6 img-responsive">
+            <a href="single.html">
+              <img src="http://placehold.it/270x150" alt="Blog Image" class="img-thumbnail"></a>
+            <!-- end a --> </div>
+          <!-- end image -->
+          <div class="col-sm-6">
+
+            <h3 class="highlighted">
+              <a href="single.html">Offre du jour: </a>
+            </h3>
+            <hr>
+             <h5 class='highlighted'> Domaine: Batîments </h5>
+             <h5 class="highlighted">Location : Paris intramuros</h5>
+             <h5 class="highlighted">Date d'expiration : 15/12/2014</h5>
+
+          </div>
+          <!-- end row --> </div>
+        <!-- end inner --> </div>
+    </article>
+
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-sm-12">
+      <img src="http://placehold.it/670x70" alt="placeholder image" class='img-responsive'></div>
+  </div>
+</div>
+
+</div>
+<!-- end span8 -->
+{% endblock middlecontent %}
+<br/>
+
+  {% block extra_js %}
+
+
+
+<script>$(".mobile").click(function() {
+      $("nav").slideToggle();  
+    });
+
+    var menu = $("nav");
+    jQuery(window).on('resize', function(){     
+        if(!jQuery(".mobile").is(":visible") && !menu.is(':visible'))
+        {
+            menu.css({'display':''});   
+        }
+    });//@ sourceURL=pen.js
+    </script>
+
+<script>
+      $(window).bind("load resize slid.bs.carousel", function() {
+      var imageHeight = $(".active .holder").height();
+      $(".controllers").height( imageHeight );
+      console.log("Slid");
+    });
+    </script>
+{% endblock extra_js %}
