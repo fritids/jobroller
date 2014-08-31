@@ -2,7 +2,7 @@
 from django.utils.translation import ugettext_lazy as _
 
 SALARY_CHOICES = [
-	('all', _('ALL')),
+	('all', _('Choisir.....')),
 	('0', 'SMIC'),
 	('1', '18k'),
 	('2', '20k'),
@@ -25,22 +25,13 @@ SALARY_CHOICES = [
 ]
 
 OFFER_CHOICES = [
-	('all', _('ALL')),
+	('all', _('Choisir.....')),
 	('1', _('Freelance')),
 	('2', _('CDD')),
 	('3', _('CDI')),
 	('4', _('Stage')),
 	('5', _('Interim'))
 ]
-
-# CATEGORY_CHOICES = [('all', _('ALL')), 
-# 	('1', _('Finance')),
-# 	('2', _('Marketing')),
-# 	('3', _('Batiments')),
-# 	('4', _('Immobilier')),
-# 	('5', _('Engineering')),
-# 	('6', _('Informatique'))
-# ]
 
 CATEGORY_CHOICES = [('all', 'Secteur ?'),
 	('1', 'Assurance'),
@@ -90,7 +81,7 @@ CATEGORY_CHOICES = [('all', 'Secteur ?'),
 
 
 REGION_CHOICES = [ 
-	('all', _('ALL')),
+	('all', _('Choisir.....')),
 	('1', _('Nord Pas de Calais')), 
 	('2', _('Picardie')), 
 	('3', _('Haute Normandie')), 
@@ -117,14 +108,14 @@ REGION_CHOICES = [
 
 
 YESNO = [
-	('all', _('ALL')),
+	('all', _('Choisir.....')),
     ('Used', _('Yes')),
     ('New',  _('No'))
 ]
 
 
 DEPARTEMENT_CHOICES = [
-('all', _('ALL')),
+('all', _('Region ?')),
 ('1', 'Ain'),
 ('2', ' Aisne'),
 ('3', ' Allier'),
@@ -134,8 +125,8 @@ DEPARTEMENT_CHOICES = [
 ('7', ' Ardeche'),
 ('8', ' Ardennes'),
 ('9', ' Ariege'),
-('1A', ' Corse-du-Sud'),
-('2A', ' Haute-Corse'),
+('100', ' Corse-du-Sud'),
+('200', ' Haute-Corse'),
 ('10', ' Aube'),
 ('11', ' Aude'),
 ('12', ' Aveyron'),
@@ -224,7 +215,7 @@ DEPARTEMENT_CHOICES = [
 ]
 
 DISPONIBILITY_CHOICES = [
-	('all', _('ALL')),
+	('all', _('Disponobilite ?')),
 	('1', 'immediat'),
 	('2', '1 mois'),
 	('3', '2 mois'),
@@ -233,13 +224,13 @@ DISPONIBILITY_CHOICES = [
 ]
 
 STATUS_CHOICES = [
-	('all', _('ALL')),
+	('all', _('Choisir.....')),
 	('1', 'en poste'),
 	('2', 'preavis en cous ou termine')
 ]
 
 STUDY_LEVEL_CHOICES = [
-('all', _('ALL')),
+('all', _('Choisir.....')),
 	('0', '2nd'),
 	('1', 'BAC'),
 	('2', 'BAC+2'), 
@@ -251,7 +242,7 @@ STUDY_LEVEL_CHOICES = [
 ]
 
 EXPERIENCE_CHOICES = [
-	('all', _('ALL')),
+	('all', _('Choisir.....')),
 	('0', 'debutant'),
 	('1', '6 mois'),
 	('2', '1 ans '),
@@ -263,7 +254,7 @@ EXPERIENCE_CHOICES = [
 ]
 
 PERIOD_CHOICES = [
-	('all', _('ALL')),
+	('all', _('Choisir.....')),
 	('0', 'temps plein'),
 	('1', 'temps partiel')
 ]

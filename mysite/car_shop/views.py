@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response, RequestContext, HttpResponseRed
 from django.utils.translation import ugettext_lazy as _
 
 from car_shop.models import Offer, Setting, Article, UserInfo, EmployerInfo
-from car_shop.forms import Search_Form, OfferForm, EditOfferForm, Text_Search_Form, CustomRegistrationForm, UserInfoForm, CustomRegistrationFormEmp
+from car_shop.forms import Search_Form, OfferForm, EditOfferForm, Text_Search_Form, CustomRegistrationForm, UserInfoForm, CustomRegistrationFormEmp, LoginForm
 from django.http import HttpResponse
 # pagination
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
@@ -21,6 +21,7 @@ from django.contrib import messages
 from django.contrib import auth
 
 from django.core.context_processors import csrf
+from django.utils import translation
 
 def home(request):
     msg         = _('target message') 
@@ -114,7 +115,6 @@ def free_add(request):
                             region          = region, 
                             immediate       = immediate, 
                             description     = description, 
-                            # image           = image, 
                             user            = request.user )
             newcar.save()
 
@@ -149,8 +149,6 @@ def search(request):
     if offer == None : offer = 'all'
     if low_salary == None : low_salary = 'all'
     if high_salary == None : high_salary = 'all'
-
-    # print region, category, offer, low_salary , high_salary   
 
     offers          = Offer.objects.all()
     if region       != "all":   offers = offers.filter(region   = region)
@@ -227,12 +225,9 @@ def car(request, num):
 
     # car.update(views=F('views')+1)
     Offer.objects.filter(id=num).update(views=F('views')+1)
-
     can_edit = False
-
     # if request.user.username == car.user.user.username:
-    if request.user.username == car.user.username:
-        can_edit = True
+    if request.user.username == car.user.username: can_edit = True
 
     return render_to_response('car.html', locals(), context_instance = RequestContext(request))
 
@@ -276,25 +271,16 @@ def contact(request):
     errors = []
     if request.method == 'POST':
         print 'in POST'
-        if not request.POST.get('name', ''):
-            errors.append('Enter a name')
 
-        if not request.POST.get('subject', ''):
-            errors.append('Enter a subject.')
-
-        if not request.POST.get('message', ''):
-            errors.append('Enter a message.')
-
-        if request.POST.get('email') and '@' not in request.POST['email']:
-            errors.append('Enter a valid e-mail address.')
-
+        if not request.POST.get('name', ''): errors.append('Enter a name')
+        if not request.POST.get('subject', ''): errors.append('Enter a subject.')
+        if not request.POST.get('message', ''): errors.append('Enter a message.')
+        if request.POST.get('email') and '@' not in request.POST['email']: errors.append('Enter a valid e-mail address.')
         # create a model to just save contact messages tickets  
-
         if not errors:
             print 'sending message'
             try:
                 send_mail(
-                    
                     #subject
                     request.POST['subject'],
                     #message
@@ -304,9 +290,7 @@ def contact(request):
                     # To [recipient list]
                     ['redatest7@gmail.com'],
                 )
-
                 messages.add_message(request, messages.INFO, 'message sent successflully.')
-
                 # return render_to_response('contact.html', locals(), context_instance = RequestContext(request))
                 return HttpResponseRedirect('/contact')
             except Exception, err:
@@ -316,26 +300,36 @@ def contact(request):
     return render_to_response('contact.html', locals(), context_instance = RequestContext(request))
 
 
-from django.utils import translation
-# profile.language == 'ar'
-
-def set_ar(request):
-    request.session['django_language'] = 'ar'
-    translation.activate('ar')
-    request.LANGUAGE_CODE = 'ar'
-    return HttpResponseRedirect('/')
-
-def set_en(request):
-    request.session['django_language'] = 'en'
-    translation.activate('en')
-    request.LANGUAGE_CODE = 'en'
-    return HttpResponseRedirect('/')
-
 @login_required
 def profile(request):
     usname = request.user.username
     uslname = request.user.last_name
     userinfo = UserInfo.objects.get( user = request.user )
+
+    if request.method == 'POST':
+        print (request.POST)
+        form = UserInfoForm(data=request.POST, instance=userinfo, user=request.user)
+        if form.is_valid():
+            print '#### the form is good #####'
+            form.save()
+            message = messages.add_message(request, messages.INFO, 'données enregistrées avec succée')
+            return HttpResponseRedirect('/profile/')
+        else:
+            print form.errors
+            message = messages.add_message(request, messages.INFO, 'erreur durant la savegarde  ')
+            return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
+
+    else: 
+        # use form initial
+        form = UserInfoForm(instance=userinfo, user=request.user)
+        return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
+
+
+@login_required
+def profileEmp(request):
+    usname = request.user.username
+    uslname = request.user.last_name
+    userinfo = EmployerInfo.objects.get( user = request.user )
 
     if request.method == 'POST':
         print (request.POST)
@@ -377,15 +371,35 @@ def profile_emp(request):
             return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
 
     else: 
-        # use form initial
         form = UserInfoForm(instance=userinfo, user=request.user)
         return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
 
 
 def login(request):
-    c = {}
-    c.update(csrf(request))
+    if request.user.is_authenticated(): return HttpResponseRedirect('/profile/')
+
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+
+            usr = auth.authenticate(username=username, password=password)
+            if usr is not None:
+                    auth.login(request, usr)
+                    return HttpResponseRedirect('/')
+            else:
+                return render_to_response('login.html', {'form': form}, context_instance=RequestContext(request))
+        else:
+            return render_to_response('login.html', {'form': form}, context_instance=RequestContext(request))
+    else:
+        form = LoginForm()
+        context = {'form': form}
+        return render_to_response('login.html', context, context_instance=RequestContext(request))
+
     return render_to_response('login.html', c, context_instance=RequestContext(request))
+
+
 
 def invalid_login(request):
     return render_to_response('invalid_login.html', locals(), context_instance = RequestContext(request))
@@ -398,11 +412,13 @@ def auth_view(request):
 
     if user is not None:
         auth.login(request, user)
-        message = 'Authentification reussie'
-        message = messages.add_message(request, messages.INFO, 'Bienveu')
+        # message = 'Authentification reussie'
+        # message = messages.add_message(request, messages.INFO, 'Bienveu')
         return HttpResponseRedirect('/')
     else:
-        message = messages.add_message(request, messages.INFO, 'Veillez verifier vos données')
+        #message = messages.add_message(request, messages.INFO, 'Veillez verifier vos données')
+        print "locals"
+        print locals()
         return HttpResponseRedirect('/accounts/login')  
 
 def logout(request):
@@ -412,11 +428,14 @@ def logout(request):
 
 
 def register_user(request):
+
+    if request.user.is_authenticated():
+        return HttpResponseRedirect('/profile/')
+
     if request.method == 'POST':
         form = CustomRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-
             #assign data to the custom user
             u = form.instance
             u = UserInfo.objects.get(user = u)
@@ -428,19 +447,15 @@ def register_user(request):
             gr = Group.objects.get(name='candidate')
             # usr = User.objects.get(username=u.username)
             gr.user_set.add(u.user)
-                
             u.save()
-                
-            message = messages.add_message(request, messages.INFO, 'Vous avez été enregistré avec succée')
+            #message = messages.add_message(request, messages.INFO, 'Vous avez été enregistré avec succée')
             return HttpResponseRedirect('/')
         else:
-            print form.errors
+            #message = messages.add_message(request, messages.INFO, 'Vous avez mal saisi les champs')
+            return render_to_response('register.html', locals(), context_instance=RequestContext(request))   
 
-            message = messages.add_message(request, messages.INFO, 'Vous avez mal saisi les champs')
-            return HttpResponseRedirect('/accounts/register')   
-
+    form = CustomRegistrationForm()        
     return render_to_response('register.html', locals(), context_instance=RequestContext(request))      
-
 
 def register_emp(request):
     if request.method == 'POST':
@@ -450,14 +465,10 @@ def register_emp(request):
             #assign data to the custom user
             u = form.instance
             u = EmployerInfo.objects.get(user = u)
+
             # society, phone, postal_code, town, website, presentation
             userFields = 'phone,postal_code,town,website,presentation' # always trim spaces
-            print request.POST
             for key in userFields.split(','): 
-                print key
-                print '----'
-                print request.POST.get(key, '')             
-
                 setattr(u, key, request.POST.get(key, ''))
 
             # set the user in employer user group    
@@ -466,17 +477,29 @@ def register_emp(request):
             gr.user_set.add(u.user)
             u.save()
                 
-            message = messages.add_message(request, messages.INFO, 'Vous avez été enregistré avec succée')
+            #message = messages.add_message(request, messages.INFO, 'Vous avez été enregistré avec succée')
             return HttpResponseRedirect('/')
         else:
-            print form.errors
+            # form = CustomRegistrationFormEmp() 
+            #message = messages.add_message(request, messages.INFO, 'Vous avez mal saisi les champs')
+            return render_to_response('register_emp.html', locals(), context_instance=RequestContext(request)) 
 
-            message = messages.add_message(request, messages.INFO, 'Vous avez mal saisi les champs')
-            return HttpResponseRedirect('/accounts/register_emp')   
-
+    form = CustomRegistrationFormEmp()        
     return render_to_response('register_emp.html', locals(), context_instance=RequestContext(request))      
-
 
 def register_success(request):
     return render_to_response('register_success.html', locals(), context_instance=RequestContext(request))
 
+
+
+def set_ar(request):
+    request.session['django_language'] = 'ar'
+    translation.activate('ar')
+    request.LANGUAGE_CODE = 'ar'
+    return HttpResponseRedirect('/')
+
+def set_en(request):
+    request.session['django_language'] = 'en'
+    translation.activate('en')
+    request.LANGUAGE_CODE = 'en'
+    return HttpResponseRedirect('/')

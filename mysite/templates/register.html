@@ -4,6 +4,25 @@
 
 {% block extra_style %}
   <link rel="stylesheet" href="/static/social.css">      
+  <style type="text/css">
+  .niceform ul.errorlist { float: left;color: #C07D7D; margin: 0px 30px; list-style: none; }
+  .niceform .break { clear: left;margin-left: 200px; }
+  .niceform ul.errorlist li {
+      padding: 5px 3px 4px 10px;
+      position: relative;
+  }
+  .niceform ul.errorlist li:before {
+      content:"";
+      position: absolute;
+      right: 100%;
+      top: 8px;
+      width: 0;
+      height: 0;
+      border-top: 6px solid transparent;
+      border-right: 12px solid rgba(255, 0, 0, 0.4);
+      border-bottom: 6px solid transparent;
+  }
+  </style>
 {% endblock extra_style %}
 
 {% block middlecontent %}
@@ -28,7 +47,7 @@
 
                                     <br>
                                       <!-- second form to hold -->  
-                                    <form class="form-horizontal" method="post" enctype="multipart/form-data" role="form">
+                                    <form class="form-horizontal niceform" method="post" enctype="multipart/form-data" role="form">
                                       {% csrf_token %}
 
                                      <p>Présentation</p>
@@ -38,7 +57,7 @@
                                         <label class="control-label">Prenom</label>
                                         <div class="controls">
                                            <input type="text" id='id_username' name="username" class="span6">
-                                           <span class="help-inline">Supporting help text</span>
+                                           {% if form.username.errors %}  <span class="help-inline">{{ form.username.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
@@ -46,7 +65,7 @@
                                         <label class="control-label">Nom de famille</label>
                                         <div class="controls">
                                            <input type="text" id='id_last_name' name="last_name" class="span6">
-                                           <span class="help-inline">Supporting help text</span>
+                                           {% if form.last_name.errors %}  <span class="help-inline">{{ form.last_name.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
@@ -54,7 +73,7 @@
                                         <label class="control-label">adresse email</label>
                                         <div class="controls">
                                            <input type="text" id='id_email' name='email' class="span6">
-                                           <span class="help-inline">Supporting help text</span>
+                                           {% if form.email.errors %}  <span class="help-inline">{{ form.email.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
@@ -62,7 +81,7 @@
                                         <label class="control-label">mot de passe</label>
                                         <div class="controls">
                                            <input type="password" id='id_password1' name="password1" class="span6">
-                                           <span class="help-inline">Supporting help text</span>
+                                           {% if form.password1.errors %}  <span class="help-inline">{{ form.password1.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
@@ -70,23 +89,23 @@
                                         <label class="control-label">verifier mot de passe</label>
                                         <div class="controls">
                                            <input type="password" id='id_password2' name="password2" class="span6">
-                                           <span class="help-inline">Supporting help text</span>
+                                           {% if form.password2.errors %}  <span class="help-inline">{{ form.password2.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">N° de telephone</label>
                                         <div class="controls">
-                                           <input id="id_telephone" type="text" name="telephone" maxlength="200" placeholder="Telephone" class='span6'>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.telephone }}
+                                           {% if form.telephone.errors %}  <span class="help-inline">{{ form.telephone.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Adresse</label>
                                         <div class="controls">
-                                           <input id="id_adress" type="text" name="adress" maxlength="200" placeholder="Adresse" class='span6'>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.adress }}
+                                           {% if form.adress.errors %}  <span class="help-inline">{{ form.adress.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
@@ -95,534 +114,72 @@
                                      <div class="control-group">
                                         <label class="control-label">Secteur métier 1</label>
                                         <div class="controls">
-                                           <select id="id_sector1" name="sector1">
-                                              <option value="all">Secteur ?</option>
-                                              <option value="1">Assurance</option>
-                                              <option value="2">Banque</option>
-                                              <option value="3">Comptabilité</option>
-                                              <option value="4">Finance</option>
-                                              <option value="5">Informatique</option>
-                                              <option value="6">Telecom</option>
-                                              <option value="7">Juridique</option>
-                                              <option value="8">Ressources Humaines</option>
-                                              <option value="9">Communication</option>
-                                              <option value="10">Distribution</option>
-                                              <option value="11">Marketing</option>
-                                              <option value="12">Bâtiment &amp; Travaux publics</option>
-                                              <option value="13">Immobilier</option>
-                                              <option value="14">Logistique</option>
-                                              <option value="15">Sécurité</option>
-                                              <option value="16">Transport</option>
-                                              <option value="17">Energie &amp; nucléaire</option>
-                                              <option value="18">Industrie</option>
-                                              <option value="19">Agriculture</option>
-                                              <option value="20">Agroalimentaire</option>
-                                              <option value="21">Artisanat</option>
-                                              <option value="22">Energies renouvelables</option>
-                                              <option value="23">Environnement</option>
-                                              <option value="24">R &amp; D</option>
-                                              <option value="25">Luxe</option>
-                                              <option value="26">Mode</option>
-                                              <option value="27">Production</option>
-                                              <option value="28">Audiovisuel</option>
-                                              <option value="29">Culture</option>
-                                              <option value="30">Tourisme</option>
-                                              <option value="31">Biotechnologies</option>
-                                              <option value="32">Santé</option>
-                                              <option value="33">Social</option>
-                                              <option value="34">Animation</option>
-                                              <option value="35">Education</option>
-                                              <option value="36">Humanitaire</option>
-                                              <option value="37">Hôtellerie</option>
-                                              <option value="38">Nettoyage</option>
-                                              <option value="39">Restauration</option>
-                                              <option value="40">International</option>
-                                              <option value="41">Travailleur Handicapé</option>
-                                              <option value="42">Stage (- de 2 mois)</option>
-                                              <option value="43">Stage (2 mois et +)</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.sector1 }}
+                                           {% if form.sector1.errors %}  <span class="help-inline">{{ form.sector1.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Secteur métier 2</label>
                                         <div class="controls">
-                                           <select id="id_sector2" name="sector2">
-                                              <option value="all">Secteur ?</option>
-                                              <option value="1">Assurance</option>
-                                              <option value="2">Banque</option>
-                                              <option value="3">Comptabilité</option>
-                                              <option value="4">Finance</option>
-                                              <option value="5">Informatique</option>
-                                              <option value="6">Telecom</option>
-                                              <option value="7">Juridique</option>
-                                              <option value="8">Ressources Humaines</option>
-                                              <option value="9">Communication</option>
-                                              <option value="10">Distribution</option>
-                                              <option value="11">Marketing</option>
-                                              <option value="12">Bâtiment &amp; Travaux publics</option>
-                                              <option value="13">Immobilier</option>
-                                              <option value="14">Logistique</option>
-                                              <option value="15">Sécurité</option>
-                                              <option value="16">Transport</option>
-                                              <option value="17">Energie &amp; nucléaire</option>
-                                              <option value="18">Industrie</option>
-                                              <option value="19">Agriculture</option>
-                                              <option value="20">Agroalimentaire</option>
-                                              <option value="21">Artisanat</option>
-                                              <option value="22">Energies renouvelables</option>
-                                              <option value="23">Environnement</option>
-                                              <option value="24">R &amp; D</option>
-                                              <option value="25">Luxe</option>
-                                              <option value="26">Mode</option>
-                                              <option value="27">Production</option>
-                                              <option value="28">Audiovisuel</option>
-                                              <option value="29">Culture</option>
-                                              <option value="30">Tourisme</option>
-                                              <option value="31">Biotechnologies</option>
-                                              <option value="32">Santé</option>
-                                              <option value="33">Social</option>
-                                              <option value="34">Animation</option>
-                                              <option value="35">Education</option>
-                                              <option value="36">Humanitaire</option>
-                                              <option value="37">Hôtellerie</option>
-                                              <option value="38">Nettoyage</option>
-                                              <option value="39">Restauration</option>
-                                              <option value="40">International</option>
-                                              <option value="41">Travailleur Handicapé</option>
-                                              <option value="42">Stage (- de 2 mois)</option>
-                                              <option value="43">Stage (2 mois et +)</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.sector2 }}
+                                           {% if form.sector2.errors %}  <span class="help-inline">{{ form.sector2.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Secteur métier 3</label>
                                         <div class="controls">
-                                           <select id="id_sector3" name="sector3" class="span6">
-                                              <option value="all">Secteur ?</option>
-                                              <option value="1">Assurance</option>
-                                              <option value="2">Banque</option>
-                                              <option value="3">Comptabilité</option>
-                                              <option value="4">Finance</option>
-                                              <option value="5">Informatique</option>
-                                              <option value="6">Telecom</option>
-                                              <option value="7">Juridique</option>
-                                              <option value="8">Ressources Humaines</option>
-                                              <option value="9">Communication</option>
-                                              <option value="10">Distribution</option>
-                                              <option value="11">Marketing</option>
-                                              <option value="12">Bâtiment &amp; Travaux publics</option>
-                                              <option value="13">Immobilier</option>
-                                              <option value="14">Logistique</option>
-                                              <option value="15">Sécurité</option>
-                                              <option value="16">Transport</option>
-                                              <option value="17">Energie &amp; nucléaire</option>
-                                              <option value="18">Industrie</option>
-                                              <option value="19">Agriculture</option>
-                                              <option value="20">Agroalimentaire</option>
-                                              <option value="21">Artisanat</option>
-                                              <option value="22">Energies renouvelables</option>
-                                              <option value="23">Environnement</option>
-                                              <option value="24">R &amp; D</option>
-                                              <option value="25">Luxe</option>
-                                              <option value="26">Mode</option>
-                                              <option value="27">Production</option>
-                                              <option value="28">Audiovisuel</option>
-                                              <option value="29">Culture</option>
-                                              <option value="30">Tourisme</option>
-                                              <option value="31">Biotechnologies</option>
-                                              <option value="32">Santé</option>
-                                              <option value="33">Social</option>
-                                              <option value="34">Animation</option>
-                                              <option value="35">Education</option>
-                                              <option value="36">Humanitaire</option>
-                                              <option value="37">Hôtellerie</option>
-                                              <option value="38">Nettoyage</option>
-                                              <option value="39">Restauration</option>
-                                              <option value="40">International</option>
-                                              <option value="41">Travailleur Handicapé</option>
-                                              <option value="42">Stage (- de 2 mois)</option>
-                                              <option value="43">Stage (2 mois et +)</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.sector3 }}
+                                           {% if form.sector3.errors %}  <span class="help-inline">{{ form.sector3.errors }}</span> {% endif %}
                                         </div>
                                      </div>
-
+                                      
                                      <div class="control-group">
                                         <label class="control-label">Mobibilité 1</label>
                                         <div class="controls">
-                                           <select name="mobility1" id="id_mobibility1">
-                                              <option value="all">Département ?</option>
-                                              <option value="01">01 -  Ain</option>
-                                              <option value="02">02 -  Aisne</option>
-                                              <option value="03">03 -  Allier</option>
-                                              <option value="04">04 -  Alpes de Hautes-Provence</option>
-                                              <option value="05">05 -  Hautes-Alpes</option>
-                                              <option value="06">06 -  Alpes-Maritimes</option>
-                                              <option value="07">07 -  Ardèche</option>
-                                              <option value="08">08 -  Ardennes</option>
-                                              <option value="09">09 -  Ariège</option>
-                                              <option value="2A">2A -  Corse-du-Sud</option>
-                                              <option value="2B">2B -  Haute-Corse</option>
-                                              <option value="10">10 -  Aube</option>
-                                              <option value="11">11 -  Aude</option>
-                                              <option value="12">12 -  Aveyron</option>
-                                              <option value="13">13 -  Bouches-du-Rhône</option>
-                                              <option value="14">14 -  Calvados</option>
-                                              <option value="15">15 -  Cantal</option>
-                                              <option value="16">16 -  Charente</option>
-                                              <option value="17">17 -  Charente-Maritime</option>
-                                              <option value="18">18 -  Cher</option>
-                                              <option value="19">19 -  Corrèze</option>
-                                              <option value="21">21 -  Côte-d'Or</option>
-                                              <option value="22">22 -  Côtes d'Armor</option>
-                                              <option value="23">23 -  Creuse</option>
-                                              <option value="24">24 -  Dordogne</option>
-                                              <option value="25">25 -  Doubs</option>
-                                              <option value="26">26 -  Drôme</option>
-                                              <option value="27">27 -  Eure</option>
-                                              <option value="28">28 -  Eure-et-Loir</option>
-                                              <option value="29">29 -  Finistère</option>
-                                              <option value="30">30 -  Gard</option>
-                                              <option value="31">31 -  Haute-Garonne</option>
-                                              <option value="32">32 -  Gers</option>
-                                              <option value="33">33 -  Gironde</option>
-                                              <option value="34">34 -  Hérault</option>
-                                              <option value="35">35 -  Ille-et-Vilaine</option>
-                                              <option value="36">36 -  Indre</option>
-                                              <option value="37">37 -  Indre-et-Loire</option>
-                                              <option value="38">38 -  Isère</option>
-                                              <option value="39">39 -  Jura</option>
-                                              <option value="40">40 -  Landes</option>
-                                              <option value="41">41 -  Loir-et-Cher</option>
-                                              <option value="42">42 -  Loire</option>
-                                              <option value="43">43 -  Haute-Loire</option>
-                                              <option value="44">44 -  Loire-Atlantique</option>
-                                              <option value="45">45 -  Loiret</option>
-                                              <option value="46">46 -  Lot</option>
-                                              <option value="47">47 -  Lot-et-Garonne</option>
-                                              <option value="48">48 -  Lozère</option>
-                                              <option value="49">49 -  Maine-et-Loire</option>
-                                              <option value="50">50 -  Manche</option>
-                                              <option value="51">51 -  Marne</option>
-                                              <option value="52">52 -  Haute-Marne</option>
-                                              <option value="53">53 -  Mayenne</option>
-                                              <option value="54">54 -  Meurthe-et-Moselle</option>
-                                              <option value="55">55 -  Meuse</option>
-                                              <option value="56">56 -  Morbihan</option>
-                                              <option value="57">57 -  Moselle</option>
-                                              <option value="58">58 -  Nièvre</option>
-                                              <option value="59">59 -  Nord</option>
-                                              <option value="60">60 -  Oise</option>
-                                              <option value="61">61 -  Orne</option>
-                                              <option value="62">62 -  Pas-de-Calais</option>
-                                              <option value="63">63 -  Puy-de-Dôme</option>
-                                              <option value="64">64 -  Pyrénées-Atlantiques</option>
-                                              <option value="65">65 -  Hautes-Pyrénées</option>
-                                              <option value="66">66 -  Pyrénées-Orientales</option>
-                                              <option value="67">67 -  Bas-Rhin</option>
-                                              <option value="68">68 -  Haut-Rhin</option>
-                                              <option value="69">69 -  Rhône</option>
-                                              <option value="70">70 -  Haute-Saône</option>
-                                              <option value="71">71 -  Saône-et-Loire</option>
-                                              <option value="72">72 -  Sarthe</option>
-                                              <option value="73">73 -  Savoie</option>
-                                              <option value="74">74 -  Haute-Savoie</option>
-                                              <option value="75">75 -  Paris</option>
-                                              <option value="76">76 -  Seine-Maritime</option>
-                                              <option value="77">77 -  Seine et Marne</option>
-                                              <option value="78">78 -  Yvelines</option>
-                                              <option value="79">79 -  Deux-Sèvres</option>
-                                              <option value="80">80 -  Somme</option>
-                                              <option value="81">81 -  Tarn</option>
-                                              <option value="82">82 -  Tarn-et-Garonne</option>
-                                              <option value="83">83 -  Var</option>
-                                              <option value="84">84 -  Vaucluse</option>
-                                              <option value="85">85 -  Vendée</option>
-                                              <option value="86">86 -  Vienne</option>
-                                              <option value="87">87 -  Haute-Vienne</option>
-                                              <option value="88">88 -  Vosges</option>
-                                              <option value="89">89 -  Yonne</option>
-                                              <option value="90">90 -  Territoire-de-Belfort</option>
-                                              <option value="91">91 -  Essonne</option>
-                                              <option value="92">92 -  Hauts de Seine</option>
-                                              <option value="93">93 -  Seine Saint Denis</option>
-                                              <option value="94">94 -  Val de Marne</option>
-                                              <option value="95">95 -  Val d'Oise</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.mobility1 }}
+                                           {% if form.mobility1.errors %}  <span class="help-inline">{{ form.mobility1.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Mobibilité 2</label>
                                         <div class="controls">
-                                           <select name="mobility2" id="id_mobibility2">
-                                              <option value="">  Département ?</option>
-                                              <option value="-1">-1 -</option>
-                                              <option value="01">01 -  Ain</option>
-                                              <option value="02">02 -  Aisne</option>
-                                              <option value="03">03 -  Allier</option>
-                                              <option value="04">04 -  Alpes de Hautes-Provence</option>
-                                              <option value="05">05 -  Hautes-Alpes</option>
-                                              <option value="06">06 -  Alpes-Maritimes</option>
-                                              <option value="07">07 -  Ardèche</option>
-                                              <option value="08">08 -  Ardennes</option>
-                                              <option value="09">09 -  Ariège</option>
-                                              <option value="2A">2A -  Corse-du-Sud</option>
-                                              <option value="2B">2B -  Haute-Corse</option>
-                                              <option value="10">10 -  Aube</option>
-                                              <option value="11">11 -  Aude</option>
-                                              <option value="12">12 -  Aveyron</option>
-                                              <option value="13">13 -  Bouches-du-Rhône</option>
-                                              <option value="14">14 -  Calvados</option>
-                                              <option value="15">15 -  Cantal</option>
-                                              <option value="16">16 -  Charente</option>
-                                              <option value="17">17 -  Charente-Maritime</option>
-                                              <option value="18">18 -  Cher</option>
-                                              <option value="19">19 -  Corrèze</option>
-                                              <option value="21">21 -  Côte-d'Or</option>
-                                              <option value="22">22 -  Côtes d'Armor</option>
-                                              <option value="23">23 -  Creuse</option>
-                                              <option value="24">24 -  Dordogne</option>
-                                              <option value="25">25 -  Doubs</option>
-                                              <option value="26">26 -  Drôme</option>
-                                              <option value="27">27 -  Eure</option>
-                                              <option value="28">28 -  Eure-et-Loir</option>
-                                              <option value="29">29 -  Finistère</option>
-                                              <option value="30">30 -  Gard</option>
-                                              <option value="31">31 -  Haute-Garonne</option>
-                                              <option value="32">32 -  Gers</option>
-                                              <option value="33">33 -  Gironde</option>
-                                              <option value="34">34 -  Hérault</option>
-                                              <option value="35">35 -  Ille-et-Vilaine</option>
-                                              <option value="36">36 -  Indre</option>
-                                              <option value="37">37 -  Indre-et-Loire</option>
-                                              <option value="38">38 -  Isère</option>
-                                              <option value="39">39 -  Jura</option>
-                                              <option value="40">40 -  Landes</option>
-                                              <option value="41">41 -  Loir-et-Cher</option>
-                                              <option value="42">42 -  Loire</option>
-                                              <option value="43">43 -  Haute-Loire</option>
-                                              <option value="44">44 -  Loire-Atlantique</option>
-                                              <option value="45">45 -  Loiret</option>
-                                              <option value="46">46 -  Lot</option>
-                                              <option value="47">47 -  Lot-et-Garonne</option>
-                                              <option value="48">48 -  Lozère</option>
-                                              <option value="49">49 -  Maine-et-Loire</option>
-                                              <option value="50">50 -  Manche</option>
-                                              <option value="51">51 -  Marne</option>
-                                              <option value="52">52 -  Haute-Marne</option>
-                                              <option value="53">53 -  Mayenne</option>
-                                              <option value="54">54 -  Meurthe-et-Moselle</option>
-                                              <option value="55">55 -  Meuse</option>
-                                              <option value="56">56 -  Morbihan</option>
-                                              <option value="57">57 -  Moselle</option>
-                                              <option value="58">58 -  Nièvre</option>
-                                              <option value="59">59 -  Nord</option>
-                                              <option value="60">60 -  Oise</option>
-                                              <option value="61">61 -  Orne</option>
-                                              <option value="62">62 -  Pas-de-Calais</option>
-                                              <option value="63">63 -  Puy-de-Dôme</option>
-                                              <option value="64">64 -  Pyrénées-Atlantiques</option>
-                                              <option value="65">65 -  Hautes-Pyrénées</option>
-                                              <option value="66">66 -  Pyrénées-Orientales</option>
-                                              <option value="67">67 -  Bas-Rhin</option>
-                                              <option value="68">68 -  Haut-Rhin</option>
-                                              <option value="69">69 -  Rhône</option>
-                                              <option value="70">70 -  Haute-Saône</option>
-                                              <option value="71">71 -  Saône-et-Loire</option>
-                                              <option value="72">72 -  Sarthe</option>
-                                              <option value="73">73 -  Savoie</option>
-                                              <option value="74">74 -  Haute-Savoie</option>
-                                              <option value="75">75 -  Paris</option>
-                                              <option value="76">76 -  Seine-Maritime</option>
-                                              <option value="77">77 -  Seine et Marne</option>
-                                              <option value="78">78 -  Yvelines</option>
-                                              <option value="79">79 -  Deux-Sèvres</option>
-                                              <option value="80">80 -  Somme</option>
-                                              <option value="81">81 -  Tarn</option>
-                                              <option value="82">82 -  Tarn-et-Garonne</option>
-                                              <option value="83">83 -  Var</option>
-                                              <option value="84">84 -  Vaucluse</option>
-                                              <option value="85">85 -  Vendée</option>
-                                              <option value="86">86 -  Vienne</option>
-                                              <option value="87">87 -  Haute-Vienne</option>
-                                              <option value="88">88 -  Vosges</option>
-                                              <option value="89">89 -  Yonne</option>
-                                              <option value="90">90 -  Territoire-de-Belfort</option>
-                                              <option value="91">91 -  Essonne</option>
-                                              <option value="92">92 -  Hauts de Seine</option>
-                                              <option value="93">93 -  Seine Saint Denis</option>
-                                              <option value="94">94 -  Val de Marne</option>
-                                              <option value="95">95 -  Val d'Oise</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                              {{ form.mobility2 }}
+                                           {% if form.mobility2.errors %}  <span class="help-inline">{{ form.mobility2.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Mobibilité 3</label>
                                         <div class="controls">
-                                           <select name="mobility3" id="id_mobibility3">
-                                              <option value="">  Département ?</option>
-                                              <option value="-1">-1 -</option>
-                                              <option value="01">01 -  Ain</option>
-                                              <option value="02">02 -  Aisne</option>
-                                              <option value="03">03 -  Allier</option>
-                                              <option value="04">04 -  Alpes de Hautes-Provence</option>
-                                              <option value="05">05 -  Hautes-Alpes</option>
-                                              <option value="06">06 -  Alpes-Maritimes</option>
-                                              <option value="07">07 -  Ardèche</option>
-                                              <option value="08">08 -  Ardennes</option>
-                                              <option value="09">09 -  Ariège</option>
-                                              <option value="2A">2A -  Corse-du-Sud</option>
-                                              <option value="2B">2B -  Haute-Corse</option>
-                                              <option value="10">10 -  Aube</option>
-                                              <option value="11">11 -  Aude</option>
-                                              <option value="12">12 -  Aveyron</option>
-                                              <option value="13">13 -  Bouches-du-Rhône</option>
-                                              <option value="14">14 -  Calvados</option>
-                                              <option value="15">15 -  Cantal</option>
-                                              <option value="16">16 -  Charente</option>
-                                              <option value="17">17 -  Charente-Maritime</option>
-                                              <option value="18">18 -  Cher</option>
-                                              <option value="19">19 -  Corrèze</option>
-                                              <option value="21">21 -  Côte-d'Or</option>
-                                              <option value="22">22 -  Côtes d'Armor</option>
-                                              <option value="23">23 -  Creuse</option>
-                                              <option value="24">24 -  Dordogne</option>
-                                              <option value="25">25 -  Doubs</option>
-                                              <option value="26">26 -  Drôme</option>
-                                              <option value="27">27 -  Eure</option>
-                                              <option value="28">28 -  Eure-et-Loir</option>
-                                              <option value="29">29 -  Finistère</option>
-                                              <option value="30">30 -  Gard</option>
-                                              <option value="31">31 -  Haute-Garonne</option>
-                                              <option value="32">32 -  Gers</option>
-                                              <option value="33">33 -  Gironde</option>
-                                              <option value="34">34 -  Hérault</option>
-                                              <option value="35">35 -  Ille-et-Vilaine</option>
-                                              <option value="36">36 -  Indre</option>
-                                              <option value="37">37 -  Indre-et-Loire</option>
-                                              <option value="38">38 -  Isère</option>
-                                              <option value="39">39 -  Jura</option>
-                                              <option value="40">40 -  Landes</option>
-                                              <option value="41">41 -  Loir-et-Cher</option>
-                                              <option value="42">42 -  Loire</option>
-                                              <option value="43">43 -  Haute-Loire</option>
-                                              <option value="44">44 -  Loire-Atlantique</option>
-                                              <option value="45">45 -  Loiret</option>
-                                              <option value="46">46 -  Lot</option>
-                                              <option value="47">47 -  Lot-et-Garonne</option>
-                                              <option value="48">48 -  Lozère</option>
-                                              <option value="49">49 -  Maine-et-Loire</option>
-                                              <option value="50">50 -  Manche</option>
-                                              <option value="51">51 -  Marne</option>
-                                              <option value="52">52 -  Haute-Marne</option>
-                                              <option value="53">53 -  Mayenne</option>
-                                              <option value="54">54 -  Meurthe-et-Moselle</option>
-                                              <option value="55">55 -  Meuse</option>
-                                              <option value="56">56 -  Morbihan</option>
-                                              <option value="57">57 -  Moselle</option>
-                                              <option value="58">58 -  Nièvre</option>
-                                              <option value="59">59 -  Nord</option>
-                                              <option value="60">60 -  Oise</option>
-                                              <option value="61">61 -  Orne</option>
-                                              <option value="62">62 -  Pas-de-Calais</option>
-                                              <option value="63">63 -  Puy-de-Dôme</option>
-                                              <option value="64">64 -  Pyrénées-Atlantiques</option>
-                                              <option value="65">65 -  Hautes-Pyrénées</option>
-                                              <option value="66">66 -  Pyrénées-Orientales</option>
-                                              <option value="67">67 -  Bas-Rhin</option>
-                                              <option value="68">68 -  Haut-Rhin</option>
-                                              <option value="69">69 -  Rhône</option>
-                                              <option value="70">70 -  Haute-Saône</option>
-                                              <option value="71">71 -  Saône-et-Loire</option>
-                                              <option value="72">72 -  Sarthe</option>
-                                              <option value="73">73 -  Savoie</option>
-                                              <option value="74">74 -  Haute-Savoie</option>
-                                              <option value="75">75 -  Paris</option>
-                                              <option value="76">76 -  Seine-Maritime</option>
-                                              <option value="77">77 -  Seine et Marne</option>
-                                              <option value="78">78 -  Yvelines</option>
-                                              <option value="79">79 -  Deux-Sèvres</option>
-                                              <option value="80">80 -  Somme</option>
-                                              <option value="81">81 -  Tarn</option>
-                                              <option value="82">82 -  Tarn-et-Garonne</option>
-                                              <option value="83">83 -  Var</option>
-                                              <option value="84">84 -  Vaucluse</option>
-                                              <option value="85">85 -  Vendée</option>
-                                              <option value="86">86 -  Vienne</option>
-                                              <option value="87">87 -  Haute-Vienne</option>
-                                              <option value="88">88 -  Vosges</option>
-                                              <option value="89">89 -  Yonne</option>
-                                              <option value="90">90 -  Territoire-de-Belfort</option>
-                                              <option value="91">91 -  Essonne</option>
-                                              <option value="92">92 -  Hauts de Seine</option>
-                                              <option value="93">93 -  Seine Saint Denis</option>
-                                              <option value="94">94 -  Val de Marne</option>
-                                              <option value="95">95 -  Val d'Oise</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.mobility3 }}
+                                           {% if form.mobility3.errors %}  <span class="help-inline">{{ form.mobility3.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Disponibilé</label>
                                         <div class="controls">
-                                           <select id="id_disponibilty" name="disponibility" class="span6">
-                                              <option value="">   Choisir ?</option>
-                                              <option value="0">Immediat</option>
-                                              <option value="1">1 mois</option>
-                                              <option value="2">2 mois</option>
-                                              <option value="3">3 mois</option>
-                                              <option value="4">3 mois et plus</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.disponibility }}
+                                           {% if form.disponibility.errors %}  <span class="help-inline">{{ form.disponibility.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Status</label>
                                         <div class="controls">
-                                           <select id="id_status" name="status" class="span6">
-                                              <option value="">   Choisir ?</option>
-                                              <option value="0">En postz</option>
-                                              <option value="1">Préavis en cous ou terminé</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.status }}
+                                           {% if form.status.errors %}  <span class="help-inline">{{ form.status.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Niveau de salaire</label>
                                         <div class="controls">
-                                           <select id="id_salary" name="salary" class="span6">
-                                              <option value="">   Choisir ?</option>
-                                              <option value="0">SMIC</option>
-                                              <option value="1">18k</option>
-                                              <option value="2">20k</option>
-                                              <option value="3">22k</option>
-                                              <option value="4">24k</option>
-                                              <option value="5">26k</option>
-                                              <option value="6">28k</option>
-                                              <option value="7">30k</option>
-                                              <option value="8">32k</option>
-                                              <option value="9">34k</option>
-                                              <option value="10">36k</option>
-                                              <option value="11">38k</option>
-                                              <option value="12">40k</option>
-                                              <option value="13">42k</option>
-                                              <option value="14">44k</option>
-                                              <option value="15">46k</option>
-                                              <option value="16">48k</option>
-                                              <option value="17">50k ey plus</option>
-                                            </select>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.salary }}
+                                           {% if form.salary.errors %}  <span class="help-inline">{{ form.salary.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
@@ -633,67 +190,32 @@
                                      <div class="control-group">
                                         <label class="control-label">Niveau d'études</label>
                                         <div class="controls">
-                                           <select id="id_stady_level" name="study_level" class="span6">
-                                              <option value="">   Choisir ?</option>
-                                              <option value="0">2nd</option>
-                                              <option value="1">BAC</option>
-                                              <option value="2">BAC+2</option>
-                                              <option value="3">BAC+3</option>
-                                              <option value="4">BAC+4</option>
-                                              <option value="5">BAC+ et plus</option>
-                                              <option value="6">BEPC</option>
-                                              <option value="7">CAP/BEP</option>
-                                            </select>
-
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.study_level }}
+                                           {% if form.study_level.errors %}  <span class="help-inline">{{ form.study_level.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Experience</label>
                                         <div class="controls">
-                                           <select id="id_experience" name="experience" class="span6">
-                                              <option value="">   Choisir ?</option>
-                                              <option value="0">Debutant</option>  <!-- corriger ca dans model_choices --> 
-                                              <option value="1">6 mois</option>
-                                              <option value="2">1 an</option>
-                                              <option value="3">2 ans</option>
-                                              <option value="4">3 ans</option>
-                                              <option value="5">4 ans</option>
-                                              <option value="6">5 à 10 ans</option>
-                                              <option value="7">10 ans et plus</option>
-                                            </select>
-                                            
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.experience }}
+                                           {% if form.experience.errors %}  <span class="help-inline">{{ form.experience.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Contrat</label>
                                         <div class="controls">
-                                           <select id="id_contrat" name="contract" class="span6">
-                                              <option value="all">   Choisir ?</option>
-                                              <option value="0">Freelance</option>  <!-- corriger ca dans model_choices --> 
-                                              <option value="1">CDI</option>
-                                              <option value="2">CDD</option>
-                                              <option value="3">Stage</option>
-                                              <option value="4">Interim</option>
-                                            </select>
-                                            
-                                           <span class="help-inline">Supporting help text</span>
+                                            {{ form.contract }}
+                                           {% if form.contract.errors %}  <span class="help-inline">{{ form.contract.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
                                      <div class="control-group">
                                         <label class="control-label">Durée</label>
                                         <div class="controls">
-                                           <select id="id_period" name="period" class="span6">
-                                              <option value="all">   Choisir ?</option>
-                                              <option value="0">Temps plain</option>  <!-- corriger ca dans model_choices --> 
-                                              <option value="1">Temps partiel</option>
-                                            </select>
-                                            
-                                           <span class="help-inline">Supporting help text</span>
+                                           {{ form.period }}
+                                           {% if form.period.errors %}  <span class="help-inline">{{ form.period.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 
@@ -706,7 +228,7 @@
                                         <label class="control-label">Langues</label>
                                         <div class="controls">
                                            <input id="id_languages" type="text" name="languages" maxlength="200" placeholder="languages" class='span6'>
-                                           <span class="help-inline">Supporting help text</span>
+                                           {% if form.languages.errors %}  <span class="help-inline">{{ form.languages.errors }}</span> {% endif %}
                                         </div>
                                      </div>
 

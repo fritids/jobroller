@@ -142,26 +142,25 @@
 
         <div class="sign">
 
-          {% if user|in_group:"employer" %}
-            <li>
+          {% if user|in_group:"candidate" %}
+            <li> 
                 <a href="/profile">{% trans "Profile" %} : {{ request.user.username }}</a>
             </li>
             {% else %}
-
             <li>
-                <a href="/profile_emp">{% trans "Profile" %} : {{ request.user.username }}</a>
+                <a href="/profileEmp">{% trans "Profile" %} : {{ request.user.username }}</a>
             </li>
 
           {% endif %}
 
-            
-            <li>
-                <a href="/accounts/logout/">{% trans "Deconnexion" %}</a>
-            </li>
+                <li>
+                    <a href="/accounts/logout/">{% trans "Deconnexion" %}</a>
+                </li>
             {% if request.user.is_superuser %}
                 <li>
                     <a href="/admin/">{% trans "Administration" %}</a>
                 </li>
+                
             {% endif %}
 
         </div>

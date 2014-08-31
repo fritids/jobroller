@@ -128,19 +128,19 @@ class UserInfo(models.Model):
     sector2       = models.IntegerField(choices=CATEGORY_CHOICES, null=True, blank=True,default="1")
     sector3       = models.IntegerField(choices=CATEGORY_CHOICES, null=True, blank=True, default="1")
     
-    mobility1     = models.IntegerField(choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
+    mobility1     = models.IntegerField(choices=DEPARTEMENT_CHOICES ,default="1")
     mobility2     = models.IntegerField(choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
     mobility3     = models.IntegerField(choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
     
-    disponibility = models.IntegerField(choices=DISPONIBILITY_CHOICES, null=True, blank=True , default="1")
+    disponibility = models.IntegerField(choices=DISPONIBILITY_CHOICES, default="2")
     
-    status        = models.IntegerField(choices=STATUS_CHOICES, null=True, blank=True, default="1") 
-    salary        = models.IntegerField(choices=SALARY_CHOICES, null=True, blank=True, default="1") 
+    status        = models.IntegerField(choices=STATUS_CHOICES, null=True, blank=True) 
+    salary        = models.IntegerField(choices=SALARY_CHOICES,default="1") 
     
-    study_level   = models.IntegerField(choices=STUDY_LEVEL_CHOICES, null=True, blank=True , default="1") 
-    experience    = models.IntegerField(choices=EXPERIENCE_CHOICES, null=True, blank=True, default="1") 
-    contract      = models.IntegerField(choices=OFFER_CHOICES, null=True, blank=True, default="1") 
-    period        = models.IntegerField(choices=PERIOD_CHOICES, null=True, blank=True, default="1") 
+    study_level   = models.IntegerField(choices=STUDY_LEVEL_CHOICES, null=True, blank=True) 
+    experience    = models.IntegerField(default="1") 
+    contract      = models.IntegerField(default="1") 
+    period        = models.IntegerField(default="1") 
     
     languages     = models.CharField(max_length=200, null=True, blank=True, default="1")
 
@@ -148,12 +148,12 @@ class EmployerInfo(models.Model):
     user        = models.ForeignKey(User)
     created_at  = models.DateTimeField(auto_now_add=True)
 
-    society      = models.CharField(max_length=200)
+    society      = models.CharField(max_length=200, null=True, blank=True)
     phone        = models.CharField(max_length=200, null=True, blank=True)
     postal_code  = models.CharField(max_length=200, null=True, blank=True)
     town         = models.CharField(max_length=200, null=True, blank=True)
     website      = models.CharField(max_length=200, null=True, blank=True)
-    presentation = models.CharField(max_length=200, null=True, blank=True)
+    presentation = models.TextField(null=True, blank=True)
 
     # user , created_at, society, phone, postal_code, town, website, presentation
 

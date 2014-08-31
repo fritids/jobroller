@@ -11278,3 +11278,1329 @@ NameError: global name 'force_unicode' is not defined
 2014-08-28 14:37:00,264 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-08-28 18:02:57,755 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-08-28 18:02:59,765 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:19:49,820 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:19:50,136 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:19:53,535 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 8, in <module>
+    from car_shop.views 			import get_pagination_page, land_page_pagination
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 388
+    if request.method == 'POST':
+                               ^
+IndentationError: unindent does not match any outer indentation level
+2014-08-31 13:21:48,086 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 390
+    if form.is_valid():
+   ^
+IndentationError: unexpected indent
+2014-08-31 13:22:38,406 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 101, in get_response
+    request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 300, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 209, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 216, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 27, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 92, in get_callable
+    lookup_view = getattr(import_module(mod_name), func_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 394
+    if drinker is not None:
+   ^
+IndentationError: unexpected indent
+2014-08-31 13:22:55,896 - django.request - ERROR - Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 403, in login
+    form = LoginForm()
+NameError: global name 'LoginForm' is not defined
+2014-08-31 13:23:12,569 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:23:36,161 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:27:25,595 - django.request - ERROR - Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 395, in login
+    usr = authenticate(username=username, password=password)
+NameError: global name 'authenticate' is not defined
+2014-08-31 13:29:23,386 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:30:03,869 - django.request - ERROR - Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 338, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-08-31 13:30:49,727 - django.request - ERROR - Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 338, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-08-31 13:31:34,207 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:32:02,864 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:33:25,087 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:35:05,542 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:35:25,067 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:36:33,182 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:36:38,841 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:36:39,130 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:37:37,147 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:38:28,031 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:41:23,243 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 13:44:09,053 - django.request - ERROR - Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 20
+    for k, field in self.fields.items()
+   ^
+IndentationError: unexpected indent
+2014-08-31 13:44:21,196 - django.request - ERROR - Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 11, in <module>
+    admin.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/admin.py", line 3, in <module>
+    from car_shop.forms import ArticleAdminForm
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 20
+    for k, field in self.fields.items()
+                                      ^
+SyntaxError: invalid syntax
+2014-08-31 13:45:07,954 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:02:44,196 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 462, in register_user
+    u.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 529, in save_base
+    rows = manager.using(using).filter(pk=pk_val)._update(values)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 557, in _update
+    return query.get_compiler(self.db).execute_sql(None)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 986, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 808, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 951, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 292, in get_db_prep_save
+    prepared=False)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 284, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '2B'
+2014-08-31 14:06:14,757 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:09:53,556 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:10:11,855 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 470, in register_user
+    return render_to_response('/accounts/register', locals(), context_instance=RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: /accounts/register
+2014-08-31 14:10:26,270 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:12:02,751 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:13:08,891 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:23:25,966 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:23:40,164 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 84
+    super(CustomRegistrationForm,self).__init__(*args, **kwargs)
+        ^
+IndentationError: expected an indented block
+2014-08-31 14:24:03,733 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:28:44,255 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:30:18,681 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:31:16,599 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:32:21,579 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:39:27,298 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:39:49,966 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:39:50,254 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 14:41:21,447 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 452, in register_user
+    form.save()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 80, in save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 565, in save_base
+    created=(not record_exists), raw=raw, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 172, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/models.py", line 171, in create_info_user
+    UserInfo(user = instance).save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1576, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 910, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: car_shop_userinfo.mobility1 may not be NULL
+2014-08-31 14:41:28,742 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:02:00,162 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:02:33,864 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:02:43,321 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:03:50,376 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:08:37,901 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:09:06,740 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:09:54,617 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:11:17,788 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:11:34,338 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:12:07,193 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:12:09,554 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:12:31,122 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:16:00,779 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:18:20,047 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 64, in <module>
+    class CustomRegistrationForm(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 71, in CustomRegistrationForm
+    mobility1			= forms.ChoiceField(label="Region", choices=DISPONOBILITY_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
+NameError: name 'DISPONOBILITY_CHOICES' is not defined
+2014-08-31 15:19:04,232 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:20:45,615 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:21:35,017 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 64, in <module>
+    class CustomRegistrationForm(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 72, in CustomRegistrationForm
+    disponibility		= forms.ChoiceField(label="disponibilite", choices=DISPONIBILITY_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
+NameError: name 'DISPONIBILITY_CHOICES' is not defined
+2014-08-31 15:22:45,273 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:24:17,498 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:29:52,411 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 64, in <module>
+    class CustomRegistrationForm(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 78, in CustomRegistrationForm
+    contract			= forms.ChoiceField(label="contract", 		choices=CONTRACT_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
+NameError: name 'CONTRACT_CHOICES' is not defined
+2014-08-31 15:45:14,257 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:48:24,668 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:50:37,462 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 15:52:08,074 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 452, in register_user
+    form.save()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 99, in save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 565, in save_base
+    created=(not record_exists), raw=raw, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 172, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/models.py", line 171, in create_info_user
+    UserInfo(user = instance).save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1576, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 910, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: car_shop_userinfo.mobility1 may not be NULL
+2014-08-31 15:54:28,954 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 452, in register_user
+    form.save()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 99, in save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 565, in save_base
+    created=(not record_exists), raw=raw, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 172, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/models.py", line 171, in create_info_user
+    UserInfo(user = instance).save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1576, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 910, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: car_shop_userinfo.mobility1 may not be NULL
+2014-08-31 15:59:02,707 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 452, in register_user
+    form.save()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 99, in save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 565, in save_base
+    created=(not record_exists), raw=raw, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 172, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/models.py", line 171, in create_info_user
+    UserInfo(user = instance).save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1576, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 910, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: car_shop_userinfo.mobility1 may not be NULL
+2014-08-31 16:05:55,207 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:06:05,099 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 74
+    mobility1 			= forms.ChoiceField(label="mobilite1", 		choices=REGION_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}), initial= 'all'))
+             			                                       		                                                                                                      ^
+SyntaxError: invalid syntax
+2014-08-31 16:06:34,952 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 11, in <module>
+    admin.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/admin.py", line 3, in <module>
+    from car_shop.forms import ArticleAdminForm
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 74
+    mobility1 			= forms.ChoiceField(label="mobilite1", 		choices=REGION_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}), initial= '1'))
+             			                                       		                                                                                                    ^
+SyntaxError: invalid syntax
+2014-08-31 16:06:45,363 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 11, in <module>
+    admin.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/admin.py", line 3, in <module>
+    from car_shop.forms import ArticleAdminForm
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 74
+    mobility1 			= forms.ChoiceField(label="mobilite1", 		choices=REGION_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}), initial= 'All'))
+             			                                       		                                                                                                      ^
+SyntaxError: invalid syntax
+2014-08-31 16:06:47,123 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 11, in <module>
+    admin.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/admin.py", line 3, in <module>
+    from car_shop.forms import ArticleAdminForm
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 74
+    mobility1 			= forms.ChoiceField(label="mobilite1", 		choices=REGION_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}), initial= 'All'))
+             			                                       		                                                                                                      ^
+SyntaxError: invalid syntax
+2014-08-31 16:07:16,593 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 11, in <module>
+    admin.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/admin.py", line 3, in <module>
+    from car_shop.forms import ArticleAdminForm
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 74
+    mobility1 			= forms.ChoiceField(label="mobilite1", 		choices=REGION_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}) initial= 'all')
+             			                                       		                                                                                            ^
+SyntaxError: invalid syntax
+2014-08-31 16:07:39,670 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:08:12,496 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:09:32,629 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:09:41,265 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:09:51,748 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:10:14,724 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:10:15,014 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:10:57,319 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 452, in register_user
+    form.save()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 99, in save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 565, in save_base
+    created=(not record_exists), raw=raw, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 172, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/models.py", line 171, in create_info_user
+    UserInfo(user = instance).save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1576, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 910, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: car_shop_userinfo.salary may not be NULL
+2014-08-31 16:11:58,489 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:12:55,423 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 452, in register_user
+    form.save()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 99, in save
+    user.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 565, in save_base
+    created=(not record_exists), raw=raw, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/dispatch/dispatcher.py", line 172, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/models.py", line 171, in create_info_user
+    UserInfo(user = instance).save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1576, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 910, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: car_shop_userinfo.salary may not be NULL
+2014-08-31 16:13:24,486 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:13:24,780 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:13:51,384 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:14:00,335 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:14:20,409 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:14:20,698 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:15:00,611 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 462, in register_user
+    gr = Group.objects.get(name='candidate')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Group matching query does not exist.
+2014-08-31 16:16:50,440 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 466, in register_user
+    u.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 529, in save_base
+    rows = manager.using(using).filter(pk=pk_val)._update(values)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 557, in _update
+    return query.get_compiler(self.db).execute_sql(None)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 986, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 808, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 951, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 292, in get_db_prep_save
+    prepared=False)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 284, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'all'
+2014-08-31 16:20:19,110 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:21:43,859 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 92
+    data = self.cleaned_data.get('mobility1')
+       ^
+IndentationError: expected an indented block
+2014-08-31 16:24:45,306 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:26:44,763 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:28:03,969 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:28:26,972 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 466, in register_user
+    u.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 529, in save_base
+    rows = manager.using(using).filter(pk=pk_val)._update(values)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 557, in _update
+    return query.get_compiler(self.db).execute_sql(None)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 986, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 808, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 951, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 292, in get_db_prep_save
+    prepared=False)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 284, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'all'
+2014-08-31 16:31:46,759 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:32:24,524 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:33:29,815 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 466, in register_user
+    u.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 529, in save_base
+    rows = manager.using(using).filter(pk=pk_val)._update(values)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 557, in _update
+    return query.get_compiler(self.db).execute_sql(None)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 986, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 808, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 951, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 292, in get_db_prep_save
+    prepared=False)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 284, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'all'
+2014-08-31 16:33:33,585 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:36:19,579 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:36:22,962 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:37:13,854 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:38:02,666 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:38:11,093 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:38:15,481 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:38:36,036 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:39:26,015 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 466, in register_user
+    u.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 529, in save_base
+    rows = manager.using(using).filter(pk=pk_val)._update(values)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 557, in _update
+    return query.get_compiler(self.db).execute_sql(None)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 986, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 808, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 951, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 292, in get_db_prep_save
+    prepared=False)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 284, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+2014-08-31 16:42:09,884 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 16:44:03,251 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 466, in register_user
+    u.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 529, in save_base
+    rows = manager.using(using).filter(pk=pk_val)._update(values)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 557, in _update
+    return query.get_compiler(self.db).execute_sql(None)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 986, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 808, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 951, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 292, in get_db_prep_save
+    prepared=False)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 284, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+2014-08-31 21:50:41,736 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 21:50:42,367 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 21:53:07,374 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 21:55:37,344 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 21:56:04,362 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 92
+    password = self.cleaned_data['password1']
+           ^
+IndentationError: expected an indented block
+2014-08-31 22:11:34,035 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:16:05,359 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:16:27,749 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 451, in register_user
+    if form.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 124, in is_valid
+    return self.is_bound and not bool(self.errors)
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 115, in _get_errors
+    self.full_clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 270, in full_clean
+    self._clean_fields()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 290, in _clean_fields
+    value = getattr(self, 'clean_%s' % name)()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 101, in clean_sector1
+    self.field[sector1].widget = forms.TextInput(attrs={'placeholder': "il fait beau"})
+AttributeError: 'CustomRegistrationForm' object has no attribute 'field'
+2014-08-31 22:16:48,134 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:17:53,170 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:31:07,305 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:39:44,043 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:39:46,407 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:40:41,388 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:42:12,669 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:42:21,108 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:42:32,834 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:42:51,987 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:42:52,276 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:44:58,000 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 22:54:16,020 - django.request - ERROR - Internal Server Error: /accounts/register_emp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 135, in <module>
+    class CustomRegistrationFormEmp(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 143, in CustomRegistrationFormEmp
+    website				= forms.UrlField( max_length=200, required=False)
+AttributeError: 'module' object has no attribute 'UrlField'
+2014-08-31 22:55:03,544 - django.request - ERROR - Internal Server Error: /accounts/register_emp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 11, in <module>
+    admin.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/admin.py", line 3, in <module>
+    from car_shop.forms import ArticleAdminForm
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 135, in <module>
+    class CustomRegistrationFormEmp(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 144, in CustomRegistrationFormEmp
+    presentation		= forms.TextField(max_length=200, required=False)
+AttributeError: 'module' object has no attribute 'TextField'
+2014-08-31 22:56:09,979 - django.request - ERROR - Internal Server Error: /accounts/register_emp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 11, in <module>
+    admin.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/admin.py", line 3, in <module>
+    from car_shop.forms import ArticleAdminForm
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 135, in <module>
+    class CustomRegistrationFormEmp(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 144, in CustomRegistrationFormEmp
+    presentation		= forms.Textarea(max_length=200, required=False)
+TypeError: __init__() got an unexpected keyword argument 'max_length'
+2014-08-31 22:56:19,634 - django.request - ERROR - Internal Server Error: /accounts/register_emp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 11, in <module>
+    admin.autodiscover()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/admin.py", line 3, in <module>
+    from car_shop.forms import ArticleAdminForm
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 135, in <module>
+    class CustomRegistrationFormEmp(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 144, in CustomRegistrationFormEmp
+    presentation		= forms.Textarea(required=False)
+TypeError: __init__() got an unexpected keyword argument 'required'
+2014-08-31 22:59:36,194 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 23:00:42,245 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 23:00:44,535 - django.request - ERROR - Internal Server Error: /accounts/register_emp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 135, in <module>
+    class CustomRegistrationFormEmp(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 144, in CustomRegistrationFormEmp
+    presentation		= forms.CharField ( widget=forms.widgets.Textarea(ttrs={'rows':4, 'cols':60}), required=False )
+TypeError: __init__() got an unexpected keyword argument 'ttrs'
+2014-08-31 23:00:59,786 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 23:01:21,361 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 23:01:27,787 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 23:02:39,968 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 23:29:36,849 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 23:30:35,814 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-08-31 23:31:08,506 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:01:08,279 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:01:43,112 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:01:55,579 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:02:15,830 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:02:36,005 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:02:36,297 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:03:02,449 - django.request - ERROR - Internal Server Error: /accounts/register_emp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 486, in register_emp
+    form.save()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 173, in save
+    gr = Group.objects.get(name='employer')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Group matching query does not exist.
+2014-09-01 00:03:59,630 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:05:57,187 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:07:38,634 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:15:23,185 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:17:24,118 - django.request - ERROR - Internal Server Error: /profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 338, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:17:29,859 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:30:12,533 - django.request - ERROR - Internal Server Error: /profileEmp
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:30:34,358 - django.request - ERROR - Internal Server Error: /profileEmp
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:32:06,178 - django.request - ERROR - Internal Server Error: /profileEmp
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:33:00,673 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:33:04,993 - django.request - ERROR - Internal Server Error: /profileEmp
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:34:15,853 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:34:48,701 - django.request - ERROR - Internal Server Error: /profileEmp
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:36:19,574 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:37:46,813 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:37:59,512 - django.request - ERROR - Internal Server Error: /profileEmp
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:38:42,900 - django.request - ERROR - Internal Server Error: /profileEmp
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:38:53,579 - django.request - ERROR - Internal Server Error: /profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:39:03,141 - django.request - ERROR - Internal Server Error: /profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:39:54,932 - django.request - ERROR - Internal Server Error: /profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:40:23,944 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:40:36,423 - django.request - ERROR - Internal Server Error: /profileEmp
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-01 00:41:08,780 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:42:33,642 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 437, in register_user
+    if form.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 124, in is_valid
+    return self.is_bound and not bool(self.errors)
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 115, in _get_errors
+    self.full_clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 272, in full_clean
+    self._post_clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/models.py", line 311, in _post_clean
+    exclude = self._get_validation_exclusions()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/models.py", line 297, in _get_validation_exclusions
+    field_value = self.cleaned_data.get(field, None)
+AttributeError: 'unicode' object has no attribute 'get'
+2014-09-01 00:43:37,805 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:44:44,133 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 437, in register_user
+    if form.is_valid():
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 124, in is_valid
+    return self.is_bound and not bool(self.errors)
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 115, in _get_errors
+    self.full_clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 272, in full_clean
+    self._post_clean()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/models.py", line 311, in _post_clean
+    exclude = self._get_validation_exclusions()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/models.py", line 297, in _get_validation_exclusions
+    field_value = self.cleaned_data.get(field, None)
+AttributeError: 'unicode' object has no attribute 'get'
+2014-09-01 00:46:52,379 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:49:34,420 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:51:23,065 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 450, in register_user
+    u.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 529, in save_base
+    rows = manager.using(using).filter(pk=pk_val)._update(values)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 557, in _update
+    return query.get_compiler(self.db).execute_sql(None)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 986, in execute_sql
+    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 808, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 951, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 292, in get_db_prep_save
+    prepared=False)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 284, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py", line 966, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'all'
+2014-09-01 00:52:34,737 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 00:59:00,917 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 01:01:02,629 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 01:03:19,444 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 01:11:27,806 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 01:12:35,933 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 01:13:54,135 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 01:15:40,505 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
