@@ -144,6 +144,43 @@ class UserInfo(models.Model):
     
     languages     = models.CharField(max_length=200, null=True, blank=True, default="1")
 
+    def get_sector1(self):   
+        return CATEGORY_CHOICES[int(self.sector1)][1]
+
+    def get_sector2(self):   
+        return CATEGORY_CHOICES[int(self.sector2)][1]    
+
+    def get_sector3(self):   
+        return CATEGORY_CHOICES[int(self.sector3)][1]    
+
+    def get_mobility1(self):   
+        return REGION_CHOICES[int(self.mobility1)][1]        
+
+    def get_mobility2(self):   
+        return REGION_CHOICES[int(self.mobility2)][1]    
+
+    def get_mobility3(self):   
+        return REGION_CHOICES[int(self.mobility3)][1]    
+
+    def get_disponibility(self):   
+        return DISPONIBILITY_CHOICES[int(self.disponibility)][1]    
+
+    def get_status(self):   
+        return STATUS_CHOICES[int(self.status)][1]        
+
+    def get_study_level(self):   
+        return STUDY_LEVEL_CHOICES[int(self.study_level)][1]    
+
+    def get_experience(self):   
+        return EXPERIENCE_CHOICES[int(self.experience)][1]        
+
+    def get_contract(self):   
+        return OFFER_CHOICES[int(self.contract)][1]            
+
+    def get_period(self):   
+        return PERIOD_CHOICES[int(self.period)][1]    
+
+
 class EmployerInfo(models.Model):
     user        = models.ForeignKey(User)
     created_at  = models.DateTimeField(auto_now_add=True)

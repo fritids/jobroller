@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response, RequestContext, HttpResponseRedirect
 from django.utils.translation import ugettext_lazy as _
-
+# models and forms
 from car_shop.models import Offer, Setting, Article, UserInfo, EmployerInfo
-from car_shop.forms import Search_Form, OfferForm, EditOfferForm, Text_Search_Form, CustomRegistrationForm, UserInfoForm, CustomRegistrationFormEmp, LoginForm
+from car_shop.forms import Search_Form, OfferForm, EditOfferForm, Text_Search_Form, CustomRegistrationForm, UserInfoForm, CustomRegistrationFormEmp, LoginForm, EmployerInfoForm
 from django.http import HttpResponse
+from django.db.models import F
 # pagination
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
 from model_choices import REGION_CHOICES, SALARY_CHOICES, CATEGORY_CHOICES, OFFER_CHOICES, YESNO
@@ -14,8 +15,6 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.models import User, Group
 # from decorators.auth import group_required
 
-from django.db.models import F
-
 from django.core.mail import send_mail
 from django.contrib import messages
 from django.contrib import auth
@@ -24,6 +23,7 @@ from django.core.context_processors import csrf
 from django.utils import translation
 
 def home(request):
+
     msg         = _('target message') 
     cars        = Offer.objects.all()
     form        = Search_Form()
@@ -75,7 +75,7 @@ def car_edit(request, num):
         form = EditOfferForm(initial={  'title':        car.title,
                                         'category':     car.category,
                                         'salary':       car.salary,
-                                        'offer':    car.offerType,
+                                        'offer':        car.offerType,
                                         'immediate':    car.immediate,
                                         'description':  car.description,
                                         'image':        car.image
@@ -144,18 +144,19 @@ def search(request):
     page        = request.GET.get('page')
 
     # in the normal display of the view
-    if region == None : region = 'all'
-    if category == None : category = 'all'
-    if offer == None : offer = 'all'
-    if low_salary == None : low_salary = 'all'
-    if high_salary == None : high_salary = 'all'
+    if region       == None : region = -1
+    if category     == None : category = -1
+    if offer        == None : offer = -1
+    if low_salary   == None : low_salary = -1
+    if high_salary  == None : high_salary = -1
 
     offers          = Offer.objects.all()
-    if region       != "all":   offers = offers.filter(region   = region)
-    if category     != 'all':   offers = offers.filter(category = category)
-    if offer        != 'all':   offers = offers.filter(offerType    = offer)
-    if low_salary   != 'all':   offers = offers.filter(salary__gte=int( low_salary ))
-    if high_salary  != 'all':   offers = offers.filter(salary__lte= int( high_salary ))
+
+    if region       < -1:   offers = offers.filter(region   = region)
+    if category     < -1:   offers = offers.filter(category = category)
+    if offer        < -1:   offers = offers.filter(offerType    = offer)
+    if low_salary   < -1:   offers = offers.filter(salary__gte=int( low_salary ))
+    if high_salary  < -1:   offers = offers.filter(salary__lte= int( high_salary ))
 
     # articles  = Offer.objects.all()
     articles    = offers
@@ -165,14 +166,10 @@ def search(request):
     page        = request.GET.get('page')
     query        = request.GET.get('region')
 
-    try:
-        contacts = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        contacts = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        contacts = paginator.page(paginator.num_pages)
+    try: contacts = paginator.page(page)
+    except PageNotAnInteger: contacts = paginator.page(1)
+    except EmptyPage: contacts = paginator.page(paginator.num_pages)
+
     return render_to_response('search.html' , locals(), context_instance = RequestContext(request))
 
 
@@ -233,19 +230,15 @@ def car(request, num):
 
 
 def get_pagination_page(page=1, items=None):
-    # items = range(0, 100)
+
     items = Offer.objects.all()
     print '----------------------in get pagination page'
     paginator = Paginator(items, 4)
-    try:
-        page = int(page)
-    except ValueError:
-        page = 1
+    try: page = int(page)
+    except ValueError: page = 1
 
-    try:
-        items = paginator.page(page)
-    except (EmptyPage, InvalidPage):
-        items = paginator.page(paginator.num_pages)
+    try:    items = paginator.page(page)
+    except  (EmptyPage, InvalidPage): items = paginator.page(paginator.num_pages)
 
     return items
 
@@ -254,15 +247,11 @@ def land_page_pagination(page=1, items=None):
     items = items
     paginator = Paginator(items, 6)
     
-    try:
-        page = int(page)
-    except ValueError:
-        page = 1
+    try:    page = int(page)
+    except  ValueError: page = 1
 
-    try:
-        items = paginator.page(page)
-    except (EmptyPage, InvalidPage):
-        items = paginator.page(paginator.num_pages)
+    try:    items = paginator.page(page)
+    except  (EmptyPage, InvalidPage): items = paginator.page(paginator.num_pages)
 
     return items
 
@@ -301,7 +290,9 @@ def contact(request):
 
 
 @login_required
+# @user_passes_test(lambda u: u.groups.filter(name='candidate').count() == 0, login_url='/')
 def profile(request):
+    print 'in simple profile view'
     usname = request.user.username
     uslname = request.user.last_name
     userinfo = UserInfo.objects.get( user = request.user )
@@ -321,11 +312,14 @@ def profile(request):
 
     else: 
         # use form initial
+        print dir(userinfo)
         form = UserInfoForm(instance=userinfo, user=request.user)
+        userinfo = UserInfo.objects.get( user = request.user )
         return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
 
 
 @login_required
+# @user_passes_test(lambda u: u.groups.filter(name='employer').count() == 0, login_url='/')
 def profileEmp(request):
     usname = request.user.username
     uslname = request.user.last_name
@@ -333,7 +327,7 @@ def profileEmp(request):
 
     if request.method == 'POST':
         print (request.POST)
-        form = UserInfoForm(data=request.POST, instance=userinfo, user=request.user)
+        form = EmployerInfoForm(data=request.POST, instance=userinfo, user=request.user)
         if form.is_valid():
             print '#### the form is good #####'
             form.save()
@@ -346,33 +340,10 @@ def profileEmp(request):
 
     else: 
         # use form initial
-        form = UserInfoForm(instance=userinfo, user=request.user)
-        return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
+        form = EmployerInfoForm(instance=userinfo, user=request.user)
+        userinfo = EmployerInfo.objects.get( user = request.user )
 
-
-@login_required
-@user_passes_test(lambda u: u.groups.filter(name='employer').count() == 0, login_url='/')
-def profile_emp(request):
-    usname = request.user.username
-    uslname = request.user.last_name
-    userinfo = UserInfo.objects.get( user = request.user )
-
-    if request.method == 'POST':
-        print (request.POST)
-        form = UserInfoForm(data=request.POST, instance=userinfo, user=request.user)
-        if form.is_valid():
-            print '#### the form is good #####'
-            form.save()
-            message = messages.add_message(request, messages.INFO, 'données enregistrées avec succée')
-            return HttpResponseRedirect('/profile/')
-        else:
-            print form.errors
-            message = messages.add_message(request, messages.INFO, 'erreur durant la savegarde  ')
-            return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
-
-    else: 
-        form = UserInfoForm(instance=userinfo, user=request.user)
-        return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
+        return render_to_response('profile_emp.html', locals(), context_instance=RequestContext(request))
 
 
 def login(request):
@@ -406,17 +377,14 @@ def invalid_login(request):
 
 
 def auth_view(request):
-    username    = request.POST.get('username', '') # if we do not get the username we return an empty string
+    username    = request.POST.get('username', '') 
     password    = request.POST.get('password', '')
-    user        = auth.authenticate( username = username, password = password ) # if the user is not found it will return None
+    user        = auth.authenticate( username = username, password = password ) 
 
     if user is not None:
         auth.login(request, user)
-        # message = 'Authentification reussie'
-        # message = messages.add_message(request, messages.INFO, 'Bienveu')
         return HttpResponseRedirect('/')
     else:
-        #message = messages.add_message(request, messages.INFO, 'Veillez verifier vos données')
         print "locals"
         print locals()
         return HttpResponseRedirect('/accounts/login')  
@@ -429,8 +397,7 @@ def logout(request):
 
 def register_user(request):
 
-    if request.user.is_authenticated():
-        return HttpResponseRedirect('/profile/')
+    if request.user.is_authenticated(): return HttpResponseRedirect('/profile/')
 
     if request.method == 'POST':
         form = CustomRegistrationForm(request.POST)
@@ -448,10 +415,8 @@ def register_user(request):
             # usr = User.objects.get(username=u.username)
             gr.user_set.add(u.user)
             u.save()
-            #message = messages.add_message(request, messages.INFO, 'Vous avez été enregistré avec succée')
             return HttpResponseRedirect('/')
         else:
-            #message = messages.add_message(request, messages.INFO, 'Vous avez mal saisi les champs')
             return render_to_response('register.html', locals(), context_instance=RequestContext(request))   
 
     form = CustomRegistrationForm()        
@@ -477,11 +442,8 @@ def register_emp(request):
             gr.user_set.add(u.user)
             u.save()
                 
-            #message = messages.add_message(request, messages.INFO, 'Vous avez été enregistré avec succée')
             return HttpResponseRedirect('/')
         else:
-            # form = CustomRegistrationFormEmp() 
-            #message = messages.add_message(request, messages.INFO, 'Vous avez mal saisi les champs')
             return render_to_response('register_emp.html', locals(), context_instance=RequestContext(request)) 
 
     form = CustomRegistrationFormEmp()        

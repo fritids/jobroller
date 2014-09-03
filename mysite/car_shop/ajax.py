@@ -28,15 +28,15 @@ def make_query(form):
 	frm_low_salary 	= form.cleaned_data.get('low_salary')
 	frm_high_salary = form.cleaned_data.get('high_salary')
 
-	# print "frm_high_salary"
+	print "frm_high_salary"
 	print frm_high_salary ,frm_low_salary, frm_category, frm_region, frm_offer
 
-	if frm_region 		!= "all": 	cars = cars.filter(region 	= frm_region)
-	if frm_category 	!= 'all': 	cars = cars.filter(category = frm_category)
-	if frm_offer 		!= 'all': 	cars = cars.filter(offer 	= frm_offer)
+	if frm_region 		< -1: 	cars = cars.filter(region 	= frm_region)
+	if frm_category 	< -1: 	cars = cars.filter(category = frm_category)
+	if frm_offer 		< -1: 	cars = cars.filter(offer 	= frm_offer)
 
-	if frm_low_salary 	!= 'all': 	cars = cars.filter(salary__gte=int(frm_low_salary))
-	if frm_high_salary 	!= 'all': 	cars = cars.filter(salary__lte= int(frm_high_salary))
+	if frm_low_salary 	< -1: 	cars = cars.filter(salary__gte=int(frm_low_salary))
+	if frm_high_salary 	< -1: 	cars = cars.filter(salary__lte= int(frm_high_salary))
 		
 	return cars			
 

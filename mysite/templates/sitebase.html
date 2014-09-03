@@ -14,40 +14,42 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> {% block title %} Fr Jobs {% endblock %} </title>
 
-		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		  <meta name="description" content="">
-		  <meta name="keywords" content="">
-		  <meta name="author" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="author" content="">
 
-		  <!-- JS -->
-		  <!-- HTML5 Support for IE -->
-		  <!--[if lt IE 9]>
-		  <script src="js/html5shim.js"></script>
-		  <![endif]-->
-		  <!-- JS -->
+      <!-- JS -->
+      <!-- HTML5 Support for IE -->
+      <!--[if lt IE 9]>
+      <script src="js/html5shim.js"></script>
+      <![endif]-->
+      <!-- JS -->
 
-		{% block style %}
-			<!-- Stylesheets -->
+    {% block style %}
+      <!-- Stylesheets -->
+        <link href="/static/header/header.css" rel="stylesheet">
+        <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="/static/style/fontawesome/css/font-awesome.css">
+        <link href="/static/style/style2.css" rel="stylesheet">
+        <link href="/static/style/slider2.css" rel="stylesheet">
+        
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Glegoo" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/flexslider.css">
+        <link rel="stylesheet"  href="/static/style/template.css" type="text/css" media="all">
+        <link rel="stylesheet" type="text/css" href="/static/social.css">
 
-			  <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
-			  <link rel="stylesheet" href="/static/style/fontawesome/css/font-awesome.css">
-			  <link href="/static/style/style2.css" rel="stylesheet">
-			  <link href="/static/style/slider2.css" rel="stylesheet">
-			  
-			  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-			  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Glegoo" type="text/css" />
-			  <link rel="stylesheet" type="text/css" href="/static/style/flexslider.css">
-			  <link rel="stylesheet"  href="/static/style/template.css" type="text/css" media="all">
-			  <link rel="stylesheet"  href="/static/style/responsive.css" type="text/css" media="all">
-			  <!-- social fonts --> 
-			  <link rel="stylesheet" href="/static/fonts/stylesheet.css" type="text/css" charset="utf-8" />
-			  <link rel="stylesheet" href="/static/css/croufredsel_style.css">
-			  <link rel="stylesheet" href="/static/css/header_style.css">
+        <link rel="stylesheet"  href="/static/style/responsive.css" type="text/css" media="all">
+        <!-- social fonts --> 
+        <link rel="stylesheet" href="/static/fonts/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="/static/css/croufredsel_style.css">
+        <link rel="stylesheet" href="/static/css/header_style.css">
 
-			<!-- jasny bootstrap -->   
-	          <link rel="stylesheet" href="/static/jasny-bootstrap/css/jasny-bootstrap.css">
+      <!-- jasny bootstrap -->   
+            <link rel="stylesheet" href="/static/jasny-bootstrap/css/jasny-bootstrap.css">
         <link rel="stylesheet" type="text/css" href="/static/css/aui-production.min.css" />
-			  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" />
         <link rel="stylesheet" type="text/css" href="/static/style/classy.css" />
 
         <!-- vmap --> 
@@ -55,55 +57,55 @@
 
         
 
-		  	
-		{% endblock style %}  
+        
+    {% endblock style %}  
 
-		{% block extra_style %}
-			
-		{% endblock extra_style %}
+    {% block extra_style %}
+      
+    {% endblock extra_style %}
 
-		{% block js %}
+    {% block js %}
 
-			  <script src="/static/js/jquery.js"></script>
-			  <script src="/static/style/bootstrap/js/bootstrap.js"></script>
-			  <script type="text/javascript" src="/static/js/jquery.infinitescroll.min.js"></script>
-			  <script type="text/javascript" src="/static/js/custom.js"></script>
-			  <script type="text/javascript" src="/static/js/jquery.mouse.move.js"></script>
-			  <script type="text/javascript" src="/static/js/jquery.swipe.js"></script>
-			  <script type="text/javascript" src="/static/js/sws_frontend.js"></script>
-			  <script type="text/javascript" src="/static/web/js/jquery.openCarousel.js"></script>
-		  	  <script src="/static/js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
-		  	  <script type="text/javascript" src="/static/style/jquery.flexslider-min.js"></script>
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/style/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.infinitescroll.min.js"></script>
+        <script type="text/javascript" src="/static/js/custom.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.mouse.move.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.swipe.js"></script>
+        <script type="text/javascript" src="/static/js/sws_frontend.js"></script>
+        <script type="text/javascript" src="/static/web/js/jquery.openCarousel.js"></script>
+          <script src="/static/js/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+          <script type="text/javascript" src="/static/style/jquery.flexslider-min.js"></script>
         <script src="/static/jasny-bootstrap/js/jasny-bootstrap.js"></script>
-			  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
         
         <!-- vmap --> 
         <script type='text/javascript' src="/static/vmap/jquery.vmap.js" ></script>         
         <script type='text/javascript' src="/static/vmap/jquery.vmap.france.js" ></script>         
 
-		{% endblock js %}
+    {% endblock js %}
 
-		<!-- bxslider --> 
-		  <script src="/static/web/js/jquery.bxslider.js"></script>
-		      <!-- bxSlider CSS file -->
-		      <link href="/static/web/css/jquery.bxslider.css" rel="stylesheet" />
-		      <script>
-		        $(document).ready(function(){
-		            $('.bxslider').bxSlider();
-		        });
-		      </script>
-  	   <!-- bxslider ends --> 
-		  
-	   <!-- dajaxice imports --> 
-		<script src="/static/js/dajax/jquery.dajax.core.js" type="text/javascript"></script>
-			{% dajaxice_js_import %}
-		<!-- dajaxice imports ends --> 
+    <!-- bxslider --> 
+      <script src="/static/web/js/jquery.bxslider.js"></script>
+          <!-- bxSlider CSS file -->
+          <link href="/static/web/css/jquery.bxslider.css" rel="stylesheet" />
+          <script>
+            $(document).ready(function(){
+                $('.bxslider').bxSlider();
+            });
+          </script>
+       <!-- bxslider ends --> 
+      
+     <!-- dajaxice imports --> 
+    <script src="/static/js/dajax/jquery.dajax.core.js" type="text/javascript"></script>
+      {% dajaxice_js_import %}
+    <!-- dajaxice imports ends --> 
 
-		<script type="text/javascript">
-			function send_form(){
-			    Dajaxice.car_shop.send_form(Dajax.process,{'form':$('#search_form').serialize(true)});
-			}
-		</script>
+    <script type="text/javascript">
+      function send_form(){
+          Dajaxice.car_shop.send_form(Dajax.process,{'form':$('#search_form').serialize(true)});
+      }
+    </script>
 
     <script type="text/javascript">
       function text_send_form(){
@@ -111,99 +113,133 @@
       }
     </script>
 
-		{% block extra_head %}{% endblock %}
-    	{% block extra_script %}{% endblock %}
+    {% block extra_head %}{% endblock %}
+      {% block extra_script %}{% endblock %}
 
     </head>
 
     <body>
-	<br/>
+  <br/>
 
-	<!-- upper menu --> 
-	<header class='top_header'>
-    <div class="container">
-      <nav>
-        <ul>
-          <li> <a href="/">{% trans "home" %}</a> </li>
-          <li> <a href="/free_add">{% trans "Deposer annonces" %}</a> </li>
-          <li> <a href="/discuss">{% trans "forum" %}</a> </li>
-          <li> <a href="/news">{% trans "Infos" %}</a> </li>
-          <li> <a href="/search">{% trans "Recherche" %}</a> </li>
-          <li> <a href="/contact">{% trans "contact" %}</a> </li>
-        </ul>
-      </nav>
+  <!-- upper menu --> 
+  <header class='top_header'>
 
-      
-
-      <a href="#" class="logo"> <span>Jobs</span> </a>
-
-      {% if request.user.is_authenticated %}
-
-
-        <div class="sign">
-
-          {% if user|in_group:"candidate" %}
-            <li> 
-                <a href="/profile">{% trans "Profile" %} : {{ request.user.username }}</a>
-            </li>
-            {% else %}
-            <li>
-                <a href="/profileEmp">{% trans "Profile" %} : {{ request.user.username }}</a>
-            </li>
-
-          {% endif %}
-
-                <li>
-                    <a href="/accounts/logout/">{% trans "Deconnexion" %}</a>
-                </li>
-            {% if request.user.is_superuser %}
-                <li>
-                    <a href="/admin/">{% trans "Administration" %}</a>
-                </li>
-                
-            {% endif %}
-
-        </div>
-            
-      {% else %}
-            <div class="sign">
-               <li>
-                    <a href="/accounts/login/">{% trans "Connexion" %}</a>
-                </li>
-                <!-- <li> <a href="/accounts/register/">{% trans "S'enregistrer" %}</a> </li> -->
-            </div>
-      {% endif %}
-
-      <div class="mobile">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div id="scsl-header" class="header">
+    <div id="scsl-banner" class="container">
+        <a href="/">
+            <img src="https://s3.amazonaws.com/libapps/accounts/1226/images/scsl_logo_0.png" alt="SC State Library" class="scsl-logo" />
+        </a>
     </div>
+</div>
+<div id="navigation" class="yamm">
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed btn-primary" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    <img src="https://s3.amazonaws.com/libapps/accounts/1226/images/logo_sm.png" alt="SC State Library" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+             
+                <ul class="nav navbar-nav">
+                    <li class="dropdown yamm-fw">
 
+                        <a href="/" class="dropdown-toggle" >
+                        <i class="glyph-icon icon-home"></i>   Principale
+                        </a>
+                        
+                    </li>
+                    <li class="dropdown yamm-fw">
+                        <a href="/free_add" class="dropdown-toggle" >
+                            <i class="glyph-icon icon-list-alt"></i> Deposer annonce
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="dropdown yamm-fw">
+                        <a href="#" class="dropdown-toggle" >
+                            <i class="glyph-icon icon-folder-open"></i>Infos
+                        </a>
+                        
+                    </li>
+                    <li class="dropdown yamm-fw">
+                        <a href="/search" class="dropdown-toggle" >
+                            <i class="glyph-icon icon-search"></i> Recherche
+                        </a>
+                        
+                    </li>
+                    <li class="dropdown yamm-fw">
+                         <a href="/contact"><i class="glyph-icon icon-pencil"></i> Contact </a>
+                    </li>
+
+
+                </ul>
+
+                <ul class="nav navbar-nav right-nav">
+
+                  {% if request.user.is_authenticated %}
+
+
+                      {% if user|in_group:"candidate" %}
+                        <li> 
+                            <a href="/profile">{% trans "Profile" %} : {{ request.user.username }}</a>
+                        </li>
+                      {% else %}
+                        <li>
+                            <a href="/profileEmp">{% trans "Profile" %} : {{ request.user.username }}</a>
+                        </li>
+                      {% endif %}
+
+                      <li>
+                          <a href="/accounts/logout/"> <i class="glyph-icon icon-signout"></i> {% trans "Deconnexion" %}</a>
+                      </li>
+                      {% if request.user.is_superuser %}
+                          <li>
+                              <a href="/admin/"> <i class="glyph-icon icon-dashboard"></i> {% trans "Admin" %}</a>
+                          </li>
+                      {% endif %}
+
+                {% else %}
+                         <li>
+                              <a href="/accounts/login/"> <i class="glyph-icon icon-signin"></i> {% trans "Connexion" %}</a>
+                          </li>
+                {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
   </header>
 
-  <a href="#" class="mobile-sign">{% trans "S'enregistrer" %}</a>	
-	<!-- upper menu ends --> 
+  <a href="#" class="mobile-sign">{% trans "S'enregistrer" %}</a> 
+  <!-- upper menu ends --> 
 
 
 
 <div class="main2 desktop chrome right-sidebar">
-	<div class="container">
-  		<div class="row">
+  <div class="container">
+      <div class="row">
 
         
 
-	{% block middlecontent %}
+  {% block middlecontent %}
 
-		
-	{% endblock middlecontent %}
+    
+  {% endblock middlecontent %}
 
-	<br/>
+  <br/>
 
-	{% block sidecontent %}
+  {% block sidecontent %}
 
-	<div class="col-sm-4">
+  <div class="col-sm-4">
     <div class="sidebar">
 
       
@@ -475,57 +511,57 @@
   </div> <!-- end col-sm-4 --> 
   
 
-	{% endblock sidecontent %} 
+  {% endblock sidecontent %} 
 
-  		</div> <!-- end row -->
+      </div> <!-- end row -->
         
         <div class="clear"></div>
       </div> <!-- end container --> 
     </div>  <!-- end main2 -->
-  <br/>	
-	 	
+  <br/> 
+    
 
 
-	 {% block footer %}
+   {% block footer %}
 
-	 <footer>
-	    <div class="container">
-	      <div class="row">
-	        <!-- This theme comes under Creative Commons Attribution 3.0 Unported. So don't remove below link back -->
-	        <div class="col-sm-12">
-	          
-	          
-	          <br/>
-	          <div class="padd">
-	            
-	            <ul class="horizontal full four ruled padded center margin-top-big">
-	              <li><h6>{% trans "Home" %}</h6></li>
-	              <li><h6>{% trans "Deposer annonce" %}</h6></li>
-	              <li><h6>{% trans "Recherche" %}</h6></li>
-	              <li><h6>{% trans "Contact" %}</h6></li>
-	            </ul>
+   <footer>
+      <div class="container">
+        <div class="row">
+          <!-- This theme comes under Creative Commons Attribution 3.0 Unported. So don't remove below link back -->
+          <div class="col-sm-12">
+            
+            
+            <br/>
+            <div class="padd">
+              
+              <ul class="horizontal full four ruled padded center margin-top-big">
+                <li><h6>{% trans "Home" %}</h6></li>
+                <li><h6>{% trans "Deposer annonce" %}</h6></li>
+                <li><h6>{% trans "Recherche" %}</h6></li>
+                <li><h6>{% trans "Contact" %}</h6></li>
+              </ul>
 
-	            <hr/>
+              <hr/>
 
-	            Copyright &copy; 2014 -
-	            <a href="#">Fr Jobs</a>
-	            | Designed by
-	            <a href="#">Med Reda</a>
-	          </div>
+              Copyright &copy; 2014 -
+              <a href="#">Fr Jobs</a>
+              | Designed by
+              <a href="#">Med Reda</a>
+            </div>
 
-	          
-	        </div>
+            
+          </div>
 
-	      </div>
-	      <div class="clearfix"></div>
-	    </div>
-	  </footer>
-	  	
-	  {% endblock footer %} 
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </footer>
+      
+    {% endblock footer %} 
 
-	  {% block extra_js %}
-	  	
-	  {% endblock extra_js %}
+    {% block extra_js %}
+      
+    {% endblock extra_js %}
 
 
     </body>

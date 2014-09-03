@@ -37,6 +37,10 @@ font-family: 'Oswald', sans-serif !important;
 img{max-width:100%;}
 /*end reset*/
 body{
+  /*background: url('../img/container-bg.gif') repeat-x left top #d6e4ec !important;*/
+  /*background: rgba(214, 228, 236, 0.42) !important;*/
+  padding-bottom: 20px !important;
+
 	font-family: 'Open Sans', sans-serif;
 	 background:#eee;
 
@@ -371,6 +375,10 @@ nav.navbar.navbar-default{
 /* navigation styling ends */
 
 /* panels */
+.panel{
+  background-color: transparent;
+  border: transparent;
+}
 
 .panel-default > .panel-heading {
    font-family: "Oswald", Helvetica, Arial, sans-serif; 
@@ -378,9 +386,24 @@ nav.navbar.navbar-default{
    font-size: 1.4em;
    border-bottom: none !important;
    /*background-color: inherit;*/
-   background-color: #127FB6;;
+   background-color: #238db4;
    border-color: inherit;
    color: #fff;
+   text-shadow: 0 -1px 0 rgba(0,0,0,.6);
+   border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+}
+
+.panel-default > .panel-body{
+  background: url('../img/grad-l1.gif') repeat-x left bottom #fff;
+  border-bottom: 1px ;
+  border-radius: 8px;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+box-shadow: 0 1px 0 rgba(0,0,0,.4);
+-moz-box-shadow: 0 1px 0 rgba(0,0,0,.4);
+-webkit-box-shadow: 0 1px 0 rgba(0,0,0,.4);
 }
 
 /* panels ends */
@@ -718,27 +741,42 @@ table.table.table.topic-list td+td {
 
 /* registration and login */
 
+.promo-link {
+  border: 2px dotted #ddd !important;
+  margin: 4px 2px 8px 2px !important;
+  padding: 8px 8px 0 48px !important;
+  text-align: left !important;
+  background-color: #f8f8f8 !important;
+  /*height: 32px !important;*/
+  font-size: 90%;
+}
+
 #loginform{
   
 }
           /* make it like bootstrap style  */
 #loginform input[type="text"], #loginform input[type="password"]{
-  display: block;
   width: 100%;
   height: 34px;
-  padding: 6px 12px;
-  font-family: Oswald, sans-serif;
   font-size: 14px;
-  line-height: 1.428571429;
   color: #555555;
   vertical-align: middle;
-  background-color: #ffffff;
   border: 2px solid rgba(93, 107, 146, 0.44) !important;
-  border-radius: 1px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
           transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  display: inline-block;
+  border: 2px solid #bbb !important;
+  padding: 4px 3px 3px 5px;
+  margin: 0;
+  font: inherit;
+  outline: none;
+  line-height: 1.2;
+  background: #f8f8f8;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;        
 }
 
 #loginform input[type="text"]:focus, #loginform input[type="password"]:focus{
@@ -746,6 +784,7 @@ table.table.table.topic-list td+td {
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    background: #fff;
 }
 
 #loginform textarea{

@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 from models import Offer
 from django.contrib.auth.models import User, Group
 from django.contrib.auth.forms import UserCreationForm
-from car_shop.models import UserInfo
+from car_shop.models import UserInfo, EmployerInfo
 import datetime
 
 
@@ -70,7 +70,7 @@ form_error_dict = {
 # you must define unique error for username
 
 class CustomRegistrationForm(UserCreationForm):
-	username			= forms.EmailField(required=True, error_messages={'invalid': "Ce champ doit contenir des lettres ou des chiffres ou @/./+/-/_ , et pas d'espace"})
+	username			= forms.CharField(max_length=200,required=True, error_messages={'invalid': "Ce champ doit contenir des lettres ou des chiffres ou @/./+/-/_ , et pas d'espace"})
 	email 				= forms.EmailField(required=True, error_messages={'invalid': 'Vous de vez entrez une adresse valide'})
 	last_name 			= forms.CharField(max_length=200)
 	telephone 			= forms.CharField(max_length=200)
@@ -240,3 +240,21 @@ class UserInfoForm(forms.ModelForm):
 	class Meta:
 		model 		= UserInfo
 		exclude 	= ['user'] # to add it later
+
+class EmployerInfoForm(forms.ModelForm):
+
+	def __init__(self, *args, **kwargs):
+		self.user = kwargs.pop('user', None)
+		super(EmployerInfoForm, self).__init__(*args, **kwargs)
+		for x in self.fields: self.fields[x].widget.attrs['class'] = 'form-control'
+
+	def save(self, *args, **kwargs):
+
+		instance = super(EmployerInfoForm, self).save(commit=False)
+		print '#### instace user #####'
+		return instance.save()	
+
+	class Meta:
+		model 		= EmployerInfo
+		exclude 	= ['user'] # to add it later
+

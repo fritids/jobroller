@@ -12604,3 +12604,574 @@ ValueError: invalid literal for int() with base 10: 'all'
 2014-09-01 01:12:35,933 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-09-01 01:13:54,135 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-09-01 01:15:40,505 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 22:27:02,298 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-01 22:27:04,876 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 13:11:05,679 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 13:11:07,258 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 13:15:25,600 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 13:15:25,891 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 21:35:43,491 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 21:35:45,323 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 22:36:00,172 - django.request - ERROR - Internal Server Error: /profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-02 22:38:26,536 - django.request - ERROR - Internal Server Error: /profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-02 22:54:18,546 - django.request - ERROR - Internal Server Error: /profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-02 22:56:19,974 - django.request - ERROR - Internal Server Error: /profile
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 307, in profile
+    userinfo = UserInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: UserInfo matching query does not exist.
+2014-09-02 23:15:29,106 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:16:16,214 - django.request - ERROR - Internal Server Error: /profileEmp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 332, in profileEmp
+    userinfo = EmployerInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: EmployerInfo matching query does not exist.
+2014-09-02 23:16:34,883 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:24:50,426 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:25:29,609 - django.request - ERROR - Internal Server Error: /profileEmp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 227, in <module>
+    class UserInfoForm(forms.ModelForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 240, in UserInfoForm
+    class Meta:
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 241, in Meta
+    model 		= EmployerInfo
+NameError: name 'EmployerInfo' is not defined
+2014-09-02 23:25:57,434 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:26:34,162 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:34:09,571 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:36:10,281 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:36:52,066 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:38:55,774 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:39:14,298 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:43:19,377 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:44:14,300 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:44:16,327 - django.request - ERROR - Internal Server Error: /profileEmp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 352, in profileEmp
+    dir(username)
+NameError: global name 'username' is not defined
+2014-09-02 23:44:26,790 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:45:22,816 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-02 23:47:29,515 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 00:05:02,134 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 00:05:02,422 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 00:59:41,352 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:01:25,796 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:02:20,309 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:24:17,809 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:24:18,098 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:25:06,955 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:27:38,996 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:27:44,760 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 28, in home
+    if user.authenticated:
+NameError: global name 'user' is not defined
+2014-09-03 01:27:56,507 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:27:58,791 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 28, in home
+    if request.user.authenticated:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 185, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'authenticated'
+2014-09-03 01:28:09,031 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:28:49,840 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:29:28,639 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:29:58,316 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:30:56,346 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:31:05,261 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 38, in home
+    return render_to_response('index.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 176, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 281, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 274, in render
+    match = condition.eval(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 823, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 599, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/templatetags/group_check.py", line 58, in in_group
+    return bool(users.groups.filter(name__in=group_list).values('name'))
+NameError: global name 'users' is not defined
+2014-09-03 01:31:12,822 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 38, in home
+    return render_to_response('index.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 176, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 281, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 274, in render
+    match = condition.eval(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 823, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 599, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/templatetags/group_check.py", line 58, in in_group
+    return bool(user.groups.filter(name__in=group_list).values('name'))
+NameError: global name 'users' is not defined
+2014-09-03 01:31:19,796 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 38, in home
+    return render_to_response('index.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 176, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 281, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 274, in render
+    match = condition.eval(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 823, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 599, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/templatetags/group_check.py", line 58, in in_group
+    return bool(user.groups.filter(name__in=group_list).values('name'))
+NameError: global name 'users' is not defined
+2014-09-03 01:31:25,338 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:31:43,923 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:32:03,493 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:32:24,078 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:33:30,506 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 39, in home
+    return render_to_response('index.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 176, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 101, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 98, in get_parent
+    return get_template(parent)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 246, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 346, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 563, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '()' from 'request.user.groups.all()'
+2014-09-03 01:37:43,301 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:38:40,264 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:39:05,897 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:42:23,428 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:42:34,907 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 01:43:09,725 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 12:03:14,270 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 12:03:16,826 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 12:03:49,650 - django.request - ERROR - Internal Server Error: /profileEmp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 359, in profileEmp
+    form = EmployerInfoForm(instance=userinfo, user=request.user)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 248, in __init__
+    super(UserInfoForm, self).__init__(*args, **kwargs)
+TypeError: super(type, obj): obj must be an instance or subtype of type
+2014-09-03 12:05:09,693 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 12:58:08,784 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 12:58:16,449 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:00:14,083 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:01:34,186 - django.request - ERROR - Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 8, in <module>
+    from car_shop.views 			import get_pagination_page, land_page_pagination
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 363
+    l = [i for in dir(userinfo) if not i.startswith('__')]
+                ^
+SyntaxError: invalid syntax
+2014-09-03 13:02:41,960 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:03:13,731 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:06:23,202 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:08:18,889 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:08:25,293 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:08:40,795 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:08:48,207 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:08:52,605 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:09:12,094 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:09:15,475 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:10:35,687 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:11:53,917 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:12:05,359 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:12:13,775 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:12:28,280 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:12:35,680 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:12:46,123 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:12:58,572 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:13:03,945 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:13:08,305 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:13:44,004 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:13:58,476 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:14:06,897 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:14:13,306 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:14:25,762 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:14:36,191 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:14:46,632 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:15:01,113 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:15:08,554 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:15:11,936 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:15:34,510 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:18:57,201 - django.request - ERROR - Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 335, in profile
+    return render_to_response('profile.html', locals(), context_instance=RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 176, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 84, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 571, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 721, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 772, in _resolve_lookup
+    current = current()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/models.py", line 178, in get_contract
+    return CONTRACT_CHOICES[int(self.contract)][1]
+NameError: global name 'CONTRACT_CHOICES' is not defined
+2014-09-03 13:19:58,528 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:44:13,437 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:51:22,742 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:51:25,220 - django.request - ERROR - Internal Server Error: /admin/logout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 72, in <module>
+    class CustomRegistrationForm(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 79, in CustomRegistrationForm
+    sector1 			= forms.IntegerField(label="sector1", 		choices=CATEGORY_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/fields.py", line 215, in __init__
+    super(IntegerField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'choices'
+2014-09-03 13:52:35,895 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:52:46,330 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:53:07,916 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:54:33,155 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:54:54,745 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:55:07,231 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:55:21,709 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 13:58:03,696 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 14:01:56,361 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 14:02:22,937 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 14:02:49,481 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 72, in <module>
+    class CustomRegistrationForm(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 79, in CustomRegistrationForm
+    sector1 			= forms.IntegerField(label="sector1", 		choices=CATEGORY_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/fields.py", line 215, in __init__
+    super(IntegerField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'choices'
+2014-09-03 14:03:19,855 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 14:03:28,300 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 14:03:29,650 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 21, in process_request
+    check_path = self.is_language_prefix_patterns_used()
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/locale.py", line 54, in is_language_prefix_patterns_used
+    for url_pattern in get_resolver(None).url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 328, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 323, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/example_bootstrap/urls.py", line 10, in <module>
+    dajaxice_autodiscover()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/dajaxice/core/Dajaxice.py", line 135, in dajaxice_autodiscover
+    import_module("%s.ajax" % app)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/ajax.py", line 5, in <module>
+    from car_shop.forms 			import Search_Form, Text_Search_Form
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 72, in <module>
+    class CustomRegistrationForm(UserCreationForm):
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 79, in CustomRegistrationForm
+    sector1 			= forms.IntegerField(label="sector1", 		choices=CATEGORY_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/fields.py", line 215, in __init__
+    super(IntegerField, self).__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'choices'
+2014-09-03 14:04:29,599 - django.request - ERROR - Internal Server Error: /profileEmp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 343, in profileEmp
+    userinfo = EmployerInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: EmployerInfo matching query does not exist.
+2014-09-03 14:15:36,801 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 14:17:55,644 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------

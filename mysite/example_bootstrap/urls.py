@@ -44,8 +44,8 @@ urlpatterns = patterns('',
     # forum applicatino
     
     # Profile
-    url('^profile$', "car_shop.views.profile", name='profile'),    
-    url('^profileEmp$', "car_shop.views.profileEmp", name='profileEmp'),    
+    url(r'^profile/$', "car_shop.views.profile", name='profile'),    
+    url(r'^profileEmp/$', "car_shop.views.profileEmp", name='profileEmp'),    
 
     # daxice 
     url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
