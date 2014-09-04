@@ -13534,3 +13534,129 @@ Traceback (most recent call last):
   File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 81, in car_edit
     'image':        car.image
 AttributeError: 'Offer' object has no attribute 'image'
+2014-09-04 13:22:42,958 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 13:22:43,246 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 13:53:47,210 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 13:57:56,005 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:00:28,645 - django.request - ERROR - Internal Server Error: /search_results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 200, in search_results
+    return render_to_response('search_results', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: search_results
+2014-09-04 14:00:57,345 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:01:02,772 - django.request - ERROR - Internal Server Error: /search_results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 200, in search_results
+    return render_to_response('search_results.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: search_results.html
+2014-09-04 14:03:08,083 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:03:49,658 - django.request - ERROR - Internal Server Error: /map_search/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 200, in map_search
+    return render_to_response('map_search.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: map_search.html
+2014-09-04 14:06:55,736 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:07:42,553 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:08:46,531 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:13:01,230 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:14:55,755 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:27:01,673 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 14:30:34,300 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 15:21:05,159 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 15:40:51,843 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 15:40:52,134 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 16:04:14,485 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 16:04:43,122 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 16:04:49,900 - django.request - ERROR - Internal Server Error: /search_results/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 192, in search_results
+    return render_to_response('search_results', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: search_results
+2014-09-04 16:05:29,897 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:17:53,727 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:20:26,018 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:21:11,676 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:26:54,208 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:26:55,488 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:30:44,392 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:31:10,673 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:31:36,574 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:32:06,860 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:36:51,753 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:37:37,723 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:38:03,030 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:38:21,989 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:38:38,597 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:40:18,957 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:40:51,015 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:41:30,884 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:42:56,440 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:43:42,505 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:44:21,729 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:45:07,443 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:45:26,782 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:45:53,823 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:47:06,283 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:48:49,035 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:49:31,421 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:50:07,820 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:51:56,475 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:52:21,183 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 22:52:21,472 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:06:42,318 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:07:39,593 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:08:04,979 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:08:05,275 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:08:33,242 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:08:49,940 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:08:50,228 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:14:54,316 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:15:56,611 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:15:56,901 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:17:00,741 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:17:46,433 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:20:52,844 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:20:53,135 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:21:35,360 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:24:48,776 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 23:29:15,909 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------

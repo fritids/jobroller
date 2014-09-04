@@ -157,64 +157,81 @@ def search(request):
     if low_salary   != 'all':   offers = offers.filter(salary__gte=int( low_salary ))
     if high_salary  != 'all':   offers = offers.filter(salary__lte= int( high_salary ))
 
-    # articles  = Offer.objects.all()
     articles    = offers
-    print 'articles'
-    print articles
     paginator   = Paginator(articles, 6) 
     page        = request.GET.get('page')
     query        = request.GET.get('region')
 
-    try:
-        contacts = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        contacts = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        contacts = paginator.page(paginator.num_pages)
+    try: contacts = paginator.page(page)
+    except PageNotAnInteger: contacts = paginator.page(1)
+    except EmptyPage: contacts = paginator.page(paginator.num_pages)
+
     return render_to_response('search.html' , locals(), context_instance = RequestContext(request))
 
-
-def search_results(request):
-
-    cars        = Offer.objects.all()
-    form        = Search_Form()
+def map_search(request):
+    # preparing forms
     text_form   = Text_Search_Form()
-    articles    = Offer.objects.all()
-    paginator   = Paginator(articles, 6) 
+    form        = Search_Form()
+
+    # preparing search words if we came from the index page
+    offer       = request.GET.get('offer')
+    category    = request.GET.get('category')
+    region      = request.GET.get('region')
+    low_salary  = request.GET.get('low_salary')
+    high_salary = request.GET.get('high_salary')
     page        = request.GET.get('page')
-    query        = request.GET.get('csrfmiddlewaretoken')
 
-    print 'query'
-    print query
+    # in the normal display of the view
+    if region == None : region = 'all'
+    if category == None : category = 'all'
+    if offer == None : offer = 'all'
+    if low_salary == None : low_salary = 'all'
+    if high_salary == None : high_salary = 'all'
 
-    try:
-        contacts = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        contacts = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        contacts = paginator.page(paginator.num_pages)
-    return render_to_response('search_results', locals(), context_instance = RequestContext(request))
+    offers          = Offer.objects.all()
+    if region       != "all":   offers = offers.filter(region   = region)
+    if category     != 'all':   offers = offers.filter(category = category)
+    if offer        != 'all':   offers = offers.filter(offerType    = offer)
+    if low_salary   != 'all':   offers = offers.filter(salary__gte=int( low_salary ))
+    if high_salary  != 'all':   offers = offers.filter(salary__lte= int( high_salary ))
 
+    articles  = offers
+    paginator = Paginator(articles, 6) 
+    page      = request.GET.get('page')
+    query     = request.GET.get('region')
+
+    try: contacts = paginator.page(page)
+    except PageNotAnInteger:    contacts = paginator.page(1)
+    except EmptyPage:           contacts = paginator.page(paginator.num_pages)
+
+    return render_to_response('map_search.html', locals(), context_instance = RequestContext(request))
+
+def search_candidates(request):
+    # preparing forms
+    text_form   = Text_Search_Form()
+    form        = Search_Form()
+    
+    users = UserInfo.objects.all()
+
+    articles  = users
+    paginator = Paginator(articles, 15) 
+    page      = request.GET.get('page')
+    #paginating found users
+    try: contacts = paginator.page(page)
+    except PageNotAnInteger:    contacts = paginator.page(1)
+    except EmptyPage:           contacts = paginator.page(paginator.num_pages)
+    return render_to_response('search_candidates.html', locals(), context_instance = RequestContext(request) )
 
 def news(request):
     articles    = Article.objects.all()
     paginator   = Paginator(articles, 3) # Show 25 contacts per page
     page        = request.GET.get('page')
-    try:
-        contacts = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        contacts = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        contacts = paginator.page(paginator.num_pages)
+
+    try: contacts = paginator.page(page)
+    except PageNotAnInteger:    contacts = paginator.page(1)
+    except EmptyPage:           contacts = paginator.page(paginator.num_pages)
 
     return render_to_response('news.html', locals(), context_instance = RequestContext(request))
-
 
 def news_item(request, num):
     article = Article.objects.get(id = num)

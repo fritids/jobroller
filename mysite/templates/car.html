@@ -1,19 +1,15 @@
 {% extends "sitebase.html" %}
-
-{% load dajaxice_templatetags %}
-{% load i18n %}
+{% load i18n dajaxice_templatetags %}
 
 {% block extra_style %}
 
 <link rel="stylesheet" type="text/css" href="/static/css/dark-blue.min.css" />
-
-  <style type='text/css'>
-
+<style type='text/css'>
   .selected img {
     opacity:0.5;
   }
-      
-  </style> 
+</style> 
+
 {% endblock extra_style %}   
 
 {% block middlecontent %}

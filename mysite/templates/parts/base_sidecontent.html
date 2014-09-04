@@ -36,7 +36,7 @@
                 <div class="panel panel-default">
                   <div class="panel-body"> 
                     <i class="glyph-icon icon-med icon-search"></i>
-                    &nbsp; <a href="#" class="reg">Trouver un candidat</a>
+                    &nbsp; <a href="/search_candidates" class="reg">Trouver un candidat</a>
                   </div>
                 </div>
 
@@ -85,7 +85,7 @@
           <div class="panel-heading"> {% trans "Recherche" %} </div>
           <div class="panel-body">
             <!-- injected form --> 
-            <form action="/search_results" method="GET" id="search_form" accept-charset="utf-8">
+            <form action="/map_search" method="GET" id="search_form" accept-charset="utf-8">
 
               {% csrf_token %}
 

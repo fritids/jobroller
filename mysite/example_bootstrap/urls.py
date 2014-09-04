@@ -34,15 +34,15 @@ urlpatterns = patterns('',
     
     url('^set_en$', "car_shop.views.set_en", name='set_en'),
 
-    url('^search', "car_shop.views.search", name='search'),
-
-    url('^search_results', "car_shop.views.search_results", name='search_results'),
+    # searching
+    url(r'^search/$', "car_shop.views.search", name='search'),
+    # url(r'^search_results/$', "car_shop.views.search_results", name='search_results'),
+    url(r'^map_search/$', "car_shop.views.map_search", name='map_search'),
+    url(r'^search_candidates/$', "car_shop.views.search_candidates", name='search_candidates'),
      
 	# administration
     url(r'^admin/', include(admin.site.urls)),
 
-    # forum applicatino
-    
     # Profile
     url(r'^profile/$', "car_shop.views.profile", name='profile'),    
     url(r'^profileEmp/$', "car_shop.views.profileEmp", name='profileEmp'),    
@@ -63,8 +63,7 @@ urlpatterns = patterns('',
 
 
 urlpatterns += patterns('',
-        url(r'media/(?P<path>.*)$',
-            'django.views.static.serve',
+        url(r'media/(?P<path>.*)$', 'django.views.static.serve', 
             {'document_root': settings.MEDIA_ROOT, }),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

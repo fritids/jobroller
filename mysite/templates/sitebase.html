@@ -184,30 +184,20 @@
 
                   {% if request.user.is_authenticated %}
 
-
                       {% if user|in_group:"candidate" %}
-                        <li> 
-                            <a href="/profile">{% trans "Profile" %} : {{ request.user.username }}</a>
-                        </li>
+                          <li> <a href="/profile">{% trans "Profile" %} : {{ request.user.username }}</a> </li>
                       {% else %}
-                        <li>
-                            <a href="/profileEmp">{% trans "Profile" %} : {{ request.user.username }}</a>
-                        </li>
+                          <li> <a href="/profileEmp">{% trans "Profile" %} : {{ request.user.username }}</a> </li>
                       {% endif %}
 
-                      <li>
-                          <a href="/accounts/logout/"> <i class="glyph-icon icon-signout"></i> {% trans "Deconnexion" %}</a>
-                      </li>
+                      <li> <a href="/accounts/logout/"> <i class="glyph-icon icon-signout"></i> {% trans "Deconnexion" %}</a> </li>
+
                       {% if request.user.is_superuser %}
-                          <li>
-                              <a href="/admin/"> <i class="glyph-icon icon-dashboard"></i> {% trans "Admin" %}</a>
-                          </li>
+                          <li> <a href="/admin/"> <i class="glyph-icon icon-dashboard"></i> {% trans "Admin" %}</a> </li>
                       {% endif %}
 
                 {% else %}
-                         <li>
-                              <a href="/accounts/login/"> <i class="glyph-icon icon-signin"></i> {% trans "Connexion" %}</a>
-                          </li>
+                         <li> <a href="/accounts/login/"> <i class="glyph-icon icon-signin"></i> {% trans "Connexion" %}</a> </li>
                 {% endif %}
 
                 </ul>
@@ -246,15 +236,12 @@
   <br/> 
     
 
-
-   {% block footer %}
+{% block footer %}
 
    <footer>
       <div class="container">
         <div class="row">
-          <!-- This theme comes under Creative Commons Attribution 3.0 Unported. So don't remove below link back -->
           <div class="col-sm-12">
-            
             
             <br/>
             <div class="padd">
@@ -267,13 +254,8 @@
               </ul>
 
               <hr/>
-
-              Copyright &copy; 2014 -
-              <a href="#">Fr Jobs</a>
-              | Designed by
-              <a href="#">Med Reda</a>
+              Copyright &copy; 2014 - <a href="#">Fr Jobs</a> | Designed by <a href="#">Med Reda</a>
             </div>
-
             
           </div>
 
