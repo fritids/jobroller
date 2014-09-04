@@ -186,7 +186,7 @@ div.fileinput.fileinput-new{
 
 .controls select{
     display: inline-block;
-    border: 2px solid #bbb !important;
+    /*border: 2px solid #bbb !important;*/
     padding: 4px 3px 3px 5px;
     margin: 0;
     font: inherit;
@@ -201,7 +201,7 @@ div.fileinput.fileinput-new{
 
 .form-input select{
     display: inline-block;
-    border: 2px solid #bbb !important;
+    /*border: 2px solid #bbb !important;*/
     padding: 4px 3px 3px 5px;
     margin: 0;
     font: inherit;

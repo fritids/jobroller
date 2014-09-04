@@ -434,16 +434,19 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: 20px;
-  padding: 4px 6px;
-  margin-bottom: 10px;
-  font-size: 14px;
+  /*height: 20px;*/
+  /*padding: 4px 6px;*/
+  /*margin-bottom: 10px;*/
+  /*font-size: 14px;*/
   line-height: 20px;
   color: #555555;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   vertical-align: middle;
+
+  /* added code */
+  
 }
 input,
 textarea,

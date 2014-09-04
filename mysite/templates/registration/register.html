@@ -1,0 +1,278 @@
+{% extends "sitebase.html" %}
+{% load dajaxice_templatetags %}
+{% load i18n %}
+
+{% block extra_style %}
+  <link rel="stylesheet" href="/static/social.css">      
+  <style type="text/css">
+  .niceform ul.errorlist { float: left;color: #C07D7D; margin: 0px 30px; list-style: none; }
+  .niceform .break { clear: left;margin-left: 200px; }
+  .niceform ul.errorlist li {
+      padding: 5px 3px 4px 10px;
+      position: relative;
+  }
+  .niceform ul.errorlist li:before {
+      content:"";
+      position: absolute;
+      right: 100%;
+      top: 8px;
+      width: 0;
+      height: 0;
+      border-top: 6px solid transparent;
+      border-right: 12px solid rgba(255, 0, 0, 0.4);
+      border-bottom: 6px solid transparent;
+  }
+  </style>
+{% endblock extra_style %}
+
+{% block middlecontent %}
+
+
+<div class="main2 desktop chrome right-sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <br/>
+                <div class="panel panel-default">
+                  <div class="panel-heading"> <i class="glyph-icon icon-user"></i> &nbsp; S'enregistrer </div>
+                    <div class="panel-body">
+
+                        <div class="col-sm-2">&nbsp;</div>
+                        <div class="col-sm-7" id='loginform'>
+                            <div class="panel panel-default">
+                                
+                                <div class="panel-body">
+
+                                    <br>
+                                      <!-- second form to hold -->  
+                                    <form class="form-horizontal niceform" method="post" enctype="multipart/form-data" role="form">
+                                      {% csrf_token %}
+
+                                     <p>Présentation</p>
+                                     <hr/>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Prenom</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_username' name="username" class="span6">
+                                           {% if form.username.errors %}  <span class="help-inline">{{ form.username.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Nom de famille</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_last_name' name="last_name" class="span6">
+                                           {% if form.last_name.errors %}  <span class="help-inline">{{ form.last_name.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">adresse email</label>
+                                        <div class="controls">
+                                           <input type="text" id='id_email' name='email' class="span6">
+                                           {% if form.email.errors %}  <span class="help-inline">{{ form.email.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">mot de passe</label>
+                                        <div class="controls">
+                                           <input type="password" id='id_password1' name="password1" class="span6">
+                                           {% if form.password1.errors %}  <span class="help-inline">{{ form.password1.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">verifier mot de passe</label>
+                                        <div class="controls">
+                                           <input type="password" id='id_password2' name="password2" class="span6">
+                                           {% if form.password2.errors %}  <span class="help-inline">{{ form.password2.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">N° de telephone</label>
+                                        <div class="controls">
+                                           {{ form.telephone }}
+                                           {% if form.telephone.errors %}  <span class="help-inline">{{ form.telephone.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Adresse</label>
+                                        <div class="controls">
+                                           {{ form.adress }}
+                                           {% if form.adress.errors %}  <span class="help-inline">{{ form.adress.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <hr/>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Secteur métier 1</label>
+                                        <div class="controls">
+                                           {{ form.sector1 }}
+                                           {% if form.sector1.errors %}  <span class="help-inline">{{ form.sector1.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Secteur métier 2</label>
+                                        <div class="controls">
+                                           {{ form.sector2 }}
+                                           {% if form.sector2.errors %}  <span class="help-inline">{{ form.sector2.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Secteur métier 3</label>
+                                        <div class="controls">
+                                           {{ form.sector3 }}
+                                           {% if form.sector3.errors %}  <span class="help-inline">{{ form.sector3.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+                                      
+                                     <div class="control-group">
+                                        <label class="control-label">Mobibilité 1</label>
+                                        <div class="controls">
+                                           {{ form.mobility1 }}
+                                           {% if form.mobility1.errors %}  <span class="help-inline">{{ form.mobility1.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Mobibilité 2</label>
+                                        <div class="controls">
+                                              {{ form.mobility2 }}
+                                           {% if form.mobility2.errors %}  <span class="help-inline">{{ form.mobility2.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Mobibilité 3</label>
+                                        <div class="controls">
+                                           {{ form.mobility3 }}
+                                           {% if form.mobility3.errors %}  <span class="help-inline">{{ form.mobility3.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Disponibilé</label>
+                                        <div class="controls">
+                                           {{ form.disponibility }}
+                                           {% if form.disponibility.errors %}  <span class="help-inline">{{ form.disponibility.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Status</label>
+                                        <div class="controls">
+                                           {{ form.status }}
+                                           {% if form.status.errors %}  <span class="help-inline">{{ form.status.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Niveau de salaire</label>
+                                        <div class="controls">
+                                           {{ form.salary }}
+                                           {% if form.salary.errors %}  <span class="help-inline">{{ form.salary.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <hr/>
+                                     <p>Etudes , Experiences</p>
+                                     <hr/>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Niveau d'études</label>
+                                        <div class="controls">
+                                           {{ form.study_level }}
+                                           {% if form.study_level.errors %}  <span class="help-inline">{{ form.study_level.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Experience</label>
+                                        <div class="controls">
+                                           {{ form.experience }}
+                                           {% if form.experience.errors %}  <span class="help-inline">{{ form.experience.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Contrat</label>
+                                        <div class="controls">
+                                            {{ form.contract }}
+                                           {% if form.contract.errors %}  <span class="help-inline">{{ form.contract.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <div class="control-group">
+                                        <label class="control-label">Durée</label>
+                                        <div class="controls">
+                                           {{ form.period }}
+                                           {% if form.period.errors %}  <span class="help-inline">{{ form.period.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     <hr/>
+                                     <p>Languages</p>
+                                     <hr/>
+
+                                      <!-- il faut le laisser comme champ de text  --> 
+                                     <div class="control-group">
+                                        <label class="control-label">Langues</label>
+                                        <div class="controls">
+                                           <input id="id_languages" type="text" name="languages" maxlength="200" placeholder="languages" class='span6'>
+                                           {% if form.languages.errors %}  <span class="help-inline">{{ form.languages.errors }}</span> {% endif %}
+                                        </div>
+                                     </div>
+
+                                     
+                                     <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary">Valider</button>
+                                        <button type="button" class="btn btn-danger" onclick='javascrpt:window.location.href="/"'>Retour</button>
+                                     </div>
+                                  </form>
+
+                                </div>
+
+                                <div class="panel-footer">
+                                    <b>Vous possedez un compte ?</b> <a href="/accounts/login/">S'authentifier</a>
+                                </div>
+
+                          </div> <!-- end panel-default -->
+
+                      </div> <!-- end col-sm-6 -->
+
+                      <div class="col-sm-3">&nbsp;</div>
+                      <div class="clearfix"></div>
+                      <br/>
+
+                      </div>
+                </div> <!-- end panel panel-default --> 
+
+                <div class="clear"></div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-sm-12">
+                        <img src="http://placehold.it/1010x70&text=espace de publicite" alt="placeholder image" class='img-responsive'></div>
+                    </div>
+                </div>
+
+          </div> <!-- end col-sm-12 --> 
+
+    </div> <!-- end row --> 
+  
+  <div class="clear"></div>
+
+</div> <!-- end container -->
+</div> <!-- end main2 -->
+{% endblock middlecontent %}
+
+{% block sidecontent %}
+  
+{% endblock sidecontent %}

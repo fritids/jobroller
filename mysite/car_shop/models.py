@@ -17,10 +17,10 @@ class Offer(models.Model):
     title       = models.CharField(max_length=250)
     offerType   = models.CharField(max_length = 200, choices=OFFER_CHOICES, default='1')
     category    = models.CharField(max_length = 200, choices=CATEGORY_CHOICES, default='1')
-    region      = models.IntegerField(choices=REGION_CHOICES)
-    salary      = models.IntegerField(blank=True, choices=SALARY_CHOICES)
+    region      = models.CharField(max_length = 200, choices=REGION_CHOICES)
+    salary      = models.CharField(max_length = 200, blank=True, choices=SALARY_CHOICES)
     
-    views       = models.IntegerField(_('Views count'), blank=True, default=0)
+    views       = models.CharField(_('Views count'),max_length = 200, blank=True, default=0)
     description = models.TextField(_('description'), blank=True, null=True)
     
     created     = models.DateTimeField(_('Created'), null=True)
@@ -90,21 +90,21 @@ class Offer(models.Model):
 
 
 class Setting(models.Model):
-    key = models.CharField(max_length=32)
-    value = models.CharField(max_length=200)
+    key     = models.CharField(max_length=32)
+    value   = models.CharField(max_length=200)
     def __unicode__(self):
         return self.key
 
 
 class Article(models.Model):
 
-    title = models.CharField(blank=True, max_length=50)
-    summary = models.TextField()
-    body = models.TextField()
-    created = models.DateTimeField(default=datetime.datetime.now)
-    is_watermarked = models.BooleanField(default=False)
-    img = ThumbnailImageField(upload_to='photos', blank=True, help_text = "for better resolution image size must be 600x280")
-    image_title = models.CharField(max_length=200, blank=True, null=True)
+    title           = models.CharField(blank=True, max_length=50)
+    summary         = models.TextField()
+    body            = models.TextField()
+    created         = models.DateTimeField(default=datetime.datetime.now)
+    is_watermarked  = models.BooleanField(default=False)
+    img             = ThumbnailImageField(upload_to='photos', blank=True, help_text = "for better resolution image size must be 600x280")
+    image_title     = models.CharField(max_length=200, blank=True, null=True)
 
     class Meta:
         ordering = ['created']
@@ -124,23 +124,24 @@ class UserInfo(models.Model):
     telephone     = models.CharField(max_length=200, null=True, blank=True)
     
     # recently added fields
-    sector1       = models.IntegerField(choices=CATEGORY_CHOICES, default="1")
-    sector2       = models.IntegerField(choices=CATEGORY_CHOICES, null=True, blank=True,default="1")
-    sector3       = models.IntegerField(choices=CATEGORY_CHOICES, null=True, blank=True, default="1")
+
+    sector1       = models.CharField(max_length = 200,choices=CATEGORY_CHOICES, default="1")
+    sector2       = models.CharField(max_length = 200,choices=CATEGORY_CHOICES, null=True, blank=True,default="1")
+    sector3       = models.CharField(max_length = 200,choices=CATEGORY_CHOICES, null=True, blank=True, default="1")
     
-    mobility1     = models.IntegerField(choices=DEPARTEMENT_CHOICES ,default="1")
-    mobility2     = models.IntegerField(choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
-    mobility3     = models.IntegerField(choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
+    mobility1     = models.CharField(max_length = 200,choices=DEPARTEMENT_CHOICES ,default="1")
+    mobility2     = models.CharField(max_length = 200,choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
+    mobility3     = models.CharField(max_length = 200,choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
     
-    disponibility = models.IntegerField(choices=DISPONIBILITY_CHOICES, default="2")
+    disponibility = models.CharField(max_length = 200,choices=DISPONIBILITY_CHOICES, default="2")
     
-    status        = models.IntegerField(choices=STATUS_CHOICES, null=True, blank=True) 
-    salary        = models.IntegerField(choices=SALARY_CHOICES,default="1") 
+    status        = models.CharField(max_length = 200,choices=STATUS_CHOICES, null=True, blank=True) 
+    salary        = models.CharField(max_length = 200,choices=SALARY_CHOICES,default="1") 
     
-    study_level   = models.IntegerField(choices=STUDY_LEVEL_CHOICES, null=True, blank=True) 
-    experience    = models.IntegerField(default="1") 
-    contract      = models.IntegerField(default="1") 
-    period        = models.IntegerField(default="1") 
+    study_level   = models.CharField(max_length = 200,choices=STUDY_LEVEL_CHOICES, null=True, blank=True) 
+    experience    = models.CharField(max_length = 200,default="1") 
+    contract      = models.CharField(max_length = 200,default="1") 
+    period        = models.CharField(max_length = 200,default="1") 
     
     languages     = models.CharField(max_length=200, null=True, blank=True, default="1")
 

@@ -47,7 +47,7 @@
         <link rel="stylesheet" href="/static/css/header_style.css">
 
       <!-- jasny bootstrap -->   
-            <link rel="stylesheet" href="/static/jasny-bootstrap/css/jasny-bootstrap.css">
+        <link rel="stylesheet" href="/static/jasny-bootstrap/css/jasny-bootstrap.css">
         <link rel="stylesheet" type="text/css" href="/static/css/aui-production.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" />
         <link rel="stylesheet" type="text/css" href="/static/style/classy.css" />
@@ -55,17 +55,18 @@
         <!-- vmap --> 
         <link rel="stylesheet" href="/static/vmap/jqvmap.css">
 
-        
+        <!-- sharethis webservice --> 
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "fc960723-2a1c-4123-bacd-9e76284af85e", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
 
         
     {% endblock style %}  
 
     {% block extra_style %}
-      
     {% endblock extra_style %}
 
     {% block js %}
-
         <script src="/static/js/jquery.js"></script>
         <script src="/static/style/bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="/static/js/jquery.infinitescroll.min.js"></script>
@@ -78,11 +79,9 @@
           <script type="text/javascript" src="/static/style/jquery.flexslider-min.js"></script>
         <script src="/static/jasny-bootstrap/js/jasny-bootstrap.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
-        
         <!-- vmap --> 
         <script type='text/javascript' src="/static/vmap/jquery.vmap.js" ></script>         
         <script type='text/javascript' src="/static/vmap/jquery.vmap.france.js" ></script>         
-
     {% endblock js %}
 
     <!-- bxslider --> 
@@ -222,16 +221,12 @@
   <a href="#" class="mobile-sign">{% trans "S'enregistrer" %}</a> 
   <!-- upper menu ends --> 
 
-
-
 <div class="main2 desktop chrome right-sidebar">
   <div class="container">
       <div class="row">
 
         
-
   {% block middlecontent %}
-
     
   {% endblock middlecontent %}
 
@@ -239,277 +234,7 @@
 
   {% block sidecontent %}
 
-  <div class="col-sm-4">
-    <div class="sidebar">
-
-      
-
-      <div class="panel panel-default">
-        <div class="panel-heading">{% trans "Partagez" %}</div>
-        <div class="panel-body">
-          <div class="social_network_likes">
-            <ul>
-              <li>
-                <a href="#" class="tweet">
-                  <div class="followers">
-                    <p>
-                      <span>2k</span>
-                      Followers
-                    </p>
-                  </div>
-                  <div class="social_network"> <i class="twitter-icon webf"> t </i>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="facebook-follower">
-                  <div class="followers">
-                    <p>
-                      <span>5k</span>
-                      Followers
-                    </p>
-                  </div>
-                  <div class="social_network"> <i class="facebook-icon webf"> f </i>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="emails">
-                  <div class="followers">
-                    <p>
-                      <span>7.5k</span>
-                      members
-                    </p>
-                  </div>
-                  <div class="social_network">
-                    <i class="email-icon webf"> r </i>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="gmail">
-                  <div class="followers">
-                    <p>
-                      <span>10k</span>
-                      Followers
-                    </p>
-                  </div>
-                  <div class="social_network">
-                    <i class="gmail-icon webf"> g </i>
-                  </div>
-                </a>
-              </li>
-              <div class="clear"></div>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- end div sidebar -->
-
-    <!--  tabbed posts and comments -->
-
-    <div class="panel panel-default">
-
-      <div class="panel-heading"> {% trans "Posts populaires" %} </div>
-      <div class="panel-body">
-
-        <br/>
-        <div id="secondary" class="widget-area span3" role="complementary">
-      <aside id="dw_focus_tabs-6" class="widget dw_focus_tabs news-tab">
-
-        <div class="nav-tab-select-wrap">
-          <select name="nav-tabs-dw_focus_tabs-6" class="nav-tabs-by-select hidden-desktop">
-            <option data-target="#dw_focus_popular_news-3" value="#dw_focus_popular_news-3">POSTS</option>
-            <option data-target="#dw-recent-comments-dw-widget-1" value="#dw-recent-comments-dw-widget-1">COMMENTAIRES</option>
-
-          </select>
-        </div>
-
-        <ul class="nav nav-tabs visible-desktop" id="nav-tabs-dw_focus_tabs-6">
-          <li class="active">
-
-            <!-- be careful to the urls it is used to navigate -->
-
-            <a href="http://demo.designwall.com/dw-focus/blog/#dw_focus_popular_news-3">POSTS</a>
-          </li>
-          <li class="">
-            <a href="http://demo.designwall.com/dw-focus/blog/#dw-recent-comments-dw-widget-1">COMMENTAIRES</a>
-          </li>
-
-        </ul>
-        <div class="tab-content">
-          <div class="tab-pane active" id="dw_focus_popular_news-3">
-            <h3 class="widget-title">POSTS</h3>
-
-            <article class="hentry item active has-thumbnail content-print">
-
-              <div class="entry-thumbnail">
-                <a href="#">
-                  <img width="110" height="110" src="http://placehold.it/80x80" class="attachment-thumbnail wp-post-image" alt="Bloomberg tops $1B in gifts to alma mater Johns Hopkins University"></a>
-              </div>
-
-              <div class="entry-meta">July 9, 2012</div>
-
-              <h2 class="entry-title">
-                <a href="#">
-                  Bloomberg tops $1B in gifts to alma mater Johns Hopkins University
-                </a>
-              </h2>
-
-            </article>
-
-            <article class="hentry item has-thumbnail content-print">
-
-              <div class="entry-thumbnail">
-                <a href="#">
-                  <img width="110" height="110" src="http://placehold.it/80x80" class="attachment-thumbnail wp-post-image" alt="Hackers take over sentencing commission website"></a>
-              </div>
-
-              <div class="entry-meta">December 30, 2012</div>
-
-              <h2 class="entry-title">
-                <a href="#">
-                  Article Demo Showcase: What markup you can use in your News Article
-                </a>
-              </h2>
-
-            </article>
-
-            <article class="hentry item has-thumbnail content-print">
-
-              <div class="entry-thumbnail">
-                <a href="#">
-                  <img width="110" height="110" src="http://placehold.it/80x80" class="attachment-thumbnail wp-post-image" alt="Tennessee lawmaker wants to tie welfare benefits to good grades"></a>
-              </div>
-
-              <div class="entry-meta">January 20, 2013</div>
-
-              <h2 class="entry-title">
-                <a href="#">Barack Obama’s Complete 2013 Inauguration Speech</a>
-              </h2>
-
-            </article>
-
-            <article class="hentry item has-thumbnail content-print">
-
-              <div class="entry-thumbnail">
-                <a href="#">
-                  <img width="110" height="110" src="http://placehold.it/80x80" class="attachment-thumbnail wp-post-image" alt="Tennessee lawmaker wants to tie welfare benefits to good grades"></a>
-              </div>
-
-              <div class="entry-meta">January 20, 2013</div>
-
-              <h2 class="entry-title">
-                <a href="#">Barack Obama’s Complete 2013 Inauguration Speech</a>
-              </h2>
-
-            </article>
-
-          </div>
-          <div class="tab-pane" id="dw-recent-comments-dw-widget-1">
-            <h3 class="widget-title">COMMENTAIRES</h3>
-            <ul id="dw_recentcomments">
-              <li class="dw_recentcomments">
-                <img alt="" src="/static/img/user.jpg" class="avatar avatar-60 photo" height="60" width="60">
-                <div class="comment-info">
-
-                  <span class="comment-date">January 8, 2013</span>
-                  <span class="comment-title">
-                    on
-                    <a href="#">The Man Who Sold The World</a>
-                  </span>
-                  <span class="comment-author">by ass</span>
-                </div>
-              </li>
-              <li class="dw_recentcomments">
-                <img alt="" src="/static/img/user.jpg" class="avatar avatar-60 photo avatar-default" height="60" width="60">
-                <div class="comment-info">
-
-                  <span class="comment-date">January 7, 2013</span>
-                  <span class="comment-title">
-                    on
-                    <a href="#">Umbrella Beach</a>
-                  </span>
-                  <span class="comment-author">
-                    by
-                    <a href="http://twitter.com/honglt" rel="external nofollow" class="url">Le Hong</a>
-                  </span>
-                </div>
-              </li>
-              <li class="dw_recentcomments">
-                <img alt="" src="/static/img/user.jpg" class="avatar avatar-60 photo avatar-default" height="60" width="60">
-                <div class="comment-info">
-
-                  <span class="comment-date">January 7, 2013</span>
-                  <span class="comment-title">
-                    on
-                    <a href="#">Umbrella Beach</a>
-                  </span>
-                  <span class="comment-author">
-                    by
-                    <a href="http://twitter.com/honglt" rel="external nofollow" class="url">Le Hong</a>
-                  </span>
-                </div>
-              </li>
-              <li class="dw_recentcomments">
-                <img alt="" src="/static/img/user.jpg" class="avatar avatar-60 photo" height="60" width="60">
-                <div class="comment-info">
-
-                  <span class="comment-date">January 7, 2013</span>
-                  <span class="comment-title">
-                    on
-                    <a href="#">Umbrella Beach</a>
-                  </span>
-                  <span class="comment-author">by admin</span>
-                </div>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-        <!-- end div tab-content --> </aside>
-
-    </div>
-      </div>
-    </div>
-    <!-- end div secodary  -->
-
-    <!--  end tabbed posts and comments -->
-
-    <div class="panel panel-default">
-
-    <div class="panel-heading">
-      {% trans "Restez Informés" %}
-    </div>
-    
-    <div class="panel-body">
-      <div class="row">
-    <div class="col-sm-12">
-      <div class="content_btm">
-
-          <div class="content_btm_grid" align="center">
-            <h2>{% trans "Abonnez vous a notre newsletter" %}</h2>
-            <p>{% trans "Entrez votre adresse mail et vous recevrez une notification à chaque nouvel article" %}</p>
-          </div>
-
-           
-            <div class="search1">
-              <form class="form_center">
-                <input type="text" value=""><br>
-                <input type="submit" value="Sign up">
-              </form>
-           </div>
-
-        </div>
-    </div>
-  </div>
-    </div>
-  </div>
-
-  </div> <!-- end col-sm-4 --> 
-  
+    {% include "./parts/base_sidecontent.html" %}  
 
   {% endblock sidecontent %} 
 

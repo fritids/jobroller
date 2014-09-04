@@ -13175,3 +13175,362 @@ Traceback (most recent call last):
 DoesNotExist: EmployerInfo matching query does not exist.
 2014-09-03 14:15:36,801 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-09-03 14:17:55,644 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 18:12:05,854 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 18:12:08,501 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:23:22,145 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:23:22,503 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:28:49,604 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:29:38,518 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:35:18,352 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:37:55,348 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:21,601 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:33,593 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:33,881 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:37,991 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:38,279 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:41,404 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:41,693 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:45,383 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:45,670 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:55,897 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:39:56,185 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:41:15,298 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:43:51,092 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:44:04,545 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:44:04,836 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:44:56,845 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:44:57,137 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:50:08,006 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:50:08,293 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:53:46,997 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 22:57:32,764 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 23:07:50,016 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 23:08:55,108 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 23:09:48,192 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 23:10:11,173 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 23:10:33,918 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 23:11:26,054 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 23:11:26,343 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-03 23:13:00,439 - django.request - ERROR - Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 417, in register_user
+    gr = Group.objects.get(name='candidate')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Group matching query does not exist.
+2014-09-03 23:23:22,623 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 00:51:19,319 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 33, in home
+    return render_to_response('index.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 189, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 898, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 897, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 830, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 163, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 174, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 833, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 346, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 557, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 352, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+TemplateSyntaxError: Invalid filter: 'in_group'
+2014-09-04 12:24:59,088 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 12:25:01,327 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 12:38:57,309 - django.request - ERROR - Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 372, in login
+    return render_to_response('login.html', context, context_instance=RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: login.html
+2014-09-04 12:39:48,519 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 12:41:18,184 - django.request - ERROR - Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 372, in login
+    return render_to_response('/registration/login.html', context, context_instance=RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: /registration/login.html
+2014-09-04 12:41:35,903 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 12:43:01,102 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-04 12:54:29,504 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 33, in home
+    return render_to_response('index.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 176, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 101, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 98, in get_parent
+    return get_template(parent)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 189, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 262, in do_include
+    isolated_context=isolated_context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 898, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 897, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 830, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 163, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 174, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 833, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 346, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 557, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 352, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+TemplateSyntaxError: Invalid filter: 'in_group'
+2014-09-04 13:04:35,622 - django.request - ERROR - Internal Server Error: /search
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 176, in search
+    return render_to_response('search.html' , locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 148, in get_template
+    template = get_template_from_string(template, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 189, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 262, in do_include
+    isolated_context=isolated_context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: /parts/search_sidecontent.html
+2014-09-04 13:04:56,666 - django.request - ERROR - Internal Server Error: /search
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 176, in search
+    return render_to_response('search.html' , locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 189, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 262, in do_include
+    isolated_context=isolated_context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 265, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 321, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'trans'
+2014-09-04 13:15:59,454 - django.request - ERROR - Internal Server Error: /contact
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 292, in contact
+    return render_to_response('contact.html', locals(), context_instance = RequestContext(request))
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 169, in render_to_string
+    t = get_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 148, in get_template
+    template = get_template_from_string(template, origin, template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 156, in get_template_from_string
+    return Template(source, origin, name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 189, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 267, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 262, in do_include
+    isolated_context=isolated_context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 145, in __init__
+    t = get_template(template_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 145, in get_template
+    template, origin = find_template(template_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: simple_sidecontent.html
+2014-09-04 13:20:06,046 - django.request - ERROR - Internal Server Error: /offer/4/edit
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 81, in car_edit
+    'image':        car.image
+AttributeError: 'Offer' object has no attribute 'image'
