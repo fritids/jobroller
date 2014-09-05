@@ -26,6 +26,8 @@
   </style>
 {% endblock extra_style %}
 
+{% block topheader %} {% endblock topheader %}
+
 {% block middlecontent %}
 
 
@@ -35,15 +37,24 @@
             <div class="col-sm-12">
 
                 <br/>
+
                 <div class="panel panel-default">
-                  <div class="panel-heading"> <i class="glyph-icon icon-user"></i> &nbsp; S'enregistrer </div>
+
                     <div class="panel-body">
+                      <br/> <br/>
 
                         <div class="col-sm-2">&nbsp;</div>
                         <div class="col-sm-7" id='loginform'>
+                          <p class="register-helptext" style='text-align:center'> 
+                                    S'enregistrer
+                                  </p>
+                                  <hr/>
+
                             <div class="panel panel-default">
                                 
                                 <div class="panel-body">
+
+                                  
 
                                     <br>
                                       <!-- second form to hold -->  
@@ -152,13 +163,6 @@
                 </div> <!-- end panel panel-default --> 
 
                 <div class="clear"></div>
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <div class="col-sm-12">
-                        <img src="http://placehold.it/1010x70" alt="placeholder image" class='img-responsive'>  
-                      </div>
-                    </div>
-                </div>
 
           </div> <!-- end col-sm-12 --> 
 
@@ -170,6 +174,5 @@
 </div> <!-- end main2 -->
 {% endblock middlecontent %}
 
-{% block sidecontent %}
-  
-{% endblock sidecontent %}
+{% block sidecontent %} {% endblock sidecontent %}
+{% block footer %} {% endblock footer %}

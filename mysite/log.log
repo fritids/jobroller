@@ -13688,3 +13688,5 @@ Traceback (most recent call last):
     self.fields["image"].widget.attrs.update({"class":"input-sm"})
 KeyError: 'image'
 2014-09-05 12:36:28,345 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-05 16:35:08,474 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-05 16:35:10,038 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------

@@ -27,9 +27,7 @@ a.reg{
 }
 
 h1,h2,h3,h4,h5,h6{
-color: #000;
-font-weight:normal;
-font-family: 'Open sans', sans-serif !important;
+  color: #333;
 }
 
 img{max-width:100%;}
@@ -169,10 +167,50 @@ body{
 
 .ad-title{
   font-size: 25px;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   line-height: 30px;
-  color: #3a4049 !important;
-  border-bottom: 1px solid rgba(0, 136, 204, 0.38);
+  color: #000 !important;
+  border-bottom: 3px solid rgba(0, 136, 204, 0.38);
+  font-family: 'Open sans', serif !important;
+}
+
+.login-helptext{
+ font-family: 'Open sans', serif !important; 
+ line-height: 30px;
+ font-size: 25px;
+ text-align: center;
+}
+
+.register-helptext{
+ font-family: 'Open sans', serif !important; 
+ line-height: 30px;
+ font-size: 25px;
+ text-align: center;
+}
+
+.niceform ul.errorlist { float: left;color: #C07D7D; margin: 0px 30px; list-style: none; }
+
+.niceform .break { clear: left;margin-left: 200px; }
+
+.niceform .error{
+  color: #C07D7D;
+}
+
+.niceform ul.errorlist li {
+    padding: 5px 3px 4px 10px;
+    position: relative;
+}
+.niceform ul.errorlist li:before {
+    content:"";
+    position: absolute;
+    right: 100%;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 12px solid rgba(255, 0, 0, 0.4);
+    border-bottom: 6px solid transparent;
 }
 
 /* colors */
@@ -752,29 +790,31 @@ table.table.table.topic-list td+td {
 #loginform{
   
 }
-          /* make it like bootstrap style  */
+ /* make it like bootstrap style  */
 #loginform input[type="text"], #loginform input[type="password"]{
-  width: 100%;
-  height: 34px;
-  font-size: 14px;
-  color: #555555;
-  vertical-align: middle;
-  border: 2px solid rgba(93, 107, 146, 0.44) !important;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  display: inline-block;
-  border: 2px solid #bbb !important;
-  padding: 4px 3px 3px 5px;
-  margin: 0;
-  font: inherit;
-  outline: none;
-  line-height: 1.2;
-  background: #f8f8f8;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;        
+  width:100%;
+  background-color: #ffffff;
+border: 1px solid #bdc7d8;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+-webkit-transition: border linear .2s, box-shadow linear .2s;
+-moz-transition: border linear .2s, box-shadow linear .2s;
+-o-transition: border linear .2s, box-shadow linear .2s;
+transition: border linear .2s, box-shadow linear .2s;
+
+border: 1px solid #f1f1f1;
+padding: 5px;
+margin-bottom: 0;
+margin-top: 0;
+background: #f1f1f1;
+color: #434343;
+font-size: 13px;
+border-radius: 3px;
+box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
+-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
+-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
+
 }
 
 #loginform input[type="text"]:focus, #loginform input[type="password"]:focus{
@@ -795,7 +835,7 @@ table.table.table.topic-list td+td {
   color: #555555;
   vertical-align: middle;
   background-color: #ffffff;
-  border: 2px solid rgba(93, 107, 146, 0.44) !important;
+  /*border: 2px solid rgba(93, 107, 146, 0.44) !important;*/
   border-radius: 1px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -810,6 +850,20 @@ table.table.table.topic-list td+td {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
+#loginform label{
+  font-family: 'Open sans', serif;
+  color: #333 !important;
+  margin-bottom: 4px !important;
+  font-size: 15px !important;
+  line-height: 14px !important;
+  font-weight: bold !important;
+}
+
+#loginform button[type='submit'], #loginform button[type='button']{
+  width: 90%;
+  margin-top: 2%;
+  margin-bottom:4%;
+}
 
 /* registration and login ends */
 

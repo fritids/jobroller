@@ -53,7 +53,7 @@
         <link rel="stylesheet" type="text/css" href="/static/style/classy.css" />
 
         <link rel="stylesheet" href="/static/test.css">
-        
+
         <!-- vmap --> 
         <link rel="stylesheet" href="/static/vmap/jqvmap.css">
 
@@ -123,7 +123,8 @@
     <body>
   <br/>
 
-  <!-- upper menu --> 
+{% block topheader %}
+    <!-- upper menu --> 
   <header class='top_header'>
 
     <div id="scsl-header" class="header">
@@ -218,6 +219,7 @@
   <div class="container">
       <div class="row">
 
+{% endblock topheader %}
         
   {% block middlecontent %}
     
