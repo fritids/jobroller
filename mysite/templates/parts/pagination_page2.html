@@ -3,98 +3,44 @@
 
       <div class="panel panel-default">
         <div class="panel-heading"> {% trans "Resultats de la recherche" %} </div>
-        <div class="panel-body"> 
+        <div class="panel-body-mod"> 
 
-          <div id="wrapper2">
-            <div id="carousel2">
+          {% for i in items.object_list %}
+            <div class="freelancer-list-item hoverable clearfix">
+              <a class="span-2 freelancer-image" href="#">
+                <img width="70" height="70" src="http://placehold.it/70x70" alt="Sando">
+              </a>
 
-              <ul>
+            <div class="span-70 boxmodelfix info">
+                <h3>
+                    <a class="freelancer left" rel="nofollow" href="#">{{i.title}}</a>
+                    <!-- <span class="cert cert-level1-small " data-level="1"> </span> --> 
+                    <div class="widget-member-prizes"></div>       
+                </h3>
 
-                {% for i in items.object_list %}
+                <div class="job-title crop span-10">
+                  {{ i.category_display }} | <strong>{{i.region_display}}</strong> | <span class="clock"> <span> {{i.created|date:"SHORT_DATE_FORMAT"}} </span> </span>
+                </div>
+
+                <ul class="horizontal left">
                     <li>
-                    
-                    <div class="col-lg-12">
+                        <span class="flag"> Nombre de vues </span>
+                    </li>
 
-                        <div class="post-block-out " style="direction:{{ direction }}">
-        
-                      <div class="post-block">
-                  
-                          <div class="post-left">
-                              <a href="#" title="My First Classified Ad">
-                                <img class="attachment-medium img-thumbnail" alt="" title="" src="{{ i.image.thumb_url }}" width='87'>
-                              </a>                
-                          </div>
-                  
-                          <div class="post-right full">
-                          
-                              <h3><a href="{{i.get_absolute_url}}">{{ i.title }}</a></h3>
-                              
-                              <div class="clr"></div>
-                              
-                              <p class="post-meta">
-                                  <span class="folder">
-                                    <a href="#" rel="tag"> {{ i.category_display }} </a>
-                                  </span> | 
+                    <li class="rating"> {{i.views}} </li>
 
-                                  <span class="owner">
-                                    <a href="#" title="Posts by admin" rel="author"> {{ i.region_display }} </a>
-                                  </span> | 
+                    </ul>
+                </div>
 
-                                  <span class="clock"><span>{{i.created}}</span></span>
-                              </p>
-                              
-                              <div class="clr"></div>
-                              
-                              <p class="post-desc">
-                                {% if i.description  %}
-                                  {{ i.description }}
-                                {% else %}
-                                  {% trans "Pas de description" %}
-                                {% endif %}
-                                
-                                <!-- <i class="glyph-icon icon-big icon-cogs"></i> --> 
-                              </p>
-                              
-                                <p class="stats">{{i.views}} &nbsp; vues</p>
-                              
-                              <div class="clr"></div>
+                <div class="span-3 last details freelancer">
 
-
-                  
-                          </div>
-                  
-                          <div class="clr"></div>
-
-
-                  
-                      </div><!-- /post-block -->
-          
-                    </div> <!-- post-block-out ends --> 
-
-                    </div>
-
-                  </li>
-
-                  {% empty %}    
-                  <li>
-                    <img src="/static/images/no-thumb.jpg" alt="" class="img-thumbnail">
-                    <div class="car-meta">
-                      <h4>{% trans "Pas de resultats disponible" %}</h4>
-                      <i class='icon icon-comments-alt'></i> <span>{% trans "Pas de commentaires" %}</span> <br/>  
-                      <i class="icon icon-calendar"></i> <span>{% trans "Pas de date d" %}</span>
-                    </div>
-                </li>
-                {% endfor %}
-                
-                
-              </ul>
-
-              <div class="clearfix"></div>
-              <a id="prev2" class="prev" href="#">&lt;</a>
-              <a id="next2" class="next" href="#">&gt;</a>
-              <div id="pager2" class="pager"></div>
+                 <a class="span-3 contact-member call-to-action button action-signup-show" rel="nofollow" href="/">
+                  Contact
+                </a>  
+               </div>
             </div>
-          </div>
+
+          {% endfor %}
 
         <div class="clearfix"></div>
 

@@ -46,11 +46,11 @@ class OfferForm(forms.Form):
 	salary 			= forms.ChoiceField(label=_("Salaire"), choices=SALARY_CHOICES, widget=forms.Select(attrs={'class':'form-control'}))
 	description 	= forms.CharField(label=_("description"), required=False, widget=forms.Textarea(attrs={'class':'form-control ', 'placeholder':'Decrivez votre annonce '}))
 	immediate 		= forms.ChoiceField(label= _("immédiat"), required=False ,choices=YESNO, widget=forms.Select(attrs={'class':'form-control input-sm'}))
-	image 			= forms.FileField(label='Choisissez votre fichier', help_text='uploadze une image ')
+	# image 			= forms.FileField(label='Choisissez votre fichier', help_text='uploadze une image ')
 	
-	def __init__(self, *args, **kwargs):
-		super(OfferForm, self).__init__(*args, **kwargs)
-		self.fields["image"].widget.attrs.update({"class":"input-sm"})
+	# def __init__(self, *args, **kwargs):
+	# 	super(OfferForm, self).__init__(*args, **kwargs)
+	# 	self.fields["image"].widget.attrs.update({"class":"input-sm"})
 	
 
 class EditOfferForm(OfferForm):

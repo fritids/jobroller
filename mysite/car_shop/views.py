@@ -106,7 +106,7 @@ def free_add(request):
             
             immediate       = form.cleaned_data['immediate']    
             description     = form.cleaned_data['description']  
-            image           = request.FILES['image']
+            # image           = request.FILES['image']
 
             newcar = Offer( title           = title, 
                             offerType       = offer,

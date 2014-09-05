@@ -13660,3 +13660,31 @@ TemplateDoesNotExist: search_results
 2014-09-04 23:21:35,360 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-09-04 23:24:48,776 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-09-04 23:29:15,909 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-05 12:25:52,822 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-05 12:25:55,055 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-05 12:30:08,254 - django.request - ERROR - Internal Server Error: /profileEmp/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 346, in profileEmp
+    userinfo = EmployerInfo.objects.get( user = request.user )
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: EmployerInfo matching query does not exist.
+2014-09-05 12:34:05,452 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-05 12:35:58,136 - django.request - ERROR - Internal Server Error: /free_add
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/views.py", line 127, in free_add
+    form = OfferForm()
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/car_shop/forms.py", line 53, in __init__
+    self.fields["image"].widget.attrs.update({"class":"input-sm"})
+KeyError: 'image'
+2014-09-05 12:36:28,345 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
