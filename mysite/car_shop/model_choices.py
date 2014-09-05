@@ -2,7 +2,7 @@
 from django.utils.translation import ugettext_lazy as _
 
 SALARY_CHOICES = [
-	('all', _('Choisir.....')),
+	('all', _('Tous.....')),
 	('0', 'SMIC'),
 	('1', '18k'),
 	('2', '20k'),
@@ -25,7 +25,7 @@ SALARY_CHOICES = [
 ]
 
 OFFER_CHOICES = [
-	('all', _('Choisir.....')),
+	('all', _('Tous.....')),
 	('1', _('Freelance')),
 	('2', _('CDD')),
 	('3', _('CDI')),
@@ -33,7 +33,7 @@ OFFER_CHOICES = [
 	('5', _('Interim'))
 ]
 
-CATEGORY_CHOICES = [('all', 'Secteur ?'),
+CATEGORY_CHOICES = [('all', 'Tous....'),
 	('1', 'Assurance'),
 	('2', 'Banque'),
 	('3', 'Comptabilite'), 
@@ -81,7 +81,7 @@ CATEGORY_CHOICES = [('all', 'Secteur ?'),
 
 
 REGION_CHOICES = [ 
-	('all', _('Choisir.....')),
+	('all', _('Tous.....')),
 	('1', _('Nord Pas de Calais')), 
 	('2', _('Picardie')), 
 	('3', _('Haute Normandie')), 
@@ -108,14 +108,14 @@ REGION_CHOICES = [
 
 
 YESNO = [
-	('all', _('Choisir.....')),
+	('all', _('Tous.....')),
     ('Used', _('Yes')),
     ('New',  _('No'))
 ]
 
 
 DEPARTEMENT_CHOICES = [
-('all', _('Region ?')),
+('all', _('Tous....')),
 ('1', 'Ain'),
 ('2', ' Aisne'),
 ('3', ' Allier'),
@@ -215,7 +215,7 @@ DEPARTEMENT_CHOICES = [
 ]
 
 DISPONIBILITY_CHOICES = [
-	('all', _('Disponobilite ?')),
+	('all', _('Tous.....')),
 	('1', 'immediat'),
 	('2', '1 mois'),
 	('3', '2 mois'),
@@ -224,13 +224,13 @@ DISPONIBILITY_CHOICES = [
 ]
 
 STATUS_CHOICES = [
-	('all', _('Choisir.....')),
+	('all', _('Tous.....')),
 	('1', 'en poste'),
 	('2', 'preavis en cous ou termine')
 ]
 
 STUDY_LEVEL_CHOICES = [
-('all', _('Choisir.....')),
+('all', _('Tous.....')),
 	('0', '2nd'),
 	('1', 'BAC'),
 	('2', 'BAC+2'), 
@@ -242,7 +242,7 @@ STUDY_LEVEL_CHOICES = [
 ]
 
 EXPERIENCE_CHOICES = [
-	('all', _('Choisir.....')),
+	('all', _('Tous.....')),
 	('0', 'debutant'),
 	('1', '6 mois'),
 	('2', '1 ans '),
@@ -254,7 +254,7 @@ EXPERIENCE_CHOICES = [
 ]
 
 PERIOD_CHOICES = [
-	('all', _('Choisir.....')),
+	('all', _('Tous.....')),
 	('0', 'temps plein'),
 	('1', 'temps partiel')
 ]

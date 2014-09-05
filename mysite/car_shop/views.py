@@ -365,6 +365,13 @@ def profileEmp(request):
 
         return render_to_response('./registration/profile_emp.html', locals(), context_instance=RequestContext(request))
 
+@login_required
+def candidate(request, num):
+    print('in candidate view ##############################')
+    print num
+    userinfo = UserInfo.objects.get(id=num)
+    
+    return render_to_response('./registration/candidate.html', locals(), context_instance=RequestContext(request))
 
 def login(request):
     if request.user.is_authenticated(): return HttpResponseRedirect('/profile/')

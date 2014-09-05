@@ -151,36 +151,44 @@
             <div class="navbar-collapse collapse">
              
                 <ul class="nav navbar-nav">
-                    <li class="dropdown yamm-fw">
 
+                    <li class="dropdown yamm-fw">
                         <a href="/" class="dropdown-toggle" >
                         <i class="glyph-icon icon-home"></i>   Principale
                         </a>
-                        
                     </li>
-                    <li class="dropdown yamm-fw">
-                        <a href="/free_add" class="dropdown-toggle" >
-                            <i class="glyph-icon icon-list-alt"></i> Deposer annonce
-                        </a>
-                        
-                    </li>
-                    
+
+                    {% if request.user.is_authenticated %}
+
+                      {% if user|in_group:"employer" %}
+
+                        <li class="dropdown yamm-fw">
+                            <a href="/free_add" class="dropdown-toggle" >
+                                <i class="glyph-icon icon-list-alt"></i> Deposer annonce
+                            </a>
+                        </li>
+                            
+                      {% endif %}
+                      
+                    {% endif %}
+
                     <li class="dropdown yamm-fw">
                         <a href="#" class="dropdown-toggle" >
                             <i class="glyph-icon icon-folder-open"></i>Infos
                         </a>
-                        
                     </li>
+
                     <li class="dropdown yamm-fw">
                         <a href="/search" class="dropdown-toggle" >
                             <i class="glyph-icon icon-search"></i> Recherche
                         </a>
-                        
-                    </li>
-                    <li class="dropdown yamm-fw">
-                         <a href="/contact"><i class="glyph-icon icon-pencil"></i> Contact </a>
                     </li>
 
+                    <li class="dropdown yamm-fw">
+                         <a href="/contact">
+                          <i class="glyph-icon icon-pencil"></i> Contact 
+                        </a>
+                    </li>
 
                 </ul>
 
@@ -189,9 +197,9 @@
                   {% if request.user.is_authenticated %}
 
                       {% if user|in_group:"candidate" %}
-                          <li> <a href="/profile">{% trans "Profile" %} : {{ request.user.username }}</a> </li>
+                          <li> <a href="/profile"><i class="glyph-icon icon-user"></i>&nbsp; : {{ request.user.username }}</a> </li>
                       {% else %}
-                          <li> <a href="/profileEmp">{% trans "Profile" %} : {{ request.user.username }}</a> </li>
+                          <li>  <a href="/profileEmp"><i class="glyph-icon icon-user"></i> &nbsp; : {{ request.user.username }}</a> </li>
                       {% endif %}
 
                       <li> <a href="/accounts/logout/"> <i class="glyph-icon icon-signout"></i> {% trans "Deconnexion" %}</a> </li>

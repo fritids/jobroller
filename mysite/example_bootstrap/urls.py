@@ -46,6 +46,7 @@ urlpatterns = patterns('',
     # Profile
     url(r'^profile/$', "car_shop.views.profile", name='profile'),    
     url(r'^profileEmp/$', "car_shop.views.profileEmp", name='profileEmp'),    
+    url(r'^candidate/(?P<num>\d+)/$', "car_shop.views.candidate", name='candidate'),    
 
     # daxice 
     url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),

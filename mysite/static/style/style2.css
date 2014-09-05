@@ -442,6 +442,7 @@ box-shadow: 0 1px 0 rgba(0,0,0,.4);
 -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.4);
 }
 
+
 /* panels ends */
 
 /*---start-wrap-----*/
@@ -791,7 +792,7 @@ table.table.table.topic-list td+td {
   
 }
  /* make it like bootstrap style  */
-#loginform input[type="text"], #loginform input[type="password"]{
+#loginform input[type="text"], #loginform input[type="password"], #loginform textarea {
   width:100%;
   background-color: #ffffff;
 border: 1px solid #bdc7d8;
@@ -817,7 +818,7 @@ box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
 
 }
 
-#loginform input[type="text"]:focus, #loginform input[type="password"]:focus{
+#loginform input[type="text"]:focus, #loginform input[type="password"]:focus, #loginform textarea:focus{
     border-color: #08C;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);

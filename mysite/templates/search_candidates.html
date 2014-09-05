@@ -28,23 +28,23 @@
       <table id="example" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
+                <th>Photo</th>
                 <th>Nom</th>
                 <th>Position</th>
                 <th>Région</th>
                 <th>Niveau</th>
                 <th>Disponibilité</th>
-                <th>Salaire</th>
             </tr>
         </thead>
  
         <tfoot>
             <tr>
+                <th>Photo</th>
                 <th>Nom</th>
                 <th>Position</th>
                 <th>Région</th>
                 <th>Niveau</th>
                 <th>Disponibilité</th>
-                <th>Salaire</th>
             </tr>
         </tfoot>
  
@@ -52,12 +52,12 @@
             {% for i in contacts %}
 
             <tr>
-                <td>{{i.user.username}}</td>
+                <td><img src="/static/img/candidate_avatar.png" height='40px' width='40px' alt="User Photo" class='img-thumbnail'></td>
+                <td><a href="{{ i.get_absolute_url }}">{{i.user.username}}</a></td>
                 <td>{{i.get_sector1}}</td>
                 <td>{{i.get_mobility1}}</td>
                 <td>{{i.get_study_level}}</td>
                 <td>{{i.get_disponibility}}</td>
-                <td>$320,800</td>
             </tr>
               
             {% endfor %}
