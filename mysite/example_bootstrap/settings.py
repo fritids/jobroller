@@ -31,7 +31,7 @@ else:
 
 # DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
-LANGUAGE_CODE = 'fr-fr'
+LANGUAGE_CODE = 'fr'
 SITE_ID = 1
 
 MEDIA_ROOT = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'media'))
