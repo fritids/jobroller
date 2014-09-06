@@ -735,8 +735,8 @@ body {
 }
 .button.call-to-action, button.call-to-action, input[type="submit"].call-to-action, input[type="button"].call-to-action, button.call-to-action.ui-button {
     color: #fff;
-    background: #ff7400;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0) inset, 0 -2px 0 #d26000 inset, 0 0 5px #fd8c2f inset, 0 2px 4px rgba(0, 0, 0, 0)
+    background: rgba(190, 232, 240, 0.24);
+    /*box-shadow: 0 1px 0 rgba(255, 255, 255, 0) inset, 0 -2px 0 #d26000 inset, 0 0 5px #fd8c2f inset, 0 2px 4px rgba(0, 0, 0, 0)*/
 }
 .button.call-to-action.selected {
     background: #ff7400;
