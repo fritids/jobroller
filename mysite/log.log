@@ -13878,3 +13878,7 @@ AttributeError: 'NoneType' object has no attribute '_meta'
 2014-09-06 00:01:12,475 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-09-06 15:25:16,982 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
 2014-09-06 15:25:19,651 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-06 16:45:01,572 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-06 16:45:03,630 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-06 21:14:16,644 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
+2014-09-06 21:14:18,746 - example_bootstrap.settings - INFO - -------------- begin to crawl ---------------
