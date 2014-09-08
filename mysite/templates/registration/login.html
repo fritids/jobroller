@@ -68,9 +68,22 @@
                                   <hr/>
 
                                     <br>
+
+                                   
+
+
                                     <form class="form-horizontal niceform" action="" method="post">
                                       {% csrf_token %}
-                                      <span class="help-inline">{% if form.errors %}<p class="error">S'il vous plait corriger les champs mentionés en dessous:</p>{% endif %}</span>
+
+                                      {% if form.non_field_errors %}
+                                      <ul class='form-errors'>
+                                          {% for error in form.non_field_errors %}
+                                              <p class="errror">{{ error }}</p>
+                                          {% endfor %}
+                                      </ul>
+                                      <br>
+                                    {% endif %}
+
 
                                       <div class="control-group">
                                         <label class="control-label" {% if form.username.errors %} class="error"{% endif %}>
@@ -94,7 +107,9 @@
                                         </div>
                                      </div>
 
-                                     <br/>
+
+
+                                    <br/>
 
                                       <div class="form-actions">
                                         <button type="submit" class="btn btn-primary">Valider</button><br/>

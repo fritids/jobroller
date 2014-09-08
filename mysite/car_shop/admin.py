@@ -18,21 +18,9 @@ class AdminImageWidget(AdminFileWidget):
 		return mark_safe(u''.join(output))
 
 class OfferAdmin(admin.ModelAdmin):
-	list_display 	= ('offerType', 'salary', 'image_tag', 'user')
+	list_display 	= ('title','offerType', 'region', 'offerType', 'salary', 'user')
 	# delete selected car and it's  file
-	actions 		= ['delete_selected']
-	def delete_selected(self, request, queryset):
-		for obj in queryset:
-			obj.delete()
-	delete_selected.short_description = _('Delete selected car(s) and image file(s).')
-
-	def formfield_for_dbfield(self, db_field, **kwargs):
-		if db_field.name == 'image':
-			request = kwargs.pop("request", None)
-			kwargs['widget'] = AdminImageWidget
-			return db_field.formfield(**kwargs)
-		return super(CarAdmin,self).formfield_for_dbfield(db_field, **kwargs)
-
+	
 class ArticleAdmin(admin.ModelAdmin):
 	list_display 	= ('title', 'created')
 	search_fields 	= ('title', 'content')

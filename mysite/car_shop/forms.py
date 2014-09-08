@@ -9,6 +9,7 @@ from django.contrib.auth.models import User, Group
 from django.contrib.auth.forms import UserCreationForm
 from car_shop.models import UserInfo, EmployerInfo
 import datetime
+from django.contrib.auth import authenticate
 
 
 class LoginForm(forms.Form):
@@ -19,7 +20,24 @@ class LoginForm(forms.Form):
 		super(LoginForm,self).__init__(*args, **kwargs)	
 		for k, field in self.fields.items():
 			if 'required' in field.error_messages:
-				field.error_messages['required'] = 'Ce champs est obligatoire'	
+				field.error_messages['required'] = 'Ce champs est obligatoire'
+
+	def clean(self):
+
+		username = self.cleaned_data.get('username')
+		password = self.cleaned_data.get('password')
+		user = authenticate(username=username, password=password)
+
+		if not user or not user.is_active:
+		    raise forms.ValidationError("Erreur d'authentification.")
+		return self.cleaned_data
+
+	def login(self, request):
+
+		username = self.cleaned_data.get('username')
+		password = self.cleaned_data.get('password')
+		user = authenticate(username=username, password=password)
+		return user				
 
 
 class Text_Search_Form(forms.Form):
@@ -96,6 +114,12 @@ class CustomRegistrationForm(UserCreationForm):
 	class Meta:
 		model 			= User
 		fields 			= ('username', 'last_name',  'email', 'password1', 'password2' )
+
+	def clean_username(self):
+		username = self.cleaned_data['username']
+		if User.objects.exclude(pk=self.instance.pk).filter(username=username).exists():
+			raise forms.ValidationError(u'le nom "%s" est deja pris.' % username)
+		return username	
 
 	def clean_password1(self):
 		password = self.cleaned_data['password1']
@@ -185,6 +209,8 @@ class CustomRegistrationForm(UserCreationForm):
 			if 'required' in field.error_messages: field.error_messages['required'] 	= 'Ce champs est obligatoire'
 			# if 'invalid' in field.error_messages: field.error_messages['invalid'] 		= 'Entrez une adresse email valide'
 			if 'invalid_choice' in field.error_messages: field.error_messages['invalid'] = 'Choisir une valeur valide'
+
+
 	
 class CustomRegistrationFormEmp(UserCreationForm):
 	first_name			= forms.CharField(max_length=200)
@@ -201,6 +227,12 @@ class CustomRegistrationFormEmp(UserCreationForm):
 	class Meta:
 		model 			= User
 		fields 			= ('username', 'first_name','email', 'password1', 'password2' )
+
+	def clean_username(self):	
+		username = self.cleaned_data['username']
+		if User.objects.exclude(pk=self.instance.pk).filter(username=username).exists():
+			raise forms.ValidationError(u'le nom "%s" est deja pris.' % username)	
+		return username		
 
 	def __init__(self,*args, **kwargs):
 		super(CustomRegistrationFormEmp,self).__init__(*args, **kwargs)	
@@ -222,6 +254,8 @@ class CustomRegistrationFormEmp(UserCreationForm):
 			gr = Group.objects.get(name='employer')
 			gr.user_set.add(user)
 		return user	
+
+	
 
 
 class UserInfoForm(forms.ModelForm):

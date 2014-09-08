@@ -24,6 +24,13 @@
         <!-- vmap --> 
         <link rel="stylesheet" href="/static/vmap/jqvmap.css">
 
+        <link rel="stylesheet" href="/static/vmap/jqvmap.css">
+
+        <!-- wyswygt --> 
+        <link rel="stylesheet" href="/static/bootstrap-wysihtml5/lib/css/bootstrap-wysihtml5-0.0.2.css">
+        <link rel="stylesheet" href="/static/bootstrap-wysihtml5/lib/css/wysihtml5-color.css">
+        
+
 
         <!-- sharethis webservice --> 
         <script type="text/javascript">var switchTo5x=true;</script>
@@ -80,11 +87,14 @@
                                         </div>
                                      </div>
 
+                                     <div class="clearfix"></div>
+
                                      <div class="control-group" style='display:none'>
                                         <div class="controls">
                                            <div style='display:none'><input type='hidden' name='first_name' value='employer' /></div>
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
 
                                      <div class="control-group">
                                         <label class="control-label">Téléphone</label>
@@ -93,6 +103,7 @@
                                            {% if form.phone.errors %}  <span class="help-inline">{{ form.phone.errors }}</span> {% endif %}
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
 
                                      <div class="control-group">
                                         <label class="control-label">code postal</label>
@@ -101,6 +112,7 @@
                                            {% if form.postal_code.errors %}  <span class="help-inline">{{ form.postal_code.errors }}</span> {% endif %}
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
 
                                      <div class="control-group">
                                         <label class="control-label">ville</label>
@@ -109,6 +121,7 @@
                                            {% if form.town.errors %}  <span class="help-inline">{{ form.town.errors }}</span> {% endif %}
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
 
                                      <div class="control-group">
                                         <label class="control-label">Email</label>
@@ -117,6 +130,7 @@
                                            {% if form.email.errors %}  <span class="help-inline">{{ form.email.errors }}</span> {% endif %}
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
 
                                      <div class="control-group">
                                         <label class="control-label">Mot de passe</label>
@@ -125,6 +139,7 @@
                                            {% if form.password1.errors %}  <span class="help-inline">{{ form.password1.errors }}</span> {% endif %}
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
 
                                      <div class="control-group">
                                         <label class="control-label">Vérifier mot de passe</label>
@@ -133,6 +148,7 @@
                                            {% if form.password2.errors %}  <span class="help-inline">{{ form.password2.errors }}</span> {% endif %}
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
 
                                      <div class="control-group">
                                         <label class="control-label">Site web</label>
@@ -141,14 +157,19 @@
                                           {% if form.website.errors %}  <span class="help-inline">{{ form.website.errors }}</span> {% endif %}
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
+
+                                     <br>
 
                                      <div class="control-group">
-                                        <label class="control-label">Presentation</label>
+                                        <label class="control-label">Presentation de l'offre</label>
                                         <div class="controls">
                                             {{ form.presentation }}
                                             {% if form.presentation.errors %}  <span class="help-inline">{{ form.presentation.errors }}</span> {% endif %}
                                         </div>
                                      </div>
+                                     <div class="clearfix"></div>
+                                     <br>
 
                                      <div class="form-actions ">
                                         <button type="submit" class="btn btn-primary">Valider</button>
@@ -187,3 +208,31 @@
 
 {% block sidecontent %} {% endblock sidecontent %}
 {% block footer %} {% endblock footer %}
+
+
+{% block js %}
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/style/bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.infinitescroll.min.js"></script>
+        <script type="text/javascript" src="/static/js/custom.js"></script>
+
+        <script src="/static/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
+        <!-- vmap --> 
+        <script type='text/javascript' src="/static/vmap/jquery.vmap.js" ></script>         
+        <script type='text/javascript' src="/static/vmap/jquery.vmap.france.js" ></script>
+
+        <script type="text/javascript" src="/static/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>         
+        <script type="text/javascript" src="/static/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.js"></script>         
+
+        <script type='text/javascript'>
+          jQuery(document).ready(function($) {
+            $('#id_presentation').wysihtml5({
+              "font-styles": false,
+              "color":false,
+              "link":false,
+              "image":false
+            });
+          });
+        </script>
+{% endblock js %}

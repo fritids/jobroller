@@ -189,6 +189,10 @@ body{
  text-align: center;
 }
 
+.form-errors{
+  color: #C07D7D;
+}
+
 .niceform ul.errorlist { float: left;color: #C07D7D; margin: 0px 30px; list-style: none; }
 
 .niceform .break { clear: left;margin-left: 200px; }

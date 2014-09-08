@@ -25,7 +25,7 @@ from django.utils import translation
 def home(request):
 
     msg         = _('target message') 
-    cars        = Offer.objects.all()
+    cars        = Offer.objects.all()[:8]
     form        = Search_Form()
     text_form   = Text_Search_Form()
     articles    = Article.objects.all()[:4]
@@ -382,19 +382,23 @@ def login(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
 
-            usr = auth.authenticate(username=username, password=password)
+            usr = form.login(request)
             if usr is not None:
                     auth.login(request, usr)
                     return HttpResponseRedirect('/')
             else:
+
                 return render_to_response('./registration/login.html', {'form': form}, context_instance=RequestContext(request))
         else:
+            print 'login mot de passe incorrecte' 
             return render_to_response('./registration/login.html', {'form': form}, context_instance=RequestContext(request))
     else:
         form = LoginForm()
         context = {'form': form}
+
         return render_to_response('./registration/login.html', context, context_instance=RequestContext(request))
 
+    print 'login mot de passe incorrecte 3'    
     return render_to_response('./registration/login.html', c, context_instance=RequestContext(request))
 
 

@@ -34,12 +34,15 @@ class Offer(models.Model):
 	def __unicode__(self):
 		return unicode(OFFER_CHOICES[int(self.offerType)][1])
 
+	def get_absolute_url(self):
+		return '/offre/%s'%(self.id)	
+
 	def region_display(self):   
 		# return self.region
 		return REGION_CHOICES[int(self.region)][1]
 
 	def salary_display(self):
-		return self.salary
+		return SALARY_CHOICES[int(self.salary)][1]
 
 	def category_display(self):
 		return CATEGORY_CHOICES[int(self.category)][1]
