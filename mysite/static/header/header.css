@@ -1,4 +1,17 @@
 
+
+
+/* heder icons */
+.dropdown.yamm-fw i.glyph-icon, .nav.navbar-nav.right-nav i.glyph-icon{
+  color: rgba(0, 0, 0, 0.48);
+  font-size: 20px;
+  height: 20px;
+  padding: 3px;
+}
+
+/* heder icons ends */
+
+
 a, a:hover, a:link, a:active, a:visited {
     /*color: #2C8DDA;*/
 }

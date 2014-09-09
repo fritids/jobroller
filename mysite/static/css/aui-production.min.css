@@ -97,16 +97,17 @@
 
 .icon-med {
     -moz-opacity: .09;
-    filter: alpha(opacity: .09);
-    opacity: .6;
-    position: absolute;
-    font-size: 50px;
-    /*right: 33%;*/
-    /*top: 70%;*/
-    height: 50px;
-    line-height: 29px;
-    width: 50px;
-    margin-top: 0px;
+    filter      : alpha(opacity: .09);
+    opacity     : .6;
+    position    : absolute;
+    font-size   : 50px;
+    /*right     : 33%;*/
+    /*top       : 70%;*/
+    height      : 50px;
+    line-height : 29px;
+    width       : 50px;
+    margin-top  : 0px;
+    color       :#8AA2AD;
 }
 
 .icon-big {
@@ -125,16 +126,16 @@
 
 .icon-bigger {
     -moz-opacity: .09;
-    filter: alpha(opacity: .09);
-    opacity: .09;
-    position: absolute;
-    font-size: 400px;
-    right: 170px;
-    top: 75%;
-    height: 50px;
-    line-height: 50px;
-    width: 50px;
-    margin-top: -50px;
+    filter      : alpha(opacity: .09);
+    opacity     : .09;
+    position    : absolute;
+    font-size   : 400px;
+    right       : 170px;
+    top         : 75%;
+    height      : 50px;
+    line-height : 50px;
+    width       : 50px;
+    margin-top  : -50px;
 }
 
 span.btn.btn-default.btn-file{
