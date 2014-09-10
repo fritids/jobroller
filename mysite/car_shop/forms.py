@@ -89,7 +89,7 @@ form_error_dict = {
 
 class CustomRegistrationForm(UserCreationForm):
 	username			= forms.CharField(max_length=200,required=True, error_messages={'invalid': "Ce champ doit contenir des lettres ou des chiffres ou @/./+/-/_ , et pas d'espace"})
-	email 				= forms.EmailField(required=True, error_messages={'invalid': 'Vous de vez entrez une adresse valide'})
+	email 				= forms.EmailField(required=True, error_messages={'invalid': 'Vous devez entrez une adresse valide'})
 	last_name 			= forms.CharField(max_length=200)
 	telephone 			= forms.CharField(max_length=200)
 	adress  			= forms.CharField(max_length=200)
@@ -110,7 +110,7 @@ class CustomRegistrationForm(UserCreationForm):
 	experience			= forms.ChoiceField(label="experience", 	choices=EXPERIENCE_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
 	contract			= forms.ChoiceField(label="contract", 		choices=OFFER_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
 	period				= forms.ChoiceField(label="period", 		choices=PERIOD_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
-	cv 					= forms.FileField(label='Déposez votre fichier sous format pdf uniquement', help_text='uploadez le CV ')
+	document			= forms.FileField(label='Déposez votre fichier sous format pdf uniquement', help_text='uploadez le CV ', required=False)
 
 	class Meta:
 		model 			= User

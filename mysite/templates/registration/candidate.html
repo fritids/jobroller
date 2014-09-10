@@ -34,11 +34,24 @@
         <div class="col-sm-9">
 
         <div class="social-box">
-            
-            <div class="body">
-              <h4>Informations générales</h4>
-              <br>
-              <dl class="dl-horizontal">
+      <div class="header">
+        <h4>Informations générales</h4>
+      </div>
+      <div class="body">
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active"><a href="#profile" data-toggle="tab"><i class="icon-user"></i> Profile</a></li>
+          <li class=""><a href="#mot" data-toggle="tab"><i class="icon-cog"></i> Motivation</a></li>
+          <li class=""><a href="#home" data-toggle="tab"><i class="icon-list-alt"></i> CV</a></li>
+          
+        </ul>
+
+            <div id="myTabContent" class="tab-content">
+
+              <!-- motivation --> 
+              <div class="tab-pane fade active in" id="profile">
+                <p><strong>Profile</strong></p>
+                <p>
+                  <dl class="dl-horizontal">
                 <dt>Nom d'utilisateur</dt>
                 <dd>{{userinfo.user.username}}</dd>
                 <br>
@@ -93,36 +106,22 @@
                 <dd>{{ userinfo.user.last_login }}</dd>
                 <br>
               </dl>
-            </div>
-           </div>  
-
-            <div class="social-box span6">
-            <div class="header">
-              <h4 class="hidden-phone">Autres Infos</h4>
-
-              <div class="tools">
-                <ul id="myTab2" class="nav nav-tabs">
-                  <li class="active"><a class="active" href="#profile2" data-toggle="tab"><i class="icon-cog"></i> Motivations</a></li>
-                  <li class=""><a href="#dropdown12" data-toggle="tab"><i class="icon-user"></i> CV</a></li>
-                </ul>
+                </p>
               </div>
 
-            </div>
-            <div class="body">
-              <div id="myTabContent2" class="tab-content">
-                <div class="tab-pane fade active in" id="profile2">
-                  <p><strong>Motivations</strong></p>
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, odio consequatur facere tempore rem sed sequi facilis quae doloremque voluptates non delectus quaerat error deleniti nam placeat ratione quisquam.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, distinctio!
+               <!-- motivation -->  
 
-                    
-                    
-                  </p>
-                </div>
-                <div class="tab-pane fade" id="dropdown12">
-                  
-                  
-                  {% if userinfo.document %} 
+              <div class="tab-pane fade" id="mot">
+                <p><strong>Motivation</strong></p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, odio consequatur facere tempore rem sed sequi facilis quae doloremque voluptates non delectus quaerat error deleniti nam placeat ratione quisquam.
+                </p>
+              </div>
+
+              <!-- CV --> 
+
+              <div class="tab-pane fade" id="home">
+
+                {% if userinfo.document %} 
                     <p><strong>&nbsp;achetez profile pour pouvoir consulter le CV</strong></p>
                     <p class='login-helptext'> <img src="{{ userinfo.get_pdf_image }}" width='300px' height='auto'> </p>
 
@@ -138,15 +137,15 @@
                   </div>
 
                   {% endif %}
-
-                  
-
-                </div>
+                
               </div>
 
+              
+
+             </div>
 
             </div>
-          </div>
+          </div>  
 
         </div>
 

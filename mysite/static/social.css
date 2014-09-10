@@ -6530,6 +6530,7 @@ a.thumbnail:focus {
 }
 .social-box .body .tab-content {
   overflow: hidden;
+  min-height: 750px;
 }
 .social-box .footer,
 .social-box footer {

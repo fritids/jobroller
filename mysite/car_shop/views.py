@@ -435,6 +435,8 @@ def register_user(request):
 
     if request.method == 'POST':
         form = CustomRegistrationForm(request.POST)
+        print request.FILES
+
         if form.is_valid():
             form.save()
             #assign data to the custom user
@@ -444,7 +446,8 @@ def register_user(request):
             for key in userFields.split(','):
                 setattr(u, key, request.POST.get(key, ''))
 
-            u.document = None    
+            cv = request.FILES.get("document", None)    
+            u.document = cv    
 
             # set the user in candidate user group    
             gr = Group.objects.get(name='candidate')
