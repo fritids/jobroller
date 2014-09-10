@@ -241,7 +241,10 @@ def car(request, num):
     car = Offer.objects.get(id=num)
 
     # car.update(views=F('views')+1)
-    Offer.objects.filter(id=num).update(views=F('views')+1)
+    # Offer.objects.filter(id=num).update(views=F('views')+1)
+    car.views = int(car.views)+1
+    car.save()
+
     can_edit = False
     # if request.user.username == car.user.user.username:
     if request.user.username == car.user.username: can_edit = True
@@ -440,6 +443,8 @@ def register_user(request):
             userFields = 'adress,telephone,sector1,sector2,sector3,mobility1,mobility2,mobility3,disponibility,status,salary,study_level,experience,contract,period,languages'  
             for key in userFields.split(','):
                 setattr(u, key, request.POST.get(key, ''))
+
+            u.document = None    
 
             # set the user in candidate user group    
             gr = Group.objects.get(name='candidate')

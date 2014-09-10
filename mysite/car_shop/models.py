@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-					
 from django.db import models
 from car_shop.fields import ThumbnailImageField 
 from model_choices import *
@@ -8,6 +9,11 @@ from django.contrib.auth.models import User, Group
 from django.utils.translation import ugettext as _
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+
+import subprocess
+from django.conf import settings
+from PyPDF2 import PdfFileReader, PdfFileWriter
+
 
 
 class Offer(models.Model):
@@ -128,25 +134,31 @@ class UserInfo(models.Model):
 	
 	# recently added fields
 
-	sector1       = models.CharField(max_length = 200,choices=CATEGORY_CHOICES, default="1")
-	sector2       = models.CharField(max_length = 200,choices=CATEGORY_CHOICES, null=True, blank=True,default="1")
-	sector3       = models.CharField(max_length = 200,choices=CATEGORY_CHOICES, null=True, blank=True, default="1")
+	sector1       = models.CharField(verbose_name = u'Secteur 1', max_length = 200,choices=CATEGORY_CHOICES, default="1")
+	sector2       = models.CharField(verbose_name = u'Secteur 2', max_length = 200,choices=CATEGORY_CHOICES, null=True, blank=True,default="1")
+	sector3       = models.CharField(verbose_name = u'Secteur 3', max_length = 200,choices=CATEGORY_CHOICES, null=True, blank=True, default="1")
 	
-	mobility1     = models.CharField(max_length = 200,choices=DEPARTEMENT_CHOICES ,default="1")
-	mobility2     = models.CharField(max_length = 200,choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
-	mobility3     = models.CharField(max_length = 200,choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
+	mobility1     = models.CharField(verbose_name = u'Mobilité 1', max_length = 200,choices=DEPARTEMENT_CHOICES ,default="1")
+	mobility2     = models.CharField(verbose_name = u'Mobilité 2', max_length = 200,choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
+	mobility3     = models.CharField(verbose_name = u'Mobilité 3', max_length = 200,choices=DEPARTEMENT_CHOICES, null=True, blank=True, default="1")
 	
-	disponibility = models.CharField(max_length = 200,choices=DISPONIBILITY_CHOICES, default="2")
+	disponibility = models.CharField(verbose_name = u'Disponibilité', max_length = 200,choices=DISPONIBILITY_CHOICES, default="2")
 	
-	status        = models.CharField(max_length = 200,choices=STATUS_CHOICES, null=True, blank=True) 
-	salary        = models.CharField(max_length = 200,choices=SALARY_CHOICES,default="1") 
+	status        = models.CharField(verbose_name = u'Status', max_length = 200,choices=STATUS_CHOICES, null=True, blank=True) 
+	salary        = models.CharField(verbose_name = u'Salaire', max_length = 200,choices=SALARY_CHOICES,default="1") 
 	
-	study_level   = models.CharField(max_length = 200,choices=STUDY_LEVEL_CHOICES, null=True, blank=True) 
-	experience    = models.CharField(max_length = 200,default="1") 
-	contract      = models.CharField(max_length = 200,default="1") 
-	period        = models.CharField(max_length = 200,default="1") 
+	study_level   = models.CharField(verbose_name = u'Niveau d\'etudes', max_length = 200,choices=STUDY_LEVEL_CHOICES, null=True, blank=True) 
+	experience    = models.CharField(verbose_name = u'Experience', max_length = 200,default="1") 
+	contract      = models.CharField(verbose_name = u'Contrat', max_length = 200,default="1") 
+	period        = models.CharField(verbose_name = u'periode', max_length = 200,default="1") 
 	
-	languages     = models.CharField(max_length=200, null=True, blank=True, default="1")
+	languages     = models.CharField(verbose_name = u'langues', max_length=200, null=True, blank=True, default="1")
+	document 	  = models.FileField(verbose_name = u'CV', upload_to = 'uploads/pdfs/', null=True, blank=True)
+
+	def get_pdf_image(self):
+		the_file = self.document.file.name.split('/')[-1].split('.')[0]
+		return '%s/pdfs_images/img-%s.jpg' %( "/".join(self.document.file.name.split('/')[:-2] ), the_file)
+
 
 	def get_sector1(self):   
 		return CATEGORY_CHOICES[int(self.sector1)][1]
@@ -186,6 +198,33 @@ class UserInfo(models.Model):
 
 	def get_absolute_url(self):
 		return '/candidate/%s'%(self.id)    
+
+
+def pdf_post_save(sender, instance=False, **kwargs):
+
+	pdf = UserInfo.objects.get(pk=instance.pk)
+	if pdf.document:
+		new_name =  pdf.document.file.name.split('/')[-1].split('.')[0]
+
+		output = PdfFileWriter()
+		pdfOne = PdfFileReader(file( '%s/%s' % (settings.MEDIA_ROOT, pdf.document), "rb"))
+		output.addPage(pdfOne.getPage(0))
+
+		outputStream = file(r'%s/uploads/first/%s-first.pdf'  % (settings.MEDIA_ROOT, new_name), "wb")
+		output.write(outputStream)
+		outputStream.close()
+
+		
+		params = ['convert', 
+					'-blur' ,'4x6',
+					(r'%s/uploads/first/%s-first.pdf')  % (settings.MEDIA_ROOT, new_name),
+					 '%s/uploads/pdfs_images/img-%s.jpg' % (settings.MEDIA_ROOT, new_name )
+					 ]
+		subprocess.check_call(params)
+
+
+
+post_save.connect(pdf_post_save, sender=UserInfo)    	
 
 
 class EmployerInfo(models.Model):

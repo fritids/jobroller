@@ -102,8 +102,8 @@
 
               <div class="tools">
                 <ul id="myTab2" class="nav nav-tabs">
-                  <li class="active"><a class="active" href="#profile2" data-toggle="tab"><i class="icon-user"></i> Motivations</a></li>
-                  <li class=""><a href="#dropdown12" data-toggle="tab"><i class="icon-cog"></i> Settings</a></li>
+                  <li class="active"><a class="active" href="#profile2" data-toggle="tab"><i class="icon-cog"></i> Motivations</a></li>
+                  <li class=""><a href="#dropdown12" data-toggle="tab"><i class="icon-user"></i> CV</a></li>
                 </ul>
               </div>
 
@@ -111,18 +111,36 @@
             <div class="body">
               <div id="myTabContent2" class="tab-content">
                 <div class="tab-pane fade active in" id="profile2">
-                  <p><strong>motivations</strong></p>
+                  <p><strong>Motivations</strong></p>
                   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, odio consequatur facere tempore rem sed sequi facilis quae doloremque voluptates non delectus quaerat error deleniti nam placeat ratione quisquam.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, distinctio!
+
+                    
                     
                   </p>
                 </div>
                 <div class="tab-pane fade" id="dropdown12">
-                  <p><strong>Settings</strong></p>
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, odio consequatur facere tempore rem sed sequi facilis quae doloremque voluptates non delectus quaerat error deleniti nam placeat ratione quisquam.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, distinctio!
-                    
-                  </p>
+                  
+                  
+                  {% if userinfo.document %} 
+                    <p><strong>&nbsp;achetez profile pour pouvoir consulter le CV</strong></p>
+                    <p class='login-helptext'> <img src="{{ userinfo.get_pdf_image }}" width='300px' height='auto'> </p>
+
+                  {%else%} 
+
+                  <div class="alert">
+                    <br/>
+                    <!-- <button type="button" class="close" data-dismiss="alert">×</button> --> 
+                    <strong>Le CV n'est pas encore déposé </strong> Best check yo self
+                    &nbsp;
+
+                    <br/>
+                  </div>
+
+                  {% endif %}
+
+                  
+
                 </div>
               </div>
 

@@ -73,7 +73,7 @@ a, a:hover, a:link, a:active, a:visited {
 
 #navigation .nav li a {
   line-height: 22px;
-  padding: 14px 15px;
+  padding: 14px 5px;
 }
 
 #navigation .nav .dropdown-toggle:hover .caret, .nav .dropdown-toggle:focus .white-caret {
@@ -184,8 +184,8 @@ a, a:hover, a:link, a:active, a:visited {
     font-size: 1.2em;
   }
   #navigation .nav .dropdown a {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 10px;
   }
 }
 @media (min-width: 1200px) {

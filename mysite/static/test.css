@@ -323,6 +323,17 @@ a.button.darker.selected, button.darker.selected, a.button.darker.selected:hover
     -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
+
+
+/*edded code */
+.span-70.boxmodelfix.info h3 a{
+    text-decoration:none; 
+    cursor         :default; 
+    font-weight    : bolder;
+}
+/*edded code ends*/
+
+
 .main-content+aside .pointer: :before {
     background: url('/css/pph2/sprites/common.png?dde1dbff') -120px -60px no-repeat;
     content: "";

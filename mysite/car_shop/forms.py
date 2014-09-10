@@ -29,7 +29,7 @@ class LoginForm(forms.Form):
 		user = authenticate(username=username, password=password)
 
 		if not user or not user.is_active:
-		    raise forms.ValidationError("Erreur d'authentification.")
+			raise forms.ValidationError("Erreur d'authentification.")
 		return self.cleaned_data
 
 	def login(self, request):
@@ -110,6 +110,7 @@ class CustomRegistrationForm(UserCreationForm):
 	experience			= forms.ChoiceField(label="experience", 	choices=EXPERIENCE_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
 	contract			= forms.ChoiceField(label="contract", 		choices=OFFER_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
 	period				= forms.ChoiceField(label="period", 		choices=PERIOD_CHOICES, widget=forms.Select(attrs={'class':'form-control input-sm'}))
+	cv 					= forms.FileField(label='Déposez votre fichier sous format pdf uniquement', help_text='uploadez le CV ')
 
 	class Meta:
 		model 			= User
@@ -126,6 +127,13 @@ class CustomRegistrationForm(UserCreationForm):
 		length = len(password)
 		if length < 8: raise forms.ValidationError("Il faut taper au moin 8 lettres.")
 		return password	
+
+	def clean_password2(self):
+		password1 = self.cleaned_data.get("password1", "")
+		password2 = self.cleaned_data["password2"]
+		if password1 != password2:
+			raise forms.ValidationError('Les deux mot de passe ne sont pas identique')
+		return password2	
 
 	def clean_sector1(self):
 		data = self.cleaned_data.get('sector1')
