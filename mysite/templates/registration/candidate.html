@@ -112,25 +112,46 @@
                <!-- motivation -->  
 
               <div class="tab-pane fade" id="mot">
-                <p><strong>Motivation</strong></p>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, odio consequatur facere tempore rem sed sequi facilis quae doloremque voluptates non delectus quaerat error deleniti nam placeat ratione quisquam.
-                </p>
+                
+                  {% if userinfo.motivation %}
+                    <p><strong>Motivation</strong></p>
+                      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, odio consequatur facere tempore rem sed sequi facilis quae doloremque voluptates non delectus quaerat error deleniti nam placeat ratione quisquam.
+                      </p>
+                  {% else %}
+
+                    <div class="alert">
+                      <p class="lead">
+
+                        Le candidat n'a pas encore décrit ses motivations
+                        
+                      </p>
+                    </div>
+
+                  {% endif %}
+
               </div>
 
               <!-- CV --> 
 
               <div class="tab-pane fade" id="home">
 
+                <br>
+
                 {% if userinfo.document %} 
-                    <p><strong>&nbsp;achetez profile pour pouvoir consulter le CV</strong></p>
-                    <p class='login-helptext'> <img src="{{ userinfo.get_pdf_image }}" width='300px' height='auto'> </p>
+                    <p><strong>&nbsp;achetez profile pour pouvoir consulter le CV</strong></p>  <br>
+
+                    <p class='login-helptext'> <img class='img-thumbnail' src="{{ userinfo.get_pdf_image }}" width='300px' height='auto'> </p>
 
                   {%else%} 
 
                   <div class="alert">
                     <br/>
                     <!-- <button type="button" class="close" data-dismiss="alert">×</button> --> 
-                    <strong>Le CV n'est pas encore déposé </strong> Best check yo self
+                    <!-- <strong>Le CV n'est pas encore déposé </strong> -->  
+
+                    <p class="lead">
+                      Le candidat n'a pas encore déposé sont CV.
+                    </p>
                     &nbsp;
 
                     <br/>

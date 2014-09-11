@@ -200,6 +200,7 @@ class CustomRegistrationForm(UserCreationForm):
 			if data == self.fields['period'].choices[0][0]: raise forms.ValidationError('Il faut choisir une valeur')
 			return data
 
+
 	def save(self, commit=True):	
 		user 			= super(UserCreationForm, self).save(commit=False) # do not save it at the moment because we did not add the email field
 		user.email 		= self.cleaned_data['email']
