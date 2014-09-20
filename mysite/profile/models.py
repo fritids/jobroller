@@ -119,42 +119,6 @@ class Profile_candid(models.Model):
         the_file = self.document.file.name.split('/')[-1].split('.')[0]
         return '%s/pdfs_images/img-%s.jpg' %( "/".join(self.document.file.name.split('/')[:-2] ), the_file)
 
-    def get_sector1(self):   
-        return CATEGORY_CHOICES[int(self.sector1)+1][1]
-
-    def get_sector2(self):   
-        return CATEGORY_CHOICES[int(self.sector2)+1][1]    
-
-    def get_sector3(self):   
-        return CATEGORY_CHOICES[int(self.sector3)+1][1]    
-
-    def get_mobility1(self):   
-        return DEPARTEMENT_CHOICES[int(self.mobility1)+1][1]        
-
-    def get_mobility2(self):
-        return DEPARTEMENT_CHOICES[int(self.mobility2)+1][1]    
-
-    def get_mobility3(self):   
-        return DEPARTEMENT_CHOICES[int(self.mobility3)+1][1]    
-
-    def get_disponibility(self):   
-        return DISPONIBILITY_CHOICES[int(self.disponibility)+1][1]    
-
-    def get_status(self):   
-        return STATUS_CHOICES[int(self.status)+1][1]        
-
-    def get_study_level(self):   
-        return STUDY_LEVEL_CHOICES[int(self.study_level)+1][1]    
-
-    def get_experience(self):   
-        return EXPERIENCE_CHOICES[int(self.experience)+1][1]        
-
-    def get_contract(self):   
-        return OFFER_CHOICES[int(self.contract)+1][1]            
-
-    def get_period(self):   
-        return PERIOD_CHOICES[int(self.period)+1][1]    
-
     def get_absolute_url(self):
         return '/candidate/%s'%(self.id)
 

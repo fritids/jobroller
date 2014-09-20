@@ -33,7 +33,7 @@
                 </h3>
 
                 <div class="job-title crop span-10">
-                  {{ i.category_display }} | <strong>{{i.region_display}}</strong> | <span class="clock"> <span> {{i.created|date:"SHORT_DATE_FORMAT"}} </span> </span>
+                  {{ i.get_category_display }} | <strong>{{i.get_region_display}}</strong> | <span class="clock"> <span> {{i.created|date:"SHORT_DATE_FORMAT"}} </span> </span>
                 </div>
 
                 <ul class="horizontal left">
@@ -55,15 +55,11 @@
             </div>
 
       {% endfor %}
-          
-        </div>
 
-    <br/>
-    
-    <!-- pagination  -->
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="page-numbers">
+
+      <br/>
+      
+      <div class="page-numbers">
           <ul>
             
             {% if contacts.has_previous %}
@@ -88,12 +84,12 @@
             </div>
           </ul>
         </div>
-        
-      </div>
-      
-    </div>
-    <!-- pagination end   -->
-    
+
+        <br/>
+          
+        </div>
+
+
     </div>
     </div>
 

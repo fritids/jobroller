@@ -1,6 +1,6 @@
 {% extends "sitebase.html" %}
 {% block title %}
-  search results
+  Résultats de la recherche
 {% endblock title %}
 {% load dajaxice_templatetags %}
 {% load i18n %}
@@ -36,7 +36,7 @@
             </h3>
 
             <div class="job-title crop span-10">
-              {{ i.category_display }} | <strong>{{i.region_display}}</strong> | <span class="clock"> <span> {{i.created|date:"SHORT_DATE_FORMAT"}} </span> </span>
+              {{ i.get_category_display }} | <strong>{{i.get_region_display}}</strong> | <span class="clock"> <span> {{i.created|date:"SHORT_DATE_FORMAT"}} </span> </span>
             </div>
 
             <ul class="horizontal left">
@@ -58,16 +58,8 @@
         </div>
 
       {% endfor %}
-      
-    </div>
-    <!-- end panel body -->
 
-    <br/> 
-
-    <!-- pagination  -->
-  <div class="panel panel-default">
-
-    <div class="panel-body">
+      <br>
 
       <div class="page-numbers">
         <ul>
@@ -97,6 +89,19 @@
 
         </ul>
       </div>
+
+      <br/>
+      
+    </div>
+    <!-- end panel body -->
+
+    <br/> 
+
+    <!-- pagination  -->
+  <div class="panel panel-default">
+
+    <div class="panel-body">
+
       
     </div>
     
