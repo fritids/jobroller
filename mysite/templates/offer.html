@@ -1,0 +1,159 @@
+{% extends "sitebase.html" %}
+{% load dajaxice_templatetags %}
+{% load i18n group_check %}
+{% block middlecontent %}
+
+<div class="col-sm-8">
+  <br/>
+  <div id="respo">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {{ car.title }}
+      </div>
+
+        <div class="panel-body">
+        <br/>
+
+        <div class="col-sm-3">
+
+          <div class="avatar">
+            <h4>Logo:</h4>
+            <br/>
+
+            <img src="http://placehold.it/120x120" alt="avatar" class="img-thumbnail" width='100' height='100'></div>
+          <br/>
+
+          <hr/>
+          Exipre dans: <strong>14 jours</strong>
+        </p>
+          <hr/>
+
+          <ul class="nav nav-list dividers">
+              <!-- <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Gérer</li> --> 
+            {% if request.user.is_authenticated %}
+
+                {% if user|in_group:"candidate" %}
+                    <li><a href="javascript:alert('en cours de dévelopement')"><i class="icon-share gray mid-size"></i> Postuler</a></li>  
+                {% else %} 
+
+                    {% if can_edit %}
+                      <li><a href="{{ car.get_edition_url }}"><i class="icon-cogs gray mid-size"></i> Editer</a></li>
+                    {% else %}  
+                      <li><a href="/emp_profile_offres"><i class="icon-sitemap gray mid-size"></i> Voir mes offres</a></li>
+                    {% endif %}
+                    
+                {% endif %}
+
+            {% else %}     
+                <li><a href="javascript:alert('en cours de dévelopement')"><i class="icon-share gray mid-size"></i> Postuler</a></li>           
+            {% endif %}
+
+          </ul>
+          
+
+        </div>
+
+        <div class="col-sm-9">
+
+          <h2> Description de l'offre </h2>
+
+          <div class="social-box">
+            <div class="body">
+              {{ car.description|safe }}
+            </div>
+          </div>
+
+        <br>
+        <hr/>
+        <br>
+
+        <h2> Infos sur l'offre </h2>
+        <div class="social-box">
+            
+            <div class="body">
+              
+              <br>
+              <dl class="dl-horizontal">
+                <dt>Société:</dt>
+                <dd>{{car.user.username}}</dd>
+                <br>
+                <dt>Titre:</dt>
+                <dd>{{car.title}}</dd>
+                <br>
+                <dt>Type de l'offre</dt>
+                <dd>{{car.offerType_display}}</dd>
+                <br>
+                <dt>Categorie:</dt>
+                <dd>{{car.category_display}}</dd>
+                <br>
+                <dt>Region:</dt>
+                <dd>{{car.region_display}}</dd>
+                <br>
+                
+                <br>
+                <dt>Salaire proposé:</dt>
+                <dd>{{ car.salary_display }}</dd>
+                <br>
+                <dt>Date de dépôt:</dt>
+                <dd>{{ car.created|date:"SHORT_DATE_FORMAT"}}</dd>
+                <br>
+                <br>
+              </dl>
+            </div>
+           </div>  
+
+        </div>
+
+    </div> <!-- end panel body -->  
+      
+    </div>
+
+</div>
+
+<div class="clearfix"></div>
+<!-- Authors word -->
+
+<div class="clear"></div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-sm-12">
+      <img src="http://placehold.it/670x70" alt="placeholder image" class='img-responsive'></div>
+  </div>
+</div>
+
+</div>
+<!-- end span8 -->
+{% endblock middlecontent %}
+<br/>
+
+
+{% block sidecontent %}
+  {% include "./parts/simple_sidecontent.html" %}
+{% endblock sidecontent %}
+
+
+
+{% block extra_js %}
+
+<script>$(".mobile").click(function() {
+      $("nav").slideToggle();  
+    });
+
+    var menu = $("nav");
+    jQuery(window).on('resize', function(){     
+        if(!jQuery(".mobile").is(":visible") && !menu.is(':visible'))
+        {
+            menu.css({'display':''});   
+        }
+    });//@ sourceURL=pen.js
+    </script>
+
+<script>
+      $(window).bind("load resize slid.bs.carousel", function() {
+      var imageHeight = $(".active .holder").height();
+      $(".controllers").height( imageHeight );
+      console.log("Slid");
+    });
+    </script>
+{% endblock extra_js %}

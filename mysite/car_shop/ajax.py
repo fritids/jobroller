@@ -3,11 +3,11 @@ from dajaxice.decorators 		import dajaxice_register
 from dajaxice.utils 			import deserialize_form
 from dajax.core 				import Dajax
 from car_shop.forms 			import Search_Form, Text_Search_Form
-from car_shop.models 			import Offer
+from offre.models	 			import Offer
 # pagination example
 from car_shop.views 			import get_pagination_page, land_page_pagination
 from django.template.loader 	import render_to_string
-from model_choices 				import REGION_CHOICES, SALARY_CHOICES, CATEGORY_CHOICES, OFFER_CHOICES, YESNO
+from car_shop.model_choices 	import REGION_CHOICES, SALARY_CHOICES, CATEGORY_CHOICES, OFFER_CHOICES, YESNO
 
 from django.core.paginator 		import Paginator
 from django.utils 				import simplejson as json

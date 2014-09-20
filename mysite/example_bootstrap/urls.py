@@ -2,7 +2,8 @@ from django.conf.urls.defaults import patterns, include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf import settings
-
+from profile.forms import ExRegistrationForm
+from registration.backends.default.views import RegistrationView
 
 from django.conf import settings
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
@@ -14,52 +15,57 @@ urlpatterns = patterns('',
 	# main application
     url('^$', "car_shop.views.home", name='home'),
 
-    url('^free_add$', "car_shop.views.free_add", name='free_add'),
+    # offres
+    url('^deposer_offre$', "offre.views.deposer_offre", name='deposer_offre'),
 
-    url('^search$', "car_shop.views.search", name='search'),
-    
-    url('^news$', "car_shop.views.news", name='news'),
+    url('^after_upload$', "offre.views.after_upload", name='after_upload'),
 
-	url('^after_upload$', "car_shop.views.after_upload", name='after_upload'),
+    url('^offer/(?P<num>\d+)/$', "offre.views.offer", name='offer'),
 
-    url('^news_item/(?P<num>\d+)/$', "car_shop.views.news_item", name='news_item'),
+    url('^offer/(?P<num>\d+)/edit/$', "offre.views.offer_edit", name='offer_edit'),
 
-    url('^offer/(?P<num>\d+)/$', "car_shop.views.car", name='car'),
+    url('^offer/(?P<num>\d+)/disable/$', "offre.views.offer_disable", name='offer_disable'),    
 
-    url('^offer/(?P<num>\d+)/edit$', "car_shop.views.car_edit", name='car_edit'),
+    url('^offer/(?P<num>\d+)/activate/$', "offre.views.offer_activate", name='offer_activate'),    
+
+    # article
+    url('^news$', "article.views.news", name='news'),
+
+    url('^news_item/(?P<num>\d+)/$', "article.views.news_item", name='news_item'),
 
     url('^contact$', "car_shop.views.contact", name='contact'),
 
-    url('^set_ar$', "car_shop.views.set_ar", name='set_ar'),
-    
-    url('^set_en$', "car_shop.views.set_en", name='set_en'),
-
     # searching
+    url('^search$', "car_shop.views.search", name='search'),
+
     url(r'^search/$', "car_shop.views.search", name='search'),
-    # url(r'^search_results/$', "car_shop.views.search_results", name='search_results'),
+    
     url(r'^map_search/$', "car_shop.views.map_search", name='map_search'),
-    url(r'^search_candidates/$', "car_shop.views.search_candidates", name='search_candidates'),
+
+    url(r'^search_candidates/$', "profile.views.search_candidates", name='search_candidates'),
      
 	# administration
     url(r'^admin/', include(admin.site.urls)),
 
     # Profile
-    url(r'^profile/$', "car_shop.views.profile", name='profile'),    
-    url(r'^profileEmp/$', "car_shop.views.profileEmp", name='profileEmp'),    
-    url(r'^candidate/(?P<num>\d+)/$', "car_shop.views.candidate", name='candidate'),    
+    url(r'^candid_profile/$', "profile.views.candid_profile", name='candid_profile'),    
+    url(r'^candid_profile_edit/(?P<id>\w+)/$', "profile.views.candid_profile_edit", name='candid_profile_edit'),    
+
+    url(r'^emp_profile/$', "profile.views.emp_profile", name='emp_profile'),    
+    url(r'^emp_profile_offres/$', "profile.views.emp_profile_offres", name='emp_profile_offres'),    
+    url(r'^emp_profile_edit/(?P<id>\w+)/$', "profile.views.emp_profile_edit", name='emp_profile_edit'),    
+    
+    url(r'^candidate/(?P<num>\d+)/$', "profile.views.candidate", name='candidate'),    
 
     # daxice 
     url(dajaxice_config.dajaxice_url, include('dajaxice.urls')),
+    
+    # custom registration
+    url(r'accounts/register/$', RegistrationView.as_view(form_class = ExRegistrationForm), name = 'registration_register'),
+    url(r'accounts/login/$', 'registration.views.login', name = 'authentication_login'),
+    (r'^accounts/', include('registration.backends.default.urls')),
 
-    # authentication
-    url(r'^accounts/login/$', "car_shop.views.login", name="login" ),
-    url(r'^accounts/invalid/$', "car_shop.views.invalid_login", name="invalid_login" ),
-    url(r'^accounts/auth/$', "car_shop.views.auth_view", name="auth_view" ),
-    url(r'^accounts/logout/$', "car_shop.views.logout", name="logout" ),
-    url(r'^accounts/register/$', "car_shop.views.register_user", name="register_user" ),
-    url(r'^accounts/register_emp/$', "car_shop.views.register_emp", name="register_emp" ),
-    url(r'^accounts/register_success/$', "car_shop.views.register_success", name="register_success" ),
-
+    
 )
 
 

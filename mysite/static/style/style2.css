@@ -162,10 +162,20 @@ body{
 /* stripped table in car page */
 .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
   background-color: rgba(0, 136, 204, 0.05);
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  margin-top: 12px;
+  text-align: center;
+  vertical-align: center;
 }
 
 .table-striped > tbody > tr:nth-child(even) > td {
   color: #14506F;
+  color: #000;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+
+  margin-top: 12px;
+  text-align: center;
+  vertical-align: center;
 }
 
 .ad-title{

@@ -34,6 +34,39 @@ a, a:hover, a:link, a:active, a:visited {
     width: 374px;
     height: 100px;
 }
+
+/* icons */
+
+[class^="icon-"].mid-size, [class*=" icon-"].mid-size {
+  font-size: 22px;
+}
+
+[class^="icon-"].blue, [class*=" icon-"].blue {
+  font-size: 22px;
+  /*margin: 10px;*/
+  color: rgba(0, 136, 204, 0.57);
+}
+
+[class^="icon-"].green, [class*=" icon-"].green {
+  font-size: 22px;
+  /*margin: 10px;*/
+  color: rgba(8, 204, 0, 0.68)
+}
+
+[class^="icon-"].gray, [class*=" icon-"].gray {
+  font-size: 22px;
+  /*margin: 10px;*/
+  color: gray;
+}
+
+[class^="icon-"].red, [class*=" icon-"].red {
+  font-size: 22px;
+  /*margin: 23px;*/
+  color: rgba(204, 90, 0, 0.57);
+}
+
+/* icons ends */
+
 #navigation .btn-primary {
   color: #ffffff;
   /*background-color: #005395 !important;*/

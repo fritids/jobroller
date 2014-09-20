@@ -57,6 +57,8 @@
         <!-- vmap --> 
         <link rel="stylesheet" href="/static/vmap/jqvmap.css">
 
+        <!-- notifications --> 
+        <link rel="stylesheet" href="/static/notifications/css/jquery.gritter.css">
 
         <!-- sharethis webservice --> 
         <script type="text/javascript">var switchTo5x=true;</script>
@@ -85,6 +87,8 @@
         <!-- vmap --> 
         <script type='text/javascript' src="/static/vmap/jquery.vmap.js" ></script>         
         <script type='text/javascript' src="/static/vmap/jquery.vmap.france.js" ></script>
+        <!-- notifications --> 
+        <script type='text/javascript' src="/static/notifications/js/jquery.gritter.min.js" ></script>
     {% endblock js %}
 
       
@@ -144,7 +148,7 @@
 
                     <li class="dropdown yamm-fw">
                         <a href="/" class="dropdown-toggle" >
-                        <i class="glyph-icon icon-home"></i>   Principale
+                        <i class="glyph-icon icon-home"></i>   Principale 
                         </a>
                     </li>
 
@@ -153,8 +157,8 @@
                       {% if user|in_group:"employer" %}
 
                         <li class="dropdown yamm-fw">
-                            <a href="/free_add" class="dropdown-toggle" >
-                                <i class="glyph-icon icon-list-alt"></i> Deposer annonce
+                            <a href="/deposer_offre" class="dropdown-toggle" >
+                                <i class="glyph-icon icon-list-alt"></i> Deposer Offre
                             </a>
                         </li>
                             
@@ -187,9 +191,9 @@
                   {% if request.user.is_authenticated %}
 
                       {% if user|in_group:"candidate" %}
-                          <li> <a href="/profile"><i class="glyph-icon icon-user"></i>&nbsp; : {{ request.user.username }}</a> </li>
+                          <li> <a href="/candid_profile"><i class="glyph-icon icon-user"></i> : {{ request.user.username }}</a> </li>
                       {% else %}
-                          <li>  <a href="/profileEmp"><i class="glyph-icon icon-user"></i> &nbsp; : {{ request.user.username }}</a> </li>
+                          <li>  <a href="/emp_profile"><i class="glyph-icon icon-user"></i>  : {{ request.user.username }}</a> </li>
                       {% endif %}
 
                       <li> <a href="/accounts/logout/"> <i class="glyph-icon icon-signout"></i> {% trans "Deconnexion" %}</a> </li>
@@ -259,6 +263,19 @@
               <hr/>
               Copyright &copy; 2014 - <a href="#">Speed Job</a> | Designed by <a href="#">Med Reda</a>
             </div>
+
+            {% if msg %}
+              <script type="text/javascript">
+              $.gritter.add({
+                  // (string | mandatory) the heading of the notification
+                  title: 'Notification',
+                  // (string | mandatory) the text inside the notification
+                  text: '{{ msg }}',
+                  // get light colors
+                  class_name: 'gritter-light'
+                });
+              </script>
+            {% endif %}
             
           </div>
 

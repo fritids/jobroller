@@ -1,0 +1,32 @@
+[
+  {
+    "pk": 1,
+    "model": "profile.profile_emp",
+    "fields": {
+      "town": "Paris",
+      "website": "www.atos-origin.fr",
+      "is_candid": "Emp remotly set",
+      "phone": "0609647966",
+      "created_at": "2014-09-17T23:01:14.957",
+      "society": null,
+      "postal_code": "75000",
+      "user": 3,
+      "presentation": "<i>lorem</i> ipsum dolore sit amet,&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "profile.profile_emp",
+    "fields": {
+      "town": null,
+      "website": null,
+      "is_candid": "Emp remotly set",
+      "phone": null,
+      "created_at": "2014-09-19T12:37:28.415",
+      "society": null,
+      "postal_code": null,
+      "user": 5,
+      "presentation": null
+    }
+  }
+]

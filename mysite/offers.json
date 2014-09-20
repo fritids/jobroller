@@ -1,1 +1,56 @@
-[{"pk": 1, "model": "car_shop.offer", "fields": {"category": "1", "salary": "3", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Chef de produits", "region": "18", "views": "39", "activated": true, "modified": "2014-09-09T16:03:45.768", "immediate": "Used", "created": "2014-09-07T16:42:44.103", "user": 4, "offerType": "5"}}, {"pk": 2, "model": "car_shop.offer", "fields": {"category": "1", "salary": "6", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Electricien fibre optique", "region": "15", "views": "8", "activated": true, "modified": "2014-09-09T22:03:34.250", "immediate": "Used", "created": "2014-09-07T16:42:44.225", "user": 4, "offerType": "5"}}, {"pk": 3, "model": "car_shop.offer", "fields": {"category": "1", "salary": "16", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "conducteur de traveaux", "region": "22", "views": "2", "activated": true, "modified": "2014-09-07T16:47:41.426", "immediate": "Used", "created": "2014-09-07T16:42:44.348", "user": 4, "offerType": "3"}}, {"pk": 4, "model": "car_shop.offer", "fields": {"category": "1", "salary": "3", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Cadre en ressource humaine", "region": "11", "views": "1", "activated": true, "modified": "2014-09-10T13:07:37.079", "immediate": "New", "created": "2014-09-07T16:42:44.472", "user": 4, "offerType": "5"}}, {"pk": 5, "model": "car_shop.offer", "fields": {"category": "1", "salary": "14", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Asssistante SAP", "region": "11", "views": "1", "activated": true, "modified": "2014-09-07T16:47:41.708", "immediate": "New", "created": "2014-09-07T16:42:44.596", "user": 4, "offerType": "1"}}, {"pk": 6, "model": "car_shop.offer", "fields": {"category": "1", "salary": "2", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Approvisionneur", "region": "10", "views": "1", "activated": true, "modified": "2014-09-07T16:47:41.843", "immediate": "Used", "created": "2014-09-07T16:42:44.742", "user": 4, "offerType": "2"}}, {"pk": 7, "model": "car_shop.offer", "fields": {"category": "1", "salary": "2", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "magasinier", "region": "11", "views": "0", "activated": true, "modified": "2014-09-07T16:47:41.989", "immediate": "New", "created": "2014-09-07T16:42:44.868", "user": 4, "offerType": "2"}}, {"pk": 8, "model": "car_shop.offer", "fields": {"category": "1", "salary": "4", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Formateur", "region": "4", "views": "0", "activated": true, "modified": "2014-09-07T16:47:42.135", "immediate": "Used", "created": "2014-09-07T16:42:44.992", "user": 4, "offerType": "4"}}, {"pk": 9, "model": "car_shop.offer", "fields": {"category": "1", "salary": "10", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "conseiller clientele", "region": "8", "views": "0", "activated": true, "modified": "2014-09-07T16:47:42.270", "immediate": "New", "created": "2014-09-07T16:42:45.138", "user": 4, "offerType": "2"}}, {"pk": 10, "model": "car_shop.offer", "fields": {"category": "1", "salary": "13", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "chef de secteur", "region": "16", "views": "0", "activated": true, "modified": "2014-09-07T16:47:42.385", "immediate": "Used", "created": "2014-09-07T16:42:45.262", "user": 4, "offerType": "4"}}, {"pk": 11, "model": "car_shop.offer", "fields": {"category": "1", "salary": "2", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Asssistante commerciale", "region": "13", "views": "0", "activated": true, "modified": "2014-09-07T16:47:42.520", "immediate": "New", "created": "2014-09-07T16:42:45.375", "user": 4, "offerType": "1"}}, {"pk": 12, "model": "car_shop.offer", "fields": {"category": "1", "salary": "12", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Logisticien/Supply Chain", "region": "20", "views": "0", "activated": true, "modified": "2014-09-07T16:47:42.677", "immediate": "Used", "created": "2014-09-07T16:42:45.521", "user": 4, "offerType": "3"}}, {"pk": 13, "model": "car_shop.offer", "fields": {"category": "1", "salary": "1", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Asssistante de direction", "region": "17", "views": "0", "activated": true, "modified": "2014-09-07T16:47:42.823", "immediate": "New", "created": "2014-09-07T16:42:45.645", "user": 4, "offerType": "1"}}, {"pk": 14, "model": "car_shop.offer", "fields": {"category": "1", "salary": "9", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Property manager", "region": "10", "views": "0", "activated": true, "modified": "2014-09-07T16:47:42.970", "immediate": "New", "created": "2014-09-07T16:42:45.782", "user": 4, "offerType": "3"}}, {"pk": 15, "model": "car_shop.offer", "fields": {"category": "1", "salary": "6", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Shef de rayon", "region": "19", "views": "0", "activated": true, "modified": "2014-09-07T16:47:43.105", "immediate": "New", "created": "2014-09-07T16:42:45.954", "user": 4, "offerType": "3"}}, {"pk": 16, "model": "car_shop.offer", "fields": {"category": "1", "salary": "16", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Controleur de gestion", "region": "22", "views": "0", "activated": true, "modified": "2014-09-07T16:47:43.231", "immediate": "New", "created": "2014-09-07T16:42:46.096", "user": 4, "offerType": "4"}}, {"pk": 17, "model": "car_shop.offer", "fields": {"category": "1", "salary": "5", "description": "lorem sipsum dolore sot amet lorem ipsum dolore sit amet", "title": "Technicien en r\u00e9seaux", "region": "4", "views": "0", "activated": true, "modified": "2014-09-07T16:47:43.366", "immediate": "New", "created": "2014-09-07T16:42:46.242", "user": 4, "offerType": "3"}}, {"pk": 18, "model": "car_shop.offer", "fields": {"category": "37", "salary": "1", "description": "lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet<br><ol><li>lorem&nbsp;</li><li>ipsum</li><li>dolore</li><li>sit</li><li>amet</li></ol>lorem&nbsp;lorem <b>ipsum</b> dolore sit <b>ametlorem</b> ipsum dolore sit ametlorem ipsum dolore sit amet", "title": "Plongeur", "region": "13", "views": "2", "activated": true, "modified": "2014-09-07T23:45:48.276", "immediate": "Used", "created": "2014-09-07T23:45:48.276", "user": 4, "offerType": "3"}}]
+[
+  {
+    "pk": 1,
+    "model": "offre.offer",
+    "fields": {
+      "category": "3",
+      "salary": "7",
+      "description": "lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet",
+      "title": "Developeur Backend/Frontend  J2EE , CSS3, HTML5",
+      "region": "5",
+      "views": "0",
+      "activated": true,
+      "modified": "2014-09-20T13:37:09.395",
+      "immediate": "Used",
+      "created": "2014-09-20T13:37:09.395",
+      "user": 3,
+      "offerType": "3"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "offre.offer",
+    "fields": {
+      "category": "3",
+      "salary": "7",
+      "description": "lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet",
+      "title": "Administrateur réseaux",
+      "region": "8",
+      "views": "0",
+      "activated": true,
+      "modified": "2014-09-20T13:37:09.395",
+      "immediate": "Used",
+      "created": "2014-09-20T13:37:09.395",
+      "user": 3,
+      "offerType": "3"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "offre.offer",
+    "fields": {
+      "category": "3",
+      "salary": "9",
+      "description": "lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet&nbsp;lorem ipsum dolore sit amet",
+      "title": "Developeur AngularJS",
+      "region": "4",
+      "views": "4",
+      "activated": true,
+      "modified": "2014-09-20T13:37:09.395",
+      "immediate": "Used",
+      "created": "2014-09-20T13:37:09.395",
+      "user": 3,
+      "offerType": "2"
+    }
+  }
+]

@@ -94,7 +94,13 @@ INSTALLED_APPS = (
     'car_shop',
     'dajaxice',
     'dajax',
+    'registration',
+    'profile',
+    'article',
+    'offre',
 )
+
+
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -108,6 +114,17 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     # 'car_shop.context_processors.strings',
     
 )
+
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "redatest7dev@gmail.com"
+EMAIL_HOST_PASSWORD = 'redatest7'
+EMAIL_PORT = 587
+
+ACCOUNT_ACTIVATION_DAYS = 14
+
 
 
 
@@ -131,17 +148,6 @@ LOGGING = {
 }
 
 
-
-# gmail settings
-EMAIL_USE_TLS = True
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "redatest7dev@gmail.com"
-EMAIL_HOST_PASSWORD = 'redatest7'
-EMAIL_PORT = 587
-
-# django_registration settings
-
-ACCOUNT_ACTIVATION_DAYS = 14
 
 LANGUAGE_CODE = 'fr'
 
