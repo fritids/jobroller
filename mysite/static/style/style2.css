@@ -833,6 +833,13 @@ box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
 -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
 -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
 
+display: block;
+  width: 96%;
+  margin: 10px 5px;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+
 }
 
 #loginform input[type="text"]:focus, #loginform input[type="password"]:focus, #loginform textarea:focus{

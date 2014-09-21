@@ -3,6 +3,49 @@
 {% load i18n %}
 {% block middlecontent %}
 
+    {% block style %}
+      <!-- Stylesheets -->
+        <link href="/static/header/header.css" rel="stylesheet">
+        <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="/static/style/fontawesome/css/font-awesome.css">
+        <link href="/static/style/style2.css" rel="stylesheet">
+        <link href="/static/style/slider2.css" rel="stylesheet">
+        
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Glegoo" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/flexslider.css">
+        <!-- <link rel="stylesheet"  href="/static/style/template.css" type="text/css" media="all"> --> 
+        <link rel="stylesheet" type="text/css" href="/static/social_bis.css">
+
+        <link rel="stylesheet"  href="/static/style/responsive.css" type="text/css" media="all">
+        <!-- social fonts --> 
+        <link rel="stylesheet" href="/static/fonts/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="/static/css/croufredsel_style.css">
+        <link rel="stylesheet" href="/static/css/header_style.css">
+
+      <!-- jasny bootstrap -->   
+        <link rel="stylesheet" href="/static/jasny-bootstrap/css/jasny-bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/aui-production.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" />
+        <link rel="stylesheet" type="text/css" href="/static/style/classy.css" />
+
+        <link rel="stylesheet" href="/static/test.css">
+
+        <!-- vmap --> 
+        <link rel="stylesheet" href="/static/vmap/jqvmap.css">
+
+        <!-- notifications --> 
+        <link rel="stylesheet" href="/static/notifications/css/jquery.gritter.css">
+
+        <!-- sharethis webservice --> 
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "fc960723-2a1c-4123-bacd-9e76284af85e", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+
+        
+    {% endblock style %}  
+
+
 
 <div class="col-sm-8">
   <br/>
@@ -17,22 +60,34 @@
 
         <div class="col-sm-4">
 
-          <div class="avatar">
-            <h4>Avatar:</h4>
-            <br>
-            <img src="/static/img/user2.png" alt="avatar" class="img-thumbnail" width='100' height='100'></div>
-          <br/>
+          
+          <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <ul class="nav nav-list dividers">
+              <li class="nav-header">Logo</li>
+          
+              <li class="nav-header">
+                  <div class="avatar">
+                    <img src="/static/img/user2.png" alt="avatar" class="img-thumbnail" width='100' height='100'>
+                  </div>
+              </li>
+              <br>
+          
+            </ul>
+          </div> <!-- end avatar -->   
 
           <hr/>
 
-          <ul class="nav nav-list dividers">
-
+          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
+            
+            <ul class="nav nav-list dividers">
               <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Confidentialité</li>
 
               <li><a href="/emp_profile"><i class="icon-user gray mid-size"></i> Page du profile</a></li>
               <li><a href="/accounts/password/reset"><i class="icon-key gray mid-size"></i> Changer le mot de passe</a></li>
-
-          </ul>
+            </ul>
+            
+            <br>
+          </div>
 
 
 
@@ -40,12 +95,13 @@
 
         <div class="col-sm-8">
 
-        <div class="social-box">
-            
-            <div class="body">
-              <h4>Informations générales</h4>
-              <br>
+      <div class="ad-title">
+        Informations générales :
+      </div>
 
+        <div class="social-box">
+            <div class="body">
+              
               <form action="." method='post'>
                 {% csrf_token %}
                 {{ form }}
@@ -108,6 +164,9 @@
 
         <script type='text/javascript'>
           jQuery(document).ready(function($) {
+
+            $('#id_presentation').css('margin-top', '10px');
+
             $('#id_presentation').wysihtml5({
               // "font-styles": false,
               "color":false,

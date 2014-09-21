@@ -6,6 +6,23 @@ body{
 a{
   color: #333 !important;
 }
+
+a.account-reg{
+    border-bottom: 2px solid #2692AC;
+    color: #2692AC;
+    text-decoration: none;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+a.account-log{
+    border-bottom: 2px solid #2692AC;
+    color: #2692AC;
+    text-decoration: none;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
 label{
 	color: #333;
 	font-family: 'Open Sans' !important;

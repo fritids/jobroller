@@ -17,6 +17,8 @@ class UserInfoForm(forms.ModelForm):
 		self.user = kwargs.pop('user', None)
 		super(UserInfoForm, self).__init__(*args, **kwargs)
 		for x in self.fields: self.fields[x].widget.attrs['class'] = 'form-control'
+		for x in self.fields: self.fields[x].widget.attrs['style'] = 'margin-bottom:15px'
+		
 
 	def save(self, *args, **kwargs):
 		instance = super(UserInfoForm, self).save(commit=False)
@@ -32,6 +34,9 @@ class EmployerInfoForm(forms.ModelForm):
 		self.user = kwargs.pop('user', None)
 		super(EmployerInfoForm, self).__init__(*args, **kwargs)
 		for x in self.fields: self.fields[x].widget.attrs['class'] = 'form-control'
+		for x in self.fields: self.fields[x].widget.attrs['style'] = 'margin-bottom:15px'
+
+		self.fields['presentation'].widget.attrs['style'] = 'margin-bottom:15px; background:#FAFBFB;'
 
 	def save(self, *args, **kwargs):
 		instance = super(EmployerInfoForm, self).save(commit=False)

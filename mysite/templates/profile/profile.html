@@ -1,86 +1,64 @@
 {% extends "sitebase.html" %}
 {% load dajaxice_templatetags %}
 {% load i18n %}
-
-{% block style %}
-      <!-- Stylesheets -->
-        <link href="/static/header/header.css" rel="stylesheet">
-        <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="/static/style/fontawesome/css/font-awesome.css">
-        <link href="/static/style/style2.css" rel="stylesheet">
-        <link href="/static/style/slider2.css" rel="stylesheet">
-        
-        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Glegoo" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="/static/style/flexslider.css">
-        <!-- <link rel="stylesheet"  href="/static/style/template.css" type="text/css" media="all"> --> 
-        <link rel="stylesheet" type="text/css" href="/static/social.css">
-
-        <link rel="stylesheet"  href="/static/style/responsive.css" type="text/css" media="all">
-        <!-- social fonts --> 
-        <link rel="stylesheet" href="/static/fonts/stylesheet.css" type="text/css" charset="utf-8" />
-        <link rel="stylesheet" href="/static/css/croufredsel_style.css">
-        <link rel="stylesheet" href="/static/css/header_style.css">
-
-      <!-- jasny bootstrap -->   
-        <link rel="stylesheet" href="/static/jasny-bootstrap/css/jasny-bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="/static/css/aui-production.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" />
-        <link rel="stylesheet" type="text/css" href="/static/style/classy.css" />
-
-        <link rel="stylesheet" href="/static/test.css">
-
-        <!-- vmap --> 
-        <link rel="stylesheet" href="/static/vmap/jqvmap.css">
-
-
-        <!-- sharethis webservice --> 
-        <script type="text/javascript">var switchTo5x=true;</script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "fc960723-2a1c-4123-bacd-9e76284af85e", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
-
-        
-    {% endblock style %}  
-
 {% block middlecontent %}
-
 
 <div class="col-sm-8">
   <br/>
   <div id="respo">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Mon Profile
+        Mes offres
       </div>
 
         <div class="panel-body">
         <br/>
 
         <div class="col-sm-4">
-          <div class="avatar">
-            <h4>Photo:</h4>
-            <br>
-            <img src="/static/img/user2.png" alt="avatar" class="img-thumbnail" width='110' height='110'></div>
-          <br/>
 
-         <ul class="nav nav-list dividers">
+          <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <ul class="nav nav-list dividers">
+              <li class="nav-header">Photo</li>
+              <li class="nav-header">
+                  <div class="avatar">
+                    <img src="/static/img/candidate_avatar.png"  alt="avatar" class="img-thumbnail" width='100' height='100'>
+                  </div>
+              </li>
+              <br>
+            </ul>
+          </div> <!-- end avatar -->   
 
+          <hr/>
+
+          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <!-- BEGIN SHOWN LIST ITEMS -->
+            <ul class="nav nav-list dividers">
               <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Confidentialité</li>
-
               <li><a href="/candid_profile_edit/{{ userinfo.id }}"><i class="icon-user gray mid-size"></i> Editer le profile</a></li>
               <li><a href="/accounts/password/reset"><i class="icon-key gray mid-size"></i> Changer le mot de passe</a></li>
+            </ul>
+            <!-- END SHOWN LIST ITEMS -->
+            <!-- BEGIN HIDDEN LIST ITEMS -->
+            <br>
+          </div>
 
-          </ul>
+
+          <hr/>
 
         </div>
 
         <div class="col-sm-8">
 
+
+        <div class="ad-title">
+          Informations générales :
+        </div>
+
+
         <div class="social-box">
-            
-            <div class="body">
-              <h4>Informations générales</h4>
-              <br>
+
+          <div class="body">
+              
               <dl class="dl-horizontal">
                 <dt>Nom d'utilisateur</dt>
                 <dd>{{userinfo.user.username}}</dd>
@@ -137,7 +115,9 @@
                 <br>
               </dl>
             </div>
-           </div>  
+            
+            
+        </div>  
 
             <div class="social-box span6">
             <div class="header">
@@ -145,8 +125,8 @@
 
               <div class="tools">
                 <ul id="myTab2" class="nav nav-tabs">
-                  <li class="active"><a class="active" href="#profile2" data-toggle="tab"><i class="icon-user"></i> CV</a></li>
-                  <li class=""><a href="#dropdown12" data-toggle="tab"><i class="icon-cog"></i> Settings</a></li>
+                  <li class="active"><a class="active" href="#profile2" data-toggle="tab"><i class="icon-user"></i> Motivations</a></li>
+                  <li class=""><a href="#dropdown12" data-toggle="tab"><i class="icon-cog"></i> CV</a></li>
                 </ul>
               </div>
 
@@ -154,18 +134,15 @@
             <div class="body">
               <div id="myTabContent2" class="tab-content" style="min-height: 280px;">
                 <div class="tab-pane fade active in" id="profile2">
-                  <p><strong>CV</strong></p>
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, odio consequatur facere tempore rem sed sequi facilis quae doloremque voluptates non delectus quaerat error deleniti nam placeat ratione quisquam.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, distinctio!
+                  <p><strong>Motivations:</strong></p>
+                  <p> 
+                    lorem ipsum dolore sit amet
                     
                   </p>
                 </div>
                 <div class="tab-pane fade" id="dropdown12">
-                  <p><strong>Settings</strong></p>
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, odio consequatur facere tempore rem sed sequi facilis quae doloremque voluptates non delectus quaerat error deleniti nam placeat ratione quisquam.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, distinctio!
-                    
-                  </p>
+                  <p><strong>CV</strong></p>
+                  lorem ipsum dolore sit amet
                 </div>
               </div>
 
@@ -196,12 +173,13 @@
 </div>
 <!-- end span8 -->
 {% endblock middlecontent %}
-
 <br/>
+
 
 {% block sidecontent %}
   {% include "./parts/simple_sidecontent.html" %}
 {% endblock sidecontent %}
+
 
 
 {% block extra_js %}

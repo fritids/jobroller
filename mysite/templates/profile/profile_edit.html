@@ -56,31 +56,45 @@
         <br/>
 
         <div class="col-sm-4">
-          <div class="avatar">
-            <h4>Photo:</h4>
-            <br/>
-            <img src="/static/img/user2.png" alt="avatar" class="img-thumbnail" width='110' height='110'></div>
-          <br/>
+          
+          <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <ul class="nav nav-list dividers">
+              <li class="nav-header">Photo</li>
+              <li class="nav-header">
+                  <div class="avatar">
+                    <img src="/static/img/user2.png" alt="avatar" class="img-thumbnail" width='110' height='110'>
+                  </div>
+              </li>
+              <br>
+            </ul>
+          </div> <!-- end avatar -->   
 
-          <ul class="nav nav-list dividers">
+          <hr/>
 
+          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
+
+            <ul class="nav nav-list dividers">
               <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Confidentialité</li>
-
               <li><a href="/candid_profile"><i class="icon-user gray mid-size"></i> Page du profile</a></li>
               <li><a href="/accounts/password/reset"><i class="icon-key gray mid-size"></i> Changer le mot de passe</a></li>
+            </ul>
 
-          </ul>
+            <br>
+          </div>
 
         </div>
 
         <div class="col-sm-8">
 
+          <div class="ad-title">
+            Informations générales :
+          </div>
+
+
         <div class="social-box">
             
             <div class="body">
-              <h4>Informations générales</h4>
-              <br>
-
+              
               <form action="." method='post'>
                 {% csrf_token %}
                 {{ form }}

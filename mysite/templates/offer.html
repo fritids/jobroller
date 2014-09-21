@@ -14,26 +14,47 @@
         <div class="panel-body">
         <br/>
 
-        <div class="col-sm-3">
+        <div class="col-sm-4">
 
-          <div class="avatar">
-            <h4>Logo:</h4>
-            <br/>
-
-            <img src="http://placehold.it/120x120" alt="avatar" class="img-thumbnail" width='100' height='100'></div>
-          <br/>
+          
+          <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <ul class="nav nav-list dividers">
+              <li class="nav-header">Logo</li>
+          
+              <li class="nav-header">
+                  <div class="avatar">
+                    <img src="/static/img/user2.png" alt="avatar" class="img-thumbnail" width='100' height='100'>
+                  </div>
+              </li>
+              <br>
+          
+            </ul>
+          </div> <!-- end avatar -->   
 
           <hr/>
-          Exipre dans: <strong>14 jours</strong>
-        </p>
+
+          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <!-- BEGIN SHOWN LIST ITEMS -->
+            <ul class="nav nav-list dividers">
+              <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Etat de l'offre</li>
+              <li><a href="/emp_profile_edit/{{ userinfo.id }}"><i class="icon-bell gray mid-size"></i> Expire dans 14 jours </a></li>
+              
+            </ul>
+            <!-- END SHOWN LIST ITEMS -->
+            <!-- BEGIN HIDDEN LIST ITEMS -->
+            <br>
+          </div>
+        
           <hr/>
 
-          <ul class="nav nav-list dividers">
-              <!-- <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Gérer</li> --> 
-            {% if request.user.is_authenticated %}
+          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <!-- BEGIN SHOWN LIST ITEMS -->
+            <ul class="nav nav-list dividers">
+              <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Opérations</li>
+              {% if request.user.is_authenticated %}
 
                 {% if user|in_group:"candidate" %}
-                    <li><a href="javascript:alert('en cours de dévelopement')"><i class="icon-share gray mid-size"></i> Postuler</a></li>  
+                    <li class="active"><a href="javascript:alert('en cours de dévelopement')"><i class="icon-share gray mid-size "></i> Postuler</a></li>  
                 {% else %} 
 
                     {% if can_edit %}
@@ -47,15 +68,22 @@
             {% else %}     
                 <li><a href="javascript:alert('en cours de dévelopement')"><i class="icon-share gray mid-size"></i> Postuler</a></li>           
             {% endif %}
-
-          </ul>
+            </ul>
+            <!-- END SHOWN LIST ITEMS -->
+            <!-- BEGIN HIDDEN LIST ITEMS -->
+            <br>
+          </div>
           
 
         </div>
 
-        <div class="col-sm-9">
+        <div class="col-sm-8">
 
-          <h2> Description de l'offre </h2>
+          
+          <div class="ad-title">
+            Description de l'offre :
+          </div>
+          <br>
 
           <div class="social-box">
             <div class="body">
@@ -63,11 +91,12 @@
             </div>
           </div>
 
-        <br>
-        <hr/>
-        <br>
 
-        <h2> Infos sur l'offre </h2>
+        <div class="ad-title">
+          Infos sur l'offre :
+        </div>
+
+        <br/>
         <div class="social-box">
             
             <div class="body">

@@ -15,23 +15,38 @@
         <div class="panel-body">
         <br/>
 
-        <div class="col-sm-3">
-          <div class="avatar">
-            <h4>Photo:</h4>
-            <img src="/static/img/candidate_avatar.png"  alt="avatar" class="img-thumbnail" width='100' height='100'>
-
-          </div>
-          <br/>
-
-          <div class="subscription"> <h4>Confidentialité:</h4> </div>
+        <div class="col-sm-4">
 
           
+          <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <ul class="nav nav-list dividers">
+              <li class="nav-header">Photo</li>
+              <li class="nav-header">
+                  <div class="avatar">
+                    <img src="/static/img/candidate_avatar.png"  alt="avatar" class="img-thumbnail" width='100' height='100'>
+                  </div>
+              </li>
+              <br>
+            </ul>
+          </div> <!-- end avatar -->   
+
           <hr/>
-          <button class="btn btn-small" type="button"> <i class="icon-money"></i>&nbsp; Acheter Profile</button>
+
+          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <!-- BEGIN SHOWN LIST ITEMS -->
+            <ul class="nav nav-list dividers">
+              <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Opérations</li>
+              <li><a href="javascript:alert('en dévelopement')"><i class="icon-money gray mid-size"></i> Acheter le profile</a></li>
+              <li><a href="#"><i class="icon-cogs gray mid-size"></i> Autres</a></li>
+            </ul>
+            <!-- END SHOWN LIST ITEMS -->
+            <!-- BEGIN HIDDEN LIST ITEMS -->
+            <br>
+          </div>
 
         </div>
 
-        <div class="col-sm-9">
+        <div class="col-sm-8">
 
         <div class="social-box">
       <div class="header">

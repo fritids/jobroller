@@ -31,13 +31,13 @@ class Profile_emp(models.Model):
     def __unicode__(self):
         return unicode(self.user)
 
-    created_at   = models.DateTimeField(auto_now_add = True)
-    society      = models.CharField(max_length=200, null=True, blank=True)
-    phone        = models.CharField(max_length=200, null=True, blank=True)
-    postal_code  = models.CharField(max_length=200, null=True, blank=True)
-    town         = models.CharField(max_length=200, null=True, blank=True)
-    website      = models.CharField(max_length=200, null=True, blank=True)
-    presentation = models.TextField(null=True, blank=True)
+    created_at   = models.DateTimeField(verbose_name="Date de creation",        auto_now_add = True)
+    society      = models.CharField(verbose_name="Société",     max_length=200, null=True, blank=True)
+    phone        = models.CharField(verbose_name="Téléphone",   max_length=200, null=True, blank=True)
+    postal_code  = models.CharField(verbose_name="Code postal", max_length=200, null=True, blank=True)
+    town         = models.CharField(verbose_name="Ville",       max_length=200, null=True, blank=True)
+    website      = models.CharField(verbose_name="Site Web",    max_length=200, null=True, blank=True)
+    presentation = models.TextField(verbose_name="Présentation",                null=True, blank=True)
 
     def __unicode__(self):
         return unicode(self.user)    
