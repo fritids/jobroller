@@ -37,32 +37,61 @@ a, a:hover, a:link, a:active, a:visited {
 
 /* icons */
 
-[class^="icon-"].mid-size, [class*=" icon-"].mid-size {
+[class^="fa-"].mid-size, [class*=" fa-"].mid-size {
   font-size: 22px;
 }
 
-[class^="icon-"].blue, [class*=" icon-"].blue {
+[class^="fa-"].sml-size, [class*=" fa-"].sml-size {
+  font-size: 17px !important;
+}
+
+[class^="fa-"].min-size, [class*=" fa-"].min-size {
+  font-size: 15px !important;
+}
+
+[class^="fa-"].white, [class*=" fa-"].white {
   font-size: 22px;
-  /*margin: 10px;*/
   color: rgba(0, 136, 204, 0.57);
 }
 
-[class^="icon-"].green, [class*=" icon-"].green {
-  font-size: 22px;
-  /*margin: 10px;*/
-  color: rgba(8, 204, 0, 0.68)
+[class^="fa-"].white-ns, [class*=" fa-"].white-ns {
+  color: #fff;
 }
 
-[class^="icon-"].gray, [class*=" icon-"].gray {
+[class^="fa-"].blue, [class*=" fa-"].blue {
   font-size: 22px;
-  /*margin: 10px;*/
+  color: rgba(0, 136, 204, 0.57);
+}
+
+[class^="fa-"].blue-ns, [class*=" fa-"].blue-ns {
+  
+  color: rgba(0, 136, 204, 0.57);
+}
+
+[class^="fa-"].green, [class*=" fa-"].green {
+  font-size: 22px;
+  color: rgba(8, 204, 0, 0.68)
+}
+[class^="fa-"].dark-green, [class*=" fa-"].dark-green {
+  font-size: 22px;
+  color: #009281
+}
+
+[class^="fa-"].gray, [class*=" fa-"].gray {
+  font-size: 22px;
   color: gray;
 }
 
-[class^="icon-"].red, [class*=" icon-"].red {
+[class^="fa-"].red, [class*=" fa-"].red {
   font-size: 22px;
   /*margin: 23px;*/
   color: rgba(204, 90, 0, 0.57);
+}
+
+[class^="fa-"].rose, [class*=" fa-"].rose {
+  font-size: 22px;
+  /*margin: 23px;*/
+  color: rgba(172, 71, 71, 0.84);
 }
 
 /* icons ends */

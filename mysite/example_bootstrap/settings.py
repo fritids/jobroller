@@ -126,8 +126,7 @@ EMAIL_PORT = 587
 ACCOUNT_ACTIVATION_DAYS = 14
 
 
-
-
+email_images = ( (os.path.join('static', 'images', 'logo1.png'), 'logo'),(os.path.join('static', 'images', 'logo1.png'), 'logo') )
 
 LOGGING = {
     'version': 1,

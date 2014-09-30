@@ -30,7 +30,7 @@
       <!-- Stylesheets -->
         <link href="/static/header/header.css" rel="stylesheet">
         <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="/static/style/fontawesome/css/font-awesome.css">
+        <link rel="stylesheet" href="/static/style/font-awesome-4.2.0/css/font-awesome.css">
         <link href="/static/style/style2.css" rel="stylesheet">
         <link href="/static/style/slider2.css" rel="stylesheet">
         
@@ -49,7 +49,6 @@
       <!-- jasny bootstrap -->   
         <link rel="stylesheet" href="/static/jasny-bootstrap/css/jasny-bootstrap.css">
         <link rel="stylesheet" type="text/css" href="/static/css/aui-production.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" />
         <link rel="stylesheet" type="text/css" href="/static/style/classy.css" />
 
         <link rel="stylesheet" href="/static/test.css">
@@ -134,9 +133,9 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed btn-primary" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <span class="fa fa-bar"></span>
+                    <span class="fa fa-bar"></span>
+                    <span class="fa fa-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
                     <img src="/static/images/logo1.png" alt="SC State Library" />
@@ -148,7 +147,7 @@
 
                     <li class="dropdown yamm-fw">
                         <a href="/" class="dropdown-toggle" >
-                        <i class="glyph-icon icon-home"></i>   Principale 
+                        <i class="fa fa-home"></i>   Principale 
                         </a>
                     </li>
 
@@ -158,7 +157,7 @@
 
                         <li class="dropdown yamm-fw">
                             <a href="/deposer_offre" class="dropdown-toggle" >
-                                <i class="glyph-icon icon-list-alt"></i> Deposer Offre
+                                <i class="fa fa-list-alt"></i> Deposer Offre
                             </a>
                         </li>
                             
@@ -168,19 +167,19 @@
 
                     <li class="dropdown yamm-fw">
                         <a href="#" class="dropdown-toggle" >
-                            <i class="glyph-icon icon-folder-open"></i>Infos
+                            <i class="fa fa-folder-open"></i>Infos
                         </a>
                     </li>
 
                     <li class="dropdown yamm-fw">
                         <a href="/search" class="dropdown-toggle" >
-                            <i class="glyph-icon icon-search"></i> Recherche
+                            <i class="fa fa-search"></i> Recherche
                         </a>
                     </li>
 
                     <li class="dropdown yamm-fw">
                          <a href="/contact">
-                          <i class="glyph-icon icon-pencil"></i> Contact 
+                          <i class="fa fa-pencil"></i> Contact 
                         </a>
                     </li>
 
@@ -191,19 +190,19 @@
                   {% if request.user.is_authenticated %}
 
                       {% if user|in_group:"candidate" %}
-                          <li> <a href="/candid_profile"><i class="glyph-icon icon-user"></i> : {{ request.user.username }}</a> </li>
+                          <li> <a href="/candid_profile"><i class="fa fa-user sml-size"></i> : {{ request.user.username }}</a> </li>
                       {% else %}
-                          <li>  <a href="/emp_profile"><i class="glyph-icon icon-user"></i>  : {{ request.user.username }}</a> </li>
+                          <li>  <a href="/emp_profile"><i class="fa fa-user sml-size"></i>  : {{ request.user.username }}</a> </li>
                       {% endif %}
 
-                      <li> <a href="/accounts/logout/"> <i class="glyph-icon icon-signout"></i> {% trans "Deconnexion" %}</a> </li>
+                      <li> <a href="/accounts/logout/"> <i class="fa fa-sign-out"></i> {% trans "Deconnexion" %}</a> </li>
 
                       {% if request.user.is_superuser %}
-                          <li> <a href="/admin/"> <i class="glyph-icon icon-dashboard"></i> {% trans "Admin" %}</a> </li>
+                          <li> <a href="/admin/"> <i class="fa fa-dashboard"></i> {% trans "Admin" %}</a> </li>
                       {% endif %}
 
                 {% else %}
-                         <li> <a href="/accounts/login/"> <i class="glyph-icon icon-signin"></i> {% trans "Connexion" %}</a> </li>
+                         <li> <a href="/accounts/login/"> <i class="fa fa-sign-in"></i> {% trans "Connexion" %}</a> </li>
                 {% endif %}
 
                 </ul>

@@ -6,7 +6,7 @@
       <!-- Stylesheets -->
         <link href="/static/header/header.css" rel="stylesheet">
         <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="/static/style/fontawesome/css/font-awesome.css">
+        <link rel="stylesheet" href="/static/style/font-awesome-4.2.0/css/font-awesome.css">
         <link href="/static/style/style2.css" rel="stylesheet">
         <link href="/static/style/slider2.css" rel="stylesheet">
         
@@ -24,11 +24,6 @@
         <!-- vmap --> 
         <link rel="stylesheet" href="/static/vmap/jqvmap.css">
 
-
-        <!-- sharethis webservice --> 
-        <script type="text/javascript">var switchTo5x=true;</script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "fc960723-2a1c-4123-bacd-9e76284af85e", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
 
         
     {% endblock style %}  
@@ -65,23 +60,25 @@
                                       
                                       <br/> <br/> 
 
+                                      <p class="login-helptext">Vous avez été déconnecté avec succés.</p>
+
 
                                       <blockquote>
-                                        <p>Vous avez été déconnecté avec succés.</p><br><br/>
+                                        
 
-                                        <small>&nbsp; 
-                                          <cite title="Source Title">
-                                          <i class="glyph-icon icon-med icon-home"></i> 
-                                          <a href="/">Retour vers la page principale</a>
-                                           </cite>
-                                         </small>
 
-                                        <small>&nbsp; 
-                                          <cite title="Source Title">
-                                            <i class="glyph-icon icon-med icon-signin"></i>
-                                            <a href="/accounts/login">Se connecter une autre fois</a> 
-                                          </cite>
-                                        </small>
+                                        <hr>
+
+                                        <a class="btn btn-lg " href="/">
+                                          <i class="fa fa-home fa-3x pull-left blue mid-size"></i> &nbsp; Retour vers la page principale
+                                        </a>
+                                        <hr>
+
+                                        <a class="btn btn-lg " href="/accounts/login">
+                                          <i class="fa fa-sign-in fa-2x pull-left red"></i> &nbsp; Se connexter une autre fois
+                                        </a>
+                                        <hr>
+
                                       </blockquote>
                                         
 

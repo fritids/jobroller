@@ -7,7 +7,7 @@
       <!-- Stylesheets -->
         <link href="/static/header/header.css" rel="stylesheet">
         <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="/static/style/fontawesome/css/font-awesome.css">
+        <link rel="stylesheet" href="/static/style/font-awesome-4.2.0/css/font-awesome.css">
         <link href="/static/style/style2.css" rel="stylesheet">
         <link href="/static/style/slider2.css" rel="stylesheet">
         
@@ -61,7 +61,7 @@
 
           <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
             <ul class="nav nav-list dividers">
-              <li class="nav-header">Logo</li>
+              <li class="nav-header">&nbsp;</li>
           
               <li class="nav-header">
                   <div class="avatar">
@@ -78,17 +78,16 @@
           <div class="social-nav-list" style="max-width: 340px; padding: 0;">
             <!-- BEGIN SHOWN LIST ITEMS -->
             <ul class="nav nav-list dividers">
-              <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Confidentialité</li>
-              <li><a href="/emp_profile_edit/{{ userinfo.id }}"><i class="icon-user gray mid-size"></i> Editer le profile</a></li>
-              <li><a href="/accounts/password/reset"><i class="icon-key gray mid-size"></i> Changer le mot de passe</a></li>
+              <li class="nav-header"><i class="fa fa-wrench blue sml-size"></i> Confidentialité</li>
+              <li><a href="/emp_profile_edit/{{ userinfo.id }}"><i class="fa fa-user gray sml-size"></i> Editer le profile</a></li>
+              <li><a href="/accounts/password/reset"><i class="fa fa-key gray sml-size"></i> Changer le mot de passe</a></li>
 
-              <li class="nav-header"><i class="icon-music blue mid-size"></i> Contenu </li>
+              <li class="nav-header"><i class="fa fa-music blue sml-size"></i> Contenu </li>
 
-              <li><a href="/emp_profile_offres"><i class="icon-sitemap gray mid-size"></i> Gérer les offres</a></li>
-              <li><a href="#"><i class="icon-group gray mid-size"></i> Liste des postulant</a></li>
+              <li><a href="/emp_profile_offres"><i class="fa fa-sitemap gray sml-size"></i> Gérer les offres</a></li>
+              <li><a href="#"><i class="fa fa-group gray sml-size"></i> Liste des postulant</a></li>
             </ul>
             <!-- END SHOWN LIST ITEMS -->
-            <!-- BEGIN HIDDEN LIST ITEMS -->
             <br>
           </div>
 
@@ -99,16 +98,29 @@
 
         <div class="col-sm-8">
 
-          <div class="ad-title">
-            Informations générales :
-          </div>
-          
 
         <div class="social-box">
+
+            <div class="header">
+
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                <i class="fa fa-pencil fa-stack-1x fa-inverse white-ns"></i>
+              </span>
+              <strong>Informations générales :</strong>
+
+            </div>
+
             <div class="body">
               <dl class="dl-horizontal">
                 <dt>Societé</dt>
                 <dd>{{userinfo.user.username}}</dd>
+                <br>
+                <dt>Représentant</dt>
+                <dd>{{userinfo.representant}}</dd>
+                <br>
+                <dt>N° Siret</dt>
+                <dd>{{userinfo.siret}}</dd>
                 <br>
                 <dt>Code postal</dt>
                 <dd>{{userinfo.postal_code}}</dd>
@@ -142,8 +154,8 @@
               <h4 class="hidden-phone">Autres Infos</h4>
               <div class="tools">
                 <ul id="myTab2" class="nav nav-tabs">
-                  <li class="active"><a class="active" href="#profile2" data-toggle="tab"><i class="icon-user"></i> Presentation</a></li>
-                  <li class=""><a href="#dropdown12" data-toggle="tab"><i class="icon-cog"></i> Gestion</a></li>
+                  <li class="active"><a class="active" href="#profile2" data-toggle="tab"><i class="fa fa-user"></i> Presentation</a></li>
+                  <li class=""><a href="#dropdown12" data-toggle="tab"><i class="fa fa-cog"></i> Gestion</a></li>
                 </ul>
               </div>
 

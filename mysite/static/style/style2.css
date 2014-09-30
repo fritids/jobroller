@@ -23,7 +23,7 @@ a.reg{
   font-family: "Oswald";
   font-size: 16px;
   color: rgba(0, 0, 0, 0.67);
-  margin-left: 18%;
+  margin-left: 10%;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -74,6 +74,9 @@ body{
 }
 /* tostr notification messages ends */
 
+.no-hover:hover{
+  background: #fff !important;
+}
 
 
 
@@ -179,13 +182,15 @@ body{
 }
 
 .ad-title{
-  font-size: 25px;
-  margin-top: 20px;
+  font-size: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
-  line-height: 30px;
-  color: #000 !important;
-  border-bottom: 3px solid rgba(0, 136, 204, 0.38);
+  line-height: 46px;
+  color: #6A7180 !important;
+  /*border-bottom: 3px solid rgba(0, 136, 204, 0.38);*/
   font-family: 'Open sans', serif !important;
+  /*background: #dedede;*/
+  padding-left: 3%
 }
 
 .login-helptext{
@@ -378,9 +383,8 @@ div#slider-thumbs.col-md-12.hidden-sm.hidden-xs{
 /*start header*/
 
 .top_header{
-  margin-left: 121px;
-  margin-right: 121px;
-  width: 80%;
+  max-width: 1020px;
+  margin: 10px auto;
 }
 
 .header{

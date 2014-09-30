@@ -2,6 +2,8 @@
 from django.shortcuts import render_to_response, RequestContext, HttpResponseRedirect, get_object_or_404
 from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import ugettext
+from os import path
 
 # models and forms
 from offre.models import Offer
@@ -22,17 +24,21 @@ from django.contrib import messages
 from django.core.context_processors import csrf
 from django.utils import translation
 
-def offer(request, num):
-    car = Offer.objects.get(id=num)
+#email
+from car_shop.nicemails import send_nice_email
+from django.conf import settings
+from django.contrib.sites.models import Site
 
-    car.views = int(car.views)+1
-    car.save()
+def offer(request, num):
+    offer = Offer.objects.get(id=num)
+
+    offer.views = int(offer.views)+1
+    offer.save()
 
     can_edit = False
-    if request.user.username == car.user.username: can_edit = True
+    if request.user.username == offer.user.username: can_edit = True
 
     return render_to_response('offer.html', locals(), context_instance = RequestContext(request))
-
 
 def offer_edit(request, num):
     car = Offer.objects.get(id = num)
@@ -40,7 +46,6 @@ def offer_edit(request, num):
     # if request.user.username == car.user.user.username:
     if request.user.username == car.user.username:
         can_edit = True
-
 
     if request.method == 'POST':
         form = EditOfferForm(request.POST, request.FILES)
@@ -55,7 +60,7 @@ def offer_edit(request, num):
             if 'salary' in changed_fields:          salary = int(form.cleaned_data['salary'])
             if 'immediate' in changed_fields:       immediate = form.cleaned_data['immediate']
             if 'description' in changed_fields:     description = form.cleaned_data['description']
-
+            if 'expired' in changed_fields:         expired = form.cleaned_data['expired']
                 
             else:
                 image = car.image       
@@ -67,7 +72,7 @@ def offer_edit(request, num):
             car.category    = category 
             car.immediate   = immediate
             car.description = description
-
+            car.expired     = expired
 
             car.save()  
             return HttpResponseRedirect(car.get_absolute_url())
@@ -82,13 +87,11 @@ def offer_edit(request, num):
                                         'region':       car.region,
                                         'offer':        car.offerType,
                                         'immediate':    car.immediate,
-                                        'description':  car.description
-                                        
+                                        'description':  car.description,
+                                        'expired':      car.expired
                                         })
 
-
     return render_to_response('offer_edit.html', locals(), context_instance = RequestContext(request))
-
 
 # make the call by ajax
 @login_required
@@ -98,13 +101,95 @@ def offer_disable(request, num):
     offer.save()
     return HttpResponseRedirect('/emp_profile_offres/')
 
-# make the call by ajax
+# todo make the call by ajax
 @login_required
 def offer_activate(request, num):
     offer = get_object_or_404(Offer, id=num)
     offer.activated = True
     offer.save()
     return HttpResponseRedirect("/emp_profile_offres/")
+
+@login_required
+def offer_postulate(request, num):
+    offer        = get_object_or_404(Offer, id=num)
+    offer_title  = offer.title
+    offer_date   = offer.created
+    offer_region = offer.get_region_display()
+    
+    owner        = offer.user
+    owner_name   = offer.user.username
+    owner_email  = offer.user.email
+    
+    sender       = request.user
+    sender_name  = request.user.username
+    sender_email = request.user.email
+
+    # get the candidate profile linked to this user
+    applyer = sender.profile_candid_set.latest('id')    
+
+    # if applyer in offer.profile_candid_set.all(): 
+    #     msg = 'vous avez postulé pour l\'offre déja'
+    #     return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
+
+
+    context = { 'nom': sender_name, 'company': owner_name, 'titre': offer_title, 'lieu': offer_region, 'creattion_date': offer_date }
+
+    images = ((path.join('static', 'images', 'logo1.png'), 'logo'), (path.join('static', 'images', 'logo1.png'), 'logo'))
+
+    # subject = ugettext(u"Test de mail pour %(nom)s") % {'nom': '{{ nom }}'}
+    subject = ugettext(u"SpeedJob: Votre candidature pour %s") % (offer_title)
+
+    # send a confirmation email to the employer
+    try:
+        send_nice_email(
+                    template_name ='html_email',
+                    email_context = context,
+                    subject       = subject,
+                    recipients    = sender_email,
+                    sender        = sender_name,
+                    images        = images
+                    )
+
+    except:
+        msg = 'L\'envoi de votre demande a echoué'
+        return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
+
+    # get current website
+    current_site = Site.objects.get_current()
+    site_root    = current_site.domain
+    full_offer_url = site_root +  offer.get_absolute_url()
+
+    # send a copy to the employer
+    context = { 'nom': sender_name, 'company': owner_name, 'titre': offer_title, 'lieu': offer_region, 'creattion_date': offer_date, 'is_active': offer.activated, 'full_offer_url':full_offer_url }
+    subject = ugettext(u"SpeedJob: Le candidat : %s  vient de postuler pour votre offre: %s") % (sender_name, offer_title)
+
+
+    try:
+        send_nice_email(
+                    template_name ='html_email_emp',
+                    email_context = context,
+                    subject       = subject,
+                    recipients    = owner_email,
+                    sender        = sender_name,
+                    images        = images
+                    )
+
+    except Exception as e:
+        print '%s (%s)' % (e.message, type(e))
+        msg = 'L\'envoi de votre demande a echoué'
+        return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
+
+    msg = 'Votre demande a été envoyé avec succès'
+
+    # add offer to the candidate collection
+    
+    offer.profile_candid_set.add(applyer)
+    offer.save()
+
+    return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
+
+    
+
 
 @login_required
 def deposer_offre(request):
@@ -122,6 +207,7 @@ def deposer_offre(request):
             salary          = form.cleaned_data['salary']
             
             immediate       = form.cleaned_data['immediate']    
+            expired       = form.cleaned_data['expired']    
             description     = form.cleaned_data['description']  
             # image           = request.FILES['image']
 
@@ -132,6 +218,7 @@ def deposer_offre(request):
                             region          = region, 
                             immediate       = immediate, 
                             description     = description, 
+                            expired         = expired, 
                             user            = request.user )
             newcar.save()
 

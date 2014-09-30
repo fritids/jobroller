@@ -20,7 +20,7 @@
           
           <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
             <ul class="nav nav-list dividers">
-              <li class="nav-header">Photo</li>
+              <li class="nav-header">&nbsp;</li>
               <li class="nav-header">
                   <div class="avatar">
                     <img src="/static/img/candidate_avatar.png"  alt="avatar" class="img-thumbnail" width='100' height='100'>
@@ -32,16 +32,11 @@
 
           <hr/>
 
-          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
-            <!-- BEGIN SHOWN LIST ITEMS -->
-            <ul class="nav nav-list dividers">
-              <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Opérations</li>
-              <li><a href="javascript:alert('en dévelopement')"><i class="icon-money gray mid-size"></i> Acheter le profile</a></li>
-              <li><a href="#"><i class="icon-cogs gray mid-size"></i> Autres</a></li>
-            </ul>
-            <!-- END SHOWN LIST ITEMS -->
-            <!-- BEGIN HIDDEN LIST ITEMS -->
-            <br>
+
+          <div class="list-group">
+            <a class="list-group-item no-hover" href="#"><i class="fa fa-wrench blue mid-size"></i> Opérations</a>
+            <a class="list-group-item" href="javascript:alert('en cours de dev')"><i class="fa fa-cc-visa gray mid-size"></i> &nbsp; Acheter le profile </a>
+            <a class="list-group-item" href="javascript:alert('en cours de dev')"><i class="fa fa-cogs gray mid-size"></i> &nbsp; Autres </a>
           </div>
 
         </div>
@@ -50,13 +45,17 @@
 
         <div class="social-box">
       <div class="header">
-        <h4>Informations générales</h4>
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                <i class="fa fa-pencil fa-stack-1x fa-inverse white-ns"></i>
+              </span>
+              <strong>Informations générales :</strong>
       </div>
       <div class="body">
         <ul id="myTab" class="nav nav-tabs">
-          <li class="active"><a href="#profile" data-toggle="tab"><i class="icon-user"></i> Profile</a></li>
-          <li class=""><a href="#mot" data-toggle="tab"><i class="icon-cog"></i> Motivation</a></li>
-          <li class=""><a href="#home" data-toggle="tab"><i class="icon-list-alt"></i> CV</a></li>
+          <li class="active"><a href="#profile" data-toggle="tab"><i class="fa fa-user"></i> Profile</a></li>
+          <li class=""><a href="#mot" data-toggle="tab"><i class="fa fa-cog"></i> Motivation</a></li>
+          <li class=""><a href="#home" data-toggle="tab"><i class="fa fa-list-alt"></i> CV</a></li>
           
         </ul>
 
@@ -64,7 +63,7 @@
 
               <!-- motivation --> 
               <div class="tab-pane fade active in" id="profile">
-                <p><strong>Profile</strong></p>
+                <p><strong>&nbsp;</strong></p>
                 <p>
                   <dl class="dl-horizontal">
                 <dt>Nom d'utilisateur</dt>

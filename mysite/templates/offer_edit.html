@@ -1,4 +1,5 @@
 {% extends "sitebase.html" %}
+{% load adminmedia %} 
 
 {% load dajaxice_templatetags %}
 
@@ -8,13 +9,14 @@
       <!-- Stylesheets -->
         <link href="/static/header/header.css" rel="stylesheet">
         <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="/static/style/fontawesome/css/font-awesome.css">
+        <link rel="stylesheet" href="/static/style/font-awesome-4.2.0/css/font-awesome.css">
         <link href="/static/style/style2.css" rel="stylesheet">
         <link href="/static/style/slider2.css" rel="stylesheet">
         
         <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Glegoo" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="/static/style/flexslider.css">
+        
+        <link rel="stylesheet" type="text/css" href="/static/jqueryui/jquery-ui.css">
         
 
         <link rel="stylesheet"  href="/static/style/responsive.css" type="text/css" media="all">
@@ -32,6 +34,11 @@
         <script type="text/javascript">var switchTo5x=true;</script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
         <script type="text/javascript">stLight.options({publisher: "fc960723-2a1c-4123-bacd-9e76284af85e", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+
+        <script type="text/javascript">
+        window.__admin_media_prefix__ = "{% filter escapejs %}{% admin_media_prefix %}{% endfilter %}";
+        </script>
+
 
 {% endblock style %}  
 
@@ -120,6 +127,16 @@
 
             <div class="form-group halfsize">
 
+                {{ form.expired.errors }}
+                <label class="col-sm-3 control-label" for="id_expired">{% trans " date d'expiration " %}:</label>
+
+                <div class="col-sm-4">
+                  {{ form.expired }}
+                </div>
+            </div>
+
+            <div class="form-group halfsize">
+
                 {{ form.description.errors }}
                 <label class="col-sm-3 control-label" for="id_description">{% trans "description" %}:</label>
 
@@ -169,6 +186,9 @@
 {% block js %}
         <script src="/static/js/jquery.js"></script>
         <script src="/static/style/bootstrap/js/bootstrap.js"></script>
+        <script src="/static/jqueryui/jquery-ui.min.js"></script>
+        
+
         <script type="text/javascript" src="/static/js/jquery.infinitescroll.min.js"></script>
         <script type="text/javascript" src="/static/js/custom.js"></script>
 
@@ -189,8 +209,14 @@
               "link":false,
               "image":false
             });
+
+            $("#id_expired").datepicker({ dateFormat: "dd-mm-yy" }).val();
+
+             
           });
         </script>
+
+
 {% endblock js %}
 
 

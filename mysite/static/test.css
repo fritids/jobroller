@@ -387,7 +387,7 @@ a.button.darker.selected, button.darker.selected, a.button.darker.selected:hover
 ul.horizontal>li:before {
 	float: left;
 	content: '\2022';
-	margin: 0 5px;
+	margin: 0 5px 5px 0;
 }
 
 .right-col .wrapper {
@@ -426,7 +426,7 @@ ul.horizontal>li:before {
 }
 .price-tag {
     font-size: 0;
-    font-weight: 800
+    font-weight: 700
 }
 .price-tag sup {
     vertical-align: top;
@@ -819,9 +819,10 @@ button.call-to-action .button.call-to-action:hover, button.call-to-action:hover,
 .freelancer-list-item .job-title {
     display: block;
     color: #565656;
-    height: 40px;
+    /*height: 30px;*/
     padding-right: 30px
 }
+
 .freelancer-list-item .cert-level1-small, .freelancer-list-item .cert-level2-small, .freelancer-list-item .cert-level3-small, .freelancer-list-item .cert-level4-small, .freelancer-list-item .cert-level5-small, .freelancer-list-item .cert-level10-small {
     position: relative;
     margin-top: 0;

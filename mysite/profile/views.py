@@ -62,6 +62,7 @@ def candid_profile_edit(request, id):
 
         if form.is_valid():
 
+            userinfo.prenom        = form.cleaned_data['prenom']
             userinfo.adress        = form.cleaned_data['adress']
             userinfo.last_name     = form.cleaned_data['last_name']
             userinfo.telephone     = form.cleaned_data['telephone']
@@ -87,6 +88,7 @@ def candid_profile_edit(request, id):
         return HttpResponseRedirect('/candid_profile')
     else:
         form = UserInfoForm(initial = {
+                            'prenom'        : userinfo.prenom,
                             'adress'        : userinfo.adress,
                             'last_name'     : userinfo.last_name,
                             'telephone'     : userinfo.telephone,
@@ -119,7 +121,8 @@ def emp_profile_edit(request, id):
 
         if form.is_valid():
 
-            # userinfo.society      = form.cleaned_data['society']
+            userinfo.representant = form.cleaned_data['representant']
+            userinfo.siret        = form.cleaned_data['siret']
             userinfo.phone        = form.cleaned_data['phone']
             userinfo.postal_code  = form.cleaned_data['postal_code']
             userinfo.town         = form.cleaned_data['town']
@@ -133,13 +136,14 @@ def emp_profile_edit(request, id):
         return HttpResponseRedirect('/emp_profile')
     else:
         form = EmployerInfoForm(initial = {
-                            # 'society'       : userinfo.society,
-                            'phone'         : userinfo.phone,
-
-                            'postal_code'   : userinfo.postal_code,
-                            'town'          : userinfo.town,
-                            'website'       : userinfo.website,
-                            'presentation'  : userinfo.presentation
+                            'representant'      : userinfo.representant,
+                            'siret'             : userinfo.siret,
+                            'phone'             : userinfo.phone,
+                            
+                            'postal_code'       : userinfo.postal_code,
+                            'town'              : userinfo.town,
+                            'website'           : userinfo.website,
+                            'presentation'      : userinfo.presentation
                             
             })
     return render_to_response('./profile/profile_emp_edit.html', locals(), context_instance = RequestContext(request))
@@ -180,13 +184,23 @@ def emp_profile_offres(request):
 
     return render_to_response('./profile/profile_emp_offers.html', locals(), context_instance=RequestContext(request))
 
+@login_required
+def emp_profile_offer_applyers(request, id):
+    
+    offer       = Offer.objects.get(id=id)
+    applyers    = offer.profile_candid_set.all()
+
+    usname      = request.user.username
+    uslname     = request.user.last_name
+    userinfo    = Profile_emp.objects.get( user = request.user )
+
+    return render_to_response('./profile/profile_emp_offer_applyers.html', locals(), context_instance=RequestContext(request))
+
 
 @login_required
 def candidate(request, num):
     userinfo = Profile_candid.objects.get(id=num)
     return render_to_response('./profile/candidate.html', locals(), context_instance=RequestContext(request))
-
-
 
 
 def search_candidates(request):

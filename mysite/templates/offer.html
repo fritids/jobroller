@@ -8,7 +8,7 @@
   <div id="respo">
     <div class="panel panel-default">
       <div class="panel-heading">
-        {{ car.title }}
+        {{ offer.title }}
       </div>
 
         <div class="panel-body">
@@ -19,7 +19,7 @@
           
           <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
             <ul class="nav nav-list dividers">
-              <li class="nav-header">Logo</li>
+              <li class="nav-header">&nbsp; </li>
           
               <li class="nav-header">
                   <div class="avatar">
@@ -33,100 +33,104 @@
 
           <hr/>
 
-          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
-            <!-- BEGIN SHOWN LIST ITEMS -->
-            <ul class="nav nav-list dividers">
-              <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Etat de l'offre</li>
-              <li><a href="/emp_profile_edit/{{ userinfo.id }}"><i class="icon-bell gray mid-size"></i> Expire dans 14 jours </a></li>
-              
-            </ul>
-            <!-- END SHOWN LIST ITEMS -->
-            <!-- BEGIN HIDDEN LIST ITEMS -->
-            <br>
+          <div class="list-group">
+            <a class="list-group-item no-hover" href="#"><i class="fa fa-signal fa-fw blue"></i>&nbsp; Etat de l'offre</a>
+            <a class="list-group-item" href="#"><i class="fa fa-bell fa-fw"></i>&nbsp; {{ offer.is_available|yesno:'Active, Inactive' }} </a>
+
           </div>
-        
+
           <hr/>
 
-          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
-            <!-- BEGIN SHOWN LIST ITEMS -->
-            <ul class="nav nav-list dividers">
-              <li class="nav-header"><i class="icon-wrench blue mid-size"></i> Opérations</li>
-              {% if request.user.is_authenticated %}
+          <div class="list-group">
+            <a class="list-group-item no-hover" href="#"><i class="fa fa-wrench blue "></i> Opérations</a>
+            {% if request.user.is_authenticated %}
 
                 {% if user|in_group:"candidate" %}
-                    <li class="active"><a href="javascript:alert('en cours de dévelopement')"><i class="icon-share gray mid-size "></i> Postuler</a></li>  
+                    <a class="list-group-item" href="/offer/1/postulate" id="btn-postulate"><i class="fa fa-paper-plane-o sml-size "></i> &nbsp; Postuler</a>
+                    <!-- <a class="list-group-item" href="javascript:void(0)" id="btn-postulate"><i class="fa fa-paper-plane-o sml-size "></i> &nbsp; Postuler</a> --> 
                 {% else %} 
 
                     {% if can_edit %}
-                      <li><a href="{{ car.get_edition_url }}"><i class="icon-cogs gray mid-size"></i> Editer</a></li>
+                    <a class="list-group-item" href="{{ offer.get_edition_url }}"><i class="fa fa-cogs gray sml-size"></i> Editer</a>
                     {% else %}  
-                      <li><a href="/emp_profile_offres"><i class="icon-sitemap gray mid-size"></i> Voir mes offres</a></li>
+                    <a class="list-group-item" href="/emp_profile_offres"><i class="fa fa-sitemap gray sml-size"></i> &nbsp; Voir mes offres</a>
                     {% endif %}
                     
                 {% endif %}
 
-            {% else %}     
-                <li><a href="javascript:alert('en cours de dévelopement')"><i class="icon-share gray mid-size"></i> Postuler</a></li>           
+            {% else %}
+                <a class="list-group-item" href="/"><i class="fa fa-share sml-size"></i> &nbsp; Postuler</a>     
             {% endif %}
-            </ul>
-            <!-- END SHOWN LIST ITEMS -->
-            <!-- BEGIN HIDDEN LIST ITEMS -->
-            <br>
           </div>
-          
+
+
+          <hr>
 
         </div>
 
         <div class="col-sm-8">
 
-          
-          <div class="ad-title">
-            Description de l'offre :
-          </div>
-          <br>
-
           <div class="social-box">
+
+            <div class="header">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                <i class="fa fa-pencil fa-stack-1x fa-inverse white-ns"></i>
+              </span>
+              <strong>Description de l'offre :</strong>
+            </div>
+
             <div class="body">
-              {{ car.description|safe }}
+              {{ offer.description|safe }}
             </div>
           </div>
 
+          <hr>
 
-        <div class="ad-title">
-          Infos sur l'offre :
-        </div>
 
-        <br/>
         <div class="social-box">
+
+          <div class="header">
+              <span class="fa-stack fa-lg">
+              <i class="fa fa-square fa-stack-2x blue-ns"></i>
+              <i class="fa fa-pencil fa-stack-1x fa-inverse white-ns"></i>
+            </span>
+            <strong>Info sur l'offre :</strong>
+
+          </div>
             
             <div class="body">
               
               <br>
               <dl class="dl-horizontal">
                 <dt>Société:</dt>
-                <dd>{{car.user.username}}</dd>
+                <dd>{{offer.user.username}}</dd>
                 <br>
                 <dt>Titre:</dt>
-                <dd>{{car.title}}</dd>
+                <dd>{{offer.title}}</dd>
                 <br>
                 <dt>Type de l'offre</dt>
-                <dd>{{car.get_offerType_display}}</dd>
+                <dd>{{offer.get_offerType_display}}</dd>
                 <br>
                 <dt>Categorie:</dt>
-                <dd>{{car.get_category_display}}</dd>
+                <dd>{{offer.get_category_display}}</dd>
                 <br>
                 <dt>Region:</dt>
-                <dd>{{car.get_region_display}}</dd>
+                <dd>{{offer.get_region_display}}</dd>
                 <br>
                 
                 <br>
                 <dt>Salaire proposé:</dt>
-                <dd>{{ car.get_salary_display }}</dd>
+                <dd>{{ offer.get_salary_display }}</dd>
                 <br>
                 <dt>Date de dépôt:</dt>
-                <dd>{{ car.created|date:"SHORT_DATE_FORMAT"}}</dd>
+                <dd>{{ offer.created|date:"SHORT_DATE_FORMAT"}}</dd>
                 <br>
+                <dt>Date de d'éxpiration:</dt>
+                <dd>{{ offer.expired|date:"SHORT_DATE_FORMAT"}}    </dd>
                 <br>
+                <dt></dt>
+                <dd><strong> {{ offer.remaining_days }} jour{{ offer.remaining_days|pluralize }} restant{{ offer.remaining_days|pluralize }} </strong> </dd>
               </dl>
             </div>
            </div>  
@@ -162,27 +166,27 @@
 {% endblock sidecontent %}
 
 
-
 {% block extra_js %}
 
-<script>$(".mobile").click(function() {
-      $("nav").slideToggle();  
+  {{ block.super }}
+
+  <script type='text/javascript'>
+  $(document).ready(function(){
+    
+    $('#btn-postulate').click(function(event) {
+      // event.preventDefault();
+      $(this).unbind('click');
+
+      $('#btn-postulate i').removeClass('fa-paper-plane-o'); 
+      $(this).text(' Envoie en cours...');
+      $(this).prepend('<i class="fa fa-spinner fa-spin sml-size "></i>');
+
+      $(this).css('background', '#fff') ;
+      $(this).css('cursor', 'default');
+      window.location.href("/offer/{{ offer.id }}");
+      // $(this).attr("href", "/");
     });
 
-    var menu = $("nav");
-    jQuery(window).on('resize', function(){     
-        if(!jQuery(".mobile").is(":visible") && !menu.is(':visible'))
-        {
-            menu.css({'display':''});   
-        }
-    });//@ sourceURL=pen.js
-    </script>
-
-<script>
-      $(window).bind("load resize slid.bs.carousel", function() {
-      var imageHeight = $(".active .holder").height();
-      $(".controllers").height( imageHeight );
-      console.log("Slid");
-    });
-    </script>
+  });
+  </script>
 {% endblock extra_js %}

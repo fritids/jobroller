@@ -182,7 +182,7 @@ h4 small {
 ul,
 ol {
   padding: 0;
-  margin: 0 0 10px 25px;
+  margin: 0 0 10px 15px;
 }
 ul ul,
 ul ol,
@@ -1261,18 +1261,19 @@ table {
   max-width: 100%;
   background-color: transparent;
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 5px;
 }
 .table {
   width: 100%;
   margin-bottom: 20px;
+  font-size: 0.85em;
 }
 .table th,
 .table td {
   padding: 8px;
   line-height: 20px;
-  text-align: left;
-  vertical-align: top;
+  text-align: center;
+  vertical-align: middle;
   border-top: 1px solid #dddddd;
 }
 .table th {
@@ -1294,11 +1295,17 @@ table {
 }
 .table .table {
   background-color: #e9eaed;
+
 }
 .table-condensed th,
 .table-condensed td {
   padding: 4px 5px;
+  width:100%;
+  height:100%;
+  text-align:center; 
+  vertical-align:middle;
 }
+
 .table-bordered {
   border: 1px solid #dddddd;
   border-collapse: separate;
@@ -2553,6 +2560,12 @@ input[type="submit"].btn.btn-mini {
   text-transform: uppercase;
   background-color: #ffffff;
 }
+
+.nav-header div.avatar{
+  margin: 0 auto;
+  width:70%;
+}
+
 .nav li + .nav-header {
   margin-top: 9px;
 }
@@ -2993,7 +3006,7 @@ input[type="submit"].btn.btn-mini {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .social-nav-list .nav-list {
-  padding-left: 15px;
+  padding-left: 10px;
   padding-right: 15px;
   margin-top: 0;
   margin-bottom: 0;
@@ -3005,10 +3018,11 @@ input[type="submit"].btn.btn-mini {
 .social-nav-list .nav-list > li > a,
 .social-nav-list .nav-list .nav-header {
   margin-top: 0 !important;
-  margin-left: -15px;
+  margin-left: -6px;
   margin-right: -15px;
   text-shadow: none;
-  font-size: 14px;
+  font-size: 11px;
+  font-weight: bold;
   color: #6A7180;
 }
 .social-nav-list .nav-list .nav-header {
@@ -3030,7 +3044,7 @@ input[type="submit"].btn.btn-mini {
   padding: 0!important;
 }
 .social-nav-list .nav-list > li > a {
-  padding: 8px 10px;
+  padding: 11px 2px;
   color: #6A7180;
   -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.8) inset;
   -moz-box-shadow: 0 1px rgba(255, 255, 255, 0.8) inset;

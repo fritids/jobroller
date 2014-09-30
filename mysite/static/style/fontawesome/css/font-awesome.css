@@ -98,6 +98,11 @@ a [class*=" icon-"] {
 .icon-dark {
   color: #333333;
 }
+
+.circular{
+
+}
+
 .icon-border {
   border: solid 1px #eeeeee;
   padding: .2em .25em .15em;

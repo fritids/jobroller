@@ -26,7 +26,7 @@ class UserInfoForm(forms.ModelForm):
 
 	class Meta:
 		model 		= Profile_candid
-		exclude 	= ['user', 'is_candid'] 
+		exclude 	= [ 'id', 'user', 'offer', 'is_candid'] 
 
 class EmployerInfoForm(forms.ModelForm):
 
@@ -44,6 +44,6 @@ class EmployerInfoForm(forms.ModelForm):
 
 	class Meta:
 		model 		= Profile_emp
-		exclude 	= ['user', 'is_candid', 'society'] 
+		exclude 	= [ 'id', 'user', 'is_candid', 'society'] 
 
 

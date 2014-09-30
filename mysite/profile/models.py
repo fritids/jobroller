@@ -3,13 +3,17 @@ from django.db import models
 from django.contrib.auth.models import User, Group
 from registration.signals import user_registered
 
+from offre.models import Offer
+from car_shop.random_unique import RandomPrimaryIdModel
 from car_shop.model_choices import *
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
 import subprocess
 from django.conf import settings
 from PyPDF2 import PdfFileReader, PdfFileWriter
+from uuid import uuid4
 
 profile_type = ((True, 'Candidat'), (False, 'Recruteur') )
 
@@ -20,7 +24,8 @@ class ExUserProfile(models.Model):
     def __unicode__(self):
         return unicode(self.user)
 
-class Profile_emp(models.Model):
+class Profile_emp(RandomPrimaryIdModel):
+    # id          = models.CharField(max_length=36, primary_key=True, default=lambda: ''.join([ i for i in str(uuid4()) if i != '-']) , editable=False)
     user        = models.ForeignKey(User, unique=True)
     is_candid   = models.CharField(max_length=230)
 
@@ -31,6 +36,8 @@ class Profile_emp(models.Model):
     def __unicode__(self):
         return unicode(self.user)
 
+    representant = models.CharField(max_length=230, null=True, blank=True)  
+    siret        = models.CharField(max_length=230, null=True, blank=True)  
     created_at   = models.DateTimeField(verbose_name="Date de creation",        auto_now_add = True)
     society      = models.CharField(verbose_name="Société",     max_length=200, null=True, blank=True)
     phone        = models.CharField(verbose_name="Téléphone",   max_length=200, null=True, blank=True)
@@ -77,11 +84,14 @@ class Profile_emp(models.Model):
 
 
 
-class Profile_candid(models.Model):
-    user        = models.ForeignKey(User, unique=True)
-    is_candid   = models.CharField(max_length=230)
+class Profile_candid(RandomPrimaryIdModel):
+    # id          = models.CharField(max_length=36, primary_key=True, default=lambda: ''.join([ i for i in str(uuid4()) if i != '-']) , editable=False)
+    user          = models.ForeignKey(User, unique=True)
+    offer         = models.ForeignKey(Offer, unique=True, null=True, blank=True)
 
+    is_candid     = models.CharField(max_length=230)
 
+    prenom        = models.CharField(max_length=230, null=True, blank=True)  
     created_at    = models.DateTimeField(auto_now_add=True)
     last_name     = models.CharField(verbose_name = u'Nom de famille', max_length=200, null=True, blank=True)
     adress        = models.CharField(verbose_name = u'Adresse', max_length=200, null=True, blank=True)

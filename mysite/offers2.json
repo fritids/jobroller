@@ -13,7 +13,7 @@
       "modified": "2014-09-09T16:03:45.768",
       "immediate": "Used",
       "created": "2014-09-07T16:42:44.103",
-      "user": 4,
+      "user":2,
       "offerType": "5"
     }
   },
@@ -31,7 +31,7 @@
       "modified": "2014-09-19T14:47:57.258",
       "immediate": "Used",
       "created": "2014-09-07T16:42:44.225",
-      "user": 4,
+      "user":2,
       "offerType": "5"
     }
   },
@@ -49,7 +49,7 @@
       "modified": "2014-09-07T16:47:41.426",
       "immediate": "Used",
       "created": "2014-09-07T16:42:44.348",
-      "user": 4,
+      "user":2,
       "offerType": "3"
     }
   },
@@ -67,7 +67,7 @@
       "modified": "2014-09-10T13:07:37.079",
       "immediate": "New",
       "created": "2014-09-07T16:42:44.472",
-      "user": 4,
+      "user":2,
       "offerType": "5"
     }
   },
@@ -85,7 +85,7 @@
       "modified": "2014-09-07T16:47:41.708",
       "immediate": "New",
       "created": "2014-09-07T16:42:44.596",
-      "user": 4,
+      "user":2,
       "offerType": "1"
     }
   },
@@ -103,7 +103,7 @@
       "modified": "2014-09-07T16:47:41.843",
       "immediate": "Used",
       "created": "2014-09-07T16:42:44.742",
-      "user": 4,
+      "user":2,
       "offerType": "2"
     }
   },
@@ -121,7 +121,7 @@
       "modified": "2014-09-07T16:47:41.989",
       "immediate": "New",
       "created": "2014-09-07T16:42:44.868",
-      "user": 4,
+      "user":2,
       "offerType": "2"
     }
   },
@@ -139,7 +139,7 @@
       "modified": "2014-09-07T16:47:42.135",
       "immediate": "Used",
       "created": "2014-09-07T16:42:44.992",
-      "user": 4,
+      "user":2,
       "offerType": "4"
     }
   },
@@ -157,7 +157,7 @@
       "modified": "2014-09-07T16:47:42.270",
       "immediate": "New",
       "created": "2014-09-07T16:42:45.138",
-      "user": 4,
+      "user":2,
       "offerType": "2"
     }
   },
@@ -175,7 +175,7 @@
       "modified": "2014-09-07T16:47:42.385",
       "immediate": "Used",
       "created": "2014-09-07T16:42:45.262",
-      "user": 4,
+      "user":2,
       "offerType": "4"
     }
   },
@@ -193,7 +193,7 @@
       "modified": "2014-09-07T16:47:42.520",
       "immediate": "New",
       "created": "2014-09-07T16:42:45.375",
-      "user": 4,
+      "user":2,
       "offerType": "1"
     }
   },
@@ -211,7 +211,7 @@
       "modified": "2014-09-07T16:47:42.677",
       "immediate": "Used",
       "created": "2014-09-07T16:42:45.521",
-      "user": 4,
+      "user":2,
       "offerType": "3"
     }
   },
@@ -229,7 +229,7 @@
       "modified": "2014-09-07T16:47:42.823",
       "immediate": "New",
       "created": "2014-09-07T16:42:45.645",
-      "user": 4,
+      "user":2,
       "offerType": "1"
     }
   },
@@ -247,7 +247,7 @@
       "modified": "2014-09-07T16:47:42.970",
       "immediate": "New",
       "created": "2014-09-07T16:42:45.782",
-      "user": 4,
+      "user":2,
       "offerType": "3"
     }
   },
@@ -265,7 +265,7 @@
       "modified": "2014-09-07T16:47:43.105",
       "immediate": "New",
       "created": "2014-09-07T16:42:45.954",
-      "user": 4,
+      "user":2,
       "offerType": "3"
     }
   },
@@ -283,7 +283,7 @@
       "modified": "2014-09-07T16:47:43.231",
       "immediate": "New",
       "created": "2014-09-07T16:42:46.096",
-      "user": 4,
+      "user":2,
       "offerType": "4"
     }
   },
@@ -301,7 +301,7 @@
       "modified": "2014-09-07T16:47:43.366",
       "immediate": "New",
       "created": "2014-09-07T16:42:46.242",
-      "user": 4,
+      "user":2,
       "offerType": "3"
     }
   },
@@ -319,7 +319,7 @@
       "modified": "2014-09-07T23:45:48.276",
       "immediate": "Used",
       "created": "2014-09-07T23:45:48.276",
-      "user": 4,
+      "user":2,
       "offerType": "3"
     }
   }

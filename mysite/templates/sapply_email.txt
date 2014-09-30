@@ -1,0 +1,9 @@
+{% load i18n %}
+{{ nom }},
+
+Ceci est un exemple de "nice-email" que je vous fait parvenir,
+à titre d'exemple, et bien que vous vous en fichiez.
+
+Cordialement
+
+Mathieu Agopian

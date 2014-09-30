@@ -6,38 +6,50 @@
         <div class="panel-body-mod"> 
 
           {% for i in items.object_list %}
-            <div class="freelancer-list-item hoverable clearfix">
-              <a class="span-2 freelancer-image" href="#">
-                <img width="70" height="70" src="http://placehold.it/70x70" alt="Sando">
-              </a>
+           
+           <div class="freelancer-list-item hoverable clearfix">
+                  <a class="span-2 freelancer-image" href="#">
+                    <img width="70" height="70" src="http://placehold.it/70x70" alt="image">
+                  </a>
 
-            <div class="span-70 boxmodelfix info">
-                <h3>
-                    <a onclick="return false" class="freelancer left" rel="nofollow" href="#">{{i.title}}</a>
-                    <!-- <span class="cert cert-level1-small " data-level="1"> </span> --> 
-                    <div class="widget-member-prizes"></div>       
-                </h3>
+                <div class="span-70 boxmodelfix info">
+                    <h3>
+                        <a onclick="return false" class="freelancer left crop span-10" rel="nofollow" href="#"> <font style="color:#999;"size="-2">
+                          {{ i.get_offerType_display }}</font> &nbsp;
+                          {{i.title}}
+                        </a>
+                        <!-- <span class="cert cert-level1-small " data-level="1"> </span> --> 
+                        <div class="widget-member-prizes"></div>       
+                    </h3>
 
-                <div class="job-title crop span-10">
-                  {{ i.get_category_display }} | <strong>{{i.get_region_display}}</strong> | <span class="clock"> <span> {{i.created|date:"SHORT_DATE_FORMAT"}} </span> </span>
-                </div>
+                    <div class="job-title crop span-10">
+                        <i class="fa fa-tag sml-size dark-green"></i> {{ i.get_category_display }} | 
+                        <i class="fa fa-map-marker rose sml-size"></i> &nbsp; <strong>{{i.get_region_display}}</strong> |
+                        <span> <i class="fa fa-calendar sml-size blue"></i> &nbsp; {{i.created|date:"SHORT_DATE_FORMAT"}} </span> 
+                    </div>
 
-                <ul class="horizontal left">
-                    <li>
-                        <span class="flag"> Nombre de vues </span>
-                    </li>
+                    <div class="job-title crop span-10">
+                      <i class="fa fa-"></i> &nbsp; <span> {{ i.head_summary|safe }} </span>
+                    </div>
 
-                    <li class="rating"> {{i.views}} </li>
-
+                    <ul class="horizontal left">
+                      <li><i class="fa fa-newspaper-o"></i> <strong>{{ i.get_offerType_display }} &nbsp;&nbsp;</strong></li> 
+                      <li> <i class="fa fa-eye min-size"></i> <strong>{{ i.views }}</strong> fois</li>
                     </ul>
-                </div>
 
-                <div class="span-3 last details freelancer">
+                    &nbsp;
 
-                 <a class="span-3 contact-member call-to-action button action-signup-show" rel="nofollow" href="/">
-                  Voir plus
-                </a>  
-               </div>
+                    <span class="cert cert-level-small " data-level="612" data-tooltip-content="{{ i.tooltip_head_summary|safe }}" data-tooltip-pos="top" 
+                    title="{{ i.tooltip_head_summary|safe }}"></span>
+
+                    </div>
+
+                    <div class="span-3 last details freelancer">
+
+                     <a class="span-2 contact-member call-to-action button action-signup-show" rel="nofollow" href="{{i.get_absolute_url}}">
+                      Voir plus
+                    </a>  
+                   </div>
             </div>
 
           {% endfor %}

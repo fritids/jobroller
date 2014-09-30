@@ -2381,7 +2381,7 @@ table.no-table {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .social-nav-list .nav-list {
-  padding-left: 15px;
+  padding-left: 10px;
   padding-right: 15px;
   margin-top: 0;
   margin-bottom: 0;
@@ -2393,10 +2393,11 @@ table.no-table {
 .social-nav-list .nav-list > li > a,
 .social-nav-list .nav-list .nav-header {
   margin-top: 0 !important;
-  margin-left: -15px;
+  margin-left: -6px;
   margin-right: -15px;
   text-shadow: none;
-  font-size: 14px;
+  font-size: 11px;
+  font-weight: bold;
   color: #6A7180;
 }
 .social-nav-list .nav-list .nav-header {
@@ -2418,7 +2419,7 @@ table.no-table {
   padding: 0!important;
 }
 .social-nav-list .nav-list > li > a {
-  padding: 8px 10px;
+  padding: 11px 2px;
   color: #6A7180;
   -webkit-box-shadow: 0 1px rgba(255, 255, 255, 0.8) inset;
   -moz-box-shadow: 0 1px rgba(255, 255, 255, 0.8) inset;
