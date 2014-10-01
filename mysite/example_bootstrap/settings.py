@@ -115,6 +115,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     
 )
 
+FIXTURE_DIRS = (
+      os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', "fixtures")),
+)
+
 LOGIN_REDIRECT_URL = '/'
 
 EMAIL_USE_TLS = True
@@ -126,7 +130,7 @@ EMAIL_PORT = 587
 ACCOUNT_ACTIVATION_DAYS = 14
 
 
-email_images = ( (os.path.join('static', 'images', 'logo1.png'), 'logo'),(os.path.join('static', 'images', 'logo1.png'), 'logo') )
+# email_images = ( (os.path.join('static', 'images', 'logo1.png'), 'logo'),(os.path.join('static', 'images', 'logo1.png'), 'logo') )
 
 LOGGING = {
     'version': 1,

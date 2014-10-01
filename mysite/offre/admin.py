@@ -22,4 +22,6 @@ class OfferAdmin(admin.ModelAdmin):
 	list_display 	= ('title','offerType', 'region', 'offerType', 'salary', 'user')
 	# delete selected car and it's  file
 	
+
+
 admin.site.register(Offer, OfferAdmin)

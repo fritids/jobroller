@@ -42,6 +42,21 @@
             <br>
           </div>
 
+          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
+            <!-- BEGIN SHOWN LIST ITEMS -->
+            <ul class="nav nav-list dividers">
+              <li class="nav-header"><i class="fa fa-wrench blue mid-size"></i> Liste des mes demandes:</li>
+              
+              {% for i in userinfo.offer.all %}
+                  <li><a href="/accounts/password/reset"><i class="fa fa-key gray mid-size"></i> {{i.title}}</a></li>
+              {% endfor %}
+              
+            </ul>
+            <!-- END SHOWN LIST ITEMS -->
+            <!-- BEGIN HIDDEN LIST ITEMS -->
+            <br>
+          </div>
+
 
           <hr/>
 

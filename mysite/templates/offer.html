@@ -46,8 +46,16 @@
             {% if request.user.is_authenticated %}
 
                 {% if user|in_group:"candidate" %}
-                    <a class="list-group-item" href="/offer/1/postulate" id="btn-postulate"><i class="fa fa-paper-plane-o sml-size "></i> &nbsp; Postuler</a>
-                    <!-- <a class="list-group-item" href="javascript:void(0)" id="btn-postulate"><i class="fa fa-paper-plane-o sml-size "></i> &nbsp; Postuler</a> --> 
+
+                    {% if already_applied %}
+                      <a class="list-group-item" href="javascript:void(0)" id="btn-postulate_off">
+                        <i class="fa fa-lightbulb-o sml-size red"></i> &nbsp; Vous avez déja postulé a l'offre
+                      </a>
+                    {% else %}   
+                      <a class="list-group-item" href="/offer/{{offer.id}}/postulate" id="btn-postulate"><i class="fa fa-paper-plane-o sml-size "></i> &nbsp; Postuler</a>
+                      <!-- <a class="list-group-item" href="javascript:void(0)" id="btn-postulate"><i class="fa fa-paper-plane-o sml-size "></i> &nbsp; Postuler</a> --> 
+                    {% endif %}
+
                 {% else %} 
 
                     {% if can_edit %}

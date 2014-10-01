@@ -87,13 +87,13 @@ class Profile_emp(RandomPrimaryIdModel):
 class Profile_candid(RandomPrimaryIdModel):
     # id          = models.CharField(max_length=36, primary_key=True, default=lambda: ''.join([ i for i in str(uuid4()) if i != '-']) , editable=False)
     user          = models.ForeignKey(User, unique=True)
-    offer         = models.ForeignKey(Offer, unique=True, null=True, blank=True)
+    offer         = models.ManyToManyField(Offer, verbose_name="a postulé pour ",  null=True, blank=True, through = "Application" )
 
     is_candid     = models.CharField(max_length=230)
 
     prenom        = models.CharField(max_length=230, null=True, blank=True)  
-    created_at    = models.DateTimeField(auto_now_add=True)
     last_name     = models.CharField(verbose_name = u'Nom de famille', max_length=200, null=True, blank=True)
+    created_at    = models.DateTimeField(verbose_name=u'Ajouté le', auto_now_add=True)
     adress        = models.CharField(verbose_name = u'Adresse', max_length=200, null=True, blank=True)
     telephone     = models.CharField(verbose_name = u'Telephone', max_length=200, null=True, blank=True)
     # recently added fields
@@ -159,6 +159,21 @@ class Profile_candid(RandomPrimaryIdModel):
             else:
                 continue 
         return msg
+
+
+class Application(models.Model):
+    offer   = models.ForeignKey(Offer, verbose_name="offre")
+    person  = models.ForeignKey(Profile_candid, verbose_name="Candidat")
+    company = models.ForeignKey(Profile_emp, verbose_name="entreprise")
+    created = models.DateTimeField(verbose_name= "date de candidature", auto_now_add=True)
+    is_seen = models.BooleanField(verbose_name='Vue ?', default=False)
+
+    class Meta:
+        verbose_name = 'candidature'
+
+    def __unicode__(self):
+        return unicode(('User: %s offer: %s') %(self.person, self.offer))   
+
     
 def pdf_post_save(sender, instance=False, **kwargs):
 
@@ -189,14 +204,14 @@ def user_registered_callback(sender, user, request, **kwargs):
     profile = ExUserProfile(user = user)
     profile.is_candid = request.POST["is_candid"]
 
-    if profile.is_candid == '1':
-        c = Profile_candid(user = user, is_candid ='cand remotly set')
+    if profile.is_candid == '1':  ##### try to use it later to make an easy check of users type
+        c = Profile_candid(user = user, is_candid ='yes')
         #add user to candidate group
         gr = Group.objects.get(name='candidate')
         gr.user_set.add(user)
         c.save()
     elif profile.is_candid == '0': 
-        c = Profile_emp(user = user, is_candid ='Emp remotly set', society = user.username)
+        c = Profile_emp(user = user, is_candid ='no', society = user.username)
         # add user to employer group
         gr = Group.objects.get(name='employer')
         gr.user_set.add(user)    

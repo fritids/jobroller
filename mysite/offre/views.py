@@ -3,12 +3,12 @@ from django.shortcuts import render_to_response, RequestContext, HttpResponseRed
 from django.http import HttpResponse
 from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import ugettext
-from os import path
+import os
 
 # models and forms
 from offre.models import Offer
 from offre.forms import OfferForm, EditOfferForm
-from profile.models import Profile_candid, Profile_emp
+from profile.models import Profile_candid, Profile_emp, Application
 from profile.forms import UserInfoForm, EmployerInfoForm
 # pagination and search
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
@@ -35,8 +35,20 @@ def offer(request, num):
     offer.views = int(offer.views)+1
     offer.save()
 
-    can_edit = False
+    can_edit        = False
+    already_applyed = False
+
     if request.user.username == offer.user.username: can_edit = True
+
+    # refactor that cause it is ugly
+    if request.user.is_authenticated:
+        gr = Group.objects.get(name='candidate')
+        if request.user in gr.user_set.all():
+            sender  = request.user
+            applyer = sender.profile_candid_set.latest('id')
+            already_applied = applyer in offer.profile_candid_set.all()
+            print 'the user %s has already applied to this offer' %sender
+            print already_applyed    
 
     return render_to_response('offer.html', locals(), context_instance = RequestContext(request))
 
@@ -124,19 +136,31 @@ def offer_postulate(request, num):
     sender_name  = request.user.username
     sender_email = request.user.email
 
+    static_files_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'static'))
+    # get current website
+    current_site = Site.objects.get_current()
+    site_root    = current_site.domain
+    full_offer_url = site_root +  offer.get_absolute_url()
+
     # get the candidate profile linked to this user
-    applyer = sender.profile_candid_set.latest('id')    
+    applyer = sender.profile_candid_set.latest('id')
+    entreprise = owner.profile_emp_set.latest('id')
 
-    # if applyer in offer.profile_candid_set.all(): 
-    #     msg = 'vous avez postulé pour l\'offre déja'
-    #     return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
+    if applyer in offer.profile_candid_set.all(): 
+        msg = 'vous avez postulé pour l\'offre déja'
+        return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
 
+    context = { 'nom': sender_name, 
+                'company': owner_name,
+                'titre': offer_title, 
+                'lieu': offer_region, 
+                'creattion_date': offer_date 
+               }
 
-    context = { 'nom': sender_name, 'company': owner_name, 'titre': offer_title, 'lieu': offer_region, 'creattion_date': offer_date }
+    images = ((os.path.join(static_files_path, 'images', 'logo1.png'), 'logo'), 
+              (os.path.join(static_files_path, 'images', 'logo1.png'), 'logo')
+              )
 
-    images = ((path.join('static', 'images', 'logo1.png'), 'logo'), (path.join('static', 'images', 'logo1.png'), 'logo'))
-
-    # subject = ugettext(u"Test de mail pour %(nom)s") % {'nom': '{{ nom }}'}
     subject = ugettext(u"SpeedJob: Votre candidature pour %s") % (offer_title)
 
     # send a confirmation email to the employer
@@ -154,15 +178,17 @@ def offer_postulate(request, num):
         msg = 'L\'envoi de votre demande a echoué'
         return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
 
-    # get current website
-    current_site = Site.objects.get_current()
-    site_root    = current_site.domain
-    full_offer_url = site_root +  offer.get_absolute_url()
-
     # send a copy to the employer
-    context = { 'nom': sender_name, 'company': owner_name, 'titre': offer_title, 'lieu': offer_region, 'creattion_date': offer_date, 'is_active': offer.activated, 'full_offer_url':full_offer_url }
-    subject = ugettext(u"SpeedJob: Le candidat : %s  vient de postuler pour votre offre: %s") % (sender_name, offer_title)
+    context = { 'nom': sender_name, 
+                'company': owner_name, 
+                'titre': offer_title, 
+                'lieu': offer_region, 
+                'creattion_date': offer_date, 
+                'is_active': offer.activated, 
+                'full_offer_url':full_offer_url 
+                }
 
+    subject = ugettext(u"SpeedJob: Le candidat : %s  vient de postuler pour votre offre: %s") % (sender_name, offer_title)
 
     try:
         send_nice_email(
@@ -181,16 +207,13 @@ def offer_postulate(request, num):
 
     msg = 'Votre demande a été envoyé avec succès'
 
-    # add offer to the candidate collection
+    # create an application that joins the candidate and the offer 
+    app = Application(offer=offer, person=applyer, company=entreprise )
+    app.save()
     
-    offer.profile_candid_set.add(applyer)
-    offer.save()
-
     return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
 
     
-
-
 @login_required
 def deposer_offre(request):
     # cars = Offer.objects.watermarked

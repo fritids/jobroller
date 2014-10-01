@@ -22,17 +22,30 @@
             <div class="header">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-square fa-stack-2x blue-ns"></i>
-                <i class="fa fa-exclamation fa-stack-1x fa-inverse white-ns"></i>
+                <i class="fa fa-tasks fa-stack-1x fa-inverse white-ns"></i>
               </span>
-              <strong>Pensez à désactiver les offres inactives </strong>
+              <strong> Vous avez {{offers.count}} offre{{offers|pluralize}} </strong>
             </div>
 
 
             
     <!-- BEGIN TABLE BODY -->
     <div class="body">
-        <br>
+      <br>
 
+      <ol>
+        <li>
+          <strong> 
+            - Clickez sur l'icone <i class="fa fa-users min-size gray"></i> pour voir la liste des postolants pour l'offre
+          </strong>
+        </li>
+
+        <li>
+            <strong>- Pensez à désactiver les offres inactives </strong>
+        </li>
+      </ol>
+      
+        <br>
 
         {% if offers %}
           <!-- BEGIN TABLE DATA -->
