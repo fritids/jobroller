@@ -34,40 +34,77 @@
           <hr/>
 
           <div class="list-group">
-            <a class="list-group-item no-hover" href="#"><i class="fa fa-signal fa-fw blue"></i>&nbsp; Etat de l'offre</a>
-            <a class="list-group-item" href="#"><i class="fa fa-bell fa-fw"></i>&nbsp; {{ offer.is_available|yesno:'Active, Inactive' }} </a>
+            <a class="list-group-item no-hover" href="#"><i class="fa fa-signal fa-fw gray"></i>&nbsp; Etat de l'offre</a>
+            <a class="list-group-item" href="#">
+
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                <i class="fa fa-bell fa-stack-1x fa-inverse white-ns"></i>
+              </span>
+              &nbsp; {{ offer.is_available|yesno:'Active, Inactive' }} 
+
+            </a>
 
           </div>
 
           <hr/>
 
           <div class="list-group">
-            <a class="list-group-item no-hover" href="#"><i class="fa fa-wrench blue "></i> Opérations</a>
+            <a class="list-group-item no-hover" href="#"><i class="fa fa-wrench gray "></i> Opérations</a>
             {% if request.user.is_authenticated %}
 
                 {% if user|in_group:"candidate" %}
 
                     {% if already_applied %}
                       <a class="list-group-item" href="javascript:void(0)" id="btn-postulate_off">
-                        <i class="fa fa-lightbulb-o sml-size red"></i> &nbsp; Vous avez déja postulé a l'offre
+                        
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-square fa-stack-2x red-ns"></i>
+                          <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse white-ns"></i>
+                        </span>
+                        &nbsp; Vous avez déja postulé a l'offre
                       </a>
                     {% else %}   
-                      <a class="list-group-item" href="/offer/{{offer.id}}/postulate" id="btn-postulate"><i class="fa fa-paper-plane-o sml-size "></i> &nbsp; Postuler</a>
+                      <a class="list-group-item" href="/offer/{{offer.id}}/postulate" id="btn-postulate">
+                        <span class="fa-stack fa-lg">
+                          <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                          <i class="fa fa-paper-plane-o fa-stack-1x fa-inverse white-ns"></i>
+                        </span>
+                        &nbsp; Postuler
+                      </a>
                       <!-- <a class="list-group-item" href="javascript:void(0)" id="btn-postulate"><i class="fa fa-paper-plane-o sml-size "></i> &nbsp; Postuler</a> --> 
                     {% endif %}
 
                 {% else %} 
 
                     {% if can_edit %}
-                    <a class="list-group-item" href="{{ offer.get_edition_url }}"><i class="fa fa-cogs gray sml-size"></i> Editer</a>
+                    <a class="list-group-item" href="{{ offer.get_edition_url }}">
+                      <span class="fa-stack fa-lg">
+                        <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                        <i class="fa fa-cogs fa-stack-1x fa-inverse white-ns"></i>
+                      </span>
+                      Editer
+                    </a>
                     {% else %}  
-                    <a class="list-group-item" href="/emp_profile_offres"><i class="fa fa-sitemap gray sml-size"></i> &nbsp; Voir mes offres</a>
+                    <a class="list-group-item" href="/emp_profile_offres">
+                      <span class="fa-stack fa-lg">
+                          <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                          <i class="fa fa-sitemap fa-stack-1x fa-inverse white-ns"></i>
+                        </span>
+                      &nbsp; Voir mes offres
+                    </a>
                     {% endif %}
                     
                 {% endif %}
 
             {% else %}
-                <a class="list-group-item" href="/"><i class="fa fa-share sml-size"></i> &nbsp; Postuler</a>     
+                <a class="list-group-item" href="/accounts/login">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                    <i class="fa fa-paper-plane-o fa-stack-1x fa-inverse white-ns"></i>
+                  </span>
+                  &nbsp; Postuler
+                </a>     
             {% endif %}
           </div>
 
@@ -81,10 +118,7 @@
           <div class="social-box">
 
             <div class="header">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-square fa-stack-2x blue-ns"></i>
-                <i class="fa fa-pencil fa-stack-1x fa-inverse white-ns"></i>
-              </span>
+              <i class="fa fa-bullseye gray-ns"></i>
               <strong>Description de l'offre :</strong>
             </div>
 
@@ -99,10 +133,7 @@
         <div class="social-box">
 
           <div class="header">
-              <span class="fa-stack fa-lg">
-              <i class="fa fa-square fa-stack-2x blue-ns"></i>
-              <i class="fa fa-pencil fa-stack-1x fa-inverse white-ns"></i>
-            </span>
+            <i class="fa fa-bullseye gray-ns"></i>
             <strong>Info sur l'offre :</strong>
 
           </div>

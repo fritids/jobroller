@@ -1,6 +1,4 @@
 
-
-
 /* heder icons */
 .dropdown.yamm-fw i.glyph-icon, .nav.navbar-nav.right-nav i.glyph-icon{
   color: rgba(0, 0, 0, 0.48);
@@ -35,7 +33,23 @@ a, a:hover, a:link, a:active, a:visited {
     height: 100px;
 }
 
+/* list group custom */
+.list-group-item{
+  color: rgb(86, 86, 86);
+  display: table-cell;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
+/* list group custom ends */
+
 /* icons */
+
+[class^="fa-"].sml-font, [class*=" fa-"].sml-font {
+  font-size: 1em;;
+}
 
 [class^="fa-"].mid-size, [class*=" fa-"].mid-size {
   font-size: 22px;
@@ -68,6 +82,15 @@ a, a:hover, a:link, a:active, a:visited {
   color: rgba(0, 136, 204, 0.57);
 }
 
+[class^="fa-"].orange, [class*=" fa-"].orange {
+  font-size: 22px;
+  color: #d26000;
+}
+
+[class^="fa-"].orange-ns, [class*=" fa-"].orange-ns {
+  color: #d26000;
+}
+
 [class^="fa-"].green, [class*=" fa-"].green {
   font-size: 22px;
   color: rgba(8, 204, 0, 0.68)
@@ -84,7 +107,10 @@ a, a:hover, a:link, a:active, a:visited {
 
 [class^="fa-"].red, [class*=" fa-"].red {
   font-size: 22px;
-  /*margin: 23px;*/
+  color: rgba(204, 90, 0, 0.57);
+}
+
+[class^="fa-"].red-ns, [class*=" fa-"].red-ns {
   color: rgba(204, 90, 0, 0.57);
 }
 
@@ -93,6 +119,11 @@ a, a:hover, a:link, a:active, a:visited {
   /*margin: 23px;*/
   color: rgba(172, 71, 71, 0.84);
 }
+
+[class^="fa-"].rose-ns, [class*=" fa-"].rose-ns {
+  color: rgba(172, 71, 71, 0.84);
+}
+
 
 /* icons ends */
 

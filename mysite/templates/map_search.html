@@ -15,7 +15,13 @@
 
   <div id="respo">
   <div class="panel panel-default">
-    <div class="panel-heading"> {% trans "Toutes les offres" %} </div>
+    <div class="panel-heading"> 
+      <span class="fa-stack ">
+          <i class="fa fa-square-o fa-stack-2x "></i>
+          <i class="fa fa-list-ul fa-stack-1x "></i>
+      </span> 
+      {% trans "Toutes les offres" %} 
+    </div>
     
     <!-- {% for key,value in request.GET.items %}{% ifnotequal key 'page' %}&{{ key }}={{ value }}{% endifnotequal %}{% endfor %} --> 
 

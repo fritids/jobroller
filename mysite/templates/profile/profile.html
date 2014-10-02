@@ -8,7 +8,11 @@
   <div id="respo">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Mes offres
+        <span class="fa-stack ">
+          <i class="fa fa-square-o fa-stack-2x "></i>
+          <i class="fa fa-user fa-stack-1x "></i>
+        </span>
+        Mon profile
       </div>
 
         <div class="panel-body">
@@ -16,49 +20,46 @@
 
         <div class="col-sm-4">
 
-          <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
+          <div class="list-group">
+            <a class="list-group-item no-hover" href="#"><i class="fa fa-file-image-o gray "></i>&nbsp; Avatar</a>
+            <div id="people-you-may-know" class="social-nav-list" style="max-width: 340px; padding: 0;">
             <ul class="nav nav-list dividers">
               <li class="nav-header">&nbsp;</li>
+          
               <li class="nav-header">
                   <div class="avatar">
-                    <img src="/static/img/candidate_avatar.png"  alt="avatar" class="img-thumbnail" width='100' height='100'>
+                    <img src="/static/img/user2.png" alt="avatar" class="img-thumbnail" width='100' height='100'>
                   </div>
               </li>
               <br>
+          
             </ul>
           </div> <!-- end avatar -->   
+          </div>
 
           <hr/>
 
-          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
-            <!-- BEGIN SHOWN LIST ITEMS -->
-            <ul class="nav nav-list dividers">
-              <li class="nav-header"><i class="fa fa-wrench blue mid-size"></i> Confidentialité</li>
-              <li><a href="/candid_profile_edit/{{ userinfo.id }}"><i class="fa fa-user gray mid-size"></i> Editer le profile</a></li>
-              <li><a href="/accounts/password/reset"><i class="fa fa-key gray mid-size"></i> Changer le mot de passe</a></li>
-            </ul>
-            <!-- END SHOWN LIST ITEMS -->
-            <!-- BEGIN HIDDEN LIST ITEMS -->
-            <br>
+          <div class="list-group">
+                <a class="list-group-item no-hover" href="#"><i class="fa fa-wrench gray "></i> Edition</a>
+
+                <a class="list-group-item" href="/candid_profile_edit/{{ userinfo.id }}">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                    <i class="fa fa-user fa-stack-1x fa-inverse white-ns"></i>
+                  </span>
+                  &nbsp; Profile
+                </a>     
+
+                <a class="list-group-item" href="/accounts/password/reset">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                    <i class="fa fa-key fa-stack-1x fa-inverse white-ns"></i>
+                  </span>
+                  &nbsp; Mot de passe
+                </a>
           </div>
 
-          <div class="social-nav-list" style="max-width: 340px; padding: 0;">
-            <!-- BEGIN SHOWN LIST ITEMS -->
-            <ul class="nav nav-list dividers">
-              <li class="nav-header"><i class="fa fa-wrench blue mid-size"></i> Liste des mes demandes:</li>
-              
-              {% for i in userinfo.offer.all %}
-                  <li><a href="/accounts/password/reset"><i class="fa fa-key gray mid-size"></i> {{i.title}}</a></li>
-              {% endfor %}
-              
-            </ul>
-            <!-- END SHOWN LIST ITEMS -->
-            <!-- BEGIN HIDDEN LIST ITEMS -->
-            <br>
-          </div>
-
-
-          <hr/>
+          <br>
 
         </div>
 
@@ -67,10 +68,8 @@
         <div class="social-box">
 
           <div class="header">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-square fa-stack-2x blue-ns"></i>
-                <i class="fa fa-pencil fa-stack-1x fa-inverse white-ns"></i>
-              </span>
+            <i class="fa fa-bullseye gray-ns"></i>
+              
               <strong>Informations générales :</strong>
             </div>
 

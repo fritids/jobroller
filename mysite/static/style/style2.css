@@ -74,8 +74,14 @@ body{
 }
 /* tostr notification messages ends */
 
+.no-hover{
+/*background: #F7F7F7;*/
+background: #e1e4ea;
+}
+
 .no-hover:hover{
-  background: #fff !important;
+  background: #e1e4ea !important;
+  /*background: #fff !important;*/
 }
 
 
@@ -440,7 +446,7 @@ nav.navbar.navbar-default{
 .panel-default > .panel-heading {
    font-family: "Oswald", Helvetica, Arial, sans-serif; 
    line-height: 15px;
-   font-size: 1.4em;
+   font-size: 1.2em;
    border-bottom: none !important;
    /*background-color: inherit;*/
    background-color: #238db4;

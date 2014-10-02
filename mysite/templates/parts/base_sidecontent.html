@@ -8,7 +8,15 @@
               {% if user|in_group:"candidate" %} 
 
               <div class="panel panel-default">
-                 <div class="panel-heading"> Partager cette page  </div>
+
+                 <div class="panel-heading"> 
+                   <span class="fa-stack ">
+                    <i class="fa fa-square-o fa-stack-2x "></i>
+                    <i class="fa fa-share-alt fa-stack-1x "></i>
+                  </span>
+
+                  Partager cette page  
+                </div>
               </div>
               
               <div class="panel panel-default">
@@ -30,7 +38,13 @@
               {% elif user|in_group:'employer' %}
 
                 <div class="panel panel-default">
-                   <div class="panel-heading"> Recherche candidat </div>
+                   <div class="panel-heading"> 
+                    <span class="fa-stack ">
+                    <i class="fa fa-square-o fa-stack-2x "></i>
+                    <i class="fa fa-search-plus fa-stack-1x "></i>
+                  </span>
+                    Recherche candidat 
+                  </div>
                 </div>
                 
                 <div class="panel panel-default">
@@ -58,7 +72,13 @@
         {% else %}
 
         <div class="panel panel-default">
-            <div class="panel-heading"> Devenez membre </div>
+            <div class="panel-heading"> 
+              <span class="fa-stack ">
+                  <i class="fa fa-square-o fa-stack-2x "></i>
+                  <i class="fa fa-group fa-stack-1x "></i>
+              </span>  
+              Devenez membre 
+            </div>
           </div>
 
         <div class="panel panel-default">
@@ -80,7 +100,14 @@
         <div class="panel panel-default">
           
         
-          <div class="panel-heading"> {% trans "Recherche" %} </div>
+          <div class="panel-heading"> 
+                <span class="fa-stack ">
+                  <i class="fa fa-square-o fa-stack-2x "></i>
+                  <i class="fa fa-search fa-stack-1x "></i>
+                </span>
+
+            {% trans "Recherche" %} 
+          </div>
           <div class="panel-body">
             <!-- injected form --> 
             <form action="/map_search" method="GET" id="search_form" accept-charset="utf-8">
@@ -151,7 +178,14 @@
 
       <div class="panel panel-default">
 
-        <div class="panel-heading"> {% trans "Posts populaires" %} </div>
+        <div class="panel-heading"> 
+          <span class="fa-stack ">
+            <i class="fa fa-square-o fa-stack-2x "></i>
+            <i class="fa fa-shield fa-stack-1x "></i>
+          </span>
+
+          {% trans "Posts populaires" %} 
+        </div>
         <div class="panel-body">
 
           <br/>
@@ -320,6 +354,11 @@
       <div class="panel panel-default">
 
       <div class="panel-heading">
+        <span class="fa-stack ">
+          <i class="fa fa-square-o fa-stack-2x "></i>
+          <i class="fa fa-rss fa-stack-1x "></i>
+        </span>
+
         {% trans "Restez informés" %}
       </div>
       
