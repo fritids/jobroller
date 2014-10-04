@@ -29,7 +29,7 @@ a, a:hover, a:link, a:active, a:visited {
 }
 
 .header .scsl-logo {
-    width: 374px;
+    width: 333px;
     height: 100px;
 }
 
@@ -46,6 +46,12 @@ a, a:hover, a:link, a:active, a:visited {
 /* list group custom ends */
 
 /* icons */
+
+.calendar-text { 
+  margin-top: .3em; 
+  font-size :0.3em;
+  color     : gray;
+}
 
 [class^="fa-"].sml-font, [class*=" fa-"].sml-font {
   font-size: 1em;;
@@ -104,6 +110,11 @@ a, a:hover, a:link, a:active, a:visited {
   font-size: 22px;
   color: gray;
 }
+
+[class^="fa-"].gray-ns, [class*=" fa-"].gray-ns {
+  color: gray;
+}
+
 
 [class^="fa-"].red, [class*=" fa-"].red {
   font-size: 22px;
@@ -166,7 +177,7 @@ a, a:hover, a:link, a:active, a:visited {
 
 #navigation .nav li a {
   line-height: 22px;
-  padding: 14px 5px;
+  padding: 22px 5px;
 }
 
 #navigation .nav .dropdown-toggle:hover .caret, .nav .dropdown-toggle:focus .white-caret {

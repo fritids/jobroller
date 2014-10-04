@@ -2,10 +2,12 @@
 {% load group_check %}
 
 {% block extra_script %}
+
   <script type="text/javascript">
   $(document).ready(function() {
     $('#francemap').vectorMap({
-        map: 'france_fr',
+    
+      map: 'france_fr',
       hoverOpacity: 0.5,
       hoverColor: "#EC0000",
       backgroundColor: "#ffffff",
@@ -14,6 +16,7 @@
       selectedColor: "#08C",
       enableZoom: false,
       showTooltip: true,
+
         onRegionClick: function(element, code, region)
         {
             // var message = 'Région : "'+ region + '" || Id : "'+ code + '"';
@@ -29,7 +32,6 @@
 
                 var query_string = $.param( dict, true );
                 window.location.href = '/map_search/?'+query_string;
-            
         }
     });
   });
@@ -83,14 +85,20 @@
             {% for i in cars %}
               <div class="freelancer-list-item hoverable clearfix">
                   <a class="span-2 freelancer-image" href="#">
-                    <img width="70" height="70" src="http://placehold.it/70x70" alt="image">
+                    <!-- <img width="70" height="70" src="http://placehold.it/70x70" alt="image"> --> 
+                    <div class="stacked-icons">
+                      <span class="fa-stack fa-3x">
+                        <i class="fa fa-calendar-o fa-stack-17x gray-ns"></i>
+                        <strong class="fa-stack-1x calendar-text">{{i.get_offerType_display}}</strong>
+                      </span>
+                    </div>
                   </a>
 
                 <div class="span-70 boxmodelfix info">
                     <h3>
-                        <a onclick="return false" class="freelancer left crop span-10" rel="nofollow" href="#"> <font style="color:#999;"size="-2">
-                          {{ i.get_offerType_display }}</font> &nbsp;
-                          {{i.title}}
+                        <a onclick="return false" class="freelancer left crop span-10" rel="nofollow" href="#"> 
+                          <i class="fa fa-newspaper-o gray-ns"></i>
+                         {{i.title}}
                         </a>
                         <!-- <span class="cert cert-level1-small " data-level="1"> </span> --> 
                         <div class="widget-member-prizes"></div>       
@@ -107,7 +115,6 @@
                     </div>
 
                     <ul class="horizontal left">
-                      <li><i class="fa fa-newspaper-o"></i> <strong>{{ i.get_offerType_display }} &nbsp;&nbsp;</strong></li> 
                       <li> <i class="fa fa-eye min-size"></i> <strong>{{ i.views }}</strong> fois</li>
                     </ul>
 

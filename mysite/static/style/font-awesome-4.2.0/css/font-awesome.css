@@ -152,12 +152,24 @@
   width: 100%;
   text-align: center;
 }
+.fa-stack-1x,
+.fa-stack-17x {
+  position: absolute;
+  left: 0;
+  width: 95%;
+  text-align: center;
+}
 .fa-stack-1x {
   line-height: inherit;
 }
 .fa-stack-2x {
   font-size: 2em;
 }
+
+.fa-stack-17x {
+  font-size: 1.7em;
+}
+
 .fa-inverse {
   color: #ffffff;
 }
