@@ -42,6 +42,7 @@ a, a:hover, a:link, a:active, a:visited {
   font-style: normal;
   font-variant: normal;
   font-weight: bold;
+  border: 1px solid rgba(51, 51, 51, 0.43);
 }
 /* list group custom ends */
 
@@ -95,6 +96,15 @@ a, a:hover, a:link, a:active, a:visited {
 
 [class^="fa-"].orange-ns, [class*=" fa-"].orange-ns {
   color: #d26000;
+}
+
+[class^="fa-"].fb-blue, [class*=" fa-"].fb-blue {
+  font-size: 22px;
+  color: #3B5999;
+}
+
+[class^="fa-"].fb-blue-ns, [class*=" fa-"].fb-blue-ns {
+  color: #3B5999;
 }
 
 [class^="fa-"].green, [class*=" fa-"].green {
@@ -289,7 +299,7 @@ a, a:hover, a:link, a:active, a:visited {
   }
   #navigation .nav .dropdown a {
     padding-left: 0px;
-    padding-right: 10px;
+    padding-right: 25px;
   }
 }
 @media (min-width: 1200px) {

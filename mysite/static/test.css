@@ -4,7 +4,7 @@ body{
 }
 
 a{
-  color: #333 !important;
+  color: #000 !important;
 }
 
 a.account-reg{
@@ -24,7 +24,7 @@ a.account-log{
 }
 
 label{
-	color: #333;
+	color: #000;
 	font-family: 'Open Sans' !important;
 	font-weight: bold;
 }
@@ -762,7 +762,8 @@ ul.horizontal>li:before {
 }
 body {
     font-size: 13px;
-    color: #565656;
+    /*color: #565656;*/
+    color: #000;
     font-family: "Open Sans", Arial, Helvetica, sans-serif
 }
 
