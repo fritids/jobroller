@@ -9,7 +9,6 @@ from car_shop.model_choices import *
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-
 import subprocess
 from django.conf import settings
 from PyPDF2 import PdfFileReader, PdfFileWriter
@@ -117,6 +116,7 @@ class Profile_candid(RandomPrimaryIdModel):
     
     languages     = models.CharField(verbose_name = u'langues', max_length=200, null=True, blank=True, default='')
     document      = models.FileField(verbose_name = u'CV', upload_to = 'uploads/pdfs/', null=True, blank=True)
+    motivations   = models.TextField(verbose_name = u'motivations',                null=True, blank=True)
 
     class Meta:
         verbose_name        = "Candidat"

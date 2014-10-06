@@ -137,10 +137,13 @@
                                 <h2>Le candidat {{ nom }} vient de postuler à l'offre :</h2>
 
                                 <h3> {{ titre }} </h3>
-
+                                <h3>qui se trouve à l'adresse suivante :</h3>
                                 <hr />
                                 <a href="{{ full_offer_url }}">{{ full_offer_url }}</a>
                                 <hr />
+
+                                <h3>Motivations du candidat :</h3>
+                                <p> {{motivations|safe}} </p>
 
                                 <br />
                                 

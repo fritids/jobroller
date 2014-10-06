@@ -138,6 +138,7 @@ def offer_postulate(request, num):
     sender_name  = request.user.username
     sender_email = request.user.email
 
+
     static_files_path = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'static'))
     # get current website
     current_site = Site.objects.get_current()
@@ -147,20 +148,27 @@ def offer_postulate(request, num):
     if not request.user.is_authenticated:
         return HttpResponseRedirect('/accounts/logins/?next=%s'%offer.get_absolute_url() )
 
-
     # get the candidate profile linked to this user
     applyer = sender.profile_candid_set.latest('id')
     entreprise = owner.profile_emp_set.latest('id')
+
+    # test if sender has written some motivations
+    if applyer.motivations == None or len(applyer.motivations) < 1:
+        msg = 'Veuillez exprimez un peu vos motivations pour le poste '
+        return render_to_response('offer.html', locals(), context_instance = RequestContext(request))
+
+    motivations = applyer.motivations    
 
     if applyer in offer.profile_candid_set.all(): 
         msg = 'vous avez postulé pour l\'offre déja'
         return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
 
-    context = { 'nom': sender_name, 
-                'company': owner_name,
-                'titre': offer_title, 
-                'lieu': offer_region, 
-                'creattion_date': offer_date 
+    context = { 
+                'nom':              sender_name, 
+                'company':          owner_name,
+                'titre':            offer_title, 
+                'lieu':             offer_region, 
+                'creattion_date':   offer_date 
                }
 
     images = ((os.path.join(static_files_path, 'images', 'logo1.png'), 'logo'), 
@@ -185,13 +193,15 @@ def offer_postulate(request, num):
         return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
 
     # send a copy to the employer
-    context = { 'nom': sender_name, 
-                'company': owner_name, 
-                'titre': offer_title, 
-                'lieu': offer_region, 
-                'creattion_date': offer_date, 
-                'is_active': offer.activated, 
-                'full_offer_url':full_offer_url 
+    context = { 
+                 'nom':             sender_name, 
+                 'company':         owner_name, 
+                 'titre':           offer_title, 
+                 'lieu':            offer_region, 
+                 'creattion_date':  offer_date, 
+                 'is_active':       offer.activated, 
+                 'full_offer_url':  full_offer_url ,
+                 'motivations'   :  motivations
                 }
 
     subject = ugettext(u"SpeedJob: Le candidat : %s  vient de postuler pour votre offre: %s") % (sender_name, offer_title)

@@ -56,6 +56,7 @@ class Profile_candid_admin(admin.ModelAdmin):
     ( 'Secteur de recherche:',  {'fields': [ ('sector1', 'sector2', 'sector3')],        'classes': ['extrapretty'] }),
     ( 'Mobilité:',              {'fields': [ ('mobility1', 'mobility2', 'mobility3') ], 'classes': ['extrapretty'] }),
     ( 'Autres Infos:',          {'fields': ['disponibility', 'status', 'salary' , 'study_level', 'experience' , 'contract', 'period' , 'languages' ],'classes': ['extrapretty'] }),
+    ( 'Motivations:',          {'fields': [ ('motivations') ],'classes': ['extrapretty'] }),
 
      )
     # raw_id_fields = ('applies',) # to disable querying all offers , we print only the linked one (goes well with ForeignKey field)

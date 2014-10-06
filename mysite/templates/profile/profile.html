@@ -157,13 +157,38 @@
                 <div class="tab-pane fade active in" id="profile2">
                   <p><strong>Motivations:</strong></p>
                   <p> 
-                    lorem ipsum dolore sit amet
+                    
+                    {% if userinfo.motivations %}
+
+                      {% autoescape off %}
+                      {{ userinfo.motivations }}
+                    {% endautoescape %}
+
+                    {% else %}
+
+                      <div class="alert">
+                      <p class="lead">
+
+                        Le candidat n'a pas encore décrit ses motivations
+                        
+                      </p>
+                    </div>
+
+                    {% endif %}
                     
                   </p>
                 </div>
                 <div class="tab-pane fade" id="dropdown12">
                   <p><strong>CV</strong></p>
-                  lorem ipsum dolore sit amet
+                  
+                  <div class="alert">
+                      <p class="lead">
+
+                        Le candidat n'a pas encore déposé son CV
+                        
+                      </p>
+                    </div>
+
                 </div>
               </div>
 

@@ -67,7 +67,6 @@ class Offer(RandomPrimaryIdModel):
         tail = len(self.description) > LIMIT and '......' or ''
         return self.description[:LIMIT] + tail        
 
-
     def get_absolute_url(self): return '/offer/%s' %(self.id)
 
     def get_disable_url(self): return '/offer/%s/disable' %(self.id)

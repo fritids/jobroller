@@ -80,6 +80,7 @@ def candid_profile_edit(request, id):
             userinfo.contract      = form.cleaned_data['contract']
             userinfo.period        = form.cleaned_data['period']
             userinfo.languages     = form.cleaned_data['languages']
+            userinfo.motivations   = form.cleaned_data['motivations']
 
             userinfo.save()
         else:
@@ -106,7 +107,8 @@ def candid_profile_edit(request, id):
                             'contract'      : userinfo.contract,
                             'period'        : userinfo.period,
                             'languages'     : userinfo.languages,
-                            'document'      : userinfo.document
+                            'document'      : userinfo.document,
+                            'motivations'   : userinfo.motivations
             })
     return render_to_response('./profile/profile_edit.html', locals(), context_instance = RequestContext(request))
 

@@ -46,6 +46,11 @@ a, a:hover, a:link, a:active, a:visited {
 }
 /* list group custom ends */
 
+b{
+  font-weight: bolder !important;
+}
+
+
 /* icons */
 
 .calendar-text { 
