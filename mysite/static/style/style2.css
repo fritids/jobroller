@@ -400,7 +400,9 @@ div#slider-thumbs.col-md-12.hidden-sm.hidden-xs{
 }
 
 .header.first{
-    border-top: 10px solid #3B5999;
+    /*border-top: 10px solid #3B5999;*/
+    /*border-top: 10px solid #004B8B;*/
+    border-top: 10px solid rgba(0, 75, 139, 0.69)
 }
 
 header{
@@ -455,7 +457,8 @@ nav.navbar.navbar-default{
    border-bottom: none !important;
    /*background-color: inherit;*/
    /*background-color: #238db4;*/
-   background-color: #3B5999;
+   /*background-color: #3B5999;*/
+   background-color: rgba(0, 75, 139, 0.69);
    border-color: inherit;
    color: #fff;
    text-shadow: 0 -1px 0 rgba(0,0,0,.6);

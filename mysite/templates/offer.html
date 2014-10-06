@@ -98,7 +98,7 @@
                 {% endif %}
 
             {% else %}
-                <a class="list-group-item" href="/accounts/login">
+                <a class="list-group-item" href="/accounts/login?next={{ offer.get_absolute_url }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-square fa-stack-2x blue-ns"></i>
                     <i class="fa fa-paper-plane-o fa-stack-1x fa-inverse white-ns"></i>

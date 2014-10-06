@@ -68,6 +68,7 @@
                                           <p>
                                             <label for="id_username">Username</label> 
                                             <input type="text" name="username" id="id_username"></p>
+                                            <input name="next" type="hidden" value="{{next}}">
                                               {% if form.username.errors %}  <span class="help-inline">{{ form.username.errors }}</span> {% endif %}
 
                                           <p>

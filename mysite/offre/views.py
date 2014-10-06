@@ -32,6 +32,8 @@ from django.contrib.sites.models import Site
 def offer(request, num):
     offer = Offer.objects.get(id=num)
 
+    next = offer.get_absolute_url()
+
     offer.views = int(offer.views)+1
     offer.save()
 
@@ -121,7 +123,7 @@ def offer_activate(request, num):
     offer.save()
     return HttpResponseRedirect("/emp_profile_offres/")
 
-@login_required
+# @login_required
 def offer_postulate(request, num):
     offer        = get_object_or_404(Offer, id=num)
     offer_title  = offer.title
@@ -141,6 +143,10 @@ def offer_postulate(request, num):
     current_site = Site.objects.get_current()
     site_root    = current_site.domain
     full_offer_url = site_root +  offer.get_absolute_url()
+
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect('/accounts/logins/?next=%s'%offer.get_absolute_url() )
+
 
     # get the candidate profile linked to this user
     applyer = sender.profile_candid_set.latest('id')

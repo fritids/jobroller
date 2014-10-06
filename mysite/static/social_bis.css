@@ -1941,6 +1941,12 @@ table.no-table {
   text-transform: uppercase;
   background-color: #ffffff;
 }
+
+.nav-header div.avatar{
+  margin: 0 auto;
+  width:70%;
+}
+
 .nav li + .nav-header {
   margin-top: 9px;
 }
