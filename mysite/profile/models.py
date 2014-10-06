@@ -81,8 +81,6 @@ class Profile_emp(RandomPrimaryIdModel):
                 continue 
         return msg    
 
-
-
 class Profile_candid(RandomPrimaryIdModel):
     # id          = models.CharField(max_length=36, primary_key=True, default=lambda: ''.join([ i for i in str(uuid4()) if i != '-']) , editable=False)
     user          = models.ForeignKey(User, unique=True)
@@ -166,13 +164,13 @@ class Application(models.Model):
     person  = models.ForeignKey(Profile_candid, verbose_name="Candidat")
     company = models.ForeignKey(Profile_emp, verbose_name="entreprise")
     created = models.DateTimeField(verbose_name= "date de candidature", auto_now_add=True)
-    is_seen = models.BooleanField(verbose_name='Vue ?', default=False)
+    is_seen = models.BooleanField(verbose_name='Vue', default=False)
 
     class Meta:
         verbose_name = 'candidature'
 
     def __unicode__(self):
-        return unicode(('User: %s offer: %s') %(self.person, self.offer))   
+        return unicode(('User: %s offer: %s') %(self.person.user.username, self.offer.title))   
 
     
 def pdf_post_save(sender, instance=False, **kwargs):
