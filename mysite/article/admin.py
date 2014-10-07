@@ -11,6 +11,7 @@ class ArticleAdmin(admin.ModelAdmin):
 	search_fields 	= ('title', 'content')
 	list_filter 	= ('created',)
 	form 			= ArticleAdminForm
+	
 
 admin.site.register(Article, ArticleAdmin)
 

@@ -10,8 +10,8 @@ class TinyMCEWidget(forms.Textarea):
 
     class Media:
         js = (
-            settings.MEDIA_URL + 'js/tiny_mce/tiny_mce.js',
-            settings.MEDIA_URL + 'js/textareas.js',
+            settings.STATIC_URL + 'js/tinymce/tiny_mce.js',
+            settings.STATIC_URL + 'js/textareas.js',
         )
 
 class SmallTextField(forms.Textarea):

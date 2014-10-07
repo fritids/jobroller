@@ -151,13 +151,21 @@ SUIT_CONFIG = {
         'auth': 'icon-lock',
     },
 
-    'MENU_OPEN_FIRST_CHILD': True, # Default True
-    'MENU_EXCLUDE': ('auth.group','sites',),
+    'MENU_OPEN_FIRST_CHILD': True, 
+
+    # 'MENU_EXCLUDE': ('auth.group','sites',),
 
     'MENU': (
         'sites',
-        {'app': 'auth',     'label':'Utilisateurs avancés', 'icon':'icon-lock', 'models': ('user', 'group')},
-        {'app': 'profile',  'label':'Profiles',             'icon':'icon-user', 'models': ('profile')},
+        '-',
+        {'app': 'auth',     'label':'Utilisateurs avancés', 'icon':'icon-lock',     'models': ('user', 'group')},
+        '-',
+        {'app': 'profile',  'label':'Profiles',             'icon':'icon-user',     'models': ('profile_emp','profile_candid', 'application') },
+        '-',
+        {'app': 'offre',    'label':'Offres',               'icon':'icon-envelope', 'models': ('offer',) },
+        '-',
+        {'app': 'article',  'label':'Article',              'icon':'icon-book',     'models': ('article',) },
+        '-',
         
     ),
 
