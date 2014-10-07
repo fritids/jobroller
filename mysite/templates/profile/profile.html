@@ -1,8 +1,8 @@
 {% extends "sitebase.html" %}
-{% load dajaxice_templatetags %}
-{% load i18n %}
-{% block middlecontent %}
+{% load dajaxice_templatetags i18n  %}
 
+
+{% block middlecontent %}
 <div class="col-sm-8">
   <br/>
   <div id="respo">
@@ -135,11 +135,9 @@
               </dl>
             </div>
             
-            
         </div>  
 
         <hr>
-              
             <div class="social-box span6">
             <div class="header">
               <h4 class="hidden-phone">Autres Infos</h4>
@@ -221,33 +219,16 @@
 {% endblock middlecontent %}
 <br/>
 
-
 {% block sidecontent %}
   {% include "./parts/simple_sidecontent.html" %}
 {% endblock sidecontent %}
 
-
-
 {% block extra_js %}
-
-<script>$(".mobile").click(function() {
-      $("nav").slideToggle();  
-    });
-
-    var menu = $("nav");
-    jQuery(window).on('resize', function(){     
-        if(!jQuery(".mobile").is(":visible") && !menu.is(':visible'))
-        {
-            menu.css({'display':''});   
-        }
-    });//@ sourceURL=pen.js
-    </script>
-
-<script>
-      $(window).bind("load resize slid.bs.carousel", function() {
-      var imageHeight = $(".active .holder").height();
-      $(".controllers").height( imageHeight );
-      console.log("Slid");
-    });
-    </script>
+  <script>
+    $(window).bind("load resize slid.bs.carousel", function() {
+    var imageHeight = $(".active .holder").height();
+    $(".controllers").height( imageHeight );
+    console.log("Slid");
+  });
+  </script>
 {% endblock extra_js %}

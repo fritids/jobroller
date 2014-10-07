@@ -1,6 +1,7 @@
 {% extends "sitebase.html" %}
-{% load dajaxice_templatetags %}
-{% load i18n %}
+{% load dajaxice_templatetags i18n %}
+
+
 {% block middlecontent %}
 
 <div class="col-sm-12">
@@ -55,8 +56,6 @@
 
                   <th class="sorting" role="columnheader" tabindex="0" aria-controls="editable" rowspan="1" colspan="1" aria-label="Edit: activate to sort column ascending" style="width: 46px;text-align: center;">CV
                   </th>
-
-                  
 
                 </tr>
             </thead>
@@ -132,8 +131,6 @@
           <br/>
         </div>
 
-        
-
     </div> <!-- end panel body -->  
       
     </div>
@@ -162,28 +159,3 @@
 
 {% endblock sidecontent %}
 
-
-
-{% block extra_js %}
-
-<script>$(".mobile").click(function() {
-      $("nav").slideToggle();  
-    });
-
-    var menu = $("nav");
-    jQuery(window).on('resize', function(){     
-        if(!jQuery(".mobile").is(":visible") && !menu.is(':visible'))
-        {
-            menu.css({'display':''});   
-        }
-    });//@ sourceURL=pen.js
-    </script>
-
-<script>
-      $(window).bind("load resize slid.bs.carousel", function() {
-      var imageHeight = $(".active .holder").height();
-      $(".controllers").height( imageHeight );
-      console.log("Slid");
-    });
-    </script>
-{% endblock extra_js %}

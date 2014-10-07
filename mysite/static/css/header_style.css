@@ -1,10 +1,4 @@
-/*@import url(http://fonts.googleapis.com/css?family=Rokkitt);*/
-/*@import url(http://weloveiconfonts.com/api/?family=entypo);*/
 
-@font-face{
-    font-family: 'kufi';
-    src:url(../fonts/kufi/DroidKufi-Regular.ttf) format('truetype');;
-}
 
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;

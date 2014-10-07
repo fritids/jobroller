@@ -75,7 +75,7 @@ class Profile_emp(RandomPrimaryIdModel):
         print fields
         for i in keys:
             if not i in fields:
-                msg = 'Veuillez completez votre profile s\'il vous plait ' 
+                msg = 'Veuillez completer votre profile s\'il vous plait ' 
                 break
             else:
                 continue 
@@ -152,7 +152,7 @@ class Profile_candid(RandomPrimaryIdModel):
         msg = None
         for i in keys:
             if not i in fields:
-                msg = 'Veuillez completez votre profile s\'il vous plait ' 
+                msg = 'Veuillez completer votre profile s\'il vous plait ' 
                 break
             else:
                 continue 

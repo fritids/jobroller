@@ -1,8 +1,4 @@
 
-body{
-	background: transparent url('https://d3ambpg2zf25sl.cloudfront.net/css/pph2/backgrounds/main-bg-noise.png?4fbe10ae') repeat top left;
-}
-
 a{
   color: #000 !important;
 }
@@ -42,7 +38,7 @@ h6 { font-size: .75em; }
 /*text heading ends*/
 
 .panel-default > .panel-body-mod {
-	background: url('../img/grad-l1.gif') repeat-x left bottom #fff;
+	background: #fff;
 	border-bottom: 1px;
 	border-radius: 8px;
 	-moz-border-radius: 8px;
@@ -774,6 +770,7 @@ body {
     color: #fff;
     background: rgba(190, 232, 240, 0.24);
     /*box-shadow: 0 1px 0 rgba(255, 255, 255, 0) inset, 0 -2px 0 #d26000 inset, 0 0 5px #fd8c2f inset, 0 2px 4px rgba(0, 0, 0, 0)*/
+    
 }
 .button.call-to-action.selected {
     background: #ff7400;
@@ -788,7 +785,6 @@ button.call-to-action .button.call-to-action:hover, button.call-to-action:hover,
     box-shadow: none
 }
 .call-to-action.search:after {
-    background-image: url('/css/pph2/sprites/icons.png?10d90cac');
     background-position: 0 -610px;
     margin: 3px auto;
     display: inline-block;
@@ -802,6 +798,7 @@ button.call-to-action .button.call-to-action:hover, button.call-to-action:hover,
     border-bottom: solid 1px #f1f1f1;
     position: relative;
     background: #fff;
+
 }
 .freelancer-list-item a.freelancer-image img {
     width: 70px;
@@ -854,6 +851,7 @@ button.call-to-action .button.call-to-action:hover, button.call-to-action:hover,
     bottom: 15px;
     right: 0;
     visibility: hidden
+
 }
 .freelancer-list-item h3 {
     line-height: 16px;
@@ -861,6 +859,7 @@ button.call-to-action .button.call-to-action:hover, button.call-to-action:hover,
 }
 .freelancer-list-item:hover a.button {
     visibility: visible
+
 }
 .freelancer-list-item .icon.small {
     vertical-align: middle;

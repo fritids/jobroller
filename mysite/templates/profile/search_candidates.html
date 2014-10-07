@@ -1,15 +1,12 @@
 {% extends "sitebase.html" %}
-{% block title %}
-  search results
-{% endblock title %}
-{% load dajaxice_templatetags %}
-{% load i18n %}
+{% load dajaxice_templatetags i18n %}
+
+{% block title %} search results {% endblock title %}
+
 {% block extra_style %}
-  <link href="/static/style/blog-style.css" rel="stylesheet">
-  <!-- 
-  <link href="/static/datatables/css/jquery.dataTables.css" rel="stylesheet">
--->
+    <link href="/static/style/blog-style.css" rel="stylesheet">
 {% endblock extra_style %}
+
 
 {% block middlecontent %}
 
@@ -88,7 +85,9 @@
           {% endif %}
 
           <li>
-            <a href="javascript:void(0)"> {% trans "page" %} &nbsp;{{ contacts.number }} / {{ contacts.paginator.num_pages }} </a>
+            <a href="javascript:void(0)"> 
+              {% trans "page" %} &nbsp;{{ contacts.number }} / {{ contacts.paginator.num_pages }} 
+            </a>
           </li>
           
           {% if contacts.has_next %}

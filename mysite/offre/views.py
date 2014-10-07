@@ -52,7 +52,7 @@ def offer(request, num):
             print 'the user %s has already applied to this offer' %sender
             print already_applyed    
 
-    return render_to_response('offer.html', locals(), context_instance = RequestContext(request))
+    return render_to_response('offre/offer.html', locals(), context_instance = RequestContext(request))
 
 def offer_edit(request, num):
     car = Offer.objects.get(id = num)
@@ -105,7 +105,7 @@ def offer_edit(request, num):
                                         'expired':      car.expired
                                         })
 
-    return render_to_response('offer_edit.html', locals(), context_instance = RequestContext(request))
+    return render_to_response('offre/offer_edit.html', locals(), context_instance = RequestContext(request))
 
 # make the call by ajax
 @login_required
@@ -154,14 +154,14 @@ def offer_postulate(request, num):
 
     # test if sender has written some motivations
     if applyer.motivations == None or len(applyer.motivations) < 1:
-        msg = 'Veuillez exprimez un peu vos motivations pour le poste '
-        return render_to_response('offer.html', locals(), context_instance = RequestContext(request))
+        msg = 'Veuillez exprimer un peu vos motivations pour le poste '
+        return render_to_response('offre/offer.html', locals(), context_instance = RequestContext(request))
 
     motivations = applyer.motivations    
 
     if applyer in offer.profile_candid_set.all(): 
         msg = 'vous avez postulé pour l\'offre déja'
-        return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
+        return render_to_response('offre/offer.html', locals(), context_instance = RequestContext(request))    
 
     context = { 
                 'nom':              sender_name, 
@@ -190,7 +190,7 @@ def offer_postulate(request, num):
 
     except:
         msg = 'L\'envoi de votre demande a echoué'
-        return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
+        return render_to_response('offre/offer.html', locals(), context_instance = RequestContext(request))    
 
     # send a copy to the employer
     context = { 
@@ -227,7 +227,7 @@ def offer_postulate(request, num):
     app = Application(offer=offer, person=applyer, company=entreprise )
     app.save()
     
-    return render_to_response('offer.html', locals(), context_instance = RequestContext(request))    
+    return render_to_response('offre/offer.html', locals(), context_instance = RequestContext(request))    
 
     
 @login_required
@@ -268,8 +268,8 @@ def deposer_offre(request):
 
     else:
         form = OfferForm()
-    return render_to_response('deposer_offre.html', locals(), context_instance = RequestContext(request))
+    return render_to_response('offre/deposer_offre.html', locals(), context_instance = RequestContext(request))
 
 def after_upload(request):
-    return render_to_response('after_upload.html', locals(), context_instance = RequestContext(request))
+    return render_to_response('offre/after_upload.html', locals(), context_instance = RequestContext(request))
 

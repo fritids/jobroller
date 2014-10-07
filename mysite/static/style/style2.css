@@ -159,6 +159,9 @@ background: #e1e4ea;
 }
 
 
+.fix-height {
+  min-height: 1120px !important;
+}
 
 /* tile images ends */
 
@@ -468,7 +471,7 @@ nav.navbar.navbar-default{
 }
 
 .panel-default > .panel-body{
-  background: url('../img/grad-l1.gif') repeat-x left bottom #fff;
+  background: #fff;
   border-bottom: 1px ;
   border-radius: 8px;
 -moz-border-radius: 8px;

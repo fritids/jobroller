@@ -3,47 +3,9 @@
 {% load i18n %}
 {% block middlecontent %}
 
-    {% block style %}
-      <!-- Stylesheets -->
-        <link href="/static/header/header.css" rel="stylesheet">
-        <link href="/static/style/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="/static/style/font-awesome-4.2.0/css/font-awesome.css">
-        <link href="/static/style/style2.css" rel="stylesheet">
-        <link href="/static/style/slider2.css" rel="stylesheet">
-        
-        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Glegoo" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="/static/style/flexslider.css">
-        <!-- <link rel="stylesheet"  href="/static/style/template.css" type="text/css" media="all"> --> 
-        <link rel="stylesheet" type="text/css" href="/static/social.css">
-
-        <link rel="stylesheet"  href="/static/style/responsive.css" type="text/css" media="all">
-        <!-- social fonts --> 
-        <link rel="stylesheet" href="/static/fonts/stylesheet.css" type="text/css" charset="utf-8" />
-        <link rel="stylesheet" href="/static/css/croufredsel_style.css">
-        <link rel="stylesheet" href="/static/css/header_style.css">
-
-      <!-- jasny bootstrap -->   
-        <link rel="stylesheet" href="/static/jasny-bootstrap/css/jasny-bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="/static/css/aui-production.min.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" />
-        <link rel="stylesheet" type="text/css" href="/static/style/classy.css" />
-
-        <link rel="stylesheet" href="/static/test.css">
-
-        <!-- vmap --> 
-        <link rel="stylesheet" href="/static/vmap/jqvmap.css">
-
-        <!-- notifications --> 
-        <link rel="stylesheet" href="/static/notifications/css/jquery.gritter.css">
-
-        <!-- sharethis webservice --> 
-        <script type="text/javascript">var switchTo5x=true;</script>
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "fc960723-2a1c-4123-bacd-9e76284af85e", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
-
-        
-    {% endblock style %}  
+{% block extra_style %}
+   <link rel="stylesheet" type="text/css" href="/static/social.css">
+ {% endblock extra_style %} 
 
 
 <div class="col-sm-8">

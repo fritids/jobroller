@@ -1,14 +1,12 @@
 {% extends "sitebase.html" %}
-{% block title %}
-  search results
-{% endblock title %}
 {% load dajaxice_templatetags %}
 {% load i18n %}
+
+{% block title %} Les candidats trouvés {% endblock title %}
+
 {% block extra_style %}
+  <link rel="stylesheet" type="text/css" href="/static/social_bis.css"> 
   <link href="/static/style/blog-style.css" rel="stylesheet">
-  <!-- 
-  <link href="/static/datatables/css/jquery.dataTables.css" rel="stylesheet">
--->
 {% endblock extra_style %}
 
 {% block middlecontent %}

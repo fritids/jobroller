@@ -1,6 +1,7 @@
 {% extends "sitebase.html" %}
-{% load dajaxice_templatetags %}
-{% load i18n %}
+{% load dajaxice_templatetags i18n %}
+
+
 {% block middlecontent %}
 
 <div class="col-sm-12">
@@ -27,8 +28,6 @@
               <strong> Vous avez {{offers.count}} offre{{offers|pluralize}} </strong>
             </div>
 
-
-            
     <!-- BEGIN TABLE BODY -->
     <div class="body">
       <br>

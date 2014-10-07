@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 from django.utils.translation import gettext_lazy as _
 TIME_ZONE = 'Europe/Paris'
 
@@ -12,22 +11,16 @@ import sys, urlparse
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-if 'HEROKU' not in os.environ:
-    
-    DATABASES = {
-    'default': {
-         'ENGINE': 'django.db.backends.sqlite3', 
-         'NAME': 'testdb2.sqlite',               
-         
-         'USER': '',
-         'PASSWORD': '',
-         'HOST': '',
-         'PORT': '',
-     }
-    }   
-
-else:
-    pass
+DATABASES = {
+'default': {
+     'ENGINE': 'django.db.backends.sqlite3', 
+     'NAME': 'testdb2.sqlite',               
+     'USER': '',
+     'PASSWORD': '',
+     'HOST': '',
+     'PORT': '',
+ }
+}   
 
 # DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
@@ -37,8 +30,6 @@ SITE_ID = 1
 MEDIA_ROOT = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'media'))
 # MEDIA_ROOT = '/app/mysite/media/'
 
-
-
 MEDIA_URL = '/media/'
 
 # STATIC_ROOT = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'static_collected'))
@@ -47,8 +38,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'static')),
 )
-
-
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -87,7 +76,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'suit',
     'django.contrib.admin',
     'pure_pagination',
     'car_shop',
@@ -111,7 +100,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     # 'django.core.context_processors.request',
     # 'car_shop.context_processors.strings',
-    
 )
 
 FIXTURE_DIRS = (
@@ -127,9 +115,6 @@ EMAIL_HOST_PASSWORD = 'redatest7'
 EMAIL_PORT = 587
 
 ACCOUNT_ACTIVATION_DAYS = 14
-
-
-# email_images = ( (os.path.join('static', 'images', 'logo1.png'), 'logo'),(os.path.join('static', 'images', 'logo1.png'), 'logo') )
 
 LOGGING = {
     'version': 1,
@@ -157,7 +142,26 @@ USE_I18N = False
 USE_L10N = False
 
 
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'SpeedJob administration',
+    'SHOW_REQUIRED_ASTERISK': True,
 
+    'MENU_ICONS': {
+        'sites': 'icon-leaf',
+        'auth': 'icon-lock',
+    },
+
+    'MENU_OPEN_FIRST_CHILD': True, # Default True
+    'MENU_EXCLUDE': ('auth.group','sites',),
+
+    'MENU': (
+        'sites',
+        {'app': 'auth',     'label':'Utilisateurs avancés', 'icon':'icon-lock', 'models': ('user', 'group')},
+        {'app': 'profile',  'label':'Profiles',             'icon':'icon-user', 'models': ('profile')},
+        
+    ),
+
+}
 
 
 
