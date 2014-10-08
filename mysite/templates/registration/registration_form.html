@@ -17,7 +17,6 @@
         <div class="row">
             <div class="col-sm-12">
 
-                <br/>
                 <div class="panel panel-default">
                   
                     <div class="panel-body">
@@ -30,11 +29,19 @@
 
                                     <br>
                                       <!-- second form to hold -->  
-                                    <div class="col-sm-11">
+                                    <div class="col-sm-11 transp">
                                       <form class="form-horizontal niceform" action="." method="post" enctype="multipart/form-data" role="form">
                                       {% csrf_token %}
 
-                                     <p class='login-helptext'>S'enregistrer</p>
+                                     <p class='register-helptext'>
+                                        <span class="fa-stack fa-lg">
+                                          <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                                          <i class="fa fa-user fa-stack-1x fa-inverse white-ns"></i>
+                                        </span>
+
+                                        <strong>{% trans "S'enregistrer" %}</strong>
+                                      </p>
+
                                      <hr/>
 
 
@@ -79,9 +86,9 @@
 	                                     <p class="required"><label for="id_is_candid_0">Vous êtes :</label> </p>
 
 	                                     <ul>
-											<li><label for="id_is_candid_0"><input type="radio" id="id_is_candid_0" value="1" name="is_candid"> Candidat</label></li>
-											<li><label for="id_is_candid_1"><input type="radio" id="id_is_candid_1" value="0" name="is_candid"> Recruteur</label></li>
-										 </ul>
+                  											<li><label for="id_is_candid_0"><input type="radio" id="id_is_candid_0" value="1" name="is_candid"> Candidat</label></li>
+                  											<li><label for="id_is_candid_1"><input type="radio" id="id_is_candid_1" value="0" name="is_candid"> Recruteur</label></li>
+                  										 </ul>
 
 
                                      <br/>
@@ -90,7 +97,7 @@
 
                                        <div class="form-actions">
                                           <button type="submit" class="btn btn-primary">Valider</button><br/>
-                                          <button type="button" class="btn btn-danger" onclick='javascrpt:window.location.href="/"'>Retour</button>
+                                          <button type="button" class="btn btn-danger" onclick='javascrpt:window.location.href="/"'>Page d'accueil</button>
                                        </div>
 
                                      </div>
@@ -101,10 +108,10 @@
                                 </div>
 
                                 <div class="panel-footer">
-                                    <b>Vous possedez un compte ?</b> <a href="/accounts/login/">S'authentifier</a>
+                                    <b>Vous possedez un compte ?</b> 
+                                    <i class="fa fa-home gray-ns"></i>&nbsp;
+                                    <a href="/accounts/login/" class="account-log">S'authentifier.</a><br/>
                                 </div>
-
-                                
 
                           </div> <!-- end panel-default -->
 

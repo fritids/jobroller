@@ -83,7 +83,7 @@ def search(request):
     if high_salary  != 'all':   offers = offers.filter(salary__lte= int( high_salary ))
 
     articles    = offers
-    paginator   = Paginator(articles, 6) 
+    paginator   = Paginator(articles, 9) 
     page        = request.GET.get('page')
     query        = request.GET.get('region')
 
@@ -122,7 +122,7 @@ def map_search(request):
     if high_salary  != 'all':   offers = offers.filter(salary__lte= int( high_salary ))
 
     articles  = offers
-    paginator = Paginator(articles, 6) 
+    paginator = Paginator(articles, 9) 
     page      = request.GET.get('page')
     query     = request.GET.get('region')
 
@@ -150,7 +150,7 @@ def get_pagination_page(page=1, items=None):
 def land_page_pagination(page=1, items=None):
     # items = range(0, 100)
     items = items
-    paginator = Paginator(items, 6)
+    paginator = Paginator(items, 9)
     
     try:    page = int(page)
     except  ValueError: page = 1

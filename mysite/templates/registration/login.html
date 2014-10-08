@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-sm-12">
 
-                <br/>
+                
                 <div class="panel panel-default">
                   
                     <div class="panel-body">
@@ -27,11 +27,20 @@
                                     <br>
                                       <!-- second form to hold -->  
 
-                                    <div class="col-sm-11">
+                                    
+
+                                      <div class="col-sm-11 transp">
                                       <form class="form-horizontal niceform" action="." method="post" enctype="multipart/form-data" role="form">
                                       {% csrf_token %}
 
-                                      <p class='login-helptext'>S'authentifier</p>
+                                      <p class='register-helptext'>
+                                        <span class="fa-stack fa-lg">
+                                          <i class="fa fa-square fa-stack-2x blue-ns"></i>
+                                          <i class="fa fa-home fa-stack-1x fa-inverse white-ns"></i>
+                                        </span>
+
+                                        <strong>{% trans "S'authentifier" %}</strong>
+                                      </p>
                                       <hr/>
 
                                         {{ form.non_field_errors }}
@@ -39,13 +48,13 @@
 
                                         <form action="{% url django.contrib.auth.views.login %}" method="post" class="login_form">{% csrf_token %}
                                           <p>
-                                            <label for="id_username">Username</label> 
+                                            <label for="id_username">Nom d'utilisateur</label> 
                                             <input type="text" name="username" id="id_username"></p>
                                             <input name="next" type="hidden" value="{{next}}">
                                               {% if form.username.errors %}  <span class="help-inline">{{ form.username.errors }}</span> {% endif %}
 
                                           <p>
-                                            <label for="id_password">Password</label> 
+                                            <label for="id_password">Mot de passe</label> 
                                             <input type="password" name="password" id="id_password">
                                           </p>
                                             {% if form.password1.errors %}  <span class="help-inline">{{ form.password1.errors }}</span> {% endif %}
@@ -56,19 +65,26 @@
                                           
                                           <div class="form-actions">
                                             <button type="submit" class="btn btn-primary">Valider</button><br/>
-                                            <button type="button" class="btn btn-danger" onclick='javascrpt:window.location.href="/"'>Retour</button>
+                                            <button type="button" class="btn btn-danger" onclick='javascrpt:window.location.href="/"'>Page d'acceuil</button>
                                           </div>
                                           
                                         </form>
                                      
                                       </form>
                                     </div>
+                                      
+                                    
 
                                 </div>
 
                                 <div class="panel-footer">
-                                    <b>Vous ne possedez pas de compte ?</b> <a href="/accounts/register/" class="account-reg">devenez membre .</a><br/>
-                                    <b>Vous avez oublié votre mot de passe ?</b> <a href="/accounts/password/reset/" class="account-log">Récupérez le .</a><br/>
+                                    <b>Vous ne possedez pas de compte ?</b> 
+                                    <i class="fa fa-hand-o-right gray-ns"></i>&nbsp;
+                                    <a href="/accounts/register/" class="account-reg">devenez membre .</a><br/>
+
+                                    <b>Vous avez oublié votre mot de passe ?</b> 
+                                    <i class="fa fa-reply-all gray-ns"></i>&nbsp;
+                                    <a href="/accounts/password/reset/" class="account-log">Récupérez le .</a><br/>
                                 </div>
 
                                 

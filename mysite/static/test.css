@@ -4,16 +4,18 @@ a{
 }
 
 a.account-reg{
-    border-bottom: 2px solid #2692AC;
-    color: #2692AC;
+    /*border-bottom: 2px solid #2692AC;*/
+    color: rgba(0, 75, 139, 0.69) !important;
+    font-weight: bold;
     text-decoration: none;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
 }
 
 a.account-log{
-    border-bottom: 2px solid #2692AC;
-    color: #2692AC;
+    /*border-bottom: 2px solid #2692AC;*/
+    color: rgba(0, 75, 139, 0.69) !important;
+    font-weight: bold;
     text-decoration: none;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;

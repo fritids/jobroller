@@ -32,6 +32,7 @@ h1,h2,h3,h4,h5,h6{
 
 img{max-width:100%;}
 /*end reset*/
+
 body{
   /*background: url('../img/container-bg.gif') repeat-x left top #d6e4ec !important;*/
   /*background: rgba(214, 228, 236, 0.42) !important;*/
@@ -51,6 +52,16 @@ body{
   font-size:14px;
   line-height:20px;
 }
+
+/* login */
+.transp{
+  /*background: transparent url(../images/opaque.png) repeat;*/
+  border: 5px solid rgba(0, 75, 139, 0.3);
+  /*z-index: 999;*/
+  padding: 10px;
+  visibility: visible;
+}
+/* login ends */
 
 /* tostr notification messages */
 .toast-info {
@@ -210,14 +221,21 @@ background: #e1e4ea;
 }
 
 .register-helptext{
- font-family: 'Open sans', serif !important; 
- line-height: 30px;
- font-size: 25px;
- text-align: center;
+
+ font-family: 'Oswald', Helvetica, Arial, sans-serif !important; 
+ color: #5F5757;
+ line-height: 25px;
+ font-size: 20px;
+ text-align: left;
 }
 
 .form-errors{
   color: #C07D7D;
+}
+
+.niceform{
+  background: #fff;
+  padding: 10%;
 }
 
 .niceform ul.errorlist { float: left;color: #C07D7D; margin: 0px 30px; list-style: none; }
@@ -405,7 +423,7 @@ div#slider-thumbs.col-md-12.hidden-sm.hidden-xs{
 .header.first{
     /*border-top: 10px solid #3B5999;*/
     /*border-top: 10px solid #004B8B;*/
-    border-top: 10px solid rgba(0, 75, 139, 0.69)
+    border-top: 5px solid rgba(0, 75, 139, 0.69)
 }
 
 header{
