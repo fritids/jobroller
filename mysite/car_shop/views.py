@@ -14,6 +14,7 @@ from profile.forms import UserInfoForm, EmployerInfoForm
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
 from model_choices import REGION_CHOICES, SALARY_CHOICES, CATEGORY_CHOICES, OFFER_CHOICES, YESNO
 from django.db.models import F
+from django.conf import settings
 
 # login
 from django.contrib.auth.decorators import login_required, user_passes_test
@@ -25,35 +26,32 @@ from django.core.context_processors import csrf
 from django.utils import translation
 from functools import wraps
 
-
-def get_notification_message(req):
-
-    msg = None
-    if req.user.is_authenticated():
-        u = req.user
-        if u.groups.filter(name="candidate"):
-            profile = Profile_candid.objects.get(user = u)
-            msg = profile.get_all_fields()
-        elif u.groups.filter(name="employer"):
-            profile = Profile_emp.objects.get(user = u)
-            msg = profile.get_all_fields()    
-    else:
-        msg = None 
-
-    return msg    
-
-def home(request):
+def set_notification_message(view):
+    @wraps(view)
+    def wrapper(request, *args, **kwargs):
+        # msg = None
+        if request.user.is_authenticated():
+            u = request.user
+            if u.groups.filter(name="candidate"):
+                profile = Profile_candid.objects.get(user = u)
+                msg = profile.get_all_fields()
+            elif u.groups.filter(name="employer"):
+                profile = Profile_emp.objects.get(user = u)
+                msg = profile.get_all_fields()    
+        else:
+            msg = None
+        return view(request, msg, *args, **kwargs)
+    return wrapper
     
+@set_notification_message
+def home(request, msg):
     cars        = Offer.objects.index_is_activated
     form        = Search_Form()
     text_form   = Text_Search_Form()
     articles    = Article.objects.all()[:4]
     
-    msg = get_notification_message(request)
-
     return render_to_response('index.html', locals(), context_instance = RequestContext(request))
     
-
 def search(request):
     # preparing forms
     text_form   = Text_Search_Form()
@@ -131,9 +129,6 @@ def map_search(request):
     except EmptyPage:           contacts = paginator.page(paginator.num_pages)
 
     return render_to_response('map_search.html', locals(), context_instance = RequestContext(request))
-
-
-
 
 def get_pagination_page(page=1, items=None):
 

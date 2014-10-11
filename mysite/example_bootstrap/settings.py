@@ -24,6 +24,8 @@ DATABASES = {
 
 # DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
+CACHE_TIMEOUT = 60*60
+
 LANGUAGE_CODE = 'fr'
 SITE_ID = 1
 
