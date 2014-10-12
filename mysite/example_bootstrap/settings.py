@@ -24,7 +24,6 @@ DATABASES = {
 
 # DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
-CACHE_TIMEOUT = 60*60
 
 LANGUAGE_CODE = 'fr'
 SITE_ID = 1
@@ -88,6 +87,8 @@ INSTALLED_APPS = (
     'profile',
     'article',
     'offre',
+    'django_forms_bootstrap',
+    'payments',
 )
 
 
@@ -102,6 +103,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     # 'django.core.context_processors.request',
     # 'car_shop.context_processors.strings',
+     # "payments.settings",
 )
 
 FIXTURE_DIRS = (
@@ -174,16 +176,42 @@ SUIT_CONFIG = {
 }
 
 
+CACHE_TIMEOUT = 60*60
+
+# CACHE_TABLE = 'db://cached_results'
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'cached_results',
+    }
+}
+
+
+TEST_SECRET_KEY      = "sk_test_mopWUvH81IrewEKfXKN9e6rq"
+TEST_PUBLISHABLE_KEY = "pk_test_v9t1PMYuYgsUM5Zsoj3uFn2b"
+
+STRIPE_SECRET_KEY = "sk_live_BFVMgVwzXLBU8CniUPILuLyo"
+STRIPE_PUBLIC_KEY = "pk_live_vB5KieclNbIxLgERKibtEvH8"
+
+
+# LIVE_SECRET_KEY      = "sk_live_BFVMgVwzXLBU8CniUPILuLyo"
+# LIVE_PUBLISHABLE_KEY = "pk_live_vB5KieclNbIxLgERKibtEvH8"
 
 
 
 
+PAYMENTS_PLANS = {
+    "yearly": {
+        "stripe_plan_id": "yearly",
+        "name": "yearly",
+        # "description": "The monthly subscription plan to WebApp",
+        "price": 0.99,
+        "currency": "usd",
+        "interval": "month",
+        "trial_period_days": 15
+    }
+}
 
 
 
-
-
-
-
-
-
+TRIAL_PERIOD_FOR_USER_CALLBACK = 15

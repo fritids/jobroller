@@ -1,5 +1,5 @@
 {% extends "sitebase.html" %}
-{% load i18n dajaxice_templatetags %}
+{% load i18n dajaxice_templatetags cache %}
 
 {% block extra_style %}
   <link rel="stylesheet" type="text/css" href="/static/social_bis.css"> 
@@ -32,7 +32,7 @@
                     <!-- <img width="70" height="70" src="http://placehold.it/70x70" alt="image"> --> 
                     <div class="stacked-icons">
                       <span class="fa-stack fa-3x">
-                        <i class="fa fa-calendar-o fa-stack-17x blue-ns"></i>
+                        <i class="fa fa-calendar-o fa-stack-17x white-ns"></i>
                         <strong class="fa-stack-1x calendar-text">{{i.get_offerType_display}}</strong>
                       </span>
                     </div>
@@ -41,7 +41,7 @@
                 <div class="span-70 boxmodelfix info">
                     <h3>
                         <a onclick="return false" class="freelancer left crop span-10" rel="nofollow" href="#"> 
-                          <i class="fa fa-newspaper-o gray-ns"></i>
+                          -
                           {{i.title}}
                         </a>
                         <!-- <span class="cert cert-level1-small " data-level="1"> </span> --> 
@@ -135,5 +135,7 @@
 <br/>
 
 {% block sidecontent %}
-  {% include "./parts/search_sidecontent.html" %}
+  {% cache 3600 search_sidecontent_html %}
+        {% include "./parts/search_sidecontent.html" %}
+  {% endcache %}
 {% endblock sidecontent %}

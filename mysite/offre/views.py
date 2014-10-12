@@ -29,11 +29,22 @@ from car_shop.nicemails import send_nice_email
 from django.conf import settings
 from django.contrib.sites.models import Site
 
+# decorating and caching
+from functools import wraps
+from django.views.decorators.cache import cache_page
+from django.core.cache import cache
+from example_bootstrap.settings import CACHE_TIMEOUT
+
+
 def offer(request, num):
-    offer = Offer.objects.get(id=num)
+    
+    offer_cache_key = request.path
+    offer           = cache.get(offer_cache_key)
+    if not offer:
+        offer = Offer.objects.get(id=num)
+        cache.set(offer_cache_key, offer, CACHE_TIMEOUT)
 
-    next = offer.get_absolute_url()
-
+    next        = offer.get_absolute_url()
     offer.views = int(offer.views)+1
     offer.save()
 

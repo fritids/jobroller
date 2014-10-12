@@ -1,6 +1,6 @@
 {% extends "sitebase.html" %}
-{% load dajaxice_templatetags %}
-{% load i18n %}
+{% load dajaxice_templatetags cache i18n %}
+
 
 {% block title %} Résultats de la recherche {% endblock title %}
 
@@ -139,5 +139,7 @@
 <br/>
 
 {% block sidecontent %}
-  {% include "./parts/search_sidecontent.html" %}
+  {% cache 3600 search_sidecontent_html %}
+        {% include "./parts/search_sidecontent.html" %}
+  {% endcache %}  
 {% endblock sidecontent %}

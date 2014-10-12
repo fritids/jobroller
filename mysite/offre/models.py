@@ -18,6 +18,10 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 
 from datetime import date, timedelta
 
+from django.db.models.signals import post_save, post_delete
+from caching.caching import cache_update, cache_evict
+
+
 class Offer(RandomPrimaryIdModel):
     """ Modele pour les offres de travail """
     # id          = models.CharField(max_length=36, primary_key=True, default=lambda: ''.join([ i for i in str(uuid4()) if i != '-']) , editable=False)
@@ -91,3 +95,12 @@ class Offer(RandomPrimaryIdModel):
 
     objects = OfferManager() # pour avoir que les objets active: Offer.objects.is_watermaked
     # objects = models.Manager() # On garde le manager par default
+
+    @property
+    def cache_key(self):
+        return self.get_absolute_url()
+
+post_save.connect(cache_update, sender=Offer)
+post_delete.connect(cache_evict, sender=Offer)
+
+

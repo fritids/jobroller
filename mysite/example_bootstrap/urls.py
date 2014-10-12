@@ -68,6 +68,8 @@ urlpatterns = patterns('',
     url(r'accounts/login/$', 'registration.views.login', name = 'authentication_login'),
     (r'^accounts/', include('registration.backends.default.urls')),
 
+    # payments
+    url(r"^payments/", include("payments.urls")),
     
 )
 

@@ -1,5 +1,4 @@
-{% load dajaxice_templatetags %}
-{% load i18n group_check %}
+{% load dajaxice_templatetags i18n group_check cache %}
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -51,6 +50,10 @@
         <!-- notifications --> 
         <link rel="stylesheet" href="/static/notifications/css/jquery.gritter.css">
 
+        <!-- payement --> 
+        <link rel="stylesheet" href="/static/eldarion-ajax/js/eldarion-ajax.min.js">
+        <script src="//checkout.stripe.com/v2/checkout.js"></script>
+
     {% endblock style %}  
 
     {% block extra_style %} 
@@ -73,6 +76,28 @@
         <script type="text/javascript">var switchTo5x=true;</script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
         <script type="text/javascript">stLight.options({publisher: "fc960723-2a1c-4123-bacd-9e76284af85e", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+
+        <script>
+            $(function() {
+                $('body').on("click", '.change-card, .subscribe-form button[type=submit]', function(e) {
+                  e.preventDefault();
+                  var $form = $(this).closest("form"),
+                      token = function(res) {
+                        $form.find("input[name=stripe_token]").val(res.id);
+                        $form.trigger("submit");
+                      };
+
+                  StripeCheckout.open({
+                    key:         $form.data("stripe-key"),
+                    name:        'Payment Method',
+                    panelLabel:  'Add Payment Method',
+                    token:       token
+                  });
+
+                  return false;
+                });
+            });
+        </script>
 
     {% endblock js %}
 
@@ -215,9 +240,9 @@
   <br/>
 
   {% block sidecontent %}
-
-    {% include "./parts/base_sidecontent.html" %}  
-
+    {% cache 3600 base_sidecontent_html %}
+      {% include "./parts/base_sidecontent.html" %}  
+    {% endcache %}
   {% endblock sidecontent %} 
 
       </div> <!-- end row -->

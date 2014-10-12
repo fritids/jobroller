@@ -3,11 +3,8 @@ from django.db import models
 
 
 class OfferQuerySets(models.query.QuerySet): 
-       
-        #here we define simple filters (or any queryset)
     def watermarked(self):
        return self.filter(is_watermarked = True)
-
 
 class OfferManager(models.Manager):
     def get_query_set(self):

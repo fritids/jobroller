@@ -24,7 +24,12 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from django.core.context_processors import csrf
 from django.utils import translation
+
+# decorating and caching
 from functools import wraps
+from django.views.decorators.cache import cache_page
+from django.core.cache import cache
+from example_bootstrap.settings import CACHE_TIMEOUT
 
 def set_notification_message(view):
     @wraps(view)
@@ -43,9 +48,16 @@ def set_notification_message(view):
         return view(request, msg, *args, **kwargs)
     return wrapper
     
+
 @set_notification_message
 def home(request, msg):
-    cars        = Offer.objects.index_is_activated
+    # offers      = Offer.objects.index_is_activated
+    offer_cache_key = request.path+'index'
+    offers = cache.get(offer_cache_key)
+    if not offers:
+        offers = Offer.objects.filter(activated = True).order_by('-created')[:8]
+        cache.set(offer_cache_key, offers, CACHE_TIMEOUT)
+
     form        = Search_Form()
     text_form   = Text_Search_Form()
     articles    = Article.objects.all()[:4]
