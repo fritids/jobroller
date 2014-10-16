@@ -34,6 +34,7 @@ from example_bootstrap.settings import CACHE_TIMEOUT
 def set_notification_message(view):
     @wraps(view)
     def wrapper(request, *args, **kwargs):
+        msg = None
         # msg = None
         if request.user.is_authenticated():
             u = request.user

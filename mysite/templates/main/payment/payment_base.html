@@ -5,17 +5,15 @@
 
 		<div class="row">
 			<div class="span8 offset2 text-center">
-				<div class="page-header">
-					<h1>Vanilla Checkout.js</h1>
-				</div>
+				
 				<br>
 				<br>
 
 				<div class="well span3">
-					<h3>Normal Potatoes</h3>
-					<p><i class="icon-gbp icon-2x"></i><span class="subscription-price"> 15</span></p>
+					<h3>Normal</h3>
+					<p><i class="icon-usd icon-2x"></i><span class="subscription-price"> 15</span></p>
 					<p>per month</p>
-					{% include "main/payment/_payment_form.html" with plan=plans.potato_normal %}
+					{% include "main/payment/_payment_form.html" with plan=plans.normal %}
 
 					<a href="" class="subscribeBtn btn btn-success btn-large">Sign Up</a>
 					<br>
@@ -23,10 +21,10 @@
 				</div>
 
 				<div class="well span3">
-					<h3>Premier Potatoes</h3>
-					<p><i class="icon-gbp icon-2x"></i><span class="subscription-price"> 30</span></p>
-					<p>per month</p>
-					{% include "main/payment/_payment_form.html" with plan=plans.potato_premier %}
+					<h3>Premier</h3>
+					<p><i class="icon-usd icon-2x"></i><span class="subscription-price"> 30</span></p>
+					<p>per year</p>
+					{% include "main/payment/_payment_form.html" with plan=plans.premier %}
 
 					<a href="" class="subscribeBtn btn btn-success btn-large">Sign Up</a>
 					<br>
@@ -41,10 +39,6 @@
 		</div>		
 	</div>
 
-	{% block extra_content %}
-	{% endblock extra_content %}
-
-	{% include 'main/_cheatsheet.html' %}
 {% endblock body %}
 
 {% block extra_js %}

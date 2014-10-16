@@ -1,0 +1,920 @@
+[2014-10-16 15:19:15,548] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 15:19:15,549] ERROR Stripe Error
+[2014-10-16 15:19:15,549] ERROR Invalid timestamp: must be an integer
+[2014-10-16 15:19:15,549] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oF9QIfcHb8GbXEvvbvS0Ix'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 15:21:52,485] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 15:21:52,486] ERROR Stripe Error
+[2014-10-16 15:21:52,486] ERROR Invalid timestamp: must be an integer
+[2014-10-16 15:21:52,486] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oFC1IfcHb8GbXEhhmO2t3V'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 15:27:25,754] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 15:27:25,756] ERROR Stripe Error
+[2014-10-16 15:27:25,756] ERROR Invalid timestamp: must be an integer
+[2014-10-16 15:27:25,757] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oFHPIfcHb8GbXEaKJO3O8w'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 15:30:51,871] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 15:30:51,872] ERROR Stripe Error
+[2014-10-16 15:30:51,873] ERROR Invalid timestamp: must be an integer
+[2014-10-16 15:30:51,873] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oFKjIfcHb8GbXEh3YfVSvn'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 15:32:18,926] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 15:32:18,928] ERROR Stripe Error
+[2014-10-16 15:32:18,928] ERROR Invalid timestamp: must be an integer
+[2014-10-16 15:32:18,929] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oFM3IfcHb8GbXE6H6HGVHG'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 15:34:35,864] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 15:34:35,865] ERROR Stripe Error
+[2014-10-16 15:34:35,865] ERROR Invalid timestamp: must be an integer
+[2014-10-16 15:34:35,865] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oFOKIfcHb8GbXEKGW9zDFR'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 15:35:33,311] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 67, in subscribe_ajax
+    customer = Customer.create(request.user, plan=plan_id)  # the problem is in this line
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/payments/models.py", line 397, in create
+    print trial_days, trial_end
+UnboundLocalError: local variable 'trial_days' referenced before assignment
+[2014-10-16 15:35:33,311] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 67, in subscribe_ajax
+    customer = Customer.create(request.user, plan=plan_id)  # the problem is in this line
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/payments/models.py", line 397, in create
+    print trial_days, trial_end
+UnboundLocalError: local variable 'trial_days' referenced before assignment
+[2014-10-16 16:11:41,119] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 67, in subscribe_ajax
+    customer = Customer.create(request.user, plan=plan_id)  # the problem is in this line
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/payments/models.py", line 397, in create
+    print trial_days, trial_end
+UnboundLocalError: local variable 'trial_days' referenced before assignment
+[2014-10-16 16:11:41,119] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 67, in subscribe_ajax
+    customer = Customer.create(request.user, plan=plan_id)  # the problem is in this line
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/payments/models.py", line 397, in create
+    print trial_days, trial_end
+UnboundLocalError: local variable 'trial_days' referenced before assignment
+[2014-10-16 16:12:46,350] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 67, in subscribe_ajax
+    customer = Customer.create(request.user, plan=plan_id)  # the problem is in this line
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/payments/models.py", line 397, in create
+    print trial_days
+UnboundLocalError: local variable 'trial_days' referenced before assignment
+[2014-10-16 16:12:46,350] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 67, in subscribe_ajax
+    customer = Customer.create(request.user, plan=plan_id)  # the problem is in this line
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/payments/models.py", line 397, in create
+    print trial_days
+UnboundLocalError: local variable 'trial_days' referenced before assignment
+[2014-10-16 16:13:56,946] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:13:56,947] ERROR Stripe Error
+[2014-10-16 16:13:56,947] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:13:56,947] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oG0LIfcHb8GbXEK3UqTzWk'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:15:38,170] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:15:38,171] ERROR Stripe Error
+[2014-10-16 16:15:38,171] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:15:38,171] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oG22IfcHb8GbXEgC2pJ4rL'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:16:56,182] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:16:56,183] ERROR Stripe Error
+[2014-10-16 16:16:56,183] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:16:56,183] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oG3KIfcHb8GbXEDgCXGNqM'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:18:02,217] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:18:02,218] ERROR Stripe Error
+[2014-10-16 16:18:02,218] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:18:02,219] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oG4NIfcHb8GbXEdnC4ovf4'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:23:17,180] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:23:17,181] ERROR Stripe Error
+[2014-10-16 16:23:17,181] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:23:17,181] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oG9MIfcHb8GbXEth6qxa9G'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:25:15,015] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:25:15,016] ERROR Stripe Error
+[2014-10-16 16:25:15,016] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:25:15,016] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGBLIfcHb8GbXEiFhu7aS7'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:26:35,139] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:26:35,140] ERROR Stripe Error
+[2014-10-16 16:26:35,140] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:26:35,140] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGCdIfcHb8GbXExL2Fqsqf'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:29:22,955] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer Unix timestamp in the future.",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:29:22,957] ERROR Stripe Error
+[2014-10-16 16:29:22,957] ERROR Invalid timestamp: must be an integer Unix timestamp in the future.
+[2014-10-16 16:29:22,957] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGFIIfcHb8GbXE0mpxM1aj'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:31:12,134] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:31:12,136] ERROR Stripe Error
+[2014-10-16 16:31:12,136] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:31:12,137] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGGvIfcHb8GbXE2L8iROO6'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:37:04,036] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:37:04,037] ERROR Stripe Error
+[2014-10-16 16:37:04,037] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:37:04,038] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGMkIfcHb8GbXEUXDDXm1o'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:43:35,296] ERROR Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 83, in dispatch
+    return super(RegistrationView, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 42, in post
+    return self.form_valid(request, form)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 86, in form_valid
+    new_user = self.register(request, **form.cleaned_data)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/backends/default/views.py", line 17, in register
+    site = Site.objects.get_current()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 25, in get_current
+    current_site = self.get(pk=sid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Site matching query does not exist.
+[2014-10-16 16:43:35,296] ERROR Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 83, in dispatch
+    return super(RegistrationView, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 42, in post
+    return self.form_valid(request, form)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 86, in form_valid
+    new_user = self.register(request, **form.cleaned_data)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/backends/default/views.py", line 17, in register
+    site = Site.objects.get_current()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 25, in get_current
+    current_site = self.get(pk=sid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Site matching query does not exist.
+[2014-10-16 16:43:59,336] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 213, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 195, in inner
+    return self.login(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 326, in login
+    return login(request, **defaults)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 53, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 92, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 25, in get_current
+    current_site = self.get(pk=sid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Site matching query does not exist.
+[2014-10-16 16:43:59,336] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 213, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 195, in inner
+    return self.login(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 326, in login
+    return login(request, **defaults)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 53, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 92, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 25, in get_current
+    current_site = self.get(pk=sid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Site matching query does not exist.
+[2014-10-16 16:43:59,982] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 213, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 195, in inner
+    return self.login(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 326, in login
+    return login(request, **defaults)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 53, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 92, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 25, in get_current
+    current_site = self.get(pk=sid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Site matching query does not exist.
+[2014-10-16 16:43:59,982] ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 213, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 195, in inner
+    return self.login(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/admin/sites.py", line 326, in login
+    return login(request, **defaults)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 69, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 91, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 89, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 53, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 92, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 25, in get_current
+    current_site = self.get(pk=sid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Site matching query does not exist.
+[2014-10-16 16:45:43,839] ERROR Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 83, in dispatch
+    return super(RegistrationView, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 42, in post
+    return self.form_valid(request, form)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 86, in form_valid
+    new_user = self.register(request, **form.cleaned_data)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/backends/default/views.py", line 17, in register
+    site = Site.objects.get_current()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 25, in get_current
+    current_site = self.get(pk=sid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Site matching query does not exist.
+[2014-10-16 16:45:43,839] ERROR Internal Server Error: /accounts/register/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 48, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 83, in dispatch
+    return super(RegistrationView, self).dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/generic/base.py", line 69, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 42, in post
+    return self.form_valid(request, form)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/views.py", line 86, in form_valid
+    new_user = self.register(request, **form.cleaned_data)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/registration/backends/default/views.py", line 17, in register
+    site = Site.objects.get_current()
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 25, in get_current
+    current_site = self.get(pk=sid)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 131, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 366, in get
+    % self.model._meta.object_name)
+DoesNotExist: Site matching query does not exist.
+[2014-10-16 16:50:28,576] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:50:28,577] ERROR Stripe Error
+[2014-10-16 16:50:28,577] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:50:28,577] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly potato delivery to your door.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGZhIfcHb8GbXEHa3h3GQr'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'Monthly Potato Delivery']}>
+[2014-10-16 16:57:14,447] INFO API request to https://api.stripe.com/v1/plans returned (response code, response body) of (200, '{\n  "interval": "year",\n  "name": "premier",\n  "created": 1413475257,\n  "amount": 30,\n  "currency": "usd",\n  "id": "premier",\n  "object": "plan",\n  "livemode": false,\n  "interval_count": 1,\n  "trial_period_days": 15,\n  "metadata": {},\n  "statement_description": null\n}\n')
+[2014-10-16 16:57:16,362] INFO API request to https://api.stripe.com/v1/plans returned (response code, response body) of (200, '{\n  "interval": "month",\n  "name": "normal",\n  "created": 1413475259,\n  "amount": 15,\n  "currency": "usd",\n  "id": "normal",\n  "object": "plan",\n  "livemode": false,\n  "interval_count": 1,\n  "trial_period_days": 15,\n  "metadata": {},\n  "statement_description": null\n}\n')
+[2014-10-16 16:58:49,636] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 16:58:49,637] ERROR Stripe Error
+[2014-10-16 16:58:49,637] ERROR Invalid timestamp: must be an integer
+[2014-10-16 16:58:49,637] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly subscription for test.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGhmIfcHb8GbXE7JCoE8b9'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'normal']}>
+[2014-10-16 17:07:17,186] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 17:07:17,187] ERROR Stripe Error
+[2014-10-16 17:07:17,188] ERROR Invalid timestamp: must be an integer
+[2014-10-16 17:07:17,188] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly subscription for test.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGq2IfcHb8GbXEH51lkS9t'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'normal']}>
+[2014-10-16 17:09:54,201] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 17:09:54,202] ERROR Stripe Error
+[2014-10-16 17:09:54,202] ERROR Invalid timestamp: must be an integer
+[2014-10-16 17:09:54,202] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly subscription for test.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGsWIfcHb8GbXEbMgqgF10'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'normal']}>
+[2014-10-16 17:11:32,552] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (400, '{\n  "error": {\n    "type": "invalid_request_error",\n    "message": "Invalid timestamp: must be an integer",\n    "param": "trial_end"\n  }\n}\n')
+[2014-10-16 17:11:32,553] ERROR Stripe Error
+[2014-10-16 17:11:32,553] ERROR Invalid timestamp: must be an integer
+[2014-10-16 17:11:32,553] ERROR <QueryDict: {u'plan_id': [u'normal'], u'description': [u'Monthly subscription for test.'], u'price': [u'15'], u'stripe_token': [u'tok_14oGu4IfcHb8GbXEa1RZdB1N'], u'csrfmiddlewaretoken': [u'K09q5GOmJlDeTqblmq0PpNUuFe9vXNJu'], u'plan_name': [u'normal']}>
+[2014-10-16 21:36:32,109] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:36:33,655] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492016,\n  "id": "cus_4yHbQWbj37wUAe",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/cards",\n    "data": [],\n    "count": 0\n  },\n  "default_card": null,\n  "active_card": null,\n  "subscription": null\n}\n')
+[2014-10-16 21:36:35,805] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:36:37,356] INFO API request to https://api.stripe.com/v1/customers/cus_4yHbQWbj37wUAe returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492016,\n  "id": "cus_4yHbQWbj37wUAe",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/cards",\n    "data": [],\n    "count": 0\n  },\n  "default_card": null,\n  "active_card": null,\n  "subscription": null\n}\n')
+[2014-10-16 21:36:38,253] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:36:39,825] INFO API request to https://api.stripe.com/v1/customers/cus_4yHbQWbj37wUAe returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492016,\n  "id": "cus_4yHbQWbj37wUAe",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/cards",\n    "data": [\n      {\n        "id": "card_14oL2dIfcHb8GbXEato36Mnb",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHbQWbj37wUAe",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oL2dIfcHb8GbXEato36Mnb",\n  "active_card": {\n    "id": "card_14oL2dIfcHb8GbXEato36Mnb",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHbQWbj37wUAe",\n    "type": "Visa"\n  },\n  "subscription": null\n}\n')
+[2014-10-16 21:36:42,057] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:36:45,241] INFO API request to https://api.stripe.com/v1/customers/cus_4yHbQWbj37wUAe returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492016,\n  "id": "cus_4yHbQWbj37wUAe",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/cards",\n    "data": [\n      {\n        "id": "card_14oL2dIfcHb8GbXEato36Mnb",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHbQWbj37wUAe",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oL2dIfcHb8GbXEato36Mnb",\n  "active_card": {\n    "id": "card_14oL2dIfcHb8GbXEato36Mnb",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHbQWbj37wUAe",\n    "type": "Visa"\n  },\n  "subscription": null\n}\n')
+[2014-10-16 21:36:46,118] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:36:49,268] INFO API request to https://api.stripe.com/v1/customers/cus_4yHbQWbj37wUAe/subscription returned (response code, response body) of (200, '{\n  "id": "sub_4yHc8WxI7ly64F",\n  "plan": {\n    "interval": "month",\n    "name": "normal",\n    "created": 1413475259,\n    "amount": 15,\n    "currency": "usd",\n    "id": "normal",\n    "object": "plan",\n    "livemode": false,\n    "interval_count": 1,\n    "trial_period_days": 15,\n    "metadata": {},\n    "statement_description": null\n  },\n  "object": "subscription",\n  "start": 1413492032,\n  "status": "trialing",\n  "customer": "cus_4yHbQWbj37wUAe",\n  "cancel_at_period_end": false,\n  "current_period_start": 1413492032,\n  "current_period_end": 1414788032,\n  "ended_at": null,\n  "trial_start": 1413492032,\n  "trial_end": 1414788032,\n  "canceled_at": null,\n  "quantity": 1,\n  "application_fee_percent": null,\n  "discount": null,\n  "metadata": {}\n}\n')
+[2014-10-16 21:36:50,072] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:36:51,859] INFO API request to https://api.stripe.com/v1/customers/cus_4yHbQWbj37wUAe returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492016,\n  "id": "cus_4yHbQWbj37wUAe",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yHc8WxI7ly64F",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413492032,\n        "status": "trialing",\n        "customer": "cus_4yHbQWbj37wUAe",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413492032,\n        "current_period_end": 1414788032,\n        "ended_at": null,\n        "trial_start": 1413492032,\n        "trial_end": 1414788032,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHbQWbj37wUAe/cards",\n    "data": [\n      {\n        "id": "card_14oL2dIfcHb8GbXEato36Mnb",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHbQWbj37wUAe",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oL2dIfcHb8GbXEato36Mnb",\n  "active_card": {\n    "id": "card_14oL2dIfcHb8GbXEato36Mnb",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHbQWbj37wUAe",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yHc8WxI7ly64F",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413492032,\n    "status": "trialing",\n    "customer": "cus_4yHbQWbj37wUAe",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413492032,\n    "current_period_end": 1414788032,\n    "ended_at": null,\n    "trial_start": 1413492032,\n    "trial_end": 1414788032,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-16 21:36:51,865] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 72, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-16 21:36:51,865] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 72, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-16 21:50:34,435] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:50:36,413] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [],\n    "count": 0\n  },\n  "default_card": null,\n  "active_card": null,\n  "subscription": null\n}\n')
+[2014-10-16 21:50:37,497] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:50:38,969] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [],\n    "count": 0\n  },\n  "default_card": null,\n  "active_card": null,\n  "subscription": null\n}\n')
+[2014-10-16 21:50:40,003] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:50:41,989] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [\n      {\n        "id": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHpdFa7qwCJle",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n  "active_card": {\n    "id": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHpdFa7qwCJle",\n    "type": "Visa"\n  },\n  "subscription": null\n}\n')
+[2014-10-16 21:50:44,229] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:50:46,071] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [\n      {\n        "id": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHpdFa7qwCJle",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n  "active_card": {\n    "id": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHpdFa7qwCJle",\n    "type": "Visa"\n  },\n  "subscription": null\n}\n')
+[2014-10-16 21:50:47,144] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:50:50,182] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle/subscription returned (response code, response body) of (200, '{\n  "id": "sub_4yHqIfeZ0K7MF2",\n  "plan": {\n    "interval": "month",\n    "name": "normal",\n    "created": 1413475259,\n    "amount": 15,\n    "currency": "usd",\n    "id": "normal",\n    "object": "plan",\n    "livemode": false,\n    "interval_count": 1,\n    "trial_period_days": 15,\n    "metadata": {},\n    "statement_description": null\n  },\n  "object": "subscription",\n  "start": 1413492872,\n  "status": "trialing",\n  "customer": "cus_4yHpdFa7qwCJle",\n  "cancel_at_period_end": false,\n  "current_period_start": 1413492872,\n  "current_period_end": 1414788872,\n  "ended_at": null,\n  "trial_start": 1413492872,\n  "trial_end": 1414788872,\n  "canceled_at": null,\n  "quantity": 1,\n  "application_fee_percent": null,\n  "discount": null,\n  "metadata": {}\n}\n')
+[2014-10-16 21:50:51,397] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-16 21:50:53,007] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yHqIfeZ0K7MF2",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413492872,\n        "status": "trialing",\n        "customer": "cus_4yHpdFa7qwCJle",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413492872,\n        "current_period_end": 1414788872,\n        "ended_at": null,\n        "trial_start": 1413492872,\n        "trial_end": 1414788872,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [\n      {\n        "id": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHpdFa7qwCJle",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n  "active_card": {\n    "id": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHpdFa7qwCJle",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yHqIfeZ0K7MF2",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413492872,\n    "status": "trialing",\n    "customer": "cus_4yHpdFa7qwCJle",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413492872,\n    "current_period_end": 1414788872,\n    "ended_at": null,\n    "trial_start": 1413492872,\n    "trial_end": 1414788872,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-16 21:50:53,012] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 76, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-16 21:50:53,012] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 76, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-17 00:03:45,921] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:03:48,105] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yHqIfeZ0K7MF2",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413492872,\n        "status": "trialing",\n        "customer": "cus_4yHpdFa7qwCJle",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413492872,\n        "current_period_end": 1414788872,\n        "ended_at": null,\n        "trial_start": 1413492872,\n        "trial_end": 1414788872,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [\n      {\n        "id": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHpdFa7qwCJle",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n  "active_card": {\n    "id": "card_14oLGDIfcHb8GbXEvqUQHBUq",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHpdFa7qwCJle",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yHqIfeZ0K7MF2",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413492872,\n    "status": "trialing",\n    "customer": "cus_4yHpdFa7qwCJle",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413492872,\n    "current_period_end": 1414788872,\n    "ended_at": null,\n    "trial_start": 1413492872,\n    "trial_end": 1414788872,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:03:52,021] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:03:54,255] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yHqIfeZ0K7MF2",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413492872,\n        "status": "trialing",\n        "customer": "cus_4yHpdFa7qwCJle",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413492872,\n        "current_period_end": 1414788872,\n        "ended_at": null,\n        "trial_start": 1413492872,\n        "trial_end": 1414788872,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [\n      {\n        "id": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHpdFa7qwCJle",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n  "active_card": {\n    "id": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHpdFa7qwCJle",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yHqIfeZ0K7MF2",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413492872,\n    "status": "trialing",\n    "customer": "cus_4yHpdFa7qwCJle",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413492872,\n    "current_period_end": 1414788872,\n    "ended_at": null,\n    "trial_start": 1413492872,\n    "trial_end": 1414788872,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:03:57,617] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:04:04,519] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yHqIfeZ0K7MF2",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413492872,\n        "status": "trialing",\n        "customer": "cus_4yHpdFa7qwCJle",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413492872,\n        "current_period_end": 1414788872,\n        "ended_at": null,\n        "trial_start": 1413492872,\n        "trial_end": 1414788872,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [\n      {\n        "id": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHpdFa7qwCJle",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n  "active_card": {\n    "id": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHpdFa7qwCJle",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yHqIfeZ0K7MF2",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413492872,\n    "status": "trialing",\n    "customer": "cus_4yHpdFa7qwCJle",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413492872,\n    "current_period_end": 1414788872,\n    "ended_at": null,\n    "trial_start": 1413492872,\n    "trial_end": 1414788872,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:04:05,598] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:04:07,361] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle/subscription returned (response code, response body) of (200, '{\n  "id": "sub_4yHqIfeZ0K7MF2",\n  "plan": {\n    "interval": "month",\n    "name": "normal",\n    "created": 1413475259,\n    "amount": 15,\n    "currency": "usd",\n    "id": "normal",\n    "object": "plan",\n    "livemode": false,\n    "interval_count": 1,\n    "trial_period_days": 15,\n    "metadata": {},\n    "statement_description": null\n  },\n  "object": "subscription",\n  "start": 1413492872,\n  "status": "trialing",\n  "customer": "cus_4yHpdFa7qwCJle",\n  "cancel_at_period_end": false,\n  "current_period_start": 1413492872,\n  "current_period_end": 1414788872,\n  "ended_at": null,\n  "trial_start": 1413492872,\n  "trial_end": 1414788872,\n  "canceled_at": null,\n  "quantity": 1,\n  "application_fee_percent": null,\n  "discount": null,\n  "metadata": {}\n}\n')
+[2014-10-17 00:04:09,488] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:04:16,458] INFO API request to https://api.stripe.com/v1/customers/cus_4yHpdFa7qwCJle returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413492859,\n  "id": "cus_4yHpdFa7qwCJle",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yHqIfeZ0K7MF2",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413492872,\n        "status": "trialing",\n        "customer": "cus_4yHpdFa7qwCJle",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413492872,\n        "current_period_end": 1414788872,\n        "ended_at": null,\n        "trial_start": 1413492872,\n        "trial_end": 1414788872,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yHpdFa7qwCJle/cards",\n    "data": [\n      {\n        "id": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yHpdFa7qwCJle",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n  "active_card": {\n    "id": "card_14oNL7IfcHb8GbXE7M5kiBNc",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yHpdFa7qwCJle",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yHqIfeZ0K7MF2",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413492872,\n    "status": "trialing",\n    "customer": "cus_4yHpdFa7qwCJle",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413492872,\n    "current_period_end": 1414788872,\n    "ended_at": null,\n    "trial_start": 1413492872,\n    "trial_end": 1414788872,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:04:16,468] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 76, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-17 00:04:16,468] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 76, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-17 00:16:55,113] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:16:59,602] INFO API request to https://api.stripe.com/v1/customers returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [],\n    "count": 0\n  },\n  "default_card": null,\n  "active_card": null,\n  "subscription": null\n}\n')
+[2014-10-17 00:17:11,072] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:17:13,796] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7 returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [],\n    "count": 0\n  },\n  "default_card": null,\n  "active_card": null,\n  "subscription": null\n}\n')
+[2014-10-17 00:17:15,865] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:17:17,666] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7 returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [\n      {\n        "id": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n  "active_card": {\n    "id": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "type": "Visa"\n  },\n  "subscription": null\n}\n')
+[2014-10-17 00:17:19,162] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:17:22,216] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7 returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 0,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [],\n    "count": 0\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": null,\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [\n      {\n        "id": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n  "active_card": {\n    "id": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "type": "Visa"\n  },\n  "subscription": null\n}\n')
+[2014-10-17 00:17:23,457] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:17:27,186] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7/subscription returned (response code, response body) of (200, '{\n  "id": "sub_4yKCOOcRt3QoBD",\n  "plan": {\n    "interval": "month",\n    "name": "normal",\n    "created": 1413475259,\n    "amount": 15,\n    "currency": "usd",\n    "id": "normal",\n    "object": "plan",\n    "livemode": false,\n    "interval_count": 1,\n    "trial_period_days": 15,\n    "metadata": {},\n    "statement_description": null\n  },\n  "object": "subscription",\n  "start": 1413501670,\n  "status": "trialing",\n  "customer": "cus_4yKCjqcqZVoDy7",\n  "cancel_at_period_end": false,\n  "current_period_start": 1413501670,\n  "current_period_end": 1414797670,\n  "ended_at": null,\n  "trial_start": 1413501670,\n  "trial_end": 1414797670,\n  "canceled_at": null,\n  "quantity": 1,\n  "application_fee_percent": null,\n  "discount": null,\n  "metadata": {}\n}\n')
+[2014-10-17 00:17:28,326] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:17:35,616] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7 returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yKCOOcRt3QoBD",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413501670,\n        "status": "trialing",\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413501670,\n        "current_period_end": 1414797670,\n        "ended_at": null,\n        "trial_start": 1413501670,\n        "trial_end": 1414797670,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [\n      {\n        "id": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n  "active_card": {\n    "id": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yKCOOcRt3QoBD",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413501670,\n    "status": "trialing",\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413501670,\n    "current_period_end": 1414797670,\n    "ended_at": null,\n    "trial_start": 1413501670,\n    "trial_end": 1414797670,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:17:35,623] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 71, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-17 00:17:35,623] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 71, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-17 00:24:07,609] ERROR Internal Server Error: /subscribe-modal
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 136, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 104, in render
+    self._set_content(self.rendered_content)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 81, in rendered_content
+    content = template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 424, in render
+    raise e
+NoReverseMatch: Reverse for '"home"' with arguments '()' and keyword arguments '{}' not found.
+[2014-10-17 00:24:07,609] ERROR Internal Server Error: /subscribe-modal
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 136, in get_response
+    response = response.render()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 104, in render
+    self._set_content(self.rendered_content)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/response.py", line 81, in rendered_content
+    content = template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 823, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 424, in render
+    raise e
+NoReverseMatch: Reverse for '"home"' with arguments '()' and keyword arguments '{}' not found.
+[2014-10-17 00:25:35,087] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:25:38,056] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7 returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yKCOOcRt3QoBD",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413501670,\n        "status": "trialing",\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413501670,\n        "current_period_end": 1414797670,\n        "ended_at": null,\n        "trial_start": 1413501670,\n        "trial_end": 1414797670,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [\n      {\n        "id": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2018,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n  "active_card": {\n    "id": "card_14oNXqIfcHb8GbXEpKGgYHvi",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2018,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yKCOOcRt3QoBD",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413501670,\n    "status": "trialing",\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413501670,\n    "current_period_end": 1414797670,\n    "ended_at": null,\n    "trial_start": 1413501670,\n    "trial_end": 1414797670,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:25:39,129] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:25:41,264] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7 returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yKCOOcRt3QoBD",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413501670,\n        "status": "trialing",\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413501670,\n        "current_period_end": 1414797670,\n        "ended_at": null,\n        "trial_start": 1413501670,\n        "trial_end": 1414797670,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [\n      {\n        "id": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2019,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n  "active_card": {\n    "id": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yKCOOcRt3QoBD",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413501670,\n    "status": "trialing",\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413501670,\n    "current_period_end": 1414797670,\n    "ended_at": null,\n    "trial_start": 1413501670,\n    "trial_end": 1414797670,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:25:47,490] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:25:50,138] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7 returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yKCOOcRt3QoBD",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413501670,\n        "status": "trialing",\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413501670,\n        "current_period_end": 1414797670,\n        "ended_at": null,\n        "trial_start": 1413501670,\n        "trial_end": 1414797670,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [\n      {\n        "id": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2019,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n  "active_card": {\n    "id": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yKCOOcRt3QoBD",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413501670,\n    "status": "trialing",\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413501670,\n    "current_period_end": 1414797670,\n    "ended_at": null,\n    "trial_start": 1413501670,\n    "trial_end": 1414797670,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:25:52,400] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:25:56,571] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7/subscription returned (response code, response body) of (200, '{\n  "id": "sub_4yKCOOcRt3QoBD",\n  "plan": {\n    "interval": "month",\n    "name": "normal",\n    "created": 1413475259,\n    "amount": 15,\n    "currency": "usd",\n    "id": "normal",\n    "object": "plan",\n    "livemode": false,\n    "interval_count": 1,\n    "trial_period_days": 15,\n    "metadata": {},\n    "statement_description": null\n  },\n  "object": "subscription",\n  "start": 1413501670,\n  "status": "trialing",\n  "customer": "cus_4yKCjqcqZVoDy7",\n  "cancel_at_period_end": false,\n  "current_period_start": 1413501670,\n  "current_period_end": 1414797670,\n  "ended_at": null,\n  "trial_start": 1413501670,\n  "trial_end": 1414797670,\n  "canceled_at": null,\n  "quantity": 1,\n  "application_fee_percent": null,\n  "discount": null,\n  "metadata": {}\n}\n')
+[2014-10-17 00:26:03,948] INFO Starting new HTTPS connection (1): api.stripe.com
+[2014-10-17 00:26:05,662] INFO API request to https://api.stripe.com/v1/customers/cus_4yKCjqcqZVoDy7 returned (response code, response body) of (200, '{\n  "object": "customer",\n  "created": 1413501640,\n  "id": "cus_4yKCjqcqZVoDy7",\n  "livemode": false,\n  "description": null,\n  "email": "redatest7@gmail.com",\n  "delinquent": false,\n  "metadata": {},\n  "subscriptions": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/subscriptions",\n    "data": [\n      {\n        "id": "sub_4yKCOOcRt3QoBD",\n        "plan": {\n          "interval": "month",\n          "name": "normal",\n          "created": 1413475259,\n          "amount": 15,\n          "currency": "usd",\n          "id": "normal",\n          "object": "plan",\n          "livemode": false,\n          "interval_count": 1,\n          "trial_period_days": 15,\n          "metadata": {},\n          "statement_description": null\n        },\n        "object": "subscription",\n        "start": 1413501670,\n        "status": "trialing",\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "cancel_at_period_end": false,\n        "current_period_start": 1413501670,\n        "current_period_end": 1414797670,\n        "ended_at": null,\n        "trial_start": 1413501670,\n        "trial_end": 1414797670,\n        "canceled_at": null,\n        "quantity": 1,\n        "application_fee_percent": null,\n        "discount": null,\n        "metadata": {}\n      }\n    ],\n    "count": 1\n  },\n  "discount": null,\n  "account_balance": 0,\n  "currency": "usd",\n  "cards": {\n    "object": "list",\n    "total_count": 1,\n    "has_more": false,\n    "url": "/v1/customers/cus_4yKCjqcqZVoDy7/cards",\n    "data": [\n      {\n        "id": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n        "object": "card",\n        "last4": "4242",\n        "brand": "Visa",\n        "funding": "credit",\n        "exp_month": 12,\n        "exp_year": 2019,\n        "fingerprint": "EtJY9OPBYegPFvbv",\n        "country": "US",\n        "name": "redatest7@gmail.com",\n        "address_line1": null,\n        "address_line2": null,\n        "address_city": null,\n        "address_state": null,\n        "address_zip": null,\n        "address_country": null,\n        "cvc_check": "pass",\n        "address_line1_check": null,\n        "address_zip_check": null,\n        "customer": "cus_4yKCjqcqZVoDy7",\n        "type": "Visa"\n      }\n    ],\n    "count": 1\n  },\n  "default_card": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n  "active_card": {\n    "id": "card_14oNg7IfcHb8GbXE0pcXtt8V",\n    "object": "card",\n    "last4": "4242",\n    "brand": "Visa",\n    "funding": "credit",\n    "exp_month": 12,\n    "exp_year": 2019,\n    "fingerprint": "EtJY9OPBYegPFvbv",\n    "country": "US",\n    "name": "redatest7@gmail.com",\n    "address_line1": null,\n    "address_line2": null,\n    "address_city": null,\n    "address_state": null,\n    "address_zip": null,\n    "address_country": null,\n    "cvc_check": "pass",\n    "address_line1_check": null,\n    "address_zip_check": null,\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "type": "Visa"\n  },\n  "subscription": {\n    "id": "sub_4yKCOOcRt3QoBD",\n    "plan": {\n      "interval": "month",\n      "name": "normal",\n      "created": 1413475259,\n      "amount": 15,\n      "currency": "usd",\n      "id": "normal",\n      "object": "plan",\n      "livemode": false,\n      "interval_count": 1,\n      "trial_period_days": 15,\n      "metadata": {},\n      "statement_description": null\n    },\n    "object": "subscription",\n    "start": 1413501670,\n    "status": "trialing",\n    "customer": "cus_4yKCjqcqZVoDy7",\n    "cancel_at_period_end": false,\n    "current_period_start": 1413501670,\n    "current_period_end": 1414797670,\n    "ended_at": null,\n    "trial_start": 1413501670,\n    "trial_end": 1414797670,\n    "canceled_at": null,\n    "quantity": 1,\n    "application_fee_percent": null,\n    "discount": null,\n    "metadata": {}\n  }\n}\n')
+[2014-10-17 00:26:05,669] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 71, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL
+[2014-10-17 00:26:05,669] ERROR Internal Server Error: /subscribe_ajax
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/http.py", line 41, in inner
+    return func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/decorators.py", line 20, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 41, in wrapper
+    return ajax_view(request)
+  File "/home/enigma/django_projects/jobroller/jobroller_offers_dep_git/mysite/main/views/payment.py", line 71, in subscribe_ajax
+    customer.subscribe(plan_id)
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 506, in subscribe
+    self.sync_current_subscription()
+  File "/usr/local/lib/python2.7/dist-packages/payments/models.py", line 473, in sync_current_subscription
+    quantity=sub.quantity
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 137, in create
+    return self.get_query_set().create(**kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 377, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 463, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 551, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 203, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1593, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 912, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 40, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 344, in execute
+    return Database.Cursor.execute(self, query, params)
+IntegrityError: payments_currentsubscription.currency may not be NULL

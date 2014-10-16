@@ -1,40 +1,31 @@
 # -*- coding: utf-8 -*-
 from django.utils.translation import gettext_lazy as _
 TIME_ZONE = 'Europe/Paris'
+USE_TZ = True
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
 import os
 import dj_database_url
 import sys, urlparse
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-# settings for heroku database
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
-
-
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')} # heroku database settings
 LANGUAGE_CODE = 'fr'
 SITE_ID = 1
 
 MEDIA_ROOT = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'media'))
-# MEDIA_ROOT = '/app/mysite/media/'
-
 MEDIA_URL = '/media/'
-
-# STATIC_ROOT = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'static_collected'))
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = (
     os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'static')),
 )
-
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'dajaxice.finders.DajaxiceFinder',
 )
+
 
 SECRET_KEY = 'qd@j3*it@3j2cgc#7t@m)^r1bnc53uam7o6u_+x$f5w3$b@3ix'
 
@@ -43,7 +34,6 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 
 )
-
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -54,13 +44,11 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'example_bootstrap.urls'
-
 TEMPLATE_DIRS = (
     os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'templates')),
 )
 
 INSTALLED_APPS = (
-    
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -82,8 +70,6 @@ INSTALLED_APPS = (
     'payments',
     'main',
 )
-
-
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -115,17 +101,51 @@ ACCOUNT_ACTIVATION_DAYS = 14
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '[%(asctime)s] %(levelname)s %(message)s'
+        },
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
     'handlers': {
+        'default': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': 'speedjob_logs.log',
+            'maxBytes': 1024 * 1024 * 5,  # 5 MB
+            'backupCount': 5,
+            'formatter': 'simple',
+        },
         'mail_admins': {
             'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
+            'filters': ['require_debug_false'],
+            # 'class': 'ssweb.logger.FQAdminEmailHandler',
+            'class': 'logging.StreamHandler',
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+            'stream': sys.stdout,
+        },
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins'],
+            'handlers': ['mail_admins', 'console', 'default'],
             'level': 'ERROR',
             'propagate': True,
+        },
+        '': {
+            'handlers': ['default', 'console'],
+            'level': 'INFO',
+            'propagate': True
         },
     }
 }
@@ -141,36 +161,30 @@ USE_L10N = False
 SUIT_CONFIG = {
     'ADMIN_NAME': 'SpeedJob administration',
     'SHOW_REQUIRED_ASTERISK': True,
-
     'MENU_ICONS': {
         'sites': 'icon-leaf',
         'auth': 'icon-lock',
     },
-
     'MENU_OPEN_FIRST_CHILD': True, 
-
     # 'MENU_EXCLUDE': ('auth.group','sites',),
-
-    'MENU': (
-        'sites',
-        '-',
-        {'app': 'auth',     'label':'Utilisateurs avancés', 'icon':'icon-lock',     'models': ('user', 'group')},
-        '-',
-        {'app': 'profile',  'label':'Profiles',             'icon':'icon-user',     'models': ('profile_emp','profile_candid', 'application') },
-        '-',
-        {'app': 'offre',    'label':'Offres',               'icon':'icon-envelope', 'models': ('offer',) },
-        '-',
-        {'app': 'article',  'label':'Article',              'icon':'icon-book',     'models': ('article',) },
-        '-',
-        
-    ),
-
+    # 'MENU': (
+    #     'sites',
+    #     '-',
+    #     'auth',
+    #     '-',
+    #     {'app': 'auth',     'label':'Utilisateurs avancés', 'icon':'icon-lock',     'models': ('user', 'group')},
+    #     '-',
+    #     {'app': 'profile',  'label':'Profiles',             'icon':'icon-user',     'models': ('profile_emp','profile_candid', 'application') },
+    #     '-',
+    #     {'app': 'offre',    'label':'Offres',               'icon':'icon-envelope', 'models': ('offer',) },
+    #     '-',
+    #     {'app': 'article',  'label':'Article',              'icon':'icon-book',     'models': ('article',) },
+    #     '-',
+    # ),
 }
 
-
 CACHE_TIMEOUT = 60*60
-
-# CACHE_TABLE = 'db://cached_results'
+# python manage.py createcachetable cached_results
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
@@ -178,19 +192,14 @@ CACHES = {
     }
 }
 
-
 TEST_SECRET_KEY      = "sk_test_mopWUvH81IrewEKfXKN9e6rq"
 TEST_PUBLISHABLE_KEY = "pk_test_v9t1PMYuYgsUM5Zsoj3uFn2b"
 
-STRIPE_SECRET_KEY    = "sk_live_BFVMgVwzXLBU8CniUPILuLyo"
+STRIPE_SECRET_KEY    = "sk_test_mopWUvH81IrewEKfXKN9e6rq"
 STRIPE_PUBLIC_KEY    = "pk_test_v9t1PMYuYgsUM5Zsoj3uFn2b"
+
 # STRIPE_PUBLIC_KEY = "pk_live_vB5KieclNbIxLgERKibtEvH8"
-
-
 # LIVE_SECRET_KEY      = "sk_live_BFVMgVwzXLBU8CniUPILuLyo"
-# LIVE_PUBLISHABLE_KEY = "pk_live_vB5KieclNbIxLgERKibtEvH8"
-
-
 
 
 # PAYMENTS_PLANS = {
@@ -226,30 +235,36 @@ STRIPE_PUBLIC_KEY    = "pk_test_v9t1PMYuYgsUM5Zsoj3uFn2b"
 #     }
 # }
 
+# Django Stripe Payments settings
+PAYMENTS_INVOICE_FROM_EMAIL = 'redatest7@gmail.com'
+
+
 PAYMENTS_PLANS = {
     "normal": {
         "stripe_plan_id": "normal",
-        "name": "Monthly Potato Delivery",
-        "description": "Monthly potato delivery to your door.",
+        "name": "normal",
+        "description": "Monthly subscription for test.",
         "price": 15,
-        "currency": "gbp",
-        "trial_period_days": 0,
+        "currency": "usd",
+        "trial_period_days": 15,
         "interval": "month"
     },
 
     "premier": {
         "stripe_plan_id": "premier",
-        "name": "Monthly Premier Potato Delivery",
-        "description": "Monthly PREMIER potato delivery to your door.",
+        "name": "premier",
+        "description": "Yearly subscription for real work.",
         "price": 30,
-        "currency": "gbp",
-        "trial_period_days": 0,
-        "interval": "month",
+        "currency": "usd",
+        "trial_period_days": 15,
+        "interval": "year",
     },
 }
 
+PAYMENTS_DEFAULT_PLAN="normal"
 
-TRIAL_PERIOD_FOR_USER_CALLBACK = 15
+
+TRIAL_PERIOD_FOR_USER_CALLBACK = 25
 
 
 # Set these, or include them in an untracked locals.py

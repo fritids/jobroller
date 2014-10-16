@@ -56,11 +56,17 @@ def subscribe_ajax(request):
     stripe_token = request.POST.get("stripe_token")
     plan_id = request.POST.get("plan_id", None)
 
+    print 'stripe_token, plan_id'
+    print stripe_token, plan_id
+
     try:
         customer = request.user.customer
     except ObjectDoesNotExist:
-        customer = Customer.create(request.user)
+        customer = Customer.create(request.user)  
 
+    print 'stripe_token, plan_id'
+    print stripe_token, plan_id
+    
     customer.update_card(stripe_token)
     customer.subscribe(plan_id)
     messages.success(request, 'Your subscription is now active.')
@@ -124,6 +130,7 @@ class BaseSubscribeView(BaseStripeTemplateView):
     """Vanilla Checkout.js example"""
     def get(self, request, *args, **kwargs):
         """Redirect user to home if he already has an active subscription"""
+
         try:
             if self.request.user.customer.current_subscription.status == 'active':
                 messages.warning(request, "You already have an active paid subscription.")
@@ -166,7 +173,7 @@ class ChangeCardView(BaseStripeTemplateView):
 
 
 subscribe_vanilla = VanillaSubscribeView.as_view()
-subscribe_modal = ModalSubscribeView.as_view()
-change = ChangeSubscriptionView.as_view()
-change_card = ChangeCardView.as_view()
-cancel = CancelSubscriptionView.as_view()
+subscribe_modal   = ModalSubscribeView.as_view()
+change            = ChangeSubscriptionView.as_view()
+change_card       = ChangeCardView.as_view()
+cancel            = CancelSubscriptionView.as_view()
