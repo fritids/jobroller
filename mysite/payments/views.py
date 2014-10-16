@@ -126,11 +126,17 @@ def subscribe(request, form_class=PlanForm):
     form = form_class(request.POST)
     if form.is_valid():
         try:
+            print 'payment form is valid'
             try:
                 customer = request.user.customer
             except ObjectDoesNotExist:
+                print 'trying to create a customer object 2'
                 customer = Customer.create(request.user)
+                print 'customer created'
             if request.POST.get("stripe_token"):
+                # print 'stripe token'
+                # print request.POST.get("stripe_token")
+
                 customer.update_card(request.POST.get("stripe_token"))
             customer.subscribe(form.cleaned_data["plan"])
             data["form"] = form_class()

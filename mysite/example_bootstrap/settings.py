@@ -11,18 +11,8 @@ import sys, urlparse
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-DATABASES = {
-'default': {
-     'ENGINE': 'django.db.backends.sqlite3', 
-     'NAME': 'testdb2.sqlite',               
-     'USER': '',
-     'PASSWORD': '',
-     'HOST': '',
-     'PORT': '',
- }
-}   
-
-# DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+# settings for heroku database
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
 
 
 LANGUAGE_CODE = 'fr'
@@ -88,7 +78,9 @@ INSTALLED_APPS = (
     'article',
     'offre',
     'django_forms_bootstrap',
+    'crispy_forms',
     'payments',
+    'main',
 )
 
 
@@ -190,8 +182,9 @@ CACHES = {
 TEST_SECRET_KEY      = "sk_test_mopWUvH81IrewEKfXKN9e6rq"
 TEST_PUBLISHABLE_KEY = "pk_test_v9t1PMYuYgsUM5Zsoj3uFn2b"
 
-STRIPE_SECRET_KEY = "sk_live_BFVMgVwzXLBU8CniUPILuLyo"
-STRIPE_PUBLIC_KEY = "pk_live_vB5KieclNbIxLgERKibtEvH8"
+STRIPE_SECRET_KEY    = "sk_live_BFVMgVwzXLBU8CniUPILuLyo"
+STRIPE_PUBLIC_KEY    = "pk_test_v9t1PMYuYgsUM5Zsoj3uFn2b"
+# STRIPE_PUBLIC_KEY = "pk_live_vB5KieclNbIxLgERKibtEvH8"
 
 
 # LIVE_SECRET_KEY      = "sk_live_BFVMgVwzXLBU8CniUPILuLyo"
@@ -200,18 +193,70 @@ STRIPE_PUBLIC_KEY = "pk_live_vB5KieclNbIxLgERKibtEvH8"
 
 
 
+# PAYMENTS_PLANS = {
+#     "yearly": {
+#         "stripe_plan_id": "yearly",
+#         "name": "yearly",
+#         # "description": "The monthly subscription plan to WebApp",
+#         "price": 0.99,
+#         "currency": "usd",
+#         "interval": "month",
+#         "trial_period_days": 15
+#     }
+# }
+
+# PAYMENTS_PLANS = {
+#     "monthly": {
+#         "stripe_plan_id": "pro-monthly",
+#         "name": "Web App Pro ($25/month)",
+#         # "description": "The monthly subscription plan to WebApp",
+#         "price": 25,
+#         "currency": "usd",
+#         "trial_period_days": 15,
+#         "interval": "month"
+#     },
+#     "yearly": {
+#         "stripe_plan_id": "pro-yearly",
+#         "name": "Web App Pro ($199/year)",
+#         # "description": "The annual subscription plan to WebApp",
+#         "price": 199,
+#         "currency": "usd",
+#         "trial_period_days": 15,
+#         "interval": "year"
+#     }
+# }
+
 PAYMENTS_PLANS = {
-    "yearly": {
-        "stripe_plan_id": "yearly",
-        "name": "yearly",
-        # "description": "The monthly subscription plan to WebApp",
-        "price": 0.99,
-        "currency": "usd",
+    "normal": {
+        "stripe_plan_id": "normal",
+        "name": "Monthly Potato Delivery",
+        "description": "Monthly potato delivery to your door.",
+        "price": 15,
+        "currency": "gbp",
+        "trial_period_days": 0,
+        "interval": "month"
+    },
+
+    "premier": {
+        "stripe_plan_id": "premier",
+        "name": "Monthly Premier Potato Delivery",
+        "description": "Monthly PREMIER potato delivery to your door.",
+        "price": 30,
+        "currency": "gbp",
+        "trial_period_days": 0,
         "interval": "month",
-        "trial_period_days": 15
-    }
+    },
 }
 
 
-
 TRIAL_PERIOD_FOR_USER_CALLBACK = 15
+
+
+# Set these, or include them in an untracked locals.py
+# STRIPE_PUBLISHABLE = None
+# STRIPE_SECRET = None
+
+try:
+    from local_settings import *
+except ImportError:
+    pass

@@ -388,7 +388,7 @@ class Customer(StripeObject):
             trial_end = datetime.datetime.utcnow() + datetime.timedelta(
                 days=trial_days
             )
-
+            
         stripe_customer = stripe.Customer.create(
             email=user.email,
             card=card,

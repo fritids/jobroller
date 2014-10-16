@@ -8,6 +8,13 @@ from registration.backends.default.views import RegistrationView
 from django.conf import settings
 from dajaxice.core import dajaxice_autodiscover, dajaxice_config
 
+import main
+from main import views
+from main.views import payment
+
+from django.contrib.auth.decorators import login_required
+
+
 dajaxice_autodiscover()
 admin.autodiscover()
 
@@ -67,6 +74,19 @@ urlpatterns = patterns('',
     url(r'accounts/register/$', RegistrationView.as_view(form_class = ExRegistrationForm), name = 'registration_register'),
     url(r'accounts/login/$', 'registration.views.login', name = 'authentication_login'),
     (r'^accounts/', include('registration.backends.default.urls')),
+
+
+    # potato stripe payments
+    url(r'^subscribe-vanilla$', login_required(main.views.payment.subscribe_vanilla), name="subscribe_vanilla"),
+    url(r'^subscribe-modal$', login_required(main.views.payment.subscribe_modal), name="subscribe_modal"),
+    url(r'^change/plan/$', login_required(main.views.payment.change), name="change_subscription"),
+    url(r'^change/card/$', login_required(main.views.payment.change_card), name="change_card"),
+    url(r'^cancel$', login_required(main.views.payment.cancel), name="cancel_subscription"),
+
+    url(r'^subscribe_ajax$', login_required(main.views.payment.subscribe_ajax), name="subscribe_ajax"),
+    url(r'^cancel_ajax$', login_required(main.views.payment.cancel_ajax), name="cancel_ajax"),
+    url(r'^change_plan_ajax$', login_required(main.views.payment.change_plan_ajax), name="change_plan_ajax"),
+    url(r'^change_card_ajax$', login_required(main.views.payment.change_card_ajax), name="change_card_ajax"),
 
     # payments
     url(r"^payments/", include("payments.urls")),

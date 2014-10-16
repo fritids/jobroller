@@ -112,6 +112,16 @@ b{
   color: #3B5999;
 }
 
+[class^="fa-"].fb-darkblue, [class*=" fa-"].fb-darkblue {
+  font-size: 22px;
+  color: rgb(0, 0, 139);
+}
+
+[class^="fa-"].fb-darkblue-ns, [class*=" fa-"].fb-darkblue-ns {
+  color: rgb(0, 0, 139);
+}
+
+
 [class^="fa-"].green, [class*=" fa-"].green {
   font-size: 22px;
   color: rgba(8, 204, 0, 0.68)
@@ -192,7 +202,7 @@ b{
 
 #navigation .nav li a {
   line-height: 22px;
-  padding: 22px 5px;
+  padding: 15px 5px;
 }
 
 #navigation .nav .dropdown-toggle:hover .caret, .nav .dropdown-toggle:focus .white-caret {
